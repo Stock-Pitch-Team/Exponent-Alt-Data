@@ -6,7 +6,8 @@
   "caveats": [
     "Courts only name experts who formally testify; the much larger volume of behind-the-scenes consulting never appears in any public record. This chart sees the tip of the iceberg.",
     "Most product-liability cases happen in STATE courts, which this archive covers thinly - federal cases dominate here.",
-    "'Exponent' is also an ordinary English/math word; the expert-context search removes most false matches, and the case list below lets you verify any row.",
-    "READ THE POST-2022 SPIKE CAREFULLY: recent years of the archive contain proportionally more trial-court opinions (where expert witnesses are actually discussed) and fewer appellate ones, which inflates the recent rate versus earlier years. The underlying raw mention counts still rose about 5x from 2022 to 2025, so the direction is real - the steepness is partly an archive artifact."
+    "'Exponent' is also an ordinary English/math word - and CourtListener's word-stemming even matches the Spanish legal word 'exponente'. We removed 421 Spanish-language Puerto Rico false matches; an earlier version of this chart showed a dramatic post-2022 spike that was almost entirely that artifact. What survives the cleaning is the honest picture below.",
+    "Written OPINIONS rarely name the testifying firm (a few cases a year) - read that line as 'presence', not market share. The federal CASE-FILE line is the meaningful volume series.",
+    "The most recent 1-2 years of the case-file line read artificially LOW: documents only enter this archive when a member of the public buys them from the court system, which lags new filings by months to years."
   ]
 }

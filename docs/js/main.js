@@ -93,17 +93,21 @@
 
     var p2 = data("p2_litigation_timeseries");
     if (p2 && p2.series) {
-      var withData = p2.series.filter(function (r) { return r.opinions_per_100k !== null && r.opinions_mentions > 0; });
-      if (withData.length >= 6) {
-        var lastY = withData[withData.length - 2] || withData[withData.length - 1];
-        var avg5 = withData.slice(-7, -2).reduce(function (a, r) { return a + r.opinions_per_100k; }, 0) / 5;
-        var dd = avg5 ? (lastY.opinions_per_100k / avg5 - 1) * 100 : null;
+      // federal case files are the meaningful volume series; the newest ~2 years
+      // read low from archive purchase lag, so anchor on year-3
+      var recap = p2.series.filter(function (r) { return r.recap_per_100k !== null && r.recap_mentions > 0; });
+      if (recap.length >= 7) {
+        // last ~2-3 years read low from archive purchase lag; anchor 3 years back
+        var anchor = recap[recap.length - 4];
+        var prior3 = recap.slice(-7, -4);
+        var avg3 = prior3.reduce(function (a, r) { return a + r.recap_per_100k; }, 0) / prior3.length;
+        var dd = avg3 ? (anchor.recap_per_100k / avg3 - 1) * 100 : null;
         U.tile("tiles", {
-          label: "Courtroom footprint (" + lastY.year + ")",
-          value: lastY.opinions_per_100k + " /100k",
-          delta: dd !== null ? (dd >= 0 ? "+" : "") + dd.toFixed(0) + "% vs prior 5-yr avg" : null,
+          label: "Litigation footprint (" + anchor.year + ", lag-robust)",
+          value: anchor.recap_per_100k + " /100k",
+          delta: dd !== null ? (dd >= 0 ? "+" : "") + dd.toFixed(0) + "% vs prior 3-yr avg" : null,
           dir: dd > 5 ? "up" : dd < -5 ? "down" : "flat",
-          note: "Share of court opinions mentioning Exponent near expert language.",
+          note: "Federal cases naming Exponent near expert language, per 100k archived cases. Peaked 2021-22; newer years read low from archive lag. Stable franchise - not a growth signal.",
           href: "#sec-p2"
         });
       }
