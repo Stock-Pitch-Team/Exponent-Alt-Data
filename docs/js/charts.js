@@ -856,7 +856,8 @@ window.ALTDATA_CHARTS = (function () {
     var ds = window.ALTDATA.p8_peers;
     var firms = ds && ds.data ? ds.data.firms : [];
     var withCourts = firms.filter(function (f) { return f.courts; });
-    if (!withCourts.length) {
+    // render only when EVERY firm has counts - a partial set would mislead
+    if (withCourts.length !== firms.length || !firms.length) {
       var mount = document.getElementById("mount-p8-courts");
       if (mount) {
         var u = U.el("div", "unavailable");

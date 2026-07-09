@@ -2,22 +2,22 @@
  "metadata": {
   "pipeline": "p2_litigation",
   "output": "daubert",
-  "generated_at": "2026-07-09T20:17:26Z",
+  "generated_at": "2026-07-09T22:20:49Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "CourtListener opinions (full text fetched per case)",
     "url": "https://www.courtlistener.com/api/rest/v4/search/",
-    "fetched_at": "2026-07-09T20:17:26Z",
-    "records_scanned": 79,
-    "records_matched": 31,
+    "fetched_at": "2026-07-09T22:20:49Z",
+    "records_scanned": 139,
+    "records_matched": 71,
     "note": "exponent query: Exponent AND (Daubert OR \"Rule 702\") AND (expert OR exclude OR admissib)"
    }
   ],
   "coverage": null,
   "caveats": [
-   "SMALL SAMPLE: 6 Exponent-linked and 25 baseline opinions had a classifiable outcome; read the rate as indicative, not precise.",
+   "SMALL SAMPLE: 6 Exponent-linked and 65 baseline opinions had a classifiable outcome; read the rate as indicative, not precise.",
    "Outcomes are classified by pattern-matching legal language; 'unclassified' and 'mixed_signals' rows are shown, never guessed. Every case links to the full opinion for human verification.",
    "The baseline is the most recent non-Exponent Daubert/Rule-702 opinions run through the SAME classifier, so classifier bias applies equally to both groups.",
    "An exclusion ruling may target any expert in the case, not necessarily the Exponent-affiliated one, when multiple experts are challenged in one opinion."
@@ -353,14 +353,14 @@
    ]
   },
   "baseline": {
-   "exclusion_rate": 0.2,
-   "n_classified": 25,
+   "exclusion_rate": 0.331,
+   "n_classified": 65,
    "outcome_counts": {
-    "excluded": 4,
-    "unclassified": 8,
-    "admitted": 19,
-    "mixed_signals": 7,
-    "granted_in_part": 2
+    "excluded": 20,
+    "unclassified": 18,
+    "admitted": 42,
+    "mixed_signals": 17,
+    "granted_in_part": 3
    }
   },
   "exponent_outcome_counts": {
