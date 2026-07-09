@@ -1,0 +1,1024 @@
+{
+ "metadata": {
+  "pipeline": "p4_moat",
+  "output": "partners_rolling",
+  "generated_at": "2026-07-09T01:07:51Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "OpenAlex co-author institutions (type=company)",
+    "url": "https://api.openalex.org/works?filter=authorships.institutions.id:I13383945",
+    "fetched_at": "2026-07-09T01:07:51Z",
+    "records_scanned": 4946,
+    "records_matched": 1120
+   }
+  ],
+  "coverage": {
+   "start": "1829",
+   "end": "2026"
+  },
+  "caveats": [
+   "Publications lag the underlying work by roughly 1-2 years (research is written up and peer-reviewed after it happens).",
+   "Confidential consulting engagements rarely produce co-authored papers, so this measures Exponent's public scientific footprint - a moat indicator, not total business activity.",
+   "OpenAlex assigns institutions by parsing author affiliation text; a small share of affiliations are mis-parsed or missing.",
+   "Recent years (especially the last 1-2) are incomplete because indexing of new publications is still catching up."
+  ],
+  "methodology_id": "p4_partners_rolling"
+ },
+ "data": {
+  "window_years": 3,
+  "series": [
+   {
+    "year": 1829,
+    "unique_partners": 2,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1830,
+    "unique_partners": 2,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1831,
+    "unique_partners": 2,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1832,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1833,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1834,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1835,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1836,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1837,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1838,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1839,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1840,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1841,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1842,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1843,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1844,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1845,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1846,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1847,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1848,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1849,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1850,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1851,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1852,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1853,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1854,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1855,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1856,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1857,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1858,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1859,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1860,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1861,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1862,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1863,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1864,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1865,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1866,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1867,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1868,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1869,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1870,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1871,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1872,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1873,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1874,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1875,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1876,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1877,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1878,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1879,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1880,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1881,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1882,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1883,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1884,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1885,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1886,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1887,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1888,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1889,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1890,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1891,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1892,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1893,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1894,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1895,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1896,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1897,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1898,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1899,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1900,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1901,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1902,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1903,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1904,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1905,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1906,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1907,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1908,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1909,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1910,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1911,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1912,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1913,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1914,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1915,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1916,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1917,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1918,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1919,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1920,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1921,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1922,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1923,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1924,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1925,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1926,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1927,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1928,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1929,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1930,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1931,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1932,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1933,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1934,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1935,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1936,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1937,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1938,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1939,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1940,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1941,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1942,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1943,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1944,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1945,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1946,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1947,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1948,
+    "unique_partners": 1,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1949,
+    "unique_partners": 1,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1950,
+    "unique_partners": 1,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1951,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1952,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1953,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1954,
+    "unique_partners": 3,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1955,
+    "unique_partners": 3,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1956,
+    "unique_partners": 3,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1957,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1958,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1959,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1960,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1961,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1962,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1963,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1964,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1965,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1966,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1967,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1968,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1969,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1970,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1971,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1972,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1973,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1974,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1975,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1976,
+    "unique_partners": 2,
+    "coauthored_works": 2
+   },
+   {
+    "year": 1977,
+    "unique_partners": 5,
+    "coauthored_works": 3
+   },
+   {
+    "year": 1978,
+    "unique_partners": 7,
+    "coauthored_works": 6
+   },
+   {
+    "year": 1979,
+    "unique_partners": 7,
+    "coauthored_works": 6
+   },
+   {
+    "year": 1980,
+    "unique_partners": 4,
+    "coauthored_works": 5
+   },
+   {
+    "year": 1981,
+    "unique_partners": 2,
+    "coauthored_works": 2
+   },
+   {
+    "year": 1982,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1983,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1984,
+    "unique_partners": 0,
+    "coauthored_works": 0
+   },
+   {
+    "year": 1985,
+    "unique_partners": 1,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1986,
+    "unique_partners": 1,
+    "coauthored_works": 1
+   },
+   {
+    "year": 1987,
+    "unique_partners": 5,
+    "coauthored_works": 5
+   },
+   {
+    "year": 1988,
+    "unique_partners": 5,
+    "coauthored_works": 4
+   },
+   {
+    "year": 1989,
+    "unique_partners": 6,
+    "coauthored_works": 6
+   },
+   {
+    "year": 1990,
+    "unique_partners": 1,
+    "coauthored_works": 2
+   },
+   {
+    "year": 1991,
+    "unique_partners": 1,
+    "coauthored_works": 2
+   },
+   {
+    "year": 1992,
+    "unique_partners": 5,
+    "coauthored_works": 4
+   },
+   {
+    "year": 1993,
+    "unique_partners": 6,
+    "coauthored_works": 5
+   },
+   {
+    "year": 1994,
+    "unique_partners": 9,
+    "coauthored_works": 8
+   },
+   {
+    "year": 1995,
+    "unique_partners": 7,
+    "coauthored_works": 7
+   },
+   {
+    "year": 1996,
+    "unique_partners": 6,
+    "coauthored_works": 6
+   },
+   {
+    "year": 1997,
+    "unique_partners": 16,
+    "coauthored_works": 11
+   },
+   {
+    "year": 1998,
+    "unique_partners": 17,
+    "coauthored_works": 14
+   },
+   {
+    "year": 1999,
+    "unique_partners": 23,
+    "coauthored_works": 29
+   },
+   {
+    "year": 2000,
+    "unique_partners": 23,
+    "coauthored_works": 39
+   },
+   {
+    "year": 2001,
+    "unique_partners": 41,
+    "coauthored_works": 50
+   },
+   {
+    "year": 2002,
+    "unique_partners": 61,
+    "coauthored_works": 68
+   },
+   {
+    "year": 2003,
+    "unique_partners": 74,
+    "coauthored_works": 66
+   },
+   {
+    "year": 2004,
+    "unique_partners": 82,
+    "coauthored_works": 74
+   },
+   {
+    "year": 2005,
+    "unique_partners": 77,
+    "coauthored_works": 64
+   },
+   {
+    "year": 2006,
+    "unique_partners": 80,
+    "coauthored_works": 88
+   },
+   {
+    "year": 2007,
+    "unique_partners": 85,
+    "coauthored_works": 96
+   },
+   {
+    "year": 2008,
+    "unique_partners": 85,
+    "coauthored_works": 106
+   },
+   {
+    "year": 2009,
+    "unique_partners": 82,
+    "coauthored_works": 91
+   },
+   {
+    "year": 2010,
+    "unique_partners": 84,
+    "coauthored_works": 92
+   },
+   {
+    "year": 2011,
+    "unique_partners": 113,
+    "coauthored_works": 104
+   },
+   {
+    "year": 2012,
+    "unique_partners": 131,
+    "coauthored_works": 132
+   },
+   {
+    "year": 2013,
+    "unique_partners": 142,
+    "coauthored_works": 143
+   },
+   {
+    "year": 2014,
+    "unique_partners": 149,
+    "coauthored_works": 145
+   },
+   {
+    "year": 2015,
+    "unique_partners": 167,
+    "coauthored_works": 153
+   },
+   {
+    "year": 2016,
+    "unique_partners": 180,
+    "coauthored_works": 168
+   },
+   {
+    "year": 2017,
+    "unique_partners": 165,
+    "coauthored_works": 156
+   },
+   {
+    "year": 2018,
+    "unique_partners": 149,
+    "coauthored_works": 134
+   },
+   {
+    "year": 2019,
+    "unique_partners": 141,
+    "coauthored_works": 124
+   },
+   {
+    "year": 2020,
+    "unique_partners": 163,
+    "coauthored_works": 150
+   },
+   {
+    "year": 2021,
+    "unique_partners": 170,
+    "coauthored_works": 171
+   },
+   {
+    "year": 2022,
+    "unique_partners": 154,
+    "coauthored_works": 163
+   },
+   {
+    "year": 2023,
+    "unique_partners": 158,
+    "coauthored_works": 146
+   },
+   {
+    "year": 2024,
+    "unique_partners": 146,
+    "coauthored_works": 127
+   },
+   {
+    "year": 2025,
+    "unique_partners": 189,
+    "coauthored_works": 138
+   },
+   {
+    "year": 2026,
+    "unique_partners": 166,
+    "coauthored_works": 123
+   }
+  ]
+ }
+}

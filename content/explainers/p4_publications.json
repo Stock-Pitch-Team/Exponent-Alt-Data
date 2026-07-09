@@ -1,0 +1,10 @@
+{
+  "title": "Exponent's scientific output over six decades",
+  "what": "Peer-reviewed papers published by Exponent scientists each year (including under the firm's pre-1998 name, Failure Analysis Associates), from OpenAlex - a free, open index of the world's research literature.",
+  "how": "OpenAlex records the employer listed on every scientific paper. We pulled every publication (about 5,000) whose author list includes an Exponent affiliation.",
+  "thesis": "You can't charge $600/hour for an expert the other side can discredit. A consultancy whose staff keep publishing real science in real journals is maintaining the credential moat that justifies premium billing rates. Steady output = the moat is being maintained; a collapse would be an early warning.",
+  "caveats": [
+    "Papers appear 1-2 years after the work behind them, and the most recent year is always undercounted while indexing catches up.",
+    "Publication volume says nothing about consulting revenue - it's a quality-of-franchise indicator."
+  ]
+}

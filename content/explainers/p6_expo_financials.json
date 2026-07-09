@@ -1,0 +1,10 @@
+{
+  "title": "Exponent's actual reported financials",
+  "what": "Exponent's quarterly revenue and profits exactly as filed with the SEC - the ground truth every alternative dataset on this page is compared against.",
+  "how": "Pulled directly from SEC EDGAR's structured-data (XBRL) system, which extracts the numbers from Exponent's own 10-Q and 10-K filings. Where a fourth quarter isn't separately filed, it is computed as full-year minus the three reported quarters (flagged 'derived').",
+  "thesis": "The thesis says the stock fell on sentiment, not fundamentals: revenue grew every year through the de-rating ($513M in 2022 to $582M in 2025) and Q1-2026 came in at $166M. The alt-data on this page exists to judge whether that growth ACCELERATES (volume + rate) or stalls (rate only).",
+  "caveats": [
+    "Revenue per consultant (shown on the scoreboard) divides this revenue by our independent directory headcount - a PROXY for the utilization metric Exponent discusses on earnings calls, not the official figure.",
+    "Quarterly XBRL history only reaches back to ~2018 for this company."
+  ]
+}

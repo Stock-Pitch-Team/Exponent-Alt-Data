@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dashboard",
+      "runtimeExecutable": ".venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "8321", "--directory", "site"],
+      "port": 8321
+    },
+    {
+      "name": "singlefile-test",
+      "runtimeExecutable": ".venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "8322", "--directory", "C:\\Users\\vetsa\\AppData\\Local\\Temp\\claude\\C--Jayaditya-Projects-AltData---Exponent\\e925b7ed-97c0-4a8b-977e-575bf574fe96\\scratchpad\\singlefile-test"],
+      "port": 8322
+    }
+  ]
+}

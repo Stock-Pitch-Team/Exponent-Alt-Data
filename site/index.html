@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exponent (EXPO) — Alternative Data Dashboard</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🔬</text></svg>">
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Exponent (NASDAQ: EXPO) — Alternative Data Dashboard</h1>
+  <p class="tagline">Six independent data pipelines testing one investment thesis: that Exponent is a
+    high-quality forensic-engineering consultancy whose demand is re-accelerating while the stock trades
+    at its cheapest valuation in a decade. Every number below comes from a public primary source you can
+    click through to — court records, regulators, the SEC, the scientific literature, and Exponent's own
+    website. <strong>Nothing is simulated or estimated.</strong></p>
+  <p class="stamp" id="data-stamp"></p>
+</header>
+
+<nav class="sections">
+  <div class="inner">
+    <a href="#sec-score">Scoreboard</a>
+    <a href="#sec-p1">Workforce</a>
+    <a href="#sec-p2">Courtroom</a>
+    <a href="#sec-p3">Failure demand</a>
+    <a href="#sec-p4">Science moat</a>
+    <a href="#sec-p5">Government</a>
+    <a href="#sec-p6">Clients &amp; financials</a>
+    <a href="#sec-metho">Methodology</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="block" id="sec-score">
+    <h2>The thesis scoreboard</h2>
+    <p class="lede">Each tile is one thesis trigger, computed live from the data on this page.
+      Click a tile to jump to the full evidence.</p>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="block" id="sec-p1">
+    <span class="trigger">Thesis trigger 1 — “growth from volume + rate, not rate alone”</span>
+    <h2>Workforce: is Exponent hiring again?</h2>
+    <p class="lede">Exponent bills by the expert-hour, so consultant headcount IS capacity. The company
+      over-hired in 2022–23, cut back in 2024, and the buy case needs headcount growing again. We track it
+      independently, using the firm's own website and twenty years of web archives.</p>
+    <div id="mount-p1-headcount"></div>
+    <div id="mount-p1-roster"></div>
+  </section>
+
+  <section class="block" id="sec-p2">
+    <span class="trigger">Thesis trigger 2 — the litigation moat is intact and demand is growing</span>
+    <h2>Courtroom: the franchise, measured in court records</h2>
+    <p class="lede">Roughly 60% of revenue is reactive work anchored in disputes and litigation. Court
+      records are public — so instead of trusting the “go-to expert firm” reputation, we counted it.</p>
+    <div id="mount-p2-timeseries"></div>
+    <div class="grid2">
+      <div id="mount-p2-daubert"></div>
+      <div id="mount-p2-cases"></div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-p3">
+    <span class="trigger">Thesis trigger 3 — the reactive pipeline is filling</span>
+    <h2>Failure demand: what breaks today is billed tomorrow</h2>
+    <p class="lede">Exponent gets hired when products catch fire, get recalled, or hurt someone. US
+      regulators publish every recall, complaint and adverse event — a real-time gauge of the demand
+      environment, months to years before it can show up in Exponent's revenue.</p>
+    <div id="mount-p3-index"></div>
+    <div id="mount-p3-lag"></div>
+  </section>
+
+  <section class="block" id="sec-p4">
+    <span class="trigger">Thesis trigger 4 — the scientific moat is being maintained</span>
+    <h2>Science moat: the credential engine</h2>
+    <p class="lede">Exponent's pricing power rests on ~1,000 consultants, most with doctorates, whose
+      credibility survives cross-examination. Their publication record — and the blue-chip corporations
+      that co-author with them — is public and countable.</p>
+    <div class="grid2">
+      <div id="mount-p4-pubs"></div>
+      <div id="mount-p4-partners"></div>
+    </div>
+    <div id="mount-p4-graph"></div>
+  </section>
+
+  <section class="block" id="sec-p5">
+    <span class="trigger">Credibility anchor + risk sensor</span>
+    <h2>Government: contracts and rulemaking</h2>
+    <p class="lede">Two smaller but fully-verifiable signals: federal agencies hiring Exponent directly
+      (a quality stamp), and Exponent's studies appearing inside federal rulemaking — where both the
+      firm's regulatory franchise and the “hired gun” criticism of it are visible in the same data.</p>
+    <div class="grid2">
+      <div id="mount-p5-awards"></div>
+      <div id="mount-p5-agencies"></div>
+    </div>
+    <div id="mount-p5-regs"></div>
+  </section>
+
+  <section class="block" id="sec-p6">
+    <span class="trigger">Thesis trigger 5 — client R&amp;D budgets are recovering</span>
+    <h2>Clients &amp; financials: the demand pool and the ground truth</h2>
+    <p class="lede">Exponent never names clients. We reconstructed a documented sample of them from
+      co-authored research and court records, then pulled each one's R&amp;D budget from its SEC filings —
+      because when client R&amp;D grows, the proactive consulting that ~40% of Exponent's revenue depends
+      on grows with it.</p>
+    <div id="mount-p6-rnd"></div>
+    <div id="mount-p6-clients"></div>
+    <div id="mount-p6-expofin"></div>
+  </section>
+
+  <section class="block" id="sec-metho">
+    <h2>Methodology, sources &amp; honest limitations</h2>
+    <p class="lede">Every chart above carries its own “How to read this chart” explainer and a provenance
+      footer. This section shows the exact rules the pipelines used, the status of every dataset, and the
+      full list of caveats — including the ones that cut against the thesis.</p>
+    <div class="metho">
+      <h3>The rules of this dashboard</h3>
+      <ul>
+        <li><strong>Real data only.</strong> Every number originates from a public primary source
+          (CourtListener, SEC EDGAR, NHTSA, CPSC, openFDA, USAspending, Regulations.gov, OpenAlex, the
+          Internet Archive, exponent.com). If a source failed, the page shows a grey “data unavailable”
+          card — a gap is never filled with an estimate.</li>
+        <li><strong>Normalize before you conclude.</strong> Archives grow and portals shrink; wherever a
+          raw count could mislead, the chart shows a rate against the source's own total volume.</li>
+        <li><strong>Small samples say so.</strong> Anything computed from a few dozen records (like the
+          Daubert analysis) is labeled with its sample size.</li>
+        <li><strong>Verifiability.</strong> Evidence tables link every underlying record so any claim can
+          be checked in the primary source.</li>
+      </ul>
+      <div id="metho-tables"></div>
+      <h3>All caveats, by dataset</h3>
+      <div id="metho-caveats"></div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    Built for equity research on Exponent, Inc. (NASDAQ: EXPO). Data sources: Free Law Project /
+    CourtListener, SEC EDGAR, NHTSA ODI, CPSC, openFDA, USAspending.gov, Regulations.gov, OpenAlex,
+    Internet Archive Wayback Machine, exponent.com. This dashboard is research, not investment advice.
+  </footer>
+
+</main>
+
+<script src="vendor/echarts.min.js"></script>
+<script src="data/explainers.data.js"></script>
+<script src="data/manifest.data.js"></script>
+<script src="data/p1_headcount_timeseries.data.js"></script>
+<script src="data/p1_current_roster.data.js"></script>
+<script src="data/p1_job_postings.data.js"></script>
+<script src="data/p2_litigation_timeseries.data.js"></script>
+<script src="data/p2_daubert.data.js"></script>
+<script src="data/p2_matched_cases.data.js"></script>
+<script src="data/p3_reactive_index.data.js"></script>
+<script src="data/p4_publications_timeseries.data.js"></script>
+<script src="data/p4_partners_rolling.data.js"></script>
+<script src="data/p4_collab_graph.data.js"></script>
+<script src="data/p4_authors.data.js"></script>
+<script src="data/p5_federal_awards.data.js"></script>
+<script src="data/p5_regulatory_mentions.data.js"></script>
+<script src="data/p6_client_rnd.data.js"></script>
+<script src="data/p6_expo_financials.data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

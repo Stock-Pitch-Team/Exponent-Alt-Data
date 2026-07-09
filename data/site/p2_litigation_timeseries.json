@@ -1,0 +1,406 @@
+{
+ "metadata": {
+  "pipeline": "p2_litigation",
+  "output": "litigation_timeseries",
+  "generated_at": "2026-07-09T19:16:10Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "CourtListener v4 search API (Free Law Project)",
+    "url": "https://www.courtlistener.com/api/rest/v4/search/",
+    "fetched_at": "2026-07-09T19:16:10Z",
+    "records_matched": 1120,
+    "note": "query: Exponent AND (expert OR witness OR testimony OR testified OR retained OR deposition OR \"Rule 702\" OR Daubert)"
+   }
+  ],
+  "coverage": {
+   "start": "1990",
+   "end": "2026"
+  },
+  "caveats": [
+   "Counts court opinions / federal-case documents where 'Exponent' appears near expert-witness language - the TESTIFYING tip of the iceberg. Consulting (non-testifying) engagements and most state-court work are invisible here.",
+   "The word 'Exponent' has non-firm meanings; the expert-context query removes most but not all false positives. Match snippets are kept so cases can be verified.",
+   "RECAP coverage only includes federal dockets that some RECAP user purchased from PACER - coverage grows over time and skews to high-profile cases. Use the per-100k normalized line, not raw counts.",
+   "CourtListener's own opinion coverage varies by court and era; normalization by total filings per year corrects for indexing growth.",
+   "Spanish-language Puerto Rico state-court opinions are screened out: CourtListener's word-stemming matches the common Spanish legal word 'exponente' against 'Exponent', and these courts were added to the archive in bulk after 2023. Removed matches are counted and disclosed in the pipeline log.",
+   "The court MIX of the archive also shifts over time, which can inflate the recent normalized rate; raw mention counts are shown alongside so both can be read together.",
+   "'Failure Analysis Associates' is Exponent's pre-1998 name, shown separately."
+  ],
+  "methodology_id": "p2_litigation_timeseries"
+ },
+ "data": {
+  "series": [
+   {
+    "year": 1990,
+    "opinions_mentions": 2,
+    "recap_mentions": null,
+    "legacy_name_mentions": 2,
+    "opinions_total": 92825,
+    "recap_total": null,
+    "opinions_per_100k": 2.15,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1991,
+    "opinions_mentions": 4,
+    "recap_mentions": null,
+    "legacy_name_mentions": 0,
+    "opinions_total": 94164,
+    "recap_total": null,
+    "opinions_per_100k": 4.25,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1992,
+    "opinions_mentions": 3,
+    "recap_mentions": null,
+    "legacy_name_mentions": 2,
+    "opinions_total": 99405,
+    "recap_total": null,
+    "opinions_per_100k": 3.02,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1993,
+    "opinions_mentions": 5,
+    "recap_mentions": null,
+    "legacy_name_mentions": 0,
+    "opinions_total": 102556,
+    "recap_total": null,
+    "opinions_per_100k": 4.88,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1994,
+    "opinions_mentions": 1,
+    "recap_mentions": null,
+    "legacy_name_mentions": 5,
+    "opinions_total": 103745,
+    "recap_total": null,
+    "opinions_per_100k": 0.96,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1995,
+    "opinions_mentions": 4,
+    "recap_mentions": null,
+    "legacy_name_mentions": 2,
+    "opinions_total": 102545,
+    "recap_total": null,
+    "opinions_per_100k": 3.9,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1996,
+    "opinions_mentions": 5,
+    "recap_mentions": null,
+    "legacy_name_mentions": 1,
+    "opinions_total": 99440,
+    "recap_total": null,
+    "opinions_per_100k": 5.03,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1997,
+    "opinions_mentions": 6,
+    "recap_mentions": null,
+    "legacy_name_mentions": 4,
+    "opinions_total": 97778,
+    "recap_total": null,
+    "opinions_per_100k": 6.14,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1998,
+    "opinions_mentions": 3,
+    "recap_mentions": null,
+    "legacy_name_mentions": 1,
+    "opinions_total": 97224,
+    "recap_total": null,
+    "opinions_per_100k": 3.09,
+    "recap_per_100k": null
+   },
+   {
+    "year": 1999,
+    "opinions_mentions": 2,
+    "recap_mentions": null,
+    "legacy_name_mentions": 0,
+    "opinions_total": 94743,
+    "recap_total": null,
+    "opinions_per_100k": 2.11,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2000,
+    "opinions_mentions": 2,
+    "recap_mentions": null,
+    "legacy_name_mentions": 0,
+    "opinions_total": 92594,
+    "recap_total": null,
+    "opinions_per_100k": 2.16,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2001,
+    "opinions_mentions": 5,
+    "recap_mentions": null,
+    "legacy_name_mentions": 1,
+    "opinions_total": 103317,
+    "recap_total": null,
+    "opinions_per_100k": 4.84,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2002,
+    "opinions_mentions": 4,
+    "recap_mentions": null,
+    "legacy_name_mentions": 2,
+    "opinions_total": 113570,
+    "recap_total": null,
+    "opinions_per_100k": 3.52,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2003,
+    "opinions_mentions": 5,
+    "recap_mentions": null,
+    "legacy_name_mentions": 1,
+    "opinions_total": 119492,
+    "recap_total": null,
+    "opinions_per_100k": 4.18,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2004,
+    "opinions_mentions": 3,
+    "recap_mentions": null,
+    "legacy_name_mentions": 2,
+    "opinions_total": 116214,
+    "recap_total": null,
+    "opinions_per_100k": 2.58,
+    "recap_per_100k": null
+   },
+   {
+    "year": 2005,
+    "opinions_mentions": 4,
+    "recap_mentions": 56,
+    "legacy_name_mentions": 3,
+    "opinions_total": 119290,
+    "recap_total": 2509919,
+    "opinions_per_100k": 3.35,
+    "recap_per_100k": 2.23
+   },
+   {
+    "year": 2006,
+    "opinions_mentions": 7,
+    "recap_mentions": 66,
+    "legacy_name_mentions": 2,
+    "opinions_total": 113417,
+    "recap_total": 1175663,
+    "opinions_per_100k": 6.17,
+    "recap_per_100k": 5.61
+   },
+   {
+    "year": 2007,
+    "opinions_mentions": 8,
+    "recap_mentions": 81,
+    "legacy_name_mentions": 0,
+    "opinions_total": 120650,
+    "recap_total": 1370707,
+    "opinions_per_100k": 6.63,
+    "recap_per_100k": 5.91
+   },
+   {
+    "year": 2008,
+    "opinions_mentions": 6,
+    "recap_mentions": 90,
+    "legacy_name_mentions": 0,
+    "opinions_total": 138865,
+    "recap_total": 1700661,
+    "opinions_per_100k": 4.32,
+    "recap_per_100k": 5.29
+   },
+   {
+    "year": 2009,
+    "opinions_mentions": 9,
+    "recap_mentions": 49,
+    "legacy_name_mentions": 2,
+    "opinions_total": 150320,
+    "recap_total": 2149983,
+    "opinions_per_100k": 5.99,
+    "recap_per_100k": 2.28
+   },
+   {
+    "year": 2010,
+    "opinions_mentions": 13,
+    "recap_mentions": 57,
+    "legacy_name_mentions": 3,
+    "opinions_total": 136444,
+    "recap_total": 2371646,
+    "opinions_per_100k": 9.53,
+    "recap_per_100k": 2.4
+   },
+   {
+    "year": 2011,
+    "opinions_mentions": 9,
+    "recap_mentions": 66,
+    "legacy_name_mentions": 0,
+    "opinions_total": 129527,
+    "recap_total": 2129259,
+    "opinions_per_100k": 6.95,
+    "recap_per_100k": 3.1
+   },
+   {
+    "year": 2012,
+    "opinions_mentions": 8,
+    "recap_mentions": 74,
+    "legacy_name_mentions": 2,
+    "opinions_total": 111849,
+    "recap_total": 1940380,
+    "opinions_per_100k": 7.15,
+    "recap_per_100k": 3.81
+   },
+   {
+    "year": 2013,
+    "opinions_mentions": 9,
+    "recap_mentions": 58,
+    "legacy_name_mentions": 0,
+    "opinions_total": 115115,
+    "recap_total": 1856729,
+    "opinions_per_100k": 7.82,
+    "recap_per_100k": 3.12
+   },
+   {
+    "year": 2014,
+    "opinions_mentions": 12,
+    "recap_mentions": 67,
+    "legacy_name_mentions": 2,
+    "opinions_total": 123696,
+    "recap_total": 1742518,
+    "opinions_per_100k": 9.7,
+    "recap_per_100k": 3.85
+   },
+   {
+    "year": 2015,
+    "opinions_mentions": 17,
+    "recap_mentions": 82,
+    "legacy_name_mentions": 3,
+    "opinions_total": 154429,
+    "recap_total": 1619292,
+    "opinions_per_100k": 11.01,
+    "recap_per_100k": 5.06
+   },
+   {
+    "year": 2016,
+    "opinions_mentions": 8,
+    "recap_mentions": 97,
+    "legacy_name_mentions": 1,
+    "opinions_total": 128103,
+    "recap_total": 1568730,
+    "opinions_per_100k": 6.24,
+    "recap_per_100k": 6.18
+   },
+   {
+    "year": 2017,
+    "opinions_mentions": 6,
+    "recap_mentions": 87,
+    "legacy_name_mentions": 1,
+    "opinions_total": 146423,
+    "recap_total": 1542677,
+    "opinions_per_100k": 4.1,
+    "recap_per_100k": 5.64
+   },
+   {
+    "year": 2018,
+    "opinions_mentions": 11,
+    "recap_mentions": 105,
+    "legacy_name_mentions": 0,
+    "opinions_total": 139005,
+    "recap_total": 1628821,
+    "opinions_per_100k": 7.91,
+    "recap_per_100k": 6.45
+   },
+   {
+    "year": 2019,
+    "opinions_mentions": 1,
+    "recap_mentions": 113,
+    "legacy_name_mentions": 0,
+    "opinions_total": 121469,
+    "recap_total": 1655156,
+    "opinions_per_100k": 0.82,
+    "recap_per_100k": 6.83
+   },
+   {
+    "year": 2020,
+    "opinions_mentions": 5,
+    "recap_mentions": 146,
+    "legacy_name_mentions": 0,
+    "opinions_total": 68285,
+    "recap_total": 1665493,
+    "opinions_per_100k": 7.32,
+    "recap_per_100k": 8.77
+   },
+   {
+    "year": 2021,
+    "opinions_mentions": 2,
+    "recap_mentions": 129,
+    "legacy_name_mentions": 1,
+    "opinions_total": 59911,
+    "recap_total": 1185870,
+    "opinions_per_100k": 3.34,
+    "recap_per_100k": 10.88
+   },
+   {
+    "year": 2022,
+    "opinions_mentions": 5,
+    "recap_mentions": 119,
+    "legacy_name_mentions": 0,
+    "opinions_total": 58387,
+    "recap_total": 1050647,
+    "opinions_per_100k": 8.56,
+    "recap_per_100k": 11.33
+   },
+   {
+    "year": 2023,
+    "opinions_mentions": 2,
+    "recap_mentions": 109,
+    "legacy_name_mentions": 0,
+    "opinions_total": 52963,
+    "recap_total": 1268966,
+    "opinions_per_100k": 3.78,
+    "recap_per_100k": 8.59
+   },
+   {
+    "year": 2024,
+    "opinions_mentions": 2,
+    "recap_mentions": 66,
+    "legacy_name_mentions": 0,
+    "opinions_total": 60261,
+    "recap_total": 1203548,
+    "opinions_per_100k": 3.32,
+    "recap_per_100k": 5.48
+   },
+   {
+    "year": 2025,
+    "opinions_mentions": 3,
+    "recap_mentions": 71,
+    "legacy_name_mentions": 0,
+    "opinions_total": 59789,
+    "recap_total": 1356099,
+    "opinions_per_100k": 5.02,
+    "recap_per_100k": 5.24
+   },
+   {
+    "year": 2026,
+    "opinions_mentions": 1,
+    "recap_mentions": 11,
+    "legacy_name_mentions": 0,
+    "opinions_total": 29305,
+    "recap_total": 756055,
+    "opinions_per_100k": 3.41,
+    "recap_per_100k": 1.45
+   }
+  ]
+ }
+}

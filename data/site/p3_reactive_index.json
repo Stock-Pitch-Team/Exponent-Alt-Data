@@ -1,0 +1,7182 @@
+{
+ "metadata": {
+  "pipeline": "p3_reactive",
+  "output": "reactive_index",
+  "generated_at": "2026-07-09T01:22:04Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "NHTSA ODI flat file (nhtsa_recalls)",
+    "url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "fetched_at": "2026-07-09T01:20:27Z",
+    "records_scanned": 242520,
+    "records_matched": 5321
+   },
+   {
+    "name": "NHTSA ODI flat file (nhtsa_complaints)",
+    "url": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
+    "fetched_at": "2026-07-09T01:22:03Z",
+    "records_scanned": 2222985,
+    "records_matched": 910499
+   },
+   {
+    "name": "CPSC recall database (saferproducts.gov REST API)",
+    "url": "https://www.saferproducts.gov/RestWebServices/Recall",
+    "fetched_at": "2026-07-09T01:22:04Z",
+    "records_scanned": 5115,
+    "records_matched": 2179
+   },
+   {
+    "name": "openFDA device enforcement (recalls by classification)",
+    "url": "https://api.fda.gov/device/enforcement.json",
+    "fetched_at": "2026-07-09T01:22:04Z",
+    "records_scanned": 39290
+   },
+   {
+    "name": "openFDA MAUDE device adverse events (by event type)",
+    "url": "https://api.fda.gov/device/event.json",
+    "fetched_at": "2026-07-09T01:22:04Z",
+    "records_scanned": 23619861
+   }
+  ],
+  "coverage": {
+   "start": "2010-Q1",
+   "end": "2026-Q2"
+  },
+  "caveats": [
+   "Counts what is REPORTED to regulators (recalls, complaints, adverse events), which is a proxy for physical product failures - not a measurement of Exponent's actual engagements.",
+   "Each source is indexed to its own 2012-2019 average (=100) and the blended line is the simple mean of available sources, so no single high-volume source dominates.",
+   "Category tagging uses keyword matching on official descriptions (rules shown in the methodology section); keyword matching is imperfect.",
+   "MAUDE adverse-event volumes grew structurally over time due to reporting-rule changes, not only because failures increased.",
+   "The 0-3 month (forensic work) and 12-24 month (litigation work) lags shown against Exponent revenue are a HYPOTHESIS overlay, not a fitted statistical model.",
+   "The most recent quarter is incomplete (reports keep arriving after quarter-end)."
+  ],
+  "methodology_id": "p3_reactive_index"
+ },
+ "data": {
+  "blended_index": [
+   {
+    "quarter": "2010-Q1",
+    "index": 64.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2010-Q2",
+    "index": 54.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2010-Q3",
+    "index": 58.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2010-Q4",
+    "index": 66.1,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2011-Q1",
+    "index": 61.9,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2011-Q2",
+    "index": 55.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2011-Q3",
+    "index": 58.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2011-Q4",
+    "index": 62.8,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2012-Q1",
+    "index": 71.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2012-Q2",
+    "index": 74.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2012-Q3",
+    "index": 78.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2012-Q4",
+    "index": 72.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2013-Q1",
+    "index": 74.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2013-Q2",
+    "index": 94.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2013-Q3",
+    "index": 86.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2013-Q4",
+    "index": 81.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2014-Q1",
+    "index": 86.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2014-Q2",
+    "index": 113.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2014-Q3",
+    "index": 103.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2014-Q4",
+    "index": 111.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2015-Q1",
+    "index": 93.1,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2015-Q2",
+    "index": 98.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2015-Q3",
+    "index": 104.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2015-Q4",
+    "index": 108.8,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2016-Q1",
+    "index": 105.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2016-Q2",
+    "index": 107.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2016-Q3",
+    "index": 108.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2016-Q4",
+    "index": 99.9,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2017-Q1",
+    "index": 102.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2017-Q2",
+    "index": 106.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2017-Q3",
+    "index": 88.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2017-Q4",
+    "index": 121.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2018-Q1",
+    "index": 108.8,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2018-Q2",
+    "index": 104.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2018-Q3",
+    "index": 114.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2018-Q4",
+    "index": 102.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2019-Q1",
+    "index": 116.1,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2019-Q2",
+    "index": 128.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2019-Q3",
+    "index": 115.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2019-Q4",
+    "index": 118.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2020-Q1",
+    "index": 107.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2020-Q2",
+    "index": 93.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2020-Q3",
+    "index": 103.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2020-Q4",
+    "index": 120.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2021-Q1",
+    "index": 117.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2021-Q2",
+    "index": 126.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2021-Q3",
+    "index": 116.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2021-Q4",
+    "index": 111.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2022-Q1",
+    "index": 134.3,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2022-Q2",
+    "index": 141.8,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2022-Q3",
+    "index": 124.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2022-Q4",
+    "index": 141.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2023-Q1",
+    "index": 141.8,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2023-Q2",
+    "index": 154.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2023-Q3",
+    "index": 135.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2023-Q4",
+    "index": 151.1,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2024-Q1",
+    "index": 168.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2024-Q2",
+    "index": 164.6,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2024-Q3",
+    "index": 173.2,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2024-Q4",
+    "index": 163.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2025-Q1",
+    "index": 157.7,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2025-Q2",
+    "index": 146.4,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2025-Q3",
+    "index": 183.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2025-Q4",
+    "index": 181.0,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2026-Q1",
+    "index": 169.5,
+    "sources_available": 5
+   },
+   {
+    "quarter": "2026-Q2",
+    "index": 155.9,
+    "sources_available": 5
+   }
+  ],
+  "per_source": {
+   "nhtsa_recalls": [
+    {
+     "quarter": "2010-Q1",
+     "count": 57,
+     "weighted": 114.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "vehicle_ev_adas": {
+       "count": 35,
+       "weighted": 70.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 10,
+       "weighted": 20.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q2",
+     "count": 62,
+     "weighted": 124.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "vehicle_ev_adas": {
+       "count": 41,
+       "weighted": 82.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 30.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q3",
+     "count": 68,
+     "weighted": 136.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 31,
+       "weighted": 62.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 52.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q4",
+     "count": 93,
+     "weighted": 186.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 36,
+       "weighted": 72.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 47,
+       "weighted": 94.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q1",
+     "count": 67,
+     "weighted": 134.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "vehicle_ev_adas": {
+       "count": 28,
+       "weighted": 56.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 11,
+       "weighted": 22.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 48.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q2",
+     "count": 65,
+     "weighted": 130.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 43,
+       "weighted": 86.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q3",
+     "count": 65,
+     "weighted": 130.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 29,
+       "weighted": 58.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 48.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q4",
+     "count": 81,
+     "weighted": 162.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 38,
+       "weighted": 76.0
+      },
+      "consumer_electronics": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 48.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q1",
+     "count": 89,
+     "weighted": 178.0,
+     "categories": {
+      "battery_energy": {
+       "count": 11,
+       "weighted": 22.0
+      },
+      "vehicle_ev_adas": {
+       "count": 54,
+       "weighted": 108.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 19,
+       "weighted": 38.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q2",
+     "count": 95,
+     "weighted": 190.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 74,
+       "weighted": 148.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 30.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q3",
+     "count": 83,
+     "weighted": 166.0,
+     "categories": {
+      "battery_energy": {
+       "count": 15,
+       "weighted": 30.0
+      },
+      "vehicle_ev_adas": {
+       "count": 38,
+       "weighted": 76.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 54.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q4",
+     "count": 59,
+     "weighted": 118.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "vehicle_ev_adas": {
+       "count": 36,
+       "weighted": 72.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 19,
+       "weighted": 38.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q1",
+     "count": 47,
+     "weighted": 94.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "vehicle_ev_adas": {
+       "count": 30,
+       "weighted": 60.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q2",
+     "count": 98,
+     "weighted": 196.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 60,
+       "weighted": 120.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 22,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q3",
+     "count": 64,
+     "weighted": 128.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 41,
+       "weighted": 82.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q4",
+     "count": 63,
+     "weighted": 126.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 44,
+       "weighted": 88.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q1",
+     "count": 56,
+     "weighted": 112.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 25,
+       "weighted": 50.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 14,
+       "weighted": 28.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q2",
+     "count": 74,
+     "weighted": 148.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 56,
+       "weighted": 112.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 6,
+       "weighted": 12.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q3",
+     "count": 79,
+     "weighted": 158.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 57,
+       "weighted": 114.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q4",
+     "count": 65,
+     "weighted": 130.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 47,
+       "weighted": 94.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q1",
+     "count": 95,
+     "weighted": 190.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 65,
+       "weighted": 130.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 36.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q2",
+     "count": 68,
+     "weighted": 136.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 35,
+       "weighted": 70.0
+      },
+      "medical_device": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 30.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q3",
+     "count": 78,
+     "weighted": 156.0,
+     "categories": {
+      "battery_energy": {
+       "count": 14,
+       "weighted": 28.0
+      },
+      "vehicle_ev_adas": {
+       "count": 41,
+       "weighted": 82.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 36.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q4",
+     "count": 120,
+     "weighted": 240.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 68,
+       "weighted": 136.0
+      },
+      "medical_device": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 13,
+       "weighted": 26.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 54.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q1",
+     "count": 81,
+     "weighted": 162.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 48,
+       "weighted": 96.0
+      },
+      "medical_device": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q2",
+     "count": 109,
+     "weighted": 218.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 80,
+       "weighted": 160.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q3",
+     "count": 67,
+     "weighted": 134.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "vehicle_ev_adas": {
+       "count": 43,
+       "weighted": 86.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q4",
+     "count": 81,
+     "weighted": 162.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 60,
+       "weighted": 120.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 8,
+       "weighted": 16.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q1",
+     "count": 67,
+     "weighted": 134.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 51,
+       "weighted": 102.0
+      },
+      "fire_structural": {
+       "count": 10,
+       "weighted": 20.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q2",
+     "count": 70,
+     "weighted": 140.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "vehicle_ev_adas": {
+       "count": 49,
+       "weighted": 98.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q3",
+     "count": 71,
+     "weighted": 142.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 52,
+       "weighted": 104.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 5,
+       "weighted": 10.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q4",
+     "count": 115,
+     "weighted": 230.0,
+     "categories": {
+      "battery_energy": {
+       "count": 37,
+       "weighted": 74.0
+      },
+      "vehicle_ev_adas": {
+       "count": 60,
+       "weighted": 120.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 14,
+       "weighted": 28.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q1",
+     "count": 96,
+     "weighted": 192.0,
+     "categories": {
+      "battery_energy": {
+       "count": 19,
+       "weighted": 38.0
+      },
+      "vehicle_ev_adas": {
+       "count": 33,
+       "weighted": 66.0
+      },
+      "medical_device": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "fire_structural": {
+       "count": 38,
+       "weighted": 76.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q2",
+     "count": 93,
+     "weighted": 186.0,
+     "categories": {
+      "battery_energy": {
+       "count": 16,
+       "weighted": 32.0
+      },
+      "vehicle_ev_adas": {
+       "count": 63,
+       "weighted": 126.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q3",
+     "count": 114,
+     "weighted": 228.0,
+     "categories": {
+      "battery_energy": {
+       "count": 13,
+       "weighted": 26.0
+      },
+      "vehicle_ev_adas": {
+       "count": 80,
+       "weighted": 160.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 19,
+       "weighted": 38.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q4",
+     "count": 115,
+     "weighted": 230.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 76,
+       "weighted": 152.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 22,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q1",
+     "count": 131,
+     "weighted": 262.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 88,
+       "weighted": 176.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 58.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q2",
+     "count": 110,
+     "weighted": 220.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 75,
+       "weighted": 150.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 42.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q3",
+     "count": 77,
+     "weighted": 154.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 52,
+       "weighted": 104.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 14,
+       "weighted": 28.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q4",
+     "count": 97,
+     "weighted": 194.0,
+     "categories": {
+      "battery_energy": {
+       "count": 13,
+       "weighted": 26.0
+      },
+      "vehicle_ev_adas": {
+       "count": 60,
+       "weighted": 120.0
+      },
+      "medical_device": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 36.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q1",
+     "count": 88,
+     "weighted": 176.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 50,
+       "weighted": 100.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 23,
+       "weighted": 46.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q2",
+     "count": 77,
+     "weighted": 154.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 53,
+       "weighted": 106.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q3",
+     "count": 70,
+     "weighted": 140.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 49,
+       "weighted": 98.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 7,
+       "weighted": 14.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q4",
+     "count": 95,
+     "weighted": 190.0,
+     "categories": {
+      "battery_energy": {
+       "count": 16,
+       "weighted": 32.0
+      },
+      "vehicle_ev_adas": {
+       "count": 55,
+       "weighted": 110.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 14,
+       "weighted": 28.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q1",
+     "count": 102,
+     "weighted": 204.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 65,
+       "weighted": 130.0
+      },
+      "consumer_electronics": {
+       "count": 11,
+       "weighted": 22.0
+      },
+      "fire_structural": {
+       "count": 14,
+       "weighted": 28.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q2",
+     "count": 103,
+     "weighted": 206.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 59,
+       "weighted": 118.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 22,
+       "weighted": 44.0
+      },
+      "fire_structural": {
+       "count": 9,
+       "weighted": 18.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q3",
+     "count": 91,
+     "weighted": 182.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 53,
+       "weighted": 106.0
+      },
+      "consumer_electronics": {
+       "count": 20,
+       "weighted": 40.0
+      },
+      "fire_structural": {
+       "count": 10,
+       "weighted": 20.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q4",
+     "count": 87,
+     "weighted": 174.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "vehicle_ev_adas": {
+       "count": 66,
+       "weighted": 132.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 10,
+       "weighted": 20.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q1",
+     "count": 92,
+     "weighted": 184.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 55,
+       "weighted": 110.0
+      },
+      "consumer_electronics": {
+       "count": 13,
+       "weighted": 26.0
+      },
+      "fire_structural": {
+       "count": 12,
+       "weighted": 24.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q2",
+     "count": 105,
+     "weighted": 210.0,
+     "categories": {
+      "battery_energy": {
+       "count": 11,
+       "weighted": 22.0
+      },
+      "vehicle_ev_adas": {
+       "count": 64,
+       "weighted": 128.0
+      },
+      "consumer_electronics": {
+       "count": 17,
+       "weighted": 34.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q3",
+     "count": 110,
+     "weighted": 220.0,
+     "categories": {
+      "battery_energy": {
+       "count": 17,
+       "weighted": 34.0
+      },
+      "vehicle_ev_adas": {
+       "count": 70,
+       "weighted": 140.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 30.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q4",
+     "count": 101,
+     "weighted": 202.0,
+     "categories": {
+      "battery_energy": {
+       "count": 18,
+       "weighted": 36.0
+      },
+      "vehicle_ev_adas": {
+       "count": 67,
+       "weighted": 134.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 8,
+       "weighted": 16.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q1",
+     "count": 115,
+     "weighted": 230.0,
+     "categories": {
+      "battery_energy": {
+       "count": 17,
+       "weighted": 34.0
+      },
+      "vehicle_ev_adas": {
+       "count": 69,
+       "weighted": 138.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 17,
+       "weighted": 34.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q2",
+     "count": 123,
+     "weighted": 246.0,
+     "categories": {
+      "battery_energy": {
+       "count": 21,
+       "weighted": 42.0
+      },
+      "vehicle_ev_adas": {
+       "count": 78,
+       "weighted": 156.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 36.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q3",
+     "count": 83,
+     "weighted": 166.0,
+     "categories": {
+      "battery_energy": {
+       "count": 16,
+       "weighted": 32.0
+      },
+      "vehicle_ev_adas": {
+       "count": 46,
+       "weighted": 92.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 17,
+       "weighted": 34.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q4",
+     "count": 141,
+     "weighted": 282.0,
+     "categories": {
+      "battery_energy": {
+       "count": 21,
+       "weighted": 42.0
+      },
+      "vehicle_ev_adas": {
+       "count": 91,
+       "weighted": 182.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 23,
+       "weighted": 46.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q1",
+     "count": 159,
+     "weighted": 318.0,
+     "categories": {
+      "battery_energy": {
+       "count": 30,
+       "weighted": 60.0
+      },
+      "vehicle_ev_adas": {
+       "count": 83,
+       "weighted": 166.0
+      },
+      "consumer_electronics": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "fire_structural": {
+       "count": 36,
+       "weighted": 72.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q2",
+     "count": 138,
+     "weighted": 276.0,
+     "categories": {
+      "battery_energy": {
+       "count": 14,
+       "weighted": 28.0
+      },
+      "vehicle_ev_adas": {
+       "count": 72,
+       "weighted": 144.0
+      },
+      "consumer_electronics": {
+       "count": 17,
+       "weighted": 34.0
+      },
+      "fire_structural": {
+       "count": 35,
+       "weighted": 70.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q3",
+     "count": 152,
+     "weighted": 304.0,
+     "categories": {
+      "battery_energy": {
+       "count": 27,
+       "weighted": 54.0
+      },
+      "vehicle_ev_adas": {
+       "count": 81,
+       "weighted": 162.0
+      },
+      "consumer_electronics": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "fire_structural": {
+       "count": 34,
+       "weighted": 68.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q4",
+     "count": 110,
+     "weighted": 220.0,
+     "categories": {
+      "battery_energy": {
+       "count": 15,
+       "weighted": 30.0
+      },
+      "vehicle_ev_adas": {
+       "count": 64,
+       "weighted": 128.0
+      },
+      "consumer_electronics": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 42.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q1",
+     "count": 101,
+     "weighted": 202.0,
+     "categories": {
+      "battery_energy": {
+       "count": 21,
+       "weighted": 42.0
+      },
+      "vehicle_ev_adas": {
+       "count": 61,
+       "weighted": 122.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 26.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q2",
+     "count": 107,
+     "weighted": 214.0,
+     "categories": {
+      "battery_energy": {
+       "count": 24,
+       "weighted": 48.0
+      },
+      "vehicle_ev_adas": {
+       "count": 66,
+       "weighted": 132.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 14,
+       "weighted": 28.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q3",
+     "count": 119,
+     "weighted": 238.0,
+     "categories": {
+      "battery_energy": {
+       "count": 18,
+       "weighted": 36.0
+      },
+      "vehicle_ev_adas": {
+       "count": 78,
+       "weighted": 156.0
+      },
+      "medical_device": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 17,
+       "weighted": 34.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q4",
+     "count": 113,
+     "weighted": 226.0,
+     "categories": {
+      "battery_energy": {
+       "count": 16,
+       "weighted": 32.0
+      },
+      "vehicle_ev_adas": {
+       "count": 71,
+       "weighted": 142.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 36.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q1",
+     "count": 92,
+     "weighted": 184.0,
+     "categories": {
+      "battery_energy": {
+       "count": 12,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 58,
+       "weighted": 116.0
+      },
+      "consumer_electronics": {
+       "count": 11,
+       "weighted": 22.0
+      },
+      "fire_structural": {
+       "count": 11,
+       "weighted": 22.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q2",
+     "count": 87,
+     "weighted": 174.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 59,
+       "weighted": 118.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 30.0
+      }
+     }
+    }
+   ],
+   "nhtsa_complaints": [
+    {
+     "quarter": "2010-Q1",
+     "count": 15108,
+     "weighted": 4640.25,
+     "categories": {
+      "battery_energy": {
+       "count": 645,
+       "weighted": 192.0
+      },
+      "vehicle_ev_adas": {
+       "count": 13118,
+       "weighted": 3920.0
+      },
+      "medical_device": {
+       "count": 341,
+       "weighted": 94.25
+      },
+      "consumer_electronics": {
+       "count": 284,
+       "weighted": 107.0
+      },
+      "fire_structural": {
+       "count": 720,
+       "weighted": 327.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q2",
+     "count": 7762,
+     "weighted": 2489.5,
+     "categories": {
+      "battery_energy": {
+       "count": 476,
+       "weighted": 146.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6383,
+       "weighted": 1968.5
+      },
+      "medical_device": {
+       "count": 116,
+       "weighted": 33.5
+      },
+      "consumer_electronics": {
+       "count": 166,
+       "weighted": 55.75
+      },
+      "fire_structural": {
+       "count": 621,
+       "weighted": 285.75
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q3",
+     "count": 8881,
+     "weighted": 2733.25,
+     "categories": {
+      "battery_energy": {
+       "count": 755,
+       "weighted": 213.5
+      },
+      "vehicle_ev_adas": {
+       "count": 6987,
+       "weighted": 2065.5
+      },
+      "medical_device": {
+       "count": 140,
+       "weighted": 38.75
+      },
+      "consumer_electronics": {
+       "count": 222,
+       "weighted": 72.0
+      },
+      "fire_structural": {
+       "count": 777,
+       "weighted": 343.5
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q4",
+     "count": 6632,
+     "weighted": 2063.0,
+     "categories": {
+      "battery_energy": {
+       "count": 535,
+       "weighted": 157.75
+      },
+      "vehicle_ev_adas": {
+       "count": 5102,
+       "weighted": 1535.75
+      },
+      "medical_device": {
+       "count": 177,
+       "weighted": 46.5
+      },
+      "consumer_electronics": {
+       "count": 290,
+       "weighted": 99.5
+      },
+      "fire_structural": {
+       "count": 528,
+       "weighted": 223.5
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q1",
+     "count": 5982,
+     "weighted": 1872.75,
+     "categories": {
+      "battery_energy": {
+       "count": 516,
+       "weighted": 147.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4614,
+       "weighted": 1380.75
+      },
+      "medical_device": {
+       "count": 111,
+       "weighted": 30.0
+      },
+      "consumer_electronics": {
+       "count": 241,
+       "weighted": 85.0
+      },
+      "fire_structural": {
+       "count": 500,
+       "weighted": 230.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q2",
+     "count": 5502,
+     "weighted": 1716.75,
+     "categories": {
+      "battery_energy": {
+       "count": 520,
+       "weighted": 158.5
+      },
+      "vehicle_ev_adas": {
+       "count": 4297,
+       "weighted": 1250.5
+      },
+      "medical_device": {
+       "count": 94,
+       "weighted": 26.5
+      },
+      "consumer_electronics": {
+       "count": 128,
+       "weighted": 44.0
+      },
+      "fire_structural": {
+       "count": 463,
+       "weighted": 237.25
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q3",
+     "count": 7119,
+     "weighted": 2151.0,
+     "categories": {
+      "battery_energy": {
+       "count": 597,
+       "weighted": 171.75
+      },
+      "vehicle_ev_adas": {
+       "count": 5579,
+       "weighted": 1604.0
+      },
+      "medical_device": {
+       "count": 148,
+       "weighted": 39.25
+      },
+      "consumer_electronics": {
+       "count": 195,
+       "weighted": 61.5
+      },
+      "fire_structural": {
+       "count": 600,
+       "weighted": 274.5
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q4",
+     "count": 6129,
+     "weighted": 1947.75,
+     "categories": {
+      "battery_energy": {
+       "count": 535,
+       "weighted": 161.5
+      },
+      "vehicle_ev_adas": {
+       "count": 4681,
+       "weighted": 1392.25
+      },
+      "medical_device": {
+       "count": 101,
+       "weighted": 25.25
+      },
+      "consumer_electronics": {
+       "count": 215,
+       "weighted": 77.75
+      },
+      "fire_structural": {
+       "count": 597,
+       "weighted": 291.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q1",
+     "count": 6259,
+     "weighted": 2005.0,
+     "categories": {
+      "battery_energy": {
+       "count": 539,
+       "weighted": 161.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4789,
+       "weighted": 1420.0
+      },
+      "medical_device": {
+       "count": 120,
+       "weighted": 33.75
+      },
+      "consumer_electronics": {
+       "count": 194,
+       "weighted": 78.5
+      },
+      "fire_structural": {
+       "count": 617,
+       "weighted": 311.75
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q2",
+     "count": 6142,
+     "weighted": 1977.25,
+     "categories": {
+      "battery_energy": {
+       "count": 542,
+       "weighted": 161.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4768,
+       "weighted": 1423.75
+      },
+      "medical_device": {
+       "count": 105,
+       "weighted": 29.25
+      },
+      "consumer_electronics": {
+       "count": 136,
+       "weighted": 43.0
+      },
+      "fire_structural": {
+       "count": 591,
+       "weighted": 320.25
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q3",
+     "count": 8210,
+     "weighted": 2531.75,
+     "categories": {
+      "battery_energy": {
+       "count": 607,
+       "weighted": 189.25
+      },
+      "vehicle_ev_adas": {
+       "count": 6655,
+       "weighted": 1894.0
+      },
+      "medical_device": {
+       "count": 93,
+       "weighted": 24.0
+      },
+      "consumer_electronics": {
+       "count": 147,
+       "weighted": 54.75
+      },
+      "fire_structural": {
+       "count": 708,
+       "weighted": 369.75
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q4",
+     "count": 6944,
+     "weighted": 2175.5,
+     "categories": {
+      "battery_energy": {
+       "count": 524,
+       "weighted": 167.75
+      },
+      "vehicle_ev_adas": {
+       "count": 5623,
+       "weighted": 1649.5
+      },
+      "medical_device": {
+       "count": 104,
+       "weighted": 29.0
+      },
+      "consumer_electronics": {
+       "count": 128,
+       "weighted": 41.0
+      },
+      "fire_structural": {
+       "count": 565,
+       "weighted": 288.25
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q1",
+     "count": 7927,
+     "weighted": 2420.5,
+     "categories": {
+      "battery_energy": {
+       "count": 637,
+       "weighted": 182.5
+      },
+      "vehicle_ev_adas": {
+       "count": 6475,
+       "weighted": 1870.0
+      },
+      "medical_device": {
+       "count": 124,
+       "weighted": 34.0
+      },
+      "consumer_electronics": {
+       "count": 188,
+       "weighted": 74.0
+      },
+      "fire_structural": {
+       "count": 503,
+       "weighted": 260.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q2",
+     "count": 8722,
+     "weighted": 2686.75,
+     "categories": {
+      "battery_energy": {
+       "count": 778,
+       "weighted": 241.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6906,
+       "weighted": 2015.25
+      },
+      "medical_device": {
+       "count": 192,
+       "weighted": 51.0
+      },
+      "consumer_electronics": {
+       "count": 136,
+       "weighted": 52.0
+      },
+      "fire_structural": {
+       "count": 710,
+       "weighted": 327.5
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q3",
+     "count": 9906,
+     "weighted": 3032.25,
+     "categories": {
+      "battery_energy": {
+       "count": 823,
+       "weighted": 240.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8050,
+       "weighted": 2323.0
+      },
+      "medical_device": {
+       "count": 147,
+       "weighted": 41.25
+      },
+      "consumer_electronics": {
+       "count": 128,
+       "weighted": 44.0
+      },
+      "fire_structural": {
+       "count": 758,
+       "weighted": 383.75
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q4",
+     "count": 7557,
+     "weighted": 2346.0,
+     "categories": {
+      "battery_energy": {
+       "count": 783,
+       "weighted": 244.5
+      },
+      "vehicle_ev_adas": {
+       "count": 5887,
+       "weighted": 1711.75
+      },
+      "medical_device": {
+       "count": 151,
+       "weighted": 42.25
+      },
+      "consumer_electronics": {
+       "count": 142,
+       "weighted": 53.5
+      },
+      "fire_structural": {
+       "count": 594,
+       "weighted": 294.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q1",
+     "count": 10789,
+     "weighted": 3377.5,
+     "categories": {
+      "battery_energy": {
+       "count": 923,
+       "weighted": 290.75
+      },
+      "vehicle_ev_adas": {
+       "count": 8704,
+       "weighted": 2542.0
+      },
+      "medical_device": {
+       "count": 163,
+       "weighted": 46.0
+      },
+      "consumer_electronics": {
+       "count": 231,
+       "weighted": 92.25
+      },
+      "fire_structural": {
+       "count": 768,
+       "weighted": 406.5
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q2",
+     "count": 14949,
+     "weighted": 4681.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1280,
+       "weighted": 380.0
+      },
+      "vehicle_ev_adas": {
+       "count": 12376,
+       "weighted": 3734.5
+      },
+      "medical_device": {
+       "count": 188,
+       "weighted": 52.25
+      },
+      "consumer_electronics": {
+       "count": 209,
+       "weighted": 70.25
+      },
+      "fire_structural": {
+       "count": 896,
+       "weighted": 444.5
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q3",
+     "count": 16531,
+     "weighted": 5141.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1605,
+       "weighted": 474.75
+      },
+      "vehicle_ev_adas": {
+       "count": 13382,
+       "weighted": 3999.5
+      },
+      "medical_device": {
+       "count": 270,
+       "weighted": 75.75
+      },
+      "consumer_electronics": {
+       "count": 241,
+       "weighted": 79.75
+      },
+      "fire_structural": {
+       "count": 1033,
+       "weighted": 511.75
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q4",
+     "count": 13863,
+     "weighted": 4500.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1441,
+       "weighted": 433.75
+      },
+      "vehicle_ev_adas": {
+       "count": 11045,
+       "weighted": 3436.25
+      },
+      "medical_device": {
+       "count": 216,
+       "weighted": 63.0
+      },
+      "consumer_electronics": {
+       "count": 243,
+       "weighted": 90.0
+      },
+      "fire_structural": {
+       "count": 918,
+       "weighted": 477.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q1",
+     "count": 12356,
+     "weighted": 3888.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1314,
+       "weighted": 388.5
+      },
+      "vehicle_ev_adas": {
+       "count": 9784,
+       "weighted": 2916.25
+      },
+      "medical_device": {
+       "count": 150,
+       "weighted": 41.25
+      },
+      "consumer_electronics": {
+       "count": 299,
+       "weighted": 110.0
+      },
+      "fire_structural": {
+       "count": 809,
+       "weighted": 432.5
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q2",
+     "count": 10250,
+     "weighted": 3321.5,
+     "categories": {
+      "battery_energy": {
+       "count": 998,
+       "weighted": 290.75
+      },
+      "vehicle_ev_adas": {
+       "count": 8196,
+       "weighted": 2545.5
+      },
+      "medical_device": {
+       "count": 163,
+       "weighted": 48.25
+      },
+      "consumer_electronics": {
+       "count": 180,
+       "weighted": 60.75
+      },
+      "fire_structural": {
+       "count": 713,
+       "weighted": 376.25
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q3",
+     "count": 12595,
+     "weighted": 4039.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1499,
+       "weighted": 454.25
+      },
+      "vehicle_ev_adas": {
+       "count": 9878,
+       "weighted": 3014.0
+      },
+      "medical_device": {
+       "count": 172,
+       "weighted": 48.25
+      },
+      "consumer_electronics": {
+       "count": 188,
+       "weighted": 66.5
+      },
+      "fire_structural": {
+       "count": 858,
+       "weighted": 456.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q4",
+     "count": 10745,
+     "weighted": 3465.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1155,
+       "weighted": 346.5
+      },
+      "vehicle_ev_adas": {
+       "count": 8309,
+       "weighted": 2549.75
+      },
+      "medical_device": {
+       "count": 226,
+       "weighted": 61.75
+      },
+      "consumer_electronics": {
+       "count": 261,
+       "weighted": 88.5
+      },
+      "fire_structural": {
+       "count": 794,
+       "weighted": 419.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q1",
+     "count": 10232,
+     "weighted": 3335.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1077,
+       "weighted": 322.5
+      },
+      "vehicle_ev_adas": {
+       "count": 7990,
+       "weighted": 2452.0
+      },
+      "medical_device": {
+       "count": 185,
+       "weighted": 58.25
+      },
+      "consumer_electronics": {
+       "count": 275,
+       "weighted": 99.5
+      },
+      "fire_structural": {
+       "count": 705,
+       "weighted": 403.5
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q2",
+     "count": 9993,
+     "weighted": 3198.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1064,
+       "weighted": 312.5
+      },
+      "vehicle_ev_adas": {
+       "count": 7884,
+       "weighted": 2373.0
+      },
+      "medical_device": {
+       "count": 160,
+       "weighted": 46.0
+      },
+      "consumer_electronics": {
+       "count": 169,
+       "weighted": 66.25
+      },
+      "fire_structural": {
+       "count": 716,
+       "weighted": 400.25
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q3",
+     "count": 11737,
+     "weighted": 3608.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1175,
+       "weighted": 341.75
+      },
+      "vehicle_ev_adas": {
+       "count": 9428,
+       "weighted": 2792.0
+      },
+      "medical_device": {
+       "count": 175,
+       "weighted": 49.75
+      },
+      "consumer_electronics": {
+       "count": 146,
+       "weighted": 45.5
+      },
+      "fire_structural": {
+       "count": 813,
+       "weighted": 379.5
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q4",
+     "count": 10300,
+     "weighted": 3168.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1044,
+       "weighted": 317.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8207,
+       "weighted": 2424.5
+      },
+      "medical_device": {
+       "count": 173,
+       "weighted": 44.75
+      },
+      "consumer_electronics": {
+       "count": 171,
+       "weighted": 50.25
+      },
+      "fire_structural": {
+       "count": 705,
+       "weighted": 331.5
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q1",
+     "count": 9901,
+     "weighted": 3071.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1023,
+       "weighted": 309.75
+      },
+      "vehicle_ev_adas": {
+       "count": 7837,
+       "weighted": 2310.25
+      },
+      "medical_device": {
+       "count": 128,
+       "weighted": 35.0
+      },
+      "consumer_electronics": {
+       "count": 206,
+       "weighted": 79.25
+      },
+      "fire_structural": {
+       "count": 707,
+       "weighted": 337.25
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q2",
+     "count": 9422,
+     "weighted": 3082.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1119,
+       "weighted": 351.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7281,
+       "weighted": 2227.5
+      },
+      "medical_device": {
+       "count": 124,
+       "weighted": 40.0
+      },
+      "consumer_electronics": {
+       "count": 102,
+       "weighted": 35.25
+      },
+      "fire_structural": {
+       "count": 796,
+       "weighted": 428.5
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q3",
+     "count": 10830,
+     "weighted": 3473.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1280,
+       "weighted": 419.75
+      },
+      "vehicle_ev_adas": {
+       "count": 8235,
+       "weighted": 2455.5
+      },
+      "medical_device": {
+       "count": 176,
+       "weighted": 50.0
+      },
+      "consumer_electronics": {
+       "count": 115,
+       "weighted": 37.75
+      },
+      "fire_structural": {
+       "count": 1024,
+       "weighted": 510.25
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q4",
+     "count": 12029,
+     "weighted": 3794.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1094,
+       "weighted": 341.0
+      },
+      "vehicle_ev_adas": {
+       "count": 9724,
+       "weighted": 2908.75
+      },
+      "medical_device": {
+       "count": 160,
+       "weighted": 46.75
+      },
+      "consumer_electronics": {
+       "count": 205,
+       "weighted": 64.75
+      },
+      "fire_structural": {
+       "count": 846,
+       "weighted": 432.75
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q1",
+     "count": 10595,
+     "weighted": 3321.5,
+     "categories": {
+      "battery_energy": {
+       "count": 994,
+       "weighted": 296.5
+      },
+      "vehicle_ev_adas": {
+       "count": 8262,
+       "weighted": 2433.0
+      },
+      "medical_device": {
+       "count": 151,
+       "weighted": 43.75
+      },
+      "consumer_electronics": {
+       "count": 356,
+       "weighted": 120.5
+      },
+      "fire_structural": {
+       "count": 832,
+       "weighted": 427.75
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q2",
+     "count": 10403,
+     "weighted": 3220.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1088,
+       "weighted": 327.5
+      },
+      "vehicle_ev_adas": {
+       "count": 8170,
+       "weighted": 2414.5
+      },
+      "medical_device": {
+       "count": 165,
+       "weighted": 42.75
+      },
+      "consumer_electronics": {
+       "count": 183,
+       "weighted": 55.5
+      },
+      "fire_structural": {
+       "count": 797,
+       "weighted": 380.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q3",
+     "count": 11328,
+     "weighted": 3648.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1293,
+       "weighted": 381.75
+      },
+      "vehicle_ev_adas": {
+       "count": 8770,
+       "weighted": 2635.75
+      },
+      "medical_device": {
+       "count": 162,
+       "weighted": 48.75
+      },
+      "consumer_electronics": {
+       "count": 122,
+       "weighted": 38.0
+      },
+      "fire_structural": {
+       "count": 981,
+       "weighted": 544.5
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q4",
+     "count": 12457,
+     "weighted": 3841.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1294,
+       "weighted": 364.75
+      },
+      "vehicle_ev_adas": {
+       "count": 9763,
+       "weighted": 2862.25
+      },
+      "medical_device": {
+       "count": 180,
+       "weighted": 48.75
+      },
+      "consumer_electronics": {
+       "count": 325,
+       "weighted": 96.25
+      },
+      "fire_structural": {
+       "count": 895,
+       "weighted": 469.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q1",
+     "count": 13056,
+     "weighted": 3955.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1451,
+       "weighted": 405.5
+      },
+      "vehicle_ev_adas": {
+       "count": 10190,
+       "weighted": 2972.75
+      },
+      "medical_device": {
+       "count": 219,
+       "weighted": 57.75
+      },
+      "consumer_electronics": {
+       "count": 313,
+       "weighted": 99.25
+      },
+      "fire_structural": {
+       "count": 883,
+       "weighted": 420.25
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q2",
+     "count": 12479,
+     "weighted": 3829.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1444,
+       "weighted": 410.5
+      },
+      "vehicle_ev_adas": {
+       "count": 9743,
+       "weighted": 2831.0
+      },
+      "medical_device": {
+       "count": 170,
+       "weighted": 47.75
+      },
+      "consumer_electronics": {
+       "count": 157,
+       "weighted": 58.0
+      },
+      "fire_structural": {
+       "count": 965,
+       "weighted": 482.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q3",
+     "count": 13556,
+     "weighted": 3982.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1615,
+       "weighted": 442.75
+      },
+      "vehicle_ev_adas": {
+       "count": 10508,
+       "weighted": 2987.75
+      },
+      "medical_device": {
+       "count": 306,
+       "weighted": 82.5
+      },
+      "consumer_electronics": {
+       "count": 106,
+       "weighted": 28.75
+      },
+      "fire_structural": {
+       "count": 1021,
+       "weighted": 440.5
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q4",
+     "count": 13009,
+     "weighted": 3942.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1513,
+       "weighted": 412.75
+      },
+      "vehicle_ev_adas": {
+       "count": 10174,
+       "weighted": 2983.0
+      },
+      "medical_device": {
+       "count": 235,
+       "weighted": 64.75
+      },
+      "consumer_electronics": {
+       "count": 236,
+       "weighted": 77.75
+      },
+      "fire_structural": {
+       "count": 851,
+       "weighted": 404.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q1",
+     "count": 11857,
+     "weighted": 3670.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1270,
+       "weighted": 363.25
+      },
+      "vehicle_ev_adas": {
+       "count": 9312,
+       "weighted": 2752.5
+      },
+      "medical_device": {
+       "count": 189,
+       "weighted": 51.75
+      },
+      "consumer_electronics": {
+       "count": 257,
+       "weighted": 85.25
+      },
+      "fire_structural": {
+       "count": 829,
+       "weighted": 417.25
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q2",
+     "count": 7671,
+     "weighted": 2355.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1096,
+       "weighted": 303.25
+      },
+      "vehicle_ev_adas": {
+       "count": 5779,
+       "weighted": 1686.25
+      },
+      "medical_device": {
+       "count": 105,
+       "weighted": 30.75
+      },
+      "consumer_electronics": {
+       "count": 103,
+       "weighted": 31.0
+      },
+      "fire_structural": {
+       "count": 588,
+       "weighted": 303.75
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q3",
+     "count": 10965,
+     "weighted": 3305.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1541,
+       "weighted": 428.0
+      },
+      "vehicle_ev_adas": {
+       "count": 8237,
+       "weighted": 2396.75
+      },
+      "medical_device": {
+       "count": 199,
+       "weighted": 52.0
+      },
+      "consumer_electronics": {
+       "count": 148,
+       "weighted": 51.25
+      },
+      "fire_structural": {
+       "count": 840,
+       "weighted": 377.25
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q4",
+     "count": 9977,
+     "weighted": 3088.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1330,
+       "weighted": 384.25
+      },
+      "vehicle_ev_adas": {
+       "count": 7564,
+       "weighted": 2240.5
+      },
+      "medical_device": {
+       "count": 167,
+       "weighted": 47.75
+      },
+      "consumer_electronics": {
+       "count": 164,
+       "weighted": 49.25
+      },
+      "fire_structural": {
+       "count": 752,
+       "weighted": 366.5
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q1",
+     "count": 10141,
+     "weighted": 3067.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1495,
+       "weighted": 422.5
+      },
+      "vehicle_ev_adas": {
+       "count": 7542,
+       "weighted": 2198.25
+      },
+      "medical_device": {
+       "count": 209,
+       "weighted": 59.0
+      },
+      "consumer_electronics": {
+       "count": 171,
+       "weighted": 53.25
+      },
+      "fire_structural": {
+       "count": 724,
+       "weighted": 334.75
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q2",
+     "count": 8205,
+     "weighted": 2531.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1384,
+       "weighted": 391.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5972,
+       "weighted": 1772.75
+      },
+      "medical_device": {
+       "count": 146,
+       "weighted": 40.25
+      },
+      "consumer_electronics": {
+       "count": 66,
+       "weighted": 26.25
+      },
+      "fire_structural": {
+       "count": 637,
+       "weighted": 301.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q3",
+     "count": 7906,
+     "weighted": 2501.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1361,
+       "weighted": 398.75
+      },
+      "vehicle_ev_adas": {
+       "count": 5674,
+       "weighted": 1706.5
+      },
+      "medical_device": {
+       "count": 122,
+       "weighted": 32.0
+      },
+      "consumer_electronics": {
+       "count": 67,
+       "weighted": 27.25
+      },
+      "fire_structural": {
+       "count": 682,
+       "weighted": 337.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q4",
+     "count": 7278,
+     "weighted": 2314.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1102,
+       "weighted": 313.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5364,
+       "weighted": 1653.75
+      },
+      "medical_device": {
+       "count": 129,
+       "weighted": 33.75
+      },
+      "consumer_electronics": {
+       "count": 122,
+       "weighted": 47.0
+      },
+      "fire_structural": {
+       "count": 561,
+       "weighted": 267.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q1",
+     "count": 10178,
+     "weighted": 3047.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1153,
+       "weighted": 325.75
+      },
+      "vehicle_ev_adas": {
+       "count": 7906,
+       "weighted": 2266.0
+      },
+      "medical_device": {
+       "count": 215,
+       "weighted": 57.5
+      },
+      "consumer_electronics": {
+       "count": 169,
+       "weighted": 50.5
+      },
+      "fire_structural": {
+       "count": 735,
+       "weighted": 347.25
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q2",
+     "count": 9000,
+     "weighted": 2745.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1128,
+       "weighted": 314.25
+      },
+      "vehicle_ev_adas": {
+       "count": 6784,
+       "weighted": 1987.75
+      },
+      "medical_device": {
+       "count": 172,
+       "weighted": 48.25
+      },
+      "consumer_electronics": {
+       "count": 108,
+       "weighted": 33.0
+      },
+      "fire_structural": {
+       "count": 808,
+       "weighted": 362.5
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q3",
+     "count": 11402,
+     "weighted": 3347.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1714,
+       "weighted": 471.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8328,
+       "weighted": 2397.0
+      },
+      "medical_device": {
+       "count": 225,
+       "weighted": 60.75
+      },
+      "consumer_electronics": {
+       "count": 124,
+       "weighted": 39.25
+      },
+      "fire_structural": {
+       "count": 1011,
+       "weighted": 379.5
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q4",
+     "count": 9103,
+     "weighted": 2696.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1378,
+       "weighted": 380.5
+      },
+      "vehicle_ev_adas": {
+       "count": 6582,
+       "weighted": 1876.5
+      },
+      "medical_device": {
+       "count": 214,
+       "weighted": 55.75
+      },
+      "consumer_electronics": {
+       "count": 142,
+       "weighted": 51.25
+      },
+      "fire_structural": {
+       "count": 787,
+       "weighted": 332.5
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q1",
+     "count": 10796,
+     "weighted": 3206.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1455,
+       "weighted": 402.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7983,
+       "weighted": 2307.75
+      },
+      "medical_device": {
+       "count": 221,
+       "weighted": 59.75
+      },
+      "consumer_electronics": {
+       "count": 220,
+       "weighted": 71.5
+      },
+      "fire_structural": {
+       "count": 917,
+       "weighted": 365.75
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q2",
+     "count": 10634,
+     "weighted": 3202.25,
+     "categories": {
+      "battery_energy": {
+       "count": 1328,
+       "weighted": 372.5
+      },
+      "vehicle_ev_adas": {
+       "count": 7866,
+       "weighted": 2304.75
+      },
+      "medical_device": {
+       "count": 253,
+       "weighted": 70.75
+      },
+      "consumer_electronics": {
+       "count": 147,
+       "weighted": 49.5
+      },
+      "fire_structural": {
+       "count": 1040,
+       "weighted": 404.75
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q3",
+     "count": 12778,
+     "weighted": 3829.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1722,
+       "weighted": 486.0
+      },
+      "vehicle_ev_adas": {
+       "count": 9385,
+       "weighted": 2719.0
+      },
+      "medical_device": {
+       "count": 323,
+       "weighted": 91.25
+      },
+      "consumer_electronics": {
+       "count": 109,
+       "weighted": 36.25
+      },
+      "fire_structural": {
+       "count": 1239,
+       "weighted": 496.5
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q4",
+     "count": 11558,
+     "weighted": 3419.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1548,
+       "weighted": 434.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8502,
+       "weighted": 2454.0
+      },
+      "medical_device": {
+       "count": 283,
+       "weighted": 76.0
+      },
+      "consumer_electronics": {
+       "count": 145,
+       "weighted": 40.75
+      },
+      "fire_structural": {
+       "count": 1080,
+       "weighted": 414.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q1",
+     "count": 12645,
+     "weighted": 3706.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1786,
+       "weighted": 497.5
+      },
+      "vehicle_ev_adas": {
+       "count": 9132,
+       "weighted": 2617.5
+      },
+      "medical_device": {
+       "count": 340,
+       "weighted": 94.0
+      },
+      "consumer_electronics": {
+       "count": 193,
+       "weighted": 66.25
+      },
+      "fire_structural": {
+       "count": 1194,
+       "weighted": 431.25
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q2",
+     "count": 11769,
+     "weighted": 3408.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1562,
+       "weighted": 430.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8582,
+       "weighted": 2405.75
+      },
+      "medical_device": {
+       "count": 346,
+       "weighted": 89.5
+      },
+      "consumer_electronics": {
+       "count": 94,
+       "weighted": 30.25
+      },
+      "fire_structural": {
+       "count": 1185,
+       "weighted": 452.25
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q3",
+     "count": 12002,
+     "weighted": 3462.5,
+     "categories": {
+      "battery_energy": {
+       "count": 1779,
+       "weighted": 495.0
+      },
+      "vehicle_ev_adas": {
+       "count": 8454,
+       "weighted": 2360.25
+      },
+      "medical_device": {
+       "count": 351,
+       "weighted": 94.5
+      },
+      "consumer_electronics": {
+       "count": 96,
+       "weighted": 28.5
+      },
+      "fire_structural": {
+       "count": 1322,
+       "weighted": 484.25
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q4",
+     "count": 11463,
+     "weighted": 3387.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1754,
+       "weighted": 494.0
+      },
+      "vehicle_ev_adas": {
+       "count": 8056,
+       "weighted": 2331.25
+      },
+      "medical_device": {
+       "count": 325,
+       "weighted": 91.75
+      },
+      "consumer_electronics": {
+       "count": 149,
+       "weighted": 47.0
+      },
+      "fire_structural": {
+       "count": 1179,
+       "weighted": 423.75
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q1",
+     "count": 12754,
+     "weighted": 3665.5,
+     "categories": {
+      "battery_energy": {
+       "count": 2279,
+       "weighted": 617.75
+      },
+      "vehicle_ev_adas": {
+       "count": 8583,
+       "weighted": 2438.25
+      },
+      "medical_device": {
+       "count": 501,
+       "weighted": 131.25
+      },
+      "consumer_electronics": {
+       "count": 188,
+       "weighted": 56.75
+      },
+      "fire_structural": {
+       "count": 1203,
+       "weighted": 421.5
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q2",
+     "count": 12549,
+     "weighted": 3645.75,
+     "categories": {
+      "battery_energy": {
+       "count": 1896,
+       "weighted": 530.25
+      },
+      "vehicle_ev_adas": {
+       "count": 8525,
+       "weighted": 2420.0
+      },
+      "medical_device": {
+       "count": 665,
+       "weighted": 183.5
+      },
+      "consumer_electronics": {
+       "count": 127,
+       "weighted": 42.25
+      },
+      "fire_structural": {
+       "count": 1336,
+       "weighted": 469.75
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q3",
+     "count": 14940,
+     "weighted": 4443.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2299,
+       "weighted": 639.25
+      },
+      "vehicle_ev_adas": {
+       "count": 10038,
+       "weighted": 2932.5
+      },
+      "medical_device": {
+       "count": 914,
+       "weighted": 247.25
+      },
+      "consumer_electronics": {
+       "count": 119,
+       "weighted": 41.0
+      },
+      "fire_structural": {
+       "count": 1570,
+       "weighted": 583.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q4",
+     "count": 14505,
+     "weighted": 4319.25,
+     "categories": {
+      "battery_energy": {
+       "count": 2532,
+       "weighted": 703.5
+      },
+      "vehicle_ev_adas": {
+       "count": 9396,
+       "weighted": 2749.5
+      },
+      "medical_device": {
+       "count": 963,
+       "weighted": 270.0
+      },
+      "consumer_electronics": {
+       "count": 186,
+       "weighted": 63.75
+      },
+      "fire_structural": {
+       "count": 1428,
+       "weighted": 532.5
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q1",
+     "count": 17188,
+     "weighted": 5103.25,
+     "categories": {
+      "battery_energy": {
+       "count": 3281,
+       "weighted": 890.0
+      },
+      "vehicle_ev_adas": {
+       "count": 10410,
+       "weighted": 3049.5
+      },
+      "medical_device": {
+       "count": 1452,
+       "weighted": 406.5
+      },
+      "consumer_electronics": {
+       "count": 289,
+       "weighted": 102.25
+      },
+      "fire_structural": {
+       "count": 1756,
+       "weighted": 655.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q2",
+     "count": 16629,
+     "weighted": 5001.75,
+     "categories": {
+      "battery_energy": {
+       "count": 2691,
+       "weighted": 744.0
+      },
+      "vehicle_ev_adas": {
+       "count": 10579,
+       "weighted": 3142.0
+      },
+      "medical_device": {
+       "count": 1591,
+       "weighted": 447.25
+      },
+      "consumer_electronics": {
+       "count": 130,
+       "weighted": 46.0
+      },
+      "fire_structural": {
+       "count": 1638,
+       "weighted": 622.5
+      }
+     }
+    }
+   ],
+   "cpsc_recalls": [
+    {
+     "quarter": "2010-Q1",
+     "count": 37,
+     "weighted": 77.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 61.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q2",
+     "count": 34,
+     "weighted": 79.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 63.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q3",
+     "count": 37,
+     "weighted": 85.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 63.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q4",
+     "count": 43,
+     "weighted": 103.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 71.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q1",
+     "count": 49,
+     "weighted": 110.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 15.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 35,
+       "weighted": 78.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q2",
+     "count": 38,
+     "weighted": 85.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 55.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q3",
+     "count": 34,
+     "weighted": 80.0,
+     "categories": {
+      "battery_energy": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 57.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q4",
+     "count": 38,
+     "weighted": 88.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 21.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 22,
+       "weighted": 51.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q1",
+     "count": 47,
+     "weighted": 112.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 34,
+       "weighted": 82.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q2",
+     "count": 31,
+     "weighted": 73.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 49.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q3",
+     "count": 30,
+     "weighted": 67.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 46.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q4",
+     "count": 38,
+     "weighted": 85.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 66.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q1",
+     "count": 43,
+     "weighted": 96.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 15.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 30,
+       "weighted": 65.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q2",
+     "count": 39,
+     "weighted": 89.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 56.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q3",
+     "count": 33,
+     "weighted": 73.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 20,
+       "weighted": 43.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q4",
+     "count": 35,
+     "weighted": 78.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 47.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q1",
+     "count": 46,
+     "weighted": 103.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 10.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 61.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q2",
+     "count": 47,
+     "weighted": 109.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 17.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 18.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 63.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q3",
+     "count": 41,
+     "weighted": 87.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 15.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 25,
+       "weighted": 54.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q4",
+     "count": 42,
+     "weighted": 91.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 53.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q1",
+     "count": 28,
+     "weighted": 58.0,
+     "categories": {
+      "battery_energy": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 19,
+       "weighted": 39.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q2",
+     "count": 38,
+     "weighted": 83.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 20,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q3",
+     "count": 51,
+     "weighted": 113.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 9,
+       "weighted": 19.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 64.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q4",
+     "count": 41,
+     "weighted": 92.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 63.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q1",
+     "count": 49,
+     "weighted": 100.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 57.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q2",
+     "count": 51,
+     "weighted": 111.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 15.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 31,
+       "weighted": 67.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q3",
+     "count": 61,
+     "weighted": 146.0,
+     "categories": {
+      "battery_energy": {
+       "count": 16,
+       "weighted": 38.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 15,
+       "weighted": 36.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 70.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q4",
+     "count": 48,
+     "weighted": 107.0,
+     "categories": {
+      "battery_energy": {
+       "count": 13,
+       "weighted": 29.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 15.0
+      },
+      "fire_structural": {
+       "count": 25,
+       "weighted": 55.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q1",
+     "count": 48,
+     "weighted": 107.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 22.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 13.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 58.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q2",
+     "count": 38,
+     "weighted": 85.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 17.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 54.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q3",
+     "count": 34,
+     "weighted": 73.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q4",
+     "count": 60,
+     "weighted": 129.0,
+     "categories": {
+      "battery_energy": {
+       "count": 11,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "consumer_electronics": {
+       "count": 10,
+       "weighted": 21.0
+      },
+      "fire_structural": {
+       "count": 33,
+       "weighted": 71.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q1",
+     "count": 56,
+     "weighted": 127.0,
+     "categories": {
+      "battery_energy": {
+       "count": 11,
+       "weighted": 25.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 17.0
+      },
+      "fire_structural": {
+       "count": 31,
+       "weighted": 73.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q2",
+     "count": 33,
+     "weighted": 67.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 22,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q3",
+     "count": 31,
+     "weighted": 70.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 47.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q4",
+     "count": 31,
+     "weighted": 64.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "fire_structural": {
+       "count": 21,
+       "weighted": 44.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q1",
+     "count": 35,
+     "weighted": 78.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 18,
+       "weighted": 40.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q2",
+     "count": 53,
+     "weighted": 119.0,
+     "categories": {
+      "battery_energy": {
+       "count": 8,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 11.0
+      },
+      "fire_structural": {
+       "count": 36,
+       "weighted": 80.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q3",
+     "count": 31,
+     "weighted": 66.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 22,
+       "weighted": 47.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q4",
+     "count": 23,
+     "weighted": 50.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "fire_structural": {
+       "count": 12,
+       "weighted": 24.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q1",
+     "count": 22,
+     "weighted": 47.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 15,
+       "weighted": 31.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q2",
+     "count": 26,
+     "weighted": 56.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "fire_structural": {
+       "count": 17,
+       "weighted": 37.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q3",
+     "count": 20,
+     "weighted": 45.0,
+     "categories": {
+      "battery_energy": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 31.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q4",
+     "count": 41,
+     "weighted": 94.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 66.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q1",
+     "count": 28,
+     "weighted": 56.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 16,
+       "weighted": 32.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q2",
+     "count": 33,
+     "weighted": 77.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 18.0
+      },
+      "vehicle_ev_adas": {
+       "count": 2,
+       "weighted": 5.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 20,
+       "weighted": 45.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q3",
+     "count": 39,
+     "weighted": 88.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 25,
+       "weighted": 57.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q4",
+     "count": 28,
+     "weighted": 68.0,
+     "categories": {
+      "battery_energy": {
+       "count": 4,
+       "weighted": 11.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 10.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 13,
+       "weighted": 31.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q1",
+     "count": 45,
+     "weighted": 96.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7,
+       "weighted": 14.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 56.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q2",
+     "count": 48,
+     "weighted": 106.0,
+     "categories": {
+      "battery_energy": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 17.0
+      },
+      "fire_structural": {
+       "count": 32,
+       "weighted": 71.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q3",
+     "count": 27,
+     "weighted": 58.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 20.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 14.0
+      },
+      "consumer_electronics": {
+       "count": 2,
+       "weighted": 4.0
+      },
+      "fire_structural": {
+       "count": 10,
+       "weighted": 20.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q4",
+     "count": 45,
+     "weighted": 101.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 27,
+       "weighted": 60.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q1",
+     "count": 65,
+     "weighted": 146.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 22.0
+      },
+      "vehicle_ev_adas": {
+       "count": 8,
+       "weighted": 17.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 43,
+       "weighted": 95.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q2",
+     "count": 47,
+     "weighted": 100.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "vehicle_ev_adas": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 61.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q3",
+     "count": 39,
+     "weighted": 95.0,
+     "categories": {
+      "battery_energy": {
+       "count": 7,
+       "weighted": 17.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 58.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q4",
+     "count": 43,
+     "weighted": 96.0,
+     "categories": {
+      "battery_energy": {
+       "count": 6,
+       "weighted": 12.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7,
+       "weighted": 16.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 59.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q1",
+     "count": 58,
+     "weighted": 135.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 24.0
+      },
+      "vehicle_ev_adas": {
+       "count": 4,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 16.0
+      },
+      "fire_structural": {
+       "count": 38,
+       "weighted": 87.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q2",
+     "count": 43,
+     "weighted": 100.0,
+     "categories": {
+      "battery_energy": {
+       "count": 9,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "consumer_electronics": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 64.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q3",
+     "count": 48,
+     "weighted": 111.0,
+     "categories": {
+      "battery_energy": {
+       "count": 10,
+       "weighted": 23.0
+      },
+      "vehicle_ev_adas": {
+       "count": 7,
+       "weighted": 17.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 12.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 59.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q4",
+     "count": 48,
+     "weighted": 116.0,
+     "categories": {
+      "battery_energy": {
+       "count": 14,
+       "weighted": 34.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 6.0
+      },
+      "consumer_electronics": {
+       "count": 7,
+       "weighted": 19.0
+      },
+      "fire_structural": {
+       "count": 24,
+       "weighted": 57.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q1",
+     "count": 54,
+     "weighted": 126.0,
+     "categories": {
+      "battery_energy": {
+       "count": 15,
+       "weighted": 34.0
+      },
+      "vehicle_ev_adas": {
+       "count": 3,
+       "weighted": 8.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 21.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 63.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q2",
+     "count": 55,
+     "weighted": 122.0,
+     "categories": {
+      "battery_energy": {
+       "count": 18,
+       "weighted": 39.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "consumer_electronics": {
+       "count": 4,
+       "weighted": 9.0
+      },
+      "fire_structural": {
+       "count": 28,
+       "weighted": 64.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q3",
+     "count": 54,
+     "weighted": 123.0,
+     "categories": {
+      "battery_energy": {
+       "count": 21,
+       "weighted": 47.0
+      },
+      "vehicle_ev_adas": {
+       "count": 1,
+       "weighted": 3.0
+      },
+      "consumer_electronics": {
+       "count": 6,
+       "weighted": 13.0
+      },
+      "fire_structural": {
+       "count": 26,
+       "weighted": 60.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q4",
+     "count": 69,
+     "weighted": 160.0,
+     "categories": {
+      "battery_energy": {
+       "count": 17,
+       "weighted": 38.0
+      },
+      "vehicle_ev_adas": {
+       "count": 8,
+       "weighted": 20.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 8,
+       "weighted": 19.0
+      },
+      "fire_structural": {
+       "count": 35,
+       "weighted": 81.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q1",
+     "count": 50,
+     "weighted": 107.0,
+     "categories": {
+      "battery_energy": {
+       "count": 18,
+       "weighted": 36.0
+      },
+      "consumer_electronics": {
+       "count": 3,
+       "weighted": 7.0
+      },
+      "fire_structural": {
+       "count": 29,
+       "weighted": 64.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q2",
+     "count": 85,
+     "weighted": 187.0,
+     "categories": {
+      "battery_energy": {
+       "count": 32,
+       "weighted": 67.0
+      },
+      "vehicle_ev_adas": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "medical_device": {
+       "count": 1,
+       "weighted": 2.0
+      },
+      "consumer_electronics": {
+       "count": 5,
+       "weighted": 10.0
+      },
+      "fire_structural": {
+       "count": 42,
+       "weighted": 98.0
+      }
+     }
+    }
+   ],
+   "fda_device_recalls": [
+    {
+     "quarter": "2010-Q1",
+     "count": 8,
+     "weighted": 16.0,
+     "categories": {
+      "medical_device": {
+       "count": 8,
+       "weighted": 16.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q2",
+     "count": 19,
+     "weighted": 38.0,
+     "categories": {
+      "medical_device": {
+       "count": 19,
+       "weighted": 38.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q3",
+     "count": 16,
+     "weighted": 29.0,
+     "categories": {
+      "medical_device": {
+       "count": 16,
+       "weighted": 29.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q4",
+     "count": 22,
+     "weighted": 42.0,
+     "categories": {
+      "medical_device": {
+       "count": 22,
+       "weighted": 42.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q1",
+     "count": 47,
+     "weighted": 90.0,
+     "categories": {
+      "medical_device": {
+       "count": 47,
+       "weighted": 90.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q2",
+     "count": 38,
+     "weighted": 75.0,
+     "categories": {
+      "medical_device": {
+       "count": 38,
+       "weighted": 75.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q3",
+     "count": 56,
+     "weighted": 126.0,
+     "categories": {
+      "medical_device": {
+       "count": 56,
+       "weighted": 126.0
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q4",
+     "count": 69,
+     "weighted": 134.0,
+     "categories": {
+      "medical_device": {
+       "count": 69,
+       "weighted": 134.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q1",
+     "count": 126,
+     "weighted": 244.0,
+     "categories": {
+      "medical_device": {
+       "count": 126,
+       "weighted": 244.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q2",
+     "count": 419,
+     "weighted": 865.0,
+     "categories": {
+      "medical_device": {
+       "count": 419,
+       "weighted": 865.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q3",
+     "count": 510,
+     "weighted": 1033.0,
+     "categories": {
+      "medical_device": {
+       "count": 510,
+       "weighted": 1033.0
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q4",
+     "count": 495,
+     "weighted": 970.0,
+     "categories": {
+      "medical_device": {
+       "count": 495,
+       "weighted": 970.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q1",
+     "count": 531,
+     "weighted": 1062.0,
+     "categories": {
+      "medical_device": {
+       "count": 531,
+       "weighted": 1062.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q2",
+     "count": 687,
+     "weighted": 1424.0,
+     "categories": {
+      "medical_device": {
+       "count": 687,
+       "weighted": 1424.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q3",
+     "count": 597,
+     "weighted": 1240.0,
+     "categories": {
+      "medical_device": {
+       "count": 597,
+       "weighted": 1240.0
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q4",
+     "count": 622,
+     "weighted": 1254.0,
+     "categories": {
+      "medical_device": {
+       "count": 622,
+       "weighted": 1254.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q1",
+     "count": 505,
+     "weighted": 1035.0,
+     "categories": {
+      "medical_device": {
+       "count": 505,
+       "weighted": 1035.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q2",
+     "count": 808,
+     "weighted": 1870.0,
+     "categories": {
+      "medical_device": {
+       "count": 808,
+       "weighted": 1870.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q3",
+     "count": 510,
+     "weighted": 1039.0,
+     "categories": {
+      "medical_device": {
+       "count": 510,
+       "weighted": 1039.0
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q4",
+     "count": 906,
+     "weighted": 2009.0,
+     "categories": {
+      "medical_device": {
+       "count": 906,
+       "weighted": 2009.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q1",
+     "count": 603,
+     "weighted": 1210.0,
+     "categories": {
+      "medical_device": {
+       "count": 603,
+       "weighted": 1210.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q2",
+     "count": 900,
+     "weighted": 1800.0,
+     "categories": {
+      "medical_device": {
+       "count": 900,
+       "weighted": 1800.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q3",
+     "count": 627,
+     "weighted": 1252.0,
+     "categories": {
+      "medical_device": {
+       "count": 627,
+       "weighted": 1252.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q4",
+     "count": 777,
+     "weighted": 1509.0,
+     "categories": {
+      "medical_device": {
+       "count": 777,
+       "weighted": 1509.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q1",
+     "count": 949,
+     "weighted": 1918.0,
+     "categories": {
+      "medical_device": {
+       "count": 949,
+       "weighted": 1918.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q2",
+     "count": 670,
+     "weighted": 1344.0,
+     "categories": {
+      "medical_device": {
+       "count": 670,
+       "weighted": 1344.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q3",
+     "count": 732,
+     "weighted": 1452.0,
+     "categories": {
+      "medical_device": {
+       "count": 732,
+       "weighted": 1452.0
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q4",
+     "count": 678,
+     "weighted": 1347.0,
+     "categories": {
+      "medical_device": {
+       "count": 678,
+       "weighted": 1347.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q1",
+     "count": 877,
+     "weighted": 1762.0,
+     "categories": {
+      "medical_device": {
+       "count": 877,
+       "weighted": 1762.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q2",
+     "count": 1164,
+     "weighted": 2368.0,
+     "categories": {
+      "medical_device": {
+       "count": 1164,
+       "weighted": 2368.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q3",
+     "count": 556,
+     "weighted": 1122.0,
+     "categories": {
+      "medical_device": {
+       "count": 556,
+       "weighted": 1122.0
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q4",
+     "count": 716,
+     "weighted": 1441.0,
+     "categories": {
+      "medical_device": {
+       "count": 716,
+       "weighted": 1441.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q1",
+     "count": 645,
+     "weighted": 1287.0,
+     "categories": {
+      "medical_device": {
+       "count": 645,
+       "weighted": 1287.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q2",
+     "count": 882,
+     "weighted": 1763.0,
+     "categories": {
+      "medical_device": {
+       "count": 882,
+       "weighted": 1763.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q3",
+     "count": 967,
+     "weighted": 1962.0,
+     "categories": {
+      "medical_device": {
+       "count": 967,
+       "weighted": 1962.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q4",
+     "count": 519,
+     "weighted": 1046.0,
+     "categories": {
+      "medical_device": {
+       "count": 519,
+       "weighted": 1046.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q1",
+     "count": 671,
+     "weighted": 1529.0,
+     "categories": {
+      "medical_device": {
+       "count": 671,
+       "weighted": 1529.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q2",
+     "count": 984,
+     "weighted": 1993.0,
+     "categories": {
+      "medical_device": {
+       "count": 984,
+       "weighted": 1993.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q3",
+     "count": 602,
+     "weighted": 1227.0,
+     "categories": {
+      "medical_device": {
+       "count": 602,
+       "weighted": 1227.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q4",
+     "count": 753,
+     "weighted": 1544.0,
+     "categories": {
+      "medical_device": {
+       "count": 753,
+       "weighted": 1544.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q1",
+     "count": 596,
+     "weighted": 1215.0,
+     "categories": {
+      "medical_device": {
+       "count": 596,
+       "weighted": 1215.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q2",
+     "count": 718,
+     "weighted": 1501.0,
+     "categories": {
+      "medical_device": {
+       "count": 718,
+       "weighted": 1501.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q3",
+     "count": 739,
+     "weighted": 1463.0,
+     "categories": {
+      "medical_device": {
+       "count": 739,
+       "weighted": 1463.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q4",
+     "count": 549,
+     "weighted": 1132.0,
+     "categories": {
+      "medical_device": {
+       "count": 549,
+       "weighted": 1132.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q1",
+     "count": 717,
+     "weighted": 1459.0,
+     "categories": {
+      "medical_device": {
+       "count": 717,
+       "weighted": 1459.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q2",
+     "count": 609,
+     "weighted": 1267.0,
+     "categories": {
+      "medical_device": {
+       "count": 609,
+       "weighted": 1267.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q3",
+     "count": 526,
+     "weighted": 1089.0,
+     "categories": {
+      "medical_device": {
+       "count": 526,
+       "weighted": 1089.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q4",
+     "count": 408,
+     "weighted": 839.0,
+     "categories": {
+      "medical_device": {
+       "count": 408,
+       "weighted": 839.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q1",
+     "count": 463,
+     "weighted": 943.0,
+     "categories": {
+      "medical_device": {
+       "count": 463,
+       "weighted": 943.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q2",
+     "count": 457,
+     "weighted": 921.0,
+     "categories": {
+      "medical_device": {
+       "count": 457,
+       "weighted": 921.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q3",
+     "count": 436,
+     "weighted": 897.0,
+     "categories": {
+      "medical_device": {
+       "count": 436,
+       "weighted": 897.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q4",
+     "count": 920,
+     "weighted": 1908.0,
+     "categories": {
+      "medical_device": {
+       "count": 920,
+       "weighted": 1908.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q1",
+     "count": 419,
+     "weighted": 868.0,
+     "categories": {
+      "medical_device": {
+       "count": 419,
+       "weighted": 868.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q2",
+     "count": 868,
+     "weighted": 2075.0,
+     "categories": {
+      "medical_device": {
+       "count": 868,
+       "weighted": 2075.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q3",
+     "count": 570,
+     "weighted": 1195.0,
+     "categories": {
+      "medical_device": {
+       "count": 570,
+       "weighted": 1195.0
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q4",
+     "count": 752,
+     "weighted": 1631.0,
+     "categories": {
+      "medical_device": {
+       "count": 752,
+       "weighted": 1631.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q1",
+     "count": 759,
+     "weighted": 1628.0,
+     "categories": {
+      "medical_device": {
+       "count": 759,
+       "weighted": 1628.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q2",
+     "count": 965,
+     "weighted": 1995.0,
+     "categories": {
+      "medical_device": {
+       "count": 965,
+       "weighted": 1995.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q3",
+     "count": 870,
+     "weighted": 1778.0,
+     "categories": {
+      "medical_device": {
+       "count": 870,
+       "weighted": 1778.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q4",
+     "count": 682,
+     "weighted": 1435.0,
+     "categories": {
+      "medical_device": {
+       "count": 682,
+       "weighted": 1435.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q1",
+     "count": 653,
+     "weighted": 1399.0,
+     "categories": {
+      "medical_device": {
+       "count": 653,
+       "weighted": 1399.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q2",
+     "count": 584,
+     "weighted": 1234.0,
+     "categories": {
+      "medical_device": {
+       "count": 584,
+       "weighted": 1234.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q3",
+     "count": 779,
+     "weighted": 1613.0,
+     "categories": {
+      "medical_device": {
+       "count": 779,
+       "weighted": 1613.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q4",
+     "count": 818,
+     "weighted": 1689.0,
+     "categories": {
+      "medical_device": {
+       "count": 818,
+       "weighted": 1689.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q1",
+     "count": 744,
+     "weighted": 1569.0,
+     "categories": {
+      "medical_device": {
+       "count": 744,
+       "weighted": 1569.0
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q2",
+     "count": 426,
+     "weighted": 935.0,
+     "categories": {
+      "medical_device": {
+       "count": 426,
+       "weighted": 935.0
+      }
+     }
+    }
+   ],
+   "fda_maude_events": [
+    {
+     "quarter": "2010-Q1",
+     "count": 64517,
+     "weighted": 38755.5,
+     "categories": {
+      "medical_device": {
+       "count": 64517,
+       "weighted": 38755.5
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q2",
+     "count": 73184,
+     "weighted": 42201.5,
+     "categories": {
+      "medical_device": {
+       "count": 73184,
+       "weighted": 42201.5
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q3",
+     "count": 74621,
+     "weighted": 42487.0,
+     "categories": {
+      "medical_device": {
+       "count": 74621,
+       "weighted": 42487.0
+      }
+     }
+    },
+    {
+     "quarter": "2010-Q4",
+     "count": 90980,
+     "weighted": 53098.5,
+     "categories": {
+      "medical_device": {
+       "count": 90980,
+       "weighted": 53098.5
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q1",
+     "count": 95279,
+     "weighted": 57726.75,
+     "categories": {
+      "medical_device": {
+       "count": 95279,
+       "weighted": 57726.75
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q2",
+     "count": 107752,
+     "weighted": 63379.5,
+     "categories": {
+      "medical_device": {
+       "count": 107752,
+       "weighted": 63379.5
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q3",
+     "count": 120334,
+     "weighted": 64065.25,
+     "categories": {
+      "medical_device": {
+       "count": 120334,
+       "weighted": 64065.25
+      }
+     }
+    },
+    {
+     "quarter": "2011-Q4",
+     "count": 122006,
+     "weighted": 66525.5,
+     "categories": {
+      "medical_device": {
+       "count": 122006,
+       "weighted": 66525.5
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q1",
+     "count": 110802,
+     "weighted": 63298.5,
+     "categories": {
+      "medical_device": {
+       "count": 110802,
+       "weighted": 63298.5
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q2",
+     "count": 119413,
+     "weighted": 69909.5,
+     "categories": {
+      "medical_device": {
+       "count": 119413,
+       "weighted": 69909.5
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q3",
+     "count": 126268,
+     "weighted": 84550.75,
+     "categories": {
+      "medical_device": {
+       "count": 126268,
+       "weighted": 84550.75
+      }
+     }
+    },
+    {
+     "quarter": "2012-Q4",
+     "count": 129817,
+     "weighted": 77979.25,
+     "categories": {
+      "medical_device": {
+       "count": 129817,
+       "weighted": 77979.25
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q1",
+     "count": 130482,
+     "weighted": 76226.25,
+     "categories": {
+      "medical_device": {
+       "count": 130482,
+       "weighted": 76226.25
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q2",
+     "count": 165244,
+     "weighted": 96164.25,
+     "categories": {
+      "medical_device": {
+       "count": 165244,
+       "weighted": 96164.25
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q3",
+     "count": 195351,
+     "weighted": 117997.25,
+     "categories": {
+      "medical_device": {
+       "count": 195351,
+       "weighted": 117997.25
+      }
+     }
+    },
+    {
+     "quarter": "2013-Q4",
+     "count": 188648,
+     "weighted": 106260.25,
+     "categories": {
+      "medical_device": {
+       "count": 188648,
+       "weighted": 106260.25
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q1",
+     "count": 192332,
+     "weighted": 97093.75,
+     "categories": {
+      "medical_device": {
+       "count": 192332,
+       "weighted": 97093.75
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q2",
+     "count": 188250,
+     "weighted": 108290.25,
+     "categories": {
+      "medical_device": {
+       "count": 188250,
+       "weighted": 108290.25
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q3",
+     "count": 228084,
+     "weighted": 124645.5,
+     "categories": {
+      "medical_device": {
+       "count": 228084,
+       "weighted": 124645.5
+      }
+     }
+    },
+    {
+     "quarter": "2014-Q4",
+     "count": 253448,
+     "weighted": 125833.75,
+     "categories": {
+      "medical_device": {
+       "count": 253448,
+       "weighted": 125833.75
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q1",
+     "count": 212962,
+     "weighted": 107361.0,
+     "categories": {
+      "medical_device": {
+       "count": 212962,
+       "weighted": 107361.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q2",
+     "count": 210536,
+     "weighted": 112547.0,
+     "categories": {
+      "medical_device": {
+       "count": 210536,
+       "weighted": 112547.0
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q3",
+     "count": 222656,
+     "weighted": 118733.25,
+     "categories": {
+      "medical_device": {
+       "count": 222656,
+       "weighted": 118733.25
+      }
+     }
+    },
+    {
+     "quarter": "2015-Q4",
+     "count": 215645,
+     "weighted": 110655.25,
+     "categories": {
+      "medical_device": {
+       "count": 215645,
+       "weighted": 110655.25
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q1",
+     "count": 196448,
+     "weighted": 104977.75,
+     "categories": {
+      "medical_device": {
+       "count": 196448,
+       "weighted": 104977.75
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q2",
+     "count": 222492,
+     "weighted": 115690.25,
+     "categories": {
+      "medical_device": {
+       "count": 222492,
+       "weighted": 115690.25
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q3",
+     "count": 225374,
+     "weighted": 110099.75,
+     "categories": {
+      "medical_device": {
+       "count": 225374,
+       "weighted": 110099.75
+      }
+     }
+    },
+    {
+     "quarter": "2016-Q4",
+     "count": 223129,
+     "weighted": 117091.5,
+     "categories": {
+      "medical_device": {
+       "count": 223129,
+       "weighted": 117091.5
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q1",
+     "count": 234169,
+     "weighted": 120549.75,
+     "categories": {
+      "medical_device": {
+       "count": 234169,
+       "weighted": 120549.75
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q2",
+     "count": 230604,
+     "weighted": 117610.25,
+     "categories": {
+      "medical_device": {
+       "count": 230604,
+       "weighted": 117610.25
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q3",
+     "count": 222717,
+     "weighted": 115885.75,
+     "categories": {
+      "medical_device": {
+       "count": 222717,
+       "weighted": 115885.75
+      }
+     }
+    },
+    {
+     "quarter": "2017-Q4",
+     "count": 249411,
+     "weighted": 136496.75,
+     "categories": {
+      "medical_device": {
+       "count": 249411,
+       "weighted": 136496.75
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q1",
+     "count": 230552,
+     "weighted": 121999.0,
+     "categories": {
+      "medical_device": {
+       "count": 230552,
+       "weighted": 121999.0
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q2",
+     "count": 265689,
+     "weighted": 141203.75,
+     "categories": {
+      "medical_device": {
+       "count": 265689,
+       "weighted": 141203.75
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q3",
+     "count": 267011,
+     "weighted": 135949.25,
+     "categories": {
+      "medical_device": {
+       "count": 267011,
+       "weighted": 135949.25
+      }
+     }
+    },
+    {
+     "quarter": "2018-Q4",
+     "count": 284830,
+     "weighted": 143364.5,
+     "categories": {
+      "medical_device": {
+       "count": 284830,
+       "weighted": 143364.5
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q1",
+     "count": 260830,
+     "weighted": 138452.5,
+     "categories": {
+      "medical_device": {
+       "count": 260830,
+       "weighted": 138452.5
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q2",
+     "count": 278676,
+     "weighted": 151648.0,
+     "categories": {
+      "medical_device": {
+       "count": 278676,
+       "weighted": 151648.0
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q3",
+     "count": 390389,
+     "weighted": 252401.75,
+     "categories": {
+      "medical_device": {
+       "count": 390389,
+       "weighted": 252401.75
+      }
+     }
+    },
+    {
+     "quarter": "2019-Q4",
+     "count": 399060,
+     "weighted": 236255.0,
+     "categories": {
+      "medical_device": {
+       "count": 399060,
+       "weighted": 236255.0
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q1",
+     "count": 371630,
+     "weighted": 225887.5,
+     "categories": {
+      "medical_device": {
+       "count": 371630,
+       "weighted": 225887.5
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q2",
+     "count": 307150,
+     "weighted": 168655.25,
+     "categories": {
+      "medical_device": {
+       "count": 307150,
+       "weighted": 168655.25
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q3",
+     "count": 394710,
+     "weighted": 221107.75,
+     "categories": {
+      "medical_device": {
+       "count": 394710,
+       "weighted": 221107.75
+      }
+     }
+    },
+    {
+     "quarter": "2020-Q4",
+     "count": 491509,
+     "weighted": 258832.25,
+     "categories": {
+      "medical_device": {
+       "count": 491509,
+       "weighted": 258832.25
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q1",
+     "count": 496919,
+     "weighted": 256369.25,
+     "categories": {
+      "medical_device": {
+       "count": 496919,
+       "weighted": 256369.25
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q2",
+     "count": 495580,
+     "weighted": 313940.0,
+     "categories": {
+      "medical_device": {
+       "count": 495580,
+       "weighted": 313940.0
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q3",
+     "count": 461115,
+     "weighted": 273263.75,
+     "categories": {
+      "medical_device": {
+       "count": 461115,
+       "weighted": 273263.75
+      }
+     }
+    },
+    {
+     "quarter": "2021-Q4",
+     "count": 574695,
+     "weighted": 304725.75,
+     "categories": {
+      "medical_device": {
+       "count": 574695,
+       "weighted": 304725.75
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q1",
+     "count": 837177,
+     "weighted": 362248.25,
+     "categories": {
+      "medical_device": {
+       "count": 837177,
+       "weighted": 362248.25
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q2",
+     "count": 909431,
+     "weighted": 388777.0,
+     "categories": {
+      "medical_device": {
+       "count": 909431,
+       "weighted": 388777.0
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q3",
+     "count": 640052,
+     "weighted": 322534.25,
+     "categories": {
+      "medical_device": {
+       "count": 640052,
+       "weighted": 322534.25
+      }
+     }
+    },
+    {
+     "quarter": "2022-Q4",
+     "count": 558725,
+     "weighted": 315282.25,
+     "categories": {
+      "medical_device": {
+       "count": 558725,
+       "weighted": 315282.25
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q1",
+     "count": 579290,
+     "weighted": 309578.75,
+     "categories": {
+      "medical_device": {
+       "count": 579290,
+       "weighted": 309578.75
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q2",
+     "count": 583295,
+     "weighted": 332775.75,
+     "categories": {
+      "medical_device": {
+       "count": 583295,
+       "weighted": 332775.75
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q3",
+     "count": 603602,
+     "weighted": 335271.5,
+     "categories": {
+      "medical_device": {
+       "count": 603602,
+       "weighted": 335271.5
+      }
+     }
+    },
+    {
+     "quarter": "2023-Q4",
+     "count": 573619,
+     "weighted": 321792.0,
+     "categories": {
+      "medical_device": {
+       "count": 573619,
+       "weighted": 321792.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q1",
+     "count": 586309,
+     "weighted": 336576.0,
+     "categories": {
+      "medical_device": {
+       "count": 586309,
+       "weighted": 336576.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q2",
+     "count": 631546,
+     "weighted": 371149.25,
+     "categories": {
+      "medical_device": {
+       "count": 631546,
+       "weighted": 371149.25
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q3",
+     "count": 699798,
+     "weighted": 405091.0,
+     "categories": {
+      "medical_device": {
+       "count": 699798,
+       "weighted": 405091.0
+      }
+     }
+    },
+    {
+     "quarter": "2024-Q4",
+     "count": 709497,
+     "weighted": 432896.0,
+     "categories": {
+      "medical_device": {
+       "count": 709497,
+       "weighted": 432896.0
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q1",
+     "count": 685251,
+     "weighted": 389450.75,
+     "categories": {
+      "medical_device": {
+       "count": 685251,
+       "weighted": 389450.75
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q2",
+     "count": 632296,
+     "weighted": 333151.75,
+     "categories": {
+      "medical_device": {
+       "count": 632296,
+       "weighted": 333151.75
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q3",
+     "count": 819444,
+     "weighted": 474604.25,
+     "categories": {
+      "medical_device": {
+       "count": 819444,
+       "weighted": 474604.25
+      }
+     }
+    },
+    {
+     "quarter": "2025-Q4",
+     "count": 751012,
+     "weighted": 419378.75,
+     "categories": {
+      "medical_device": {
+       "count": 751012,
+       "weighted": 419378.75
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q1",
+     "count": 811616,
+     "weighted": 432865.25,
+     "categories": {
+      "medical_device": {
+       "count": 811616,
+       "weighted": 432865.25
+      }
+     }
+    },
+    {
+     "quarter": "2026-Q2",
+     "count": 594601,
+     "weighted": 309801.0,
+     "categories": {
+      "medical_device": {
+       "count": 594601,
+       "weighted": 309801.0
+      }
+     }
+    }
+   ]
+  },
+  "per_source_indexed": {
+   "nhtsa_recalls": {
+    "2010-Q1": 66.9,
+    "2010-Q2": 72.8,
+    "2010-Q3": 79.8,
+    "2010-Q4": 109.1,
+    "2011-Q1": 78.6,
+    "2011-Q2": 76.3,
+    "2011-Q3": 76.3,
+    "2011-Q4": 95.0,
+    "2012-Q1": 104.4,
+    "2012-Q2": 111.5,
+    "2012-Q3": 97.4,
+    "2012-Q4": 69.2,
+    "2013-Q1": 55.2,
+    "2013-Q2": 115.0,
+    "2013-Q3": 75.1,
+    "2013-Q4": 73.9,
+    "2014-Q1": 65.7,
+    "2014-Q2": 86.8,
+    "2014-Q3": 92.7,
+    "2014-Q4": 76.3,
+    "2015-Q1": 111.5,
+    "2015-Q2": 79.8,
+    "2015-Q3": 91.5,
+    "2015-Q4": 140.8,
+    "2016-Q1": 95.0,
+    "2016-Q2": 127.9,
+    "2016-Q3": 78.6,
+    "2016-Q4": 95.0,
+    "2017-Q1": 78.6,
+    "2017-Q2": 82.1,
+    "2017-Q3": 83.3,
+    "2017-Q4": 134.9,
+    "2018-Q1": 112.7,
+    "2018-Q2": 109.1,
+    "2018-Q3": 133.8,
+    "2018-Q4": 134.9,
+    "2019-Q1": 153.7,
+    "2019-Q2": 129.1,
+    "2019-Q3": 90.4,
+    "2019-Q4": 113.8,
+    "2020-Q1": 103.3,
+    "2020-Q2": 90.4,
+    "2020-Q3": 82.1,
+    "2020-Q4": 111.5,
+    "2021-Q1": 119.7,
+    "2021-Q2": 120.9,
+    "2021-Q3": 106.8,
+    "2021-Q4": 102.1,
+    "2022-Q1": 108.0,
+    "2022-Q2": 123.2,
+    "2022-Q3": 129.1,
+    "2022-Q4": 118.5,
+    "2023-Q1": 134.9,
+    "2023-Q2": 144.3,
+    "2023-Q3": 97.4,
+    "2023-Q4": 165.5,
+    "2024-Q1": 186.6,
+    "2024-Q2": 161.9,
+    "2024-Q3": 178.4,
+    "2024-Q4": 129.1,
+    "2025-Q1": 118.5,
+    "2025-Q2": 125.6,
+    "2025-Q3": 139.6,
+    "2025-Q4": 132.6,
+    "2026-Q1": 108.0,
+    "2026-Q2": 102.1
+   },
+   "nhtsa_complaints": {
+    "2010-Q1": 137.4,
+    "2010-Q2": 73.7,
+    "2010-Q3": 80.9,
+    "2010-Q4": 61.1,
+    "2011-Q1": 55.5,
+    "2011-Q2": 50.8,
+    "2011-Q3": 63.7,
+    "2011-Q4": 57.7,
+    "2012-Q1": 59.4,
+    "2012-Q2": 58.6,
+    "2012-Q3": 75.0,
+    "2012-Q4": 64.4,
+    "2013-Q1": 71.7,
+    "2013-Q2": 79.6,
+    "2013-Q3": 89.8,
+    "2013-Q4": 69.5,
+    "2014-Q1": 100.0,
+    "2014-Q2": 138.6,
+    "2014-Q3": 152.3,
+    "2014-Q4": 133.3,
+    "2015-Q1": 115.1,
+    "2015-Q2": 98.4,
+    "2015-Q3": 119.6,
+    "2015-Q4": 102.6,
+    "2016-Q1": 98.8,
+    "2016-Q2": 94.7,
+    "2016-Q3": 106.9,
+    "2016-Q4": 93.8,
+    "2017-Q1": 91.0,
+    "2017-Q2": 91.3,
+    "2017-Q3": 102.9,
+    "2017-Q4": 112.4,
+    "2018-Q1": 98.4,
+    "2018-Q2": 95.4,
+    "2018-Q3": 108.0,
+    "2018-Q4": 113.7,
+    "2019-Q1": 117.1,
+    "2019-Q2": 113.4,
+    "2019-Q3": 117.9,
+    "2019-Q4": 116.7,
+    "2020-Q1": 108.7,
+    "2020-Q2": 69.7,
+    "2020-Q3": 97.9,
+    "2020-Q4": 91.5,
+    "2021-Q1": 90.8,
+    "2021-Q2": 75.0,
+    "2021-Q3": 74.1,
+    "2021-Q4": 68.5,
+    "2022-Q1": 90.2,
+    "2022-Q2": 81.3,
+    "2022-Q3": 99.1,
+    "2022-Q4": 79.9,
+    "2023-Q1": 95.0,
+    "2023-Q2": 94.8,
+    "2023-Q3": 113.4,
+    "2023-Q4": 101.2,
+    "2024-Q1": 109.8,
+    "2024-Q2": 100.9,
+    "2024-Q3": 102.5,
+    "2024-Q4": 100.3,
+    "2025-Q1": 108.5,
+    "2025-Q2": 108.0,
+    "2025-Q3": 131.6,
+    "2025-Q4": 127.9,
+    "2026-Q1": 151.1,
+    "2026-Q2": 148.1
+   },
+   "cpsc_recalls": {
+    "2010-Q1": 84.7,
+    "2010-Q2": 86.9,
+    "2010-Q3": 93.5,
+    "2010-Q4": 113.3,
+    "2011-Q1": 121.0,
+    "2011-Q2": 93.5,
+    "2011-Q3": 88.0,
+    "2011-Q4": 96.8,
+    "2012-Q1": 123.2,
+    "2012-Q2": 80.3,
+    "2012-Q3": 73.7,
+    "2012-Q4": 93.5,
+    "2013-Q1": 105.6,
+    "2013-Q2": 97.9,
+    "2013-Q3": 80.3,
+    "2013-Q4": 85.8,
+    "2014-Q1": 113.3,
+    "2014-Q2": 119.9,
+    "2014-Q3": 95.7,
+    "2014-Q4": 100.1,
+    "2015-Q1": 63.8,
+    "2015-Q2": 91.3,
+    "2015-Q3": 124.3,
+    "2015-Q4": 101.2,
+    "2016-Q1": 110.0,
+    "2016-Q2": 122.1,
+    "2016-Q3": 160.7,
+    "2016-Q4": 117.7,
+    "2017-Q1": 117.7,
+    "2017-Q2": 93.5,
+    "2017-Q3": 80.3,
+    "2017-Q4": 142.0,
+    "2018-Q1": 139.8,
+    "2018-Q2": 73.7,
+    "2018-Q3": 77.0,
+    "2018-Q4": 70.4,
+    "2019-Q1": 85.8,
+    "2019-Q2": 130.9,
+    "2019-Q3": 72.6,
+    "2019-Q4": 55.0,
+    "2020-Q1": 51.7,
+    "2020-Q2": 61.6,
+    "2020-Q3": 49.5,
+    "2020-Q4": 103.4,
+    "2021-Q1": 61.6,
+    "2021-Q2": 84.7,
+    "2021-Q3": 96.8,
+    "2021-Q4": 74.8,
+    "2022-Q1": 105.6,
+    "2022-Q2": 116.6,
+    "2022-Q3": 63.8,
+    "2022-Q4": 111.1,
+    "2023-Q1": 160.7,
+    "2023-Q2": 110.0,
+    "2023-Q3": 104.5,
+    "2023-Q4": 105.6,
+    "2024-Q1": 148.6,
+    "2024-Q2": 110.0,
+    "2024-Q3": 122.1,
+    "2024-Q4": 127.6,
+    "2025-Q1": 138.7,
+    "2025-Q2": 134.3,
+    "2025-Q3": 135.4,
+    "2025-Q4": 176.1,
+    "2026-Q1": 117.7,
+    "2026-Q2": 205.8
+   },
+   "fda_device_recalls": {
+    "2010-Q1": 1.1,
+    "2010-Q2": 2.7,
+    "2010-Q3": 2.1,
+    "2010-Q4": 3.0,
+    "2011-Q1": 6.4,
+    "2011-Q2": 5.3,
+    "2011-Q3": 9.0,
+    "2011-Q4": 9.5,
+    "2012-Q1": 17.4,
+    "2012-Q2": 61.6,
+    "2012-Q3": 73.6,
+    "2012-Q4": 69.1,
+    "2013-Q1": 75.7,
+    "2013-Q2": 101.4,
+    "2013-Q3": 88.3,
+    "2013-Q4": 89.3,
+    "2014-Q1": 73.7,
+    "2014-Q2": 133.2,
+    "2014-Q3": 74.0,
+    "2014-Q4": 143.1,
+    "2015-Q1": 86.2,
+    "2015-Q2": 128.2,
+    "2015-Q3": 89.2,
+    "2015-Q4": 107.5,
+    "2016-Q1": 136.6,
+    "2016-Q2": 95.7,
+    "2016-Q3": 103.4,
+    "2016-Q4": 96.0,
+    "2017-Q1": 125.5,
+    "2017-Q2": 168.7,
+    "2017-Q3": 79.9,
+    "2017-Q4": 102.7,
+    "2018-Q1": 91.7,
+    "2018-Q2": 125.6,
+    "2018-Q3": 139.8,
+    "2018-Q4": 74.5,
+    "2019-Q1": 108.9,
+    "2019-Q2": 142.0,
+    "2019-Q3": 87.4,
+    "2019-Q4": 110.0,
+    "2020-Q1": 86.6,
+    "2020-Q2": 106.9,
+    "2020-Q3": 104.2,
+    "2020-Q4": 80.6,
+    "2021-Q1": 103.9,
+    "2021-Q2": 90.3,
+    "2021-Q3": 77.6,
+    "2021-Q4": 59.8,
+    "2022-Q1": 67.2,
+    "2022-Q2": 65.6,
+    "2022-Q3": 63.9,
+    "2022-Q4": 135.9,
+    "2023-Q1": 61.8,
+    "2023-Q2": 147.8,
+    "2023-Q3": 85.1,
+    "2023-Q4": 116.2,
+    "2024-Q1": 116.0,
+    "2024-Q2": 142.1,
+    "2024-Q3": 126.7,
+    "2024-Q4": 102.2,
+    "2025-Q1": 99.7,
+    "2025-Q2": 87.9,
+    "2025-Q3": 114.9,
+    "2025-Q4": 120.3,
+    "2026-Q1": 111.8,
+    "2026-Q2": 66.6
+   },
+   "fda_maude_events": {
+    "2010-Q1": 32.2,
+    "2010-Q2": 35.0,
+    "2010-Q3": 35.2,
+    "2010-Q4": 44.1,
+    "2011-Q1": 47.9,
+    "2011-Q2": 52.6,
+    "2011-Q3": 53.1,
+    "2011-Q4": 55.2,
+    "2012-Q1": 52.5,
+    "2012-Q2": 58.0,
+    "2012-Q3": 70.1,
+    "2012-Q4": 64.7,
+    "2013-Q1": 63.2,
+    "2013-Q2": 79.8,
+    "2013-Q3": 97.9,
+    "2013-Q4": 88.2,
+    "2014-Q1": 80.6,
+    "2014-Q2": 89.8,
+    "2014-Q3": 103.4,
+    "2014-Q4": 104.4,
+    "2015-Q1": 89.1,
+    "2015-Q2": 93.4,
+    "2015-Q3": 98.5,
+    "2015-Q4": 91.8,
+    "2016-Q1": 87.1,
+    "2016-Q2": 96.0,
+    "2016-Q3": 91.3,
+    "2016-Q4": 97.1,
+    "2017-Q1": 100.0,
+    "2017-Q2": 97.6,
+    "2017-Q3": 96.1,
+    "2017-Q4": 113.2,
+    "2018-Q1": 101.2,
+    "2018-Q2": 117.1,
+    "2018-Q3": 112.8,
+    "2018-Q4": 118.9,
+    "2019-Q1": 114.9,
+    "2019-Q2": 125.8,
+    "2019-Q3": 209.4,
+    "2019-Q4": 196.0,
+    "2020-Q1": 187.4,
+    "2020-Q2": 139.9,
+    "2020-Q3": 183.4,
+    "2020-Q4": 214.7,
+    "2021-Q1": 212.7,
+    "2021-Q2": 260.4,
+    "2021-Q3": 226.7,
+    "2021-Q4": 252.8,
+    "2022-Q1": 300.5,
+    "2022-Q2": 322.5,
+    "2022-Q3": 267.6,
+    "2022-Q4": 261.6,
+    "2023-Q1": 256.8,
+    "2023-Q2": 276.1,
+    "2023-Q3": 278.1,
+    "2023-Q4": 267.0,
+    "2024-Q1": 279.2,
+    "2024-Q2": 307.9,
+    "2024-Q3": 336.1,
+    "2024-Q4": 359.1,
+    "2025-Q1": 323.1,
+    "2025-Q2": 276.4,
+    "2025-Q3": 393.7,
+    "2025-Q4": 347.9,
+    "2026-Q1": 359.1,
+    "2026-Q2": 257.0
+   }
+  },
+  "severity_weights": {
+   "nhtsa_recall": 2.0,
+   "nhtsa_complaint": 0.25,
+   "nhtsa_complaint_injury": 1.0,
+   "cpsc_recall": 2.0,
+   "cpsc_recall_injury": 3.0,
+   "fda_recall_class_1": 3.0,
+   "fda_recall_class_2": 2.0,
+   "fda_recall_class_3": 1.0,
+   "maude_death": 3.0,
+   "maude_injury": 1.0,
+   "maude_malfunction": 0.25
+  },
+  "category_keywords": {
+   "battery_energy": [
+    "lithium",
+    "li-ion",
+    "battery",
+    "batteries",
+    "thermal runaway",
+    "energy storage",
+    "power bank",
+    "charger",
+    "charging"
+   ],
+   "vehicle_ev_adas": [
+    "electric vehicle",
+    "hybrid",
+    "autonomous",
+    "self-driving",
+    "adas",
+    "autopilot",
+    "fuel cell",
+    "propulsion",
+    "airbag",
+    "unintended acceleration",
+    "brake",
+    "steering"
+   ],
+   "medical_device": [
+    "implant",
+    "pacemaker",
+    "defibrillator",
+    "insulin pump",
+    "catheter",
+    "surgical",
+    "infusion",
+    "ventilator",
+    "prosthe",
+    "stent",
+    "hip replacement",
+    "knee replacement"
+   ],
+   "consumer_electronics": [
+    "smartphone",
+    "laptop",
+    "tablet",
+    "wearable",
+    "headphone",
+    "e-cigarette",
+    "vape",
+    "hoverboard",
+    "e-bike",
+    "e-scooter",
+    "scooter",
+    "drone",
+    "appliance",
+    "heater",
+    "dehumidifier"
+   ],
+   "fire_structural": [
+    "fire hazard",
+    "burn hazard",
+    "overheat",
+    "smoke",
+    "explosion",
+    "combust",
+    "flammab",
+    "carbon monoxide",
+    "collapse"
+   ]
+  },
+  "base_period": "2012-2019"
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "The Reactive Demand Index: how much is physically going wrong",
+  "what": "A quarterly index of product failures reported to US regulators - vehicle recalls and complaints (NHTSA), consumer-product recalls (CPSC), and medical-device recalls and adverse events (FDA) - filtered to the categories Exponent actually works on: batteries, EVs, medical devices, consumer electronics, and fire hazards.",
+  "how": "Each source is counted quarterly, weighted by severity (a death/injury-linked recall counts 3, an ordinary recall 2, a routine complaint 0.25 - the full weight table is in the Methodology section). Because sources differ hugely in volume, each is first indexed to its own 2012-2019 average = 100, then averaged into the blended line. A value of 150 means failure reports are running 50% above that baseline.",
+  "thesis": "Exponent is the firm companies call AFTER something catches fire, gets recalled, or ends up in court. More reported failures today = more forensic work now (0-3 months out) and more litigation support later (12-24 months out). An elevated index supports the 'reactive revenue pipeline' leg of the thesis.",
+  "caveats": [
+    "This measures what is REPORTED to regulators, not Exponent's actual bookings - it's a demand-environment gauge.",
+    "Medical-device adverse-event volumes also grew because reporting rules tightened, not only because more devices failed.",
+    "Category filtering is keyword-based and imperfect; the exact keyword lists are published in Methodology."
+  ]
+}

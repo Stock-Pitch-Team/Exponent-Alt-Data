@@ -1,0 +1,11 @@
+{
+  "title": "How many consultants does Exponent have? (tracked independently)",
+  "what": "An independent estimate of how Exponent's consultant workforce has grown or shrunk each year, built without waiting for the company's own annual reports.",
+  "how": "Every Exponent consultant has a profile page on exponent.com. The Internet Archive's Wayback Machine has been photographing the web for decades, so we counted how many distinct consultant profile pages existed in its archive each year: a profile is counted as 'active' from the first year it was archived to the last. Think of it as flipping through old snapshots of the company's staff directory.",
+  "thesis": "The single most important test in the investment thesis is whether Exponent is growing by ADDING PEOPLE again, not just by raising prices. The company over-hired in 2022-23, shrank in 2024, and the bet is that headcount growth resumes. This chart lets you check that claim independently and earlier than official filings.",
+  "caveats": [
+    "The archive doesn't photograph every page every year, so the exact numbers run LOW - trust the direction of the line, not the level.",
+    "The company redesigned its website in 2022-23 (every profile got a new address), which creates an artificial step in the chart around those years.",
+    "Cross-check: our 2026 count (935) is close to the 996 consultants on the live site today, which suggests the method tracks reality well."
+  ]
+}

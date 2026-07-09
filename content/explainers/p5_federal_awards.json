@@ -1,0 +1,11 @@
+{
+  "title": "Federal contract dollars flowing to Exponent",
+  "what": "Every prime federal contract awarded to Exponent, Inc., by fiscal year and by agency, from USAspending.gov - the official public ledger of US government spending.",
+  "how": "USAspending records every prime federal award. We matched awards whose recipient name is exactly Exponent (or its pre-1998 name) and summed the obligated dollars per federal fiscal year (Oct-Sep).",
+  "thesis": "Two signals: (1) credibility - the Department of Defense repeatedly hiring your engineering firm is a quality stamp no marketing budget can buy; (2) the award trend recovered from the 2014-2018 trough (~$17M/yr) back to $60-74M/yr - a small but real, contractually-committed revenue stream.",
+  "caveats": [
+    "Only PRIME contracts appear; subcontracts and classified work are invisible here.",
+    "Federal work is a modest slice of Exponent's ~$580M revenue - read this as a credibility anchor, not a growth driver.",
+    "The current fiscal year is incomplete by definition."
+  ]
+}

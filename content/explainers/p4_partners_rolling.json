@@ -1,0 +1,10 @@
+{
+  "title": "How many corporations work with Exponent's scientists",
+  "what": "The number of DIFFERENT companies (Stryker, Dow, ExxonMobil, P&G...) that co-authored at least one scientific paper with Exponent staff in each rolling 3-year window.",
+  "how": "When an Exponent scientist and a client company's engineers publish research together, both employers appear on the paper. We extracted every corporate co-author from Exponent's ~5,000 publications and counted unique companies per trailing 3-year period.",
+  "thesis": "About 40% of Exponent's business is proactive R&D consulting for corporations, and the client list is secret - this is one of the only public windows into it. A record-high count of distinct corporate partners (189 in the 2023-2025 window) suggests the proactive book is broadening, which is exactly what the recovery thesis needs.",
+  "caveats": [
+    "Confidential engagements rarely produce co-authored papers, so this UNDERCOUNTS the real client base - treat it as a lower bound and watch the trend.",
+    "Publication lag means the latest window partly reflects work done 1-2 years ago."
+  ]
+}

@@ -1,0 +1,250 @@
+{
+ "metadata": {
+  "pipeline": "p1_headcount",
+  "output": "job_postings",
+  "generated_at": "2026-07-09T01:22:30Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "Exponent.com careers content (site's own public search index)",
+    "url": "https://www.exponent.com/careers",
+    "fetched_at": "2026-07-09T01:22:30Z",
+    "records_matched": 24
+   }
+  ],
+  "coverage": null,
+  "caveats": [
+   "Snapshot of postings visible on the site at fetch time; no historical backfill is possible from this source, so the hiring series accumulates from today forward.",
+   "Postings signal hiring INTENT by discipline; they are not hires."
+  ],
+  "methodology_id": "p1_job_postings"
+ },
+ "data": {
+  "postings": [
+   {
+    "title": "Careers",
+    "url": "/careers",
+    "summary": "Discover unlimited opportunities to shape your career and one-of-a-kind opportunities to make a difference."
+   },
+   {
+    "title": "Life @ Exponent",
+    "url": "/careers/life-exponent",
+    "summary": "At Exponent, our culture is one that actively supports and nurtures development and where people want to stay and grow."
+   },
+   {
+    "title": "Brian Shen",
+    "url": "/brian-shen",
+    "summary": ""
+   },
+   {
+    "title": "Naomi Clayman",
+    "url": "/naomi-clayman",
+    "summary": ""
+   },
+   {
+    "title": "Jessica Vargas",
+    "url": "/jessica-vargas",
+    "summary": ""
+   },
+   {
+    "title": "Winnie Hung",
+    "url": "/winnie-hung",
+    "summary": ""
+   },
+   {
+    "title": "Aimon Iftikhar",
+    "url": "/aimon-iftikhar",
+    "summary": ""
+   },
+   {
+    "title": "Sam Lawton",
+    "url": "/sam-lawton",
+    "summary": "Sam Lawton When you work at Exponent, you collaborate with world-leading experts across multiple fields. You always learn something new — and you have opportunities to bring something new to the team.&nbsp; Helping Clients Achieve Exponent is an engineering and scientific consulting firm. When compa"
+   },
+   {
+    "title": "Kimberly Killelea",
+    "url": "/kimberly-killelea",
+    "summary": ""
+   },
+   {
+    "title": "For Students",
+    "url": "/careers/students",
+    "summary": "Exponent is an exciting place for new graduates to grow a thriving scientific and technical consulting career."
+   },
+   {
+    "title": "For Experienced Experts",
+    "url": "/careers/experienced-experts",
+    "summary": "Work on a variety of projects, collaborate, and make a positive impact on people and communities."
+   },
+   {
+    "title": "For Corporate Staff",
+    "url": "/careers/corporate-staff",
+    "summary": "Find an exciting, challenging, and rewarding work environment that complements our strong technical bench."
+   },
+   {
+    "title": "Darrell Ford",
+    "url": "/darrell-ford",
+    "summary": "Senior Manager Darrell Ford leads software teams at Exponent, valuing creativity, diverse projects, open communication, and a collaborative culture fostering both professional growth and personal connections."
+   },
+   {
+    "title": "Sergio Mendoza",
+    "url": "/sergio-mendoza",
+    "summary": ""
+   },
+   {
+    "title": "Jermaine Marshall, Senior Scientist, Data Sciences",
+    "url": "/jermaine-marshall-senior-scientist-data-sciences",
+    "summary": ""
+   },
+   {
+    "title": "Morgan Griffith, Senior Managing Engineer, Buildings & Structures",
+    "url": "/morgan-griffith-senior-managing-engineer-buildings-structures",
+    "summary": ""
+   },
+   {
+    "title": "Harri Kytömaa",
+    "url": "/harri-kytomaa",
+    "summary": ""
+   },
+   {
+    "title": "Maureen Reitman",
+    "url": "/maureen-reitman",
+    "summary": ""
+   },
+   {
+    "title": "David Dore",
+    "url": "/david-dore",
+    "summary": ""
+   },
+   {
+    "title": "Forge Your Path",
+    "url": "/careers/forge-your-path",
+    "summary": ""
+   },
+   {
+    "title": "Ute West",
+    "url": "/ute-west",
+    "summary": ""
+   },
+   {
+    "title": "Okanmisope Fashanu",
+    "url": "/okanmisope-fashanu",
+    "summary": ""
+   },
+   {
+    "title": "Vashti Campbell, Scientist, Chemical Regulation and Food Safety",
+    "url": "/vashti-campbell-scientist-chemical-regulation-and-food-safety",
+    "summary": ""
+   },
+   {
+    "title": "Dan Heinrich Manuyag",
+    "url": "/dan-heinrich-manuyag",
+    "summary": ""
+   }
+  ],
+  "subtypes_seen": {
+   "Accident & Failure Investigation": 1,
+   "Accident Investigation & Reconstruction: Human Factors [HF]": 1,
+   "Accident Investigations [EECS]": 1,
+   "Accident Reconstruction & Analysis [VE]": 1,
+   "Acoustics Consulting & Analysis [ME]": 1,
+   "Acton": 1,
+   "ADAS Research, Testing & Consulting [VE]": 1,
+   "Aeronautical Engineering [TS]": 1,
+   "Agrochemicals & Pesticides [CRFS]": 1,
+   "Agrochemicals in Europe [CRFS]": 1,
+   "AI Consulting": 1,
+   "AI Consulting for Life Sciences": 1,
+   "AI Consulting for the Tech Industry": 1,
+   "AI Consulting for Transportation": 1,
+   "AI Consulting for Utilities": 1,
+   "Alerts": 358,
+   "Alexandria": 1,
+   "Amusement & Entertainment Industry [BIO]": 1,
+   "Announcement": 155,
+   "Antimicrobials in North America [CRFS]": 1,
+   "Asbestos-Cement Pipe in Water Distribution Systems [CSE]": 1,
+   "Assessment & Management of Natural Resource Capital [EBS]": 1,
+   "Asset Management for Extreme Weather Risks [EES]": 1,
+   "Atlanta": 1,
+   "Audio, Video & Image Processing [EECS]": 1,
+   "Austin": 1,
+   "Automotive Materials [MCE]": 1,
+   "Autonomous Vehicle Analysis & Incident Response [VE]": 1,
+   "Basel": 1,
+   "Batteries & Energy Storage [BAT]": 1,
+   "Battery Custom Testing [BAT]": 1,
+   "Battery Energy Storage Systems (BESS) Consulting [MSE]": 1,
+   "Battery Evaluations": 1,
+   "Battery Failure Investigation [BAT]": 1,
+   "Battery Intellectual Property & Trade Secrets [BAT]": 1,
+   "Battery Risk Assessments & Corrective Support [BAT]": 1,
+   "Battery Safety & Risk Management for Medical Devices [BES]": 1,
+   "Battery Safety Recall & Support [BAT]": 1,
+   "Battery Supply Chain Services [BAT]": 1,
+   "Battery System Design Review & Testing [BAT]": 1,
+   "Battery Vendor Evaluation Services [BAT]": 1,
+   "Bellevue": 1,
+   "Bioavailability & Chemical Exposure Assessment [EBS]": 1,
+   "Biocides and Antimicrobials [CRFS]": 1,
+   "Biocides in Europe [CRFS]": 1,
+   "Biocompatibility & Biological Risk Assessment [BES]": 1,
+   "Biofluid Dynamics for Biomedical Devices & Products [BES]": 1,
+   "Biomechanical Engineering Support for Product Design & Development [BIO]": 1,
+   "Biomechanical Expertise for Clinical Technologies [BIO]": 1,
+   "Biomechanical Expertise for Helmets & Other Personal Protective Equipment [BIO]": 1,
+   "Biomechanical Expertise for Military Technology [BIO]": 1,
+   "Biomechanical Expertise for Product Evaluations [BIO]": 1,
+   "Biomechanical Expertise for Virtual & Augmented Reality [BIO]": 1,
+   "Biomechanical Expertise for Wearables [BIO]": 1,
+   "Biomechanical Injury Investigations & Analysis [BIO]": 1,
+   "Biomechanical Testing & Modeling [BIO]": 1,
+   "Biomechanics": 1,
+   "Biomedical Engineering and Sciences": 1,
+   "Biomedical Engineering Laboratories [BES]": 1,
+   "Biomedical Evaluations": 1,
+   "Biomedical Expertise for Disputes [BES]": 1,
+   "Biomedical Expertise for Therapeutic Areas [BES]": 1,
+   "Biometric Analysis & Data Collection [EECS]": 1,
+   "Biopesticides & Biocontrol Agents [CRFS]": 1,
+   "Biopesticides [CRFS]": 1,
+   "Biosensor Integration & Biosignal Processing for UX Research [HF]": 1,
+   "Biostatistics Research [HS]": 1,
+   "Bowie": 1,
+   "Building Envelope Consulting [CSE]": 1,
+   "Buildings & Mechanical Engineering [ME]": 1,
+   "Buildings & Structures Design Support [CSE]": 1,
+   "Burlington": 1,
+   "Burner Management & Combustion Safety Services [EECS]": 1,
+   "California Regulatory & Scientific Support [CRFS]": 1,
+   "Canada: Pest Management Regulatory Agency (PMRA) [CRFS]": 1,
+   "Canadian Environmental Protection Act (CEPA) [CRFS]": 1,
+   "Careers": 24,
+   "Catalysts & Catalytic Processes [MCE]": 1,
+   "Chemical & Biochemical Engineering [TS]": 1,
+   "Chemical Compliance [CHEMICALS]": 1,
+   "Chemical Consulting & Analysis [HS]": 1,
+   "Chemical Engineering [TS]": 1,
+   "Chemical Fate & Transport [EES]": 1,
+   "Chemical Regulation and Food Safety": 1,
+   "Chemical Regulatory Support [HS]": 1,
+   "Chemical Toxicology & Health Risk Assessments [HS]": 1,
+   "Chemicals": 1,
+   "Chemosensory Perception Consulting [HF]": 1,
+   "Chicago": 1,
+   "Chicago Laboratory": 1,
+   "Child Safety [HF]": 1,
+   "Civil and Structural Engineering": 1,
+   "Claims on Foods and Dietary Supplements [CRFS]": 1,
+   "Clinical & Pharmacoepidemiology [HS]": 1,
+   "Cluster Investigation Analysis [HS]": 1,
+   "Code & Standard Review [EECS]": 1,
+   "Combustible Dust Hazard Analysis & Facility Inspections": 1,
+   "Company": 29,
+   "Component, System and Vehicle Analysis & Testing [VE]": 1,
+   "Computational Modeling: Thermal Sciences [TS]": 1
+  },
+  "job_subtype": "Careers"
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Do Exponent's experts survive challenges in court?",
+  "what": "When one side hires an expert witness, the other side often asks the judge to throw that expert out (a 'Daubert challenge', after a famous Supreme Court case). This chart compares how often experts get excluded in cases involving Exponent versus a baseline of similar cases without Exponent.",
+  "how": "We pulled the full text of court opinions that discuss both Exponent and a Daubert/Rule 702 challenge, and had software read each one for the judge's ruling language ('motion to exclude is GRANTED' vs 'DENIED'). The same software classified a same-size set of recent non-Exponent Daubert opinions, so any classification bias hits both groups equally. Anything ambiguous is labeled 'unclassified' - never guessed.",
+  "thesis": "The entire moat argument is that Exponent's 55-year courtroom-tested reputation lets it charge premium rates. If its experts survive exclusion challenges at a better-than-baseline rate, that reputation is measurably real - not marketing copy.",
+  "caveats": [
+    "SMALL SAMPLE - a few dozen classifiable cases per group. Treat the comparison as indicative, not a precise statistic.",
+    "When several experts are challenged in one case, the ruling may concern a non-Exponent expert.",
+    "Every case in the list links to the actual opinion so you can read the judge's words yourself."
+  ]
+}

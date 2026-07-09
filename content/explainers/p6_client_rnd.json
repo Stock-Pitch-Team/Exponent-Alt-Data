@@ -1,0 +1,11 @@
+{
+  "title": "Are Exponent's clients' R&D budgets growing?",
+  "what": "Total research & development spending, as reported to the SEC, by the public companies we can document a relationship with Exponent for - plus the market-wide R&D total as a baseline.",
+  "how": "Exponent never names clients, so we built a 'revealed client' list from two public traces: companies that co-authored research with Exponent (strong signal) and companies that were parties in court cases where Exponent experts appear (weaker signal - the side is usually unknown). Each name was matched to its SEC filings and its officially reported annual R&D expense. The aggregate line uses only the constant sample of companies reporting R&D every year, so growth isn't distorted by companies entering or leaving the list.",
+  "thesis": "Exponent's proactive segment sells into corporate R&D budgets. When clients' R&D spending grows 7-11% a year - as this sample shows for 2021-2025 - the pool of money that pays for Exponent's design-review, testing and regulatory work is expanding. This tests the 'proactive demand recovery' leg of the thesis.",
+  "caveats": [
+    "The revealed-client list is a biased LOWER BOUND: it only sees clients who publish or litigate publicly.",
+    "R&D budgets fund many things besides consultants - this is a demand-environment indicator, not a revenue forecast.",
+    "Companies that don't report the standard R&D line item are shown as unavailable, never estimated."
+  ]
+}

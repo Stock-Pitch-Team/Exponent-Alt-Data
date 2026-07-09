@@ -1,0 +1,10 @@
+{
+  "title": "Failures today, revenue later: the lag hypothesis",
+  "what": "The Reactive Demand Index overlaid on Exponent's actual quarterly revenue, both rescaled to the same 100 = 2012-2019-average footing so they can share one axis honestly.",
+  "how": "Exponent's revenue comes straight from its SEC filings. Use the shift buttons to slide the failure index forward in time: '+12 months' asks whether failure spikes line up with revenue roughly a year later, which is when lawsuits and formal investigations typically generate billable expert work.",
+  "thesis": "If elevated failure activity in 2024-2025 shows up as Exponent revenue in 2025-2027, the current elevated index is effectively a backlog indicator - revenue strength that the market can't see in official filings yet.",
+  "caveats": [
+    "This is a HYPOTHESIS you can eyeball, not a fitted statistical model - with only ~60 quarters of financial data, a regression would overstate certainty.",
+    "Both lines are indexed to their own average so they can share one axis; the overlay shows timing alignment, never magnitude."
+  ]
+}

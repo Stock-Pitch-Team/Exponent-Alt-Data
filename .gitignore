@@ -1,0 +1,18 @@
+# Secrets
+.env
+.claude/settings.local.json
+
+# Bulky / regenerable data
+data/raw/
+data/cache/
+data/interim/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+Thumbs.db
+.DS_Store

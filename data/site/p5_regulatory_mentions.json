@@ -1,0 +1,2365 @@
+{
+ "metadata": {
+  "pipeline": "p5_gov",
+  "output": "regulatory_mentions",
+  "generated_at": "2026-07-09T01:31:07Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "Regulations.gov v4 API (documents + comments full-text search)",
+    "url": "https://api.regulations.gov/v4/documents",
+    "fetched_at": "2026-07-09T01:31:07Z",
+    "records_matched": 404
+   }
+  ],
+  "coverage": {
+   "start": "2005",
+   "end": "2026"
+  },
+  "caveats": [
+   "The 'strict' series counts quoted phrases that can only mean the firm ('Exponent, Inc', 'prepared by Exponent'); the 'raw' series counts the bare word 'Exponent', which includes unrelated math/finance uses - shown for transparency.",
+   "Regulations.gov coverage differs by agency and era; early years underrepresent activity.",
+   "A mention can be favorable (Exponent's own study submitted) or critical (an opposing comment citing Exponent's work) - the count alone does not distinguish; read the evidence table.",
+   "Counts use the API's total-results field per calendar year; documents and comments are counted separately.",
+   "Regulations.gov's own posting volume collapsed in 2025 (~65k documents vs several hundred thousand in typical years), so use the per-10k-documents normalized rate - not the raw count - when reading recent years."
+  ],
+  "methodology_id": "p5_regulatory_mentions"
+ },
+ "data": {
+  "yearly": [
+   {
+    "year": 2005,
+    "documents": {
+     "strict": 5,
+     "raw": 124,
+     "total_posted": 48359,
+     "strict_per_10k": 1.03
+    },
+    "comments": {
+     "strict": 10,
+     "raw": 36,
+     "total_posted": 100129,
+     "strict_per_10k": 1.0
+    }
+   },
+   {
+    "year": 2006,
+    "documents": {
+     "strict": 40,
+     "raw": 240,
+     "total_posted": 81711,
+     "strict_per_10k": 4.9
+    },
+    "comments": {
+     "strict": 24,
+     "raw": 61,
+     "total_posted": 115228,
+     "strict_per_10k": 2.08
+    }
+   },
+   {
+    "year": 2007,
+    "documents": {
+     "strict": 34,
+     "raw": 182,
+     "total_posted": 72861,
+     "strict_per_10k": 4.67
+    },
+    "comments": {
+     "strict": 10,
+     "raw": 27,
+     "total_posted": 113068,
+     "strict_per_10k": 0.88
+    }
+   },
+   {
+    "year": 2008,
+    "documents": {
+     "strict": 30,
+     "raw": 247,
+     "total_posted": 60442,
+     "strict_per_10k": 4.96
+    },
+    "comments": {
+     "strict": 10,
+     "raw": 57,
+     "total_posted": 325692,
+     "strict_per_10k": 0.31
+    }
+   },
+   {
+    "year": 2009,
+    "documents": {
+     "strict": 29,
+     "raw": 214,
+     "total_posted": 58296,
+     "strict_per_10k": 4.97
+    },
+    "comments": {
+     "strict": 6,
+     "raw": 45,
+     "total_posted": 402958,
+     "strict_per_10k": 0.15
+    }
+   },
+   {
+    "year": 2010,
+    "documents": {
+     "strict": 53,
+     "raw": 261,
+     "total_posted": 61245,
+     "strict_per_10k": 8.65
+    },
+    "comments": {
+     "strict": 32,
+     "raw": 91,
+     "total_posted": 324219,
+     "strict_per_10k": 0.99
+    }
+   },
+   {
+    "year": 2011,
+    "documents": {
+     "strict": 55,
+     "raw": 377,
+     "total_posted": 66971,
+     "strict_per_10k": 8.21
+    },
+    "comments": {
+     "strict": 37,
+     "raw": 145,
+     "total_posted": 529913,
+     "strict_per_10k": 0.7
+    }
+   },
+   {
+    "year": 2012,
+    "documents": {
+     "strict": 39,
+     "raw": 327,
+     "total_posted": 67278,
+     "strict_per_10k": 5.8
+    },
+    "comments": {
+     "strict": 38,
+     "raw": 131,
+     "total_posted": 361738,
+     "strict_per_10k": 1.05
+    }
+   },
+   {
+    "year": 2013,
+    "documents": {
+     "strict": 19,
+     "raw": 212,
+     "total_posted": 66215,
+     "strict_per_10k": 2.87
+    },
+    "comments": {
+     "strict": 17,
+     "raw": 82,
+     "total_posted": 395591,
+     "strict_per_10k": 0.43
+    }
+   },
+   {
+    "year": 2014,
+    "documents": {
+     "strict": 39,
+     "raw": 327,
+     "total_posted": 70843,
+     "strict_per_10k": 5.51
+    },
+    "comments": {
+     "strict": 21,
+     "raw": 99,
+     "total_posted": 715327,
+     "strict_per_10k": 0.29
+    }
+   },
+   {
+    "year": 2015,
+    "documents": {
+     "strict": 60,
+     "raw": 436,
+     "total_posted": 85684,
+     "strict_per_10k": 7.0
+    },
+    "comments": {
+     "strict": 29,
+     "raw": 121,
+     "total_posted": 412051,
+     "strict_per_10k": 0.7
+    }
+   },
+   {
+    "year": 2016,
+    "documents": {
+     "strict": 37,
+     "raw": 389,
+     "total_posted": 110487,
+     "strict_per_10k": 3.35
+    },
+    "comments": {
+     "strict": 31,
+     "raw": 157,
+     "total_posted": 1126030,
+     "strict_per_10k": 0.28
+    }
+   },
+   {
+    "year": 2017,
+    "documents": {
+     "strict": 55,
+     "raw": 264,
+     "total_posted": 80359,
+     "strict_per_10k": 6.84
+    },
+    "comments": {
+     "strict": 24,
+     "raw": 106,
+     "total_posted": 1822991,
+     "strict_per_10k": 0.13
+    }
+   },
+   {
+    "year": 2018,
+    "documents": {
+     "strict": 42,
+     "raw": 300,
+     "total_posted": 130440,
+     "strict_per_10k": 3.22
+    },
+    "comments": {
+     "strict": 16,
+     "raw": 164,
+     "total_posted": 2339870,
+     "strict_per_10k": 0.07
+    }
+   },
+   {
+    "year": 2019,
+    "documents": {
+     "strict": 52,
+     "raw": 350,
+     "total_posted": 110641,
+     "strict_per_10k": 4.7
+    },
+    "comments": {
+     "strict": 45,
+     "raw": 158,
+     "total_posted": 2212601,
+     "strict_per_10k": 0.2
+    }
+   },
+   {
+    "year": 2020,
+    "documents": {
+     "strict": 42,
+     "raw": 396,
+     "total_posted": 74454,
+     "strict_per_10k": 5.64
+    },
+    "comments": {
+     "strict": 60,
+     "raw": 197,
+     "total_posted": 2244217,
+     "strict_per_10k": 0.27
+    }
+   },
+   {
+    "year": 2021,
+    "documents": {
+     "strict": 77,
+     "raw": 400,
+     "total_posted": 76710,
+     "strict_per_10k": 10.04
+    },
+    "comments": {
+     "strict": 22,
+     "raw": 156,
+     "total_posted": 1505168,
+     "strict_per_10k": 0.15
+    }
+   },
+   {
+    "year": 2022,
+    "documents": {
+     "strict": 42,
+     "raw": 379,
+     "total_posted": 75813,
+     "strict_per_10k": 5.54
+    },
+    "comments": {
+     "strict": 30,
+     "raw": 130,
+     "total_posted": 1891323,
+     "strict_per_10k": 0.16
+    }
+   },
+   {
+    "year": 2023,
+    "documents": {
+     "strict": 59,
+     "raw": 486,
+     "total_posted": 77884,
+     "strict_per_10k": 7.58
+    },
+    "comments": {
+     "strict": 40,
+     "raw": 165,
+     "total_posted": 3850082,
+     "strict_per_10k": 0.1
+    }
+   },
+   {
+    "year": 2024,
+    "documents": {
+     "strict": 41,
+     "raw": 369,
+     "total_posted": 82554,
+     "strict_per_10k": 4.97
+    },
+    "comments": {
+     "strict": 28,
+     "raw": 90,
+     "total_posted": 1286185,
+     "strict_per_10k": 0.22
+    }
+   },
+   {
+    "year": 2025,
+    "documents": {
+     "strict": 0,
+     "raw": 2,
+     "total_posted": 65220,
+     "strict_per_10k": 0.0
+    },
+    "comments": {
+     "strict": 0,
+     "raw": 1,
+     "total_posted": 2457062,
+     "strict_per_10k": 0.0
+    }
+   },
+   {
+    "year": 2026,
+    "documents": {
+     "strict": 3,
+     "raw": 4,
+     "total_posted": 38562,
+     "strict_per_10k": 0.78
+    },
+    "comments": {
+     "strict": 0,
+     "raw": 3,
+     "total_posted": 759008,
+     "strict_per_10k": 0.0
+    }
+   }
+  ],
+  "evidence": [
+   {
+    "id": "EPA-HQ-OPPT-2018-0446-0079",
+    "title": "Final Report Occupational Inhalation Exposure Assessment for p-DCB",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2018-0446",
+    "type": "Supporting & Related Material",
+    "posted": "2026-04-29",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2018-0446-0079"
+   },
+   {
+    "id": "EPA-HQ-OPP-2015-0433-0678",
+    "title": "Meeting Notes (February, 11, 2026) - EPA Office of Pesticide Programs (OPP) Pesticide Re-evaluation Division (PRD); Environmental Fate and Effects Division (EFED); Human Effects Division (HED); and Biological and Economic Analysis Division (BEAD) Meeting with Great Oak, Inc. And Exponent, Inc. To Di",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2015-0433",
+    "type": "Supporting & Related Material",
+    "posted": "2026-03-09",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2015-0433-0678"
+   },
+   {
+    "id": "FDA-2026-C-2014-0001",
+    "title": "Ecoflora Cares; Filing of Color Additive Petition",
+    "agency": "FDA",
+    "docket": "FDA-2026-C-2014",
+    "type": "Proposed Rule",
+    "posted": "2026-03-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2026-C-2014-0001"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0211",
+    "title": "3.81 SouthCoast_COP_Volume II_Rev_F",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0211"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0083",
+    "title": "3.80 Mayflower_DEIS_Vol_III_WEB_508",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0083"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0214",
+    "title": "3.79 Mayflower_DEIS_Vol_II_WEB_508",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0214"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0216",
+    "title": "3.88 SouthCoast_FEIS_Volume_II_Appendices",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0216"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0084",
+    "title": "3.79 Mayflower_DEIS_Vol_II_WEB_508",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0084"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0213",
+    "title": "3.80 Mayflower_DEIS_Vol_III_WEB_508",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0213"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0215",
+    "title": "3.86 SouthCoast_COP_Volume II",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0215"
+   },
+   {
+    "id": "EPA-R01-OAR-2024-0393-0068",
+    "title": "3.81 SouthCoast_COP_Volume II_Rev_F",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2024-0393",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2024-0393-0068"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2023-0231-0812",
+    "title": "Review of the All Ages Lead Model External Review Draft 2.0",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2023-0231",
+    "type": "Supporting & Related Material",
+    "posted": "2024-11-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2023-0231-0812"
+   },
+   {
+    "id": "PHMSA-2024-0043-0040",
+    "title": "2024 Risk Modeling Public Workshop Agenda 22 Oct 24 Final",
+    "agency": "PHMSA",
+    "docket": "PHMSA-2024-0043",
+    "type": "Other",
+    "posted": "2024-11-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/PHMSA-2024-0043-0040"
+   },
+   {
+    "id": "PHMSA-2024-0043-0039",
+    "title": "2024 Risk Modeling Public Workshop Agenda 22 Oct 24 - Final",
+    "agency": "PHMSA",
+    "docket": "PHMSA-2024-0043",
+    "type": "Other",
+    "posted": "2024-11-01",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/PHMSA-2024-0043-0039"
+   },
+   {
+    "id": "EPA-HQ-OW-2022-0801-2624",
+    "title": "USEPA (2024). Technical Support Document for the All Ages lead model (AALM) version 3.0 - Parameters, Equations, and Evaluations. EPA 600/R-23/346. February 2024.",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OW-2022-0801",
+    "type": "Supporting & Related Material",
+    "posted": "2024-10-30",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OW-2022-0801-2624"
+   },
+   {
+    "id": "EPA-HQ-OPP-2024-0396-0002",
+    "title": "Capsaicin and Related Capsaicinoids Case 4018 Preliminary Work Plan",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2024-0396",
+    "type": "Supporting & Related Material",
+    "posted": "2024-10-28",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2024-0396-0002"
+   },
+   {
+    "id": "EPA-HQ-OAR-2022-0606-0164",
+    "title": "Documents and Materials Referenced in the Preamble: Folder Three",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2022-0606",
+    "type": "Supporting & Related Material",
+    "posted": "2024-10-11",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2022-0606-0164"
+   },
+   {
+    "id": "EPA-R02-OAR-2024-0312-0043",
+    "title": "4.4.6 BOEM FEIS Volume II Appendix E",
+    "agency": "EPA",
+    "docket": "EPA-R02-OAR-2024-0312",
+    "type": "Supporting & Related Material",
+    "posted": "2024-09-30",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R02-OAR-2024-0312-0043"
+   },
+   {
+    "id": "EPA-R02-OAR-2024-0312-0049",
+    "title": "4.4.11 BOEM FEIS Volume II Appendix J",
+    "agency": "EPA",
+    "docket": "EPA-R02-OAR-2024-0312",
+    "type": "Supporting & Related Material",
+    "posted": "2024-09-30",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R02-OAR-2024-0312-0049"
+   },
+   {
+    "id": "EPA-R02-OAR-2024-0312-0037",
+    "title": "4.4.5 BOEM FEIS Volume II Appendix D",
+    "agency": "EPA",
+    "docket": "EPA-R02-OAR-2024-0312",
+    "type": "Supporting & Related Material",
+    "posted": "2024-09-30",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R02-OAR-2024-0312-0037"
+   },
+   {
+    "id": "EPA-HQ-OPP-2014-0004-0186",
+    "title": "Carbendazim (MBC): Report of the Cancer Assessment Review Committee",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2014-0004",
+    "type": "Supporting & Related Material",
+    "posted": "2024-09-12",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2014-0004-0186"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2018-0436-0062",
+    "title": "05. Data Quality Evaluation and Data Extraction Information for Environmental Release and Occupational Exposure for Diisononyl Phthalate (DINP)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2018-0436",
+    "type": "Supporting & Related Material",
+    "posted": "2024-09-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2018-0436-0062"
+   },
+   {
+    "id": "EPA-HQ-OPP-2024-0354-0002",
+    "title": "Notice of Filing for IN-11882: Glycerol Ester of Rosin (CAS Reg. No. 8050-31-5), Exemption from the Requirement of a Tolerance",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2024-0354",
+    "type": "Supporting & Related Material",
+    "posted": "2024-08-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2024-0354-0002"
+   },
+   {
+    "id": "FDA-2024-E-3545-0002",
+    "title": "Patent Extension Application from Sterne, Kessler, Goldstein & Fox P.L.L.C. (on behalf of Ecoflora S.A.S. (\"Ecoflora\"))",
+    "agency": "FDA",
+    "docket": "FDA-2024-E-3545",
+    "type": "Other",
+    "posted": "2024-08-09",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2024-E-3545-0002"
+   },
+   {
+    "id": "FDA-2024-C-3384-0001",
+    "title": "GNT USA, LLC; Filing of Color Additive Petition",
+    "agency": "FDA",
+    "docket": "FDA-2024-C-3384",
+    "type": "Proposed Rule",
+    "posted": "2024-08-05",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2024-C-3384-0001"
+   },
+   {
+    "id": "EPA-R02-OAR-2024-0312-0002",
+    "title": "2.1.1 ASOW_OCS Air Application - 2024-06-26_r",
+    "agency": "EPA",
+    "docket": "EPA-R02-OAR-2024-0312",
+    "type": "Supporting & Related Material",
+    "posted": "2024-07-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R02-OAR-2024-0312-0002"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2023-0613-0297",
+    "title": "Formaldehyde Peer Review Meeting Transcript 05.20.2024",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2023-0613",
+    "type": "Supporting & Related Material",
+    "posted": "2024-07-01",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2023-0613-0297"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0744-0054",
+    "title": "Science Advisory Committee on Chemicals Meeting Minutes and Final Report No. 2022-01. March 15-17, 2022. https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0415-0095",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0744",
+    "type": "Supporting & Related Material",
+    "posted": "2024-06-14",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0744-0054"
+   },
+   {
+    "id": "EPA-HQ-OPP-2023-0065-0004",
+    "title": "Baicalin. Human Health Risk Assessment and Ecological Effects Assessment to Support Inert Ingredient Approval for use in Pesticide Formulations",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2023-0065",
+    "type": "Supporting & Related Material",
+    "posted": "2024-05-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2023-0065-0004"
+   },
+   {
+    "id": "EPA-HQ-OAR-2022-0730-2764",
+    "title": "Summary of Public Comments and Responses for New Source Performance Standards for the Synthetic Organic Chemical Manufacturing Industry and National Emission Standards for Hazardous Air Pollutants for the Synthetic Organic Chemical Manufacturing Industry and Group I & II Polymers and Resins Industry",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2022-0730",
+    "type": "Supporting & Related Material",
+    "posted": "2024-05-16",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2022-0730-2764"
+   },
+   {
+    "id": "EPA-HQ-OW-2022-0114-3608",
+    "title": "Concepts, Methods and Data Sources for Cumulative Health Risk Assessment of Multiple Chemicals, Exposures and Effects: A Resource Document",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OW-2022-0114",
+    "type": "Supporting & Related Material",
+    "posted": "2024-04-26",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OW-2022-0114-3608"
+   },
+   {
+    "id": "EPA-HQ-OW-2022-0114-3629",
+    "title": "Letter is in response to the Request for Correction (RFC) received by the USEPA from Arnold & Porter Kaye Scholer LLP (A&P) on March 18, 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OW-2022-0114",
+    "type": "Supporting & Related Material",
+    "posted": "2024-04-26",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OW-2022-0114-3629"
+   },
+   {
+    "id": "EPA-HQ-OAR-2019-0178-1502",
+    "title": "Request for Correction under the Information Quality Act: 2014 National Air Toxics Assessment (NATA). ACC. September 20, 2018",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2019-0178",
+    "type": "Supporting & Related Material",
+    "posted": "2024-04-05",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2019-0178-1502"
+   },
+   {
+    "id": "EPA-HQ-OAR-2019-0178-1538",
+    "title": "Monitored and Modeled Ambient Air Concentrations of Ethylene Oxide: Contextualizing Health Risk for Potentially Exposed Populations in Georgia. Lewis et al. 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2019-0178",
+    "type": "Supporting & Related Material",
+    "posted": "2024-04-05",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2019-0178-1538"
+   },
+   {
+    "id": "EPA-HQ-ORD-2012-0830-0104",
+    "title": "Compilation of Public Comments-iAs - January 2024 - clean",
+    "agency": "EPA",
+    "docket": "EPA-HQ-ORD-2012-0830",
+    "type": "Supporting & Related Material",
+    "posted": "2024-03-14",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-ORD-2012-0830-0104"
+   },
+   {
+    "id": "EPA-HQ-OAR-2015-0072-5906",
+    "title": "Moolgavkar SH, Chang ET, Watson HN, Lau EC. An Assessment of the Cox Proportional Hazards Regression Model for Epidemiologic Studies. Risk Anal. 2018 Apr;38(4):777-794. doi: 10.1111/risa.12865. Epub 2017 Nov 23. PMID: 29168991",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2015-0072",
+    "type": "Supporting & Related Material",
+    "posted": "2024-03-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2015-0072-5906"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0140-0115",
+    "title": "Metam Sodium Meeting Notes January 24, 2024",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0140",
+    "type": "Supporting & Related Material",
+    "posted": "2024-02-09",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0140-0115"
+   },
+   {
+    "id": "FDA-2018-C-4117-0016",
+    "title": "Sensient Colors, LLC.; Filing of Color Additive Petition",
+    "agency": "FDA",
+    "docket": "FDA-2018-C-4117",
+    "type": "Rule",
+    "posted": "2024-02-08",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2018-C-4117-0016"
+   },
+   {
+    "id": "FWS-R8-ES-2023-0142-0002",
+    "title": "Grey Literature - See Attachments",
+    "agency": "FWS",
+    "docket": "FWS-R8-ES-2023-0142",
+    "type": "Supporting & Related Material",
+    "posted": "2024-01-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FWS-R8-ES-2023-0142-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2023-0065-0002",
+    "title": "Pesticide Tolerance; Exemptions, Petitions, Revocations, etc.: Baicalin",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2023-0065",
+    "type": "Rule",
+    "posted": "2024-01-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2023-0065-0002"
+   },
+   {
+    "id": "EPA-HQ-OLEM-2023-0644-0024",
+    "title": "Integrated Science Assessment for Lead, June 2013",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OLEM-2023-0644",
+    "type": "Supporting & Related Material",
+    "posted": "2024-01-17",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OLEM-2023-0644-0024"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0099",
+    "title": "3.58 EPA FLM AQRV",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0099"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0034",
+    "title": "2.13 NEW2 OCS Air Permit Application Initial",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0034"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0114",
+    "title": "3.3 NE Wind COP Volume I II III",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0114"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0106",
+    "title": "3.58 EPA FLM AQRV",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0106"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0525-0124",
+    "title": "3.3 SRW Construction and Operation Plan",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0525",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0525-0124"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0036",
+    "title": "2.10 MetEvaluation Report NEW2",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0036"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0030",
+    "title": "2.20 NEW1 OCS Air Permit Application",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0030"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0105",
+    "title": "3.3 NE Wind COP Volume I II III",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0105"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0007",
+    "title": "2.9 ClassI-NO2-Modeling-Protocol NEW2",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0007"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0037",
+    "title": "2.26 NEW2 - OCS Air Permit Application",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0037"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0031",
+    "title": "2.10 NEW1 OCS Air Permit Application Initial",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0031"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0013",
+    "title": "2.4 NEW1 Modeling Protocol",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0013"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0527-0022",
+    "title": "2.3 NE Wind Phase 2 Modeling Protocol",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0527",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0527-0022"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0526-0016",
+    "title": "2.2 NEW1 Air Quality Modeling Protocol",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0526",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-19",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0526-0016"
+   },
+   {
+    "id": "EPA-HQ-OW-2022-0801-0176",
+    "title": "USEPA (2013) - Integrated Science Assessment for Lead, Report",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OW-2022-0801",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OW-2022-0801-0176"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0431-0008",
+    "title": "Bacillus subtilis var. amyloliquefaciens strain FZB24 Generic Data Call-In GDCI-006479-1929 Form and Instructions",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0431",
+    "type": "Supporting & Related Material",
+    "posted": "2023-12-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0431-0008"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0533-0004",
+    "title": "Meiji Seika Pharma Co., Ltd. Notice of Filing Pesticide Petition establish an exemption from the requirement of a tolerance for L-glufosinate free acid, (2S)-2-amino-4-[hydroxy(methyl)phosphinoyl]butyric acid, including its metabolites and degradates, 2-(acetylamino)-4-(hydroxymethyl phosphinyl) but",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0533",
+    "type": "Supporting & Related Material",
+    "posted": "2023-11-21",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0533-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0081-0127",
+    "title": "Phosphine Meeting Notes October 11, 2023",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0081",
+    "type": "Supporting & Related Material",
+    "posted": "2023-11-08",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0081-0127"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0140-0113",
+    "title": "Metam Sodium Meeting Notes October 18, 2023",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0140",
+    "type": "Supporting & Related Material",
+    "posted": "2023-11-08",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0140-0113"
+   },
+   {
+    "id": "FDA-2020-C-2131-0006",
+    "title": "Listing of Color Additives Exempt From Certification; Jagua (Genipin-Glycine) Blue",
+    "agency": "FDA",
+    "docket": "FDA-2020-C-2131",
+    "type": "Rule",
+    "posted": "2023-11-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2020-C-2131-0006"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0642-0058",
+    "title": "Final Report for the TSCA Science Advisory Committee on Chemicals Meeting March 24 to 27, 2020",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0642",
+    "type": "Supporting & Related Material",
+    "posted": "2023-10-31",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0642-0058"
+   },
+   {
+    "id": "EPA-HQ-OAR-2021-0643-0228",
+    "title": "FRM – New Materials and Documents Referenced in the Final Rule",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2021-0643",
+    "type": "Supporting & Related Material",
+    "posted": "2023-10-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2021-0643-0228"
+   },
+   {
+    "id": "EPA-HQ-OAR-2023-0289-0003",
+    "title": "40 CFR Part 81 [EPA-R09-OAR-2021-0340; FRL-10024-58-Region 9] Designation of Areas for Air Quality Planning Purposes; California; Eastern Kern Ozone Nonattainment Area; Reclassification to Severe",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2023-0289",
+    "type": "Supporting & Related Material",
+    "posted": "2023-10-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2023-0289-0003"
+   },
+   {
+    "id": "NHTSA-2022-0075-0024",
+    "title": "Tab 6 References Not Copyrighted",
+    "agency": "NHTSA",
+    "docket": "NHTSA-2022-0075",
+    "type": "Supporting & Related Material",
+    "posted": "2023-09-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/NHTSA-2022-0075-0024"
+   },
+   {
+    "id": "FDA-2020-C-2131-0004",
+    "title": "Memorandum from N. Belai to FDA CFSAN",
+    "agency": "FDA",
+    "docket": "FDA-2020-C-2131",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2020-C-2131-0004"
+   },
+   {
+    "id": "FDA-2020-C-2131-0003",
+    "title": "Memorandum from Abu T. Khan to FDA CFSAN",
+    "agency": "FDA",
+    "docket": "FDA-2020-C-2131",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2020-C-2131-0003"
+   },
+   {
+    "id": "FDA-2020-C-2131-0005",
+    "title": "Memorandum from R. Kolanos to FDA CFSAN",
+    "agency": "FDA",
+    "docket": "FDA-2020-C-2131",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2020-C-2131-0005"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0004-0032",
+    "title": "Final Ecological Risk Assessment for the New Active Ingredient Pyraclonil for Use on Rice in California and its Biological Evaluation and Associated Effects Determinations for Endangered and Threatened Species and Their Designated Critical Habitats",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0004",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0004-0032"
+   },
+   {
+    "id": "EPA-HQ-OAR-2003-0051-0693",
+    "title": "Assessing the Human Health Risks of Trichloroethylene, NRC, 2006",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2003-0051",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-16",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2003-0051-0693"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2023-0231-0332",
+    "title": "2013 Integrated Science Assessment for Lead",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2023-0231",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-01",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2023-0231-0332"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2023-0231-0044",
+    "title": "Summary Report of the Peer Review meeting for EPA’s Draft Report, Proposed Modeling Approaches for a Health-based benchmark for lead in drinking water",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2023-0231",
+    "type": "Supporting & Related Material",
+    "posted": "2023-08-01",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2023-0231-0044"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0592-0031",
+    "title": "Final Report for the Science Advisory Committee on Chemicals Draft TSCA Screening Level Approach for Assessing Ambient Air and Water Exposures to Fenceline Communities Version 1.0",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0592",
+    "type": "Supporting & Related Material",
+    "posted": "2023-07-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0592-0031"
+   },
+   {
+    "id": "EPA-HQ-TRI-2022-0262-0320",
+    "title": "Toxicological Review of Ethyl Tertiary Butyl Ether",
+    "agency": "EPA",
+    "docket": "EPA-HQ-TRI-2022-0262",
+    "type": "Supporting & Related Material",
+    "posted": "2023-07-14",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-TRI-2022-0262-0320"
+   },
+   {
+    "id": "CPSC-2006-0057-0217",
+    "title": "Secret_ties_to_industry_and_conflicting",
+    "agency": "CPSC",
+    "docket": "CPSC-2006-0057",
+    "type": "Supporting & Related Material",
+    "posted": "2023-06-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/CPSC-2006-0057-0217"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0720-0057",
+    "title": "Science Advisory Committee on Chemicals Meeting Minutes and Final Report No. 2022-01",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0720",
+    "type": "Supporting & Related Material",
+    "posted": "2023-06-16",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0720-0057"
+   },
+   {
+    "id": "NHTSA-2022-0094-0004",
+    "title": "Proterial Cable America, Inc. - Cover Letter & Attachments",
+    "agency": "NHTSA",
+    "docket": "NHTSA-2022-0094",
+    "type": "Other",
+    "posted": "2023-05-16",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/NHTSA-2022-0094-0004"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0465-0120",
+    "title": "Final Report for the Science Advisory Committee on Chemicals Draft TSCA Screening Level Approach for Assessing Ambient Air and Water Exposures to Fenceline Communities Version 1.0",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0465",
+    "type": "Supporting & Related Material",
+    "posted": "2023-05-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0465-0120"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0004-0019",
+    "title": "Draft Ecological Risk Assessment and Draft Effects Determination for the New Active Ingredient Pyraclonil for use on Rice in California",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0004",
+    "type": "Supporting & Related Material",
+    "posted": "2023-04-17",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0004-0019"
+   },
+   {
+    "id": "NOAA-NMFS-2023-0053-0004",
+    "title": "LOA Application for EmpireWind",
+    "agency": "NOAA",
+    "docket": "NOAA-NMFS-2023-0053",
+    "type": "Supporting & Related Material",
+    "posted": "2023-04-13",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/NOAA-NMFS-2023-0053-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0244-0046",
+    "title": "Response to Public Comments for the Ethylene Oxide (EtO) Draft Risk Assessment (DRA). March 27, 2023.",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0244",
+    "type": "Supporting & Related Material",
+    "posted": "2023-04-13",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0244-0046"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0244-0047",
+    "title": "Ethylene Oxide (EtO). Addendum to “Draft Human Health and Ecological Risk Assessment in Support of Registration Review” - Inhalation Exposure Risk Assessment in Support of Registration Review. March 27, 2023.",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0244",
+    "type": "Supporting & Related Material",
+    "posted": "2023-04-13",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0244-0047"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0244-0045",
+    "title": "Ethylene Oxide Proposed Interim Registration Review Decision Case Number 2275. March 28, 2023.",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0244",
+    "type": "Supporting & Related Material",
+    "posted": "2023-04-13",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0244-0045"
+   },
+   {
+    "id": "NHTSA-2022-0094-0001",
+    "title": "Hitachi Cable America Inc. – Inconsequential Noncompliance Petition",
+    "agency": "NHTSA",
+    "docket": "NHTSA-2022-0094",
+    "type": "Other",
+    "posted": "2023-04-10",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/NHTSA-2022-0094-0001"
+   },
+   {
+    "id": "EPA-R01-OAR-2023-0060-0081",
+    "title": "3.69 RW Draft Env. Impact Statement Sept. 2022",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2023-0060",
+    "type": "Supporting & Related Material",
+    "posted": "2023-03-31",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2023-0060-0081"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0364-0004",
+    "title": "IN-11660; Zein; Human Health Risk Assessment and Ecological Effects Assessment to Support Proposed Exemption from the Requirement of a Tolerance When Used as Inert Ingredients in Pesticide Formulations",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0364",
+    "type": "Supporting & Related Material",
+    "posted": "2023-02-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0364-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0438-0002",
+    "title": "Fluensulfone: Problem Formulation for Registration Review",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0438",
+    "type": "Supporting & Related Material",
+    "posted": "2023-01-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0438-0002"
+   },
+   {
+    "id": "FDA-2017-D-0085-0047",
+    "title": "Reference-29-Memorandum-November 4, 2010-Linda Kahl - Substances that Are Generally Recognized as Safe (GRAS); Experience with GRAS Notices - Re: Best Practices for Convening a GRAS Panel: Guidance for Industry - Final Guidance",
+    "agency": "FDA",
+    "docket": "FDA-2017-D-0085",
+    "type": "Supporting & Related Material",
+    "posted": "2022-12-21",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2017-D-0085-0047"
+   },
+   {
+    "id": "FDA-2014-N-0053-1295",
+    "title": "Reference 09 - FDAs Response to External Peer Review Model Review on FDAs Draft Report for Peer Review September 2015 August 2020 RE Requirements for Additional Traceability Records for Certain Foods",
+    "agency": "FDA",
+    "docket": "FDA-2014-N-0053",
+    "type": "Supporting & Related Material",
+    "posted": "2022-11-21",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2014-N-0053-1295"
+   },
+   {
+    "id": "FDA-2020-C-1309-0010",
+    "title": "Memorandum from D. DeGroot, Toxicology Review Branch (TRB), DFI, OFAS, CFSAN, FDA to S. Hice Redacted re Listing of Color Additives Exempt From Certification; Spirulina Extract",
+    "agency": "FDA",
+    "docket": "FDA-2020-C-1309",
+    "type": "Supporting & Related Material",
+    "posted": "2022-11-10",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2020-C-1309-0010"
+   },
+   {
+    "id": "FDA-2017-C-6238-0009",
+    "title": "2017 T CAP 0C0318 memo",
+    "agency": "FDA",
+    "docket": "FDA-2017-C-6238",
+    "type": "Supporting & Related Material",
+    "posted": "2022-10-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2017-C-6238-0009"
+   },
+   {
+    "id": "EPA-HQ-OAR-2022-0389-0098",
+    "title": "LEAD ISA 2013B (2)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2022-0389",
+    "type": "Supporting & Related Material",
+    "posted": "2022-10-17",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2022-0389-0098"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0774-0004",
+    "title": "PC Code: 900177; IN-11603; Dimethyl Sulfoxide; Human Health Risk Assessment and Ecological Effects Assessment to Support an Amendment to the Current Exemption from the Requirement of a Tolerance When Used as an Inert Ingredient in Pesticide Formulations",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0774",
+    "type": "Supporting & Related Material",
+    "posted": "2022-10-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0774-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0774-0003",
+    "title": "Pesticide Tolerances: Dimethyl Sulfoxide; Exemption",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0774",
+    "type": "Rule",
+    "posted": "2022-10-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0774-0003"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0454-0003",
+    "title": "Fenpyrazamine Problem Formulation for Registration Review",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0454",
+    "type": "Supporting & Related Material",
+    "posted": "2022-07-12",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0454-0003"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2016-0737-0128",
+    "title": "Summary of External Peer Review and Public Comments and Disposition for Trichloroethylene (TCE)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2016-0737",
+    "type": "Supporting & Related Material",
+    "posted": "2022-07-07",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2016-0737-0128"
+   },
+   {
+    "id": "OSHA-2018-0004-0051",
+    "title": "Environmental Protection Agency (U.S. EPA).  (2013). Final Report: Integrated Science Assessment for Lead. U.S. Environmental Protection Agency, Washington, DC, EPA/600/R-10/075F, 2013.",
+    "agency": "OSHA",
+    "docket": "OSHA-2018-0004",
+    "type": "Supporting & Related Material",
+    "posted": "2022-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/OSHA-2018-0004-0051"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0452-0003",
+    "title": "Gowan Company, LLC. Notice of Filing Pesticide Petition No. 1F8979 to establish a tolerance for residues of Acynonapyr, 3-endo-[2-propoxy-4-(trifluoromethyl)phenoxy]-9-[5-(trifluoromethyl)-2-pyridyloxy]-9-azabicyclo[3.3.1]nonane) and its metabolites AP, 3-endo-[2-propoxy-4-(trifluoromethyl)phenoxy]-",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0452",
+    "type": "Supporting & Related Material",
+    "posted": "2022-06-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0452-0003"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0434-0006",
+    "title": "Teflubenzuron. Petition for the Establishment of Permanent Tolerances on Imported Grapes. Summary of Analytical Chemistry and Residue Data",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0434",
+    "type": "Supporting & Related Material",
+    "posted": "2022-06-07",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0434-0006"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0415-0095",
+    "title": "SACC Meeting Minutes and Final Report",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0415",
+    "type": "Supporting & Related Material",
+    "posted": "2022-05-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0415-0095"
+   },
+   {
+    "id": "FDA-2021-N-1349-0022",
+    "title": "Reference 19 HHS E Cigarette Use Among Youth and Young Adults 2016",
+    "agency": "FDA",
+    "docket": "FDA-2021-N-1349",
+    "type": "Supporting & Related Material",
+    "posted": "2022-05-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2021-N-1349-0022"
+   },
+   {
+    "id": "FDA-2021-N-1309-0036",
+    "title": "Reference 33 HHS E Cigarette Use Among Youth and Young Adults 2016",
+    "agency": "FDA",
+    "docket": "FDA-2021-N-1309",
+    "type": "Supporting & Related Material",
+    "posted": "2022-05-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2021-N-1309-0036"
+   },
+   {
+    "id": "FDA-2021-N-1349-0325",
+    "title": "PRIA Reference 16 HHS Ecigarette Use Among Youth and Young Adults 2016",
+    "agency": "FDA",
+    "docket": "FDA-2021-N-1349",
+    "type": "Supporting & Related Material",
+    "posted": "2022-05-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2021-N-1349-0325"
+   },
+   {
+    "id": "FDA-2021-N-1309-0327",
+    "title": "PRIA Reference 15 HHS E Cigarette Use Among Youth and Young Adults 2016",
+    "agency": "FDA",
+    "docket": "FDA-2021-N-1309",
+    "type": "Supporting & Related Material",
+    "posted": "2022-05-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2021-N-1309-0327"
+   },
+   {
+    "id": "EPA-HQ-OA-2021-0848-0024",
+    "title": "Final NEJAC Meeting 1/5/2022 Summary Full",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OA-2021-0848",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-29",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OA-2021-0848-0024"
+   },
+   {
+    "id": "EPA-HQ-OA-2021-0848-0023",
+    "title": "Final NEJAC Meeting 1.5.2022 Summary Full",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OA-2021-0848",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OA-2021-0848-0023"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0057-0027",
+    "title": "Ref. 23. Summary of External Peer Review and Public Comments",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0057",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-12",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0057-0027"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0415-0093",
+    "title": "March 15-17 Meeting Transcript",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0415",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-07",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0415-0093"
+   },
+   {
+    "id": "EPA-HQ-OPP-2009-0136-0344",
+    "title": "Meeting Minutes Douglas Products/EPA Office of Pesticide Programs February 10, 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2009-0136",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2009-0136-0344"
+   },
+   {
+    "id": "EPA-HQ-OPP-2009-0136-0343",
+    "title": "Meeting Minutes Douglas Products/EPA Office of Pesticide Programs November 30, 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2009-0136",
+    "type": "Supporting & Related Material",
+    "posted": "2022-04-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2009-0136-0343"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0225-0023",
+    "title": "Ipflufenoquin: Report of the Cancer Assessment Review Committee",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0225",
+    "type": "Supporting & Related Material",
+    "posted": "2022-03-29",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0225-0023"
+   },
+   {
+    "id": "FDA-2018-C-4117-0010",
+    "title": "CAP 8C0313_C_memo OCAC final",
+    "agency": "FDA",
+    "docket": "FDA-2018-C-4117",
+    "type": "Supporting & Related Material",
+    "posted": "2022-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2018-C-4117-0010"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0642-0005",
+    "title": "Exemption from the Requirement of a Tolerance: Calcium Sulfate",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0642",
+    "type": "Rule",
+    "posted": "2022-03-11",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0642-0005"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0415-0052",
+    "title": "Updated Roster for SACC March 15 Meeting",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0415",
+    "type": "Supporting & Related Material",
+    "posted": "2022-03-11",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0415-0052"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0364-0003",
+    "title": "Pesticide Tolerance; Exemptions, Petitions, Revocations, etc.: Fatty Acids, Esters with Ethoxylated Triethanolamine",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0364",
+    "type": "Rule",
+    "posted": "2022-02-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0364-0003"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0364-0004",
+    "title": "Fatty acids, Tall-Oil, Esters with Triethanolamine, Ethoxylated (20ETO) and Fatty Acids, C8-18 or C18-Unsatd., Esters with Polyethylene Glycol Ether with Triethanolamine (3:1) (10ETO); Human Health Risk Assessment and Ecological Effects Assessment to Support Proposed Exemption from the Requirement o",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0364",
+    "type": "Supporting & Related Material",
+    "posted": "2022-02-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0364-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0646-0001",
+    "title": "Pesticide Petitions Filed: Residues of Pesticide Chemicals in or on Various Commodities, January 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0646",
+    "type": "Proposed Rule",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0646-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0866-0002",
+    "title": "Pesticide Petitions Filed: Residues of Pesticide Chemicals in or on Various Commodities, January 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0866",
+    "type": "Proposed Rule",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0866-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0101-0002",
+    "title": "Pesticide Petitions Filed: Residues of Pesticide Chemicals in or on Various Commodities, January 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0101",
+    "type": "Proposed Rule",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0101-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2022-0161-0001",
+    "title": "Pesticide Petitions Filed: Residues of Pesticide Chemicals in or on Various Commodities, January 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2022-0161",
+    "type": "Proposed Rule",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2022-0161-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0774-0002",
+    "title": "Pesticide Petitions Filed: Residues of Pesticide Chemicals in or on Various Commodities, January 2022",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0774",
+    "type": "Proposed Rule",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0774-0002"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0415-0042",
+    "title": "SACC Meeting Roster",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0415",
+    "type": "Supporting & Related Material",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0415-0042"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0774-0001",
+    "title": "Gaylord Chemical Company, L.L.C. Notice of Filing Pesticide Petition to amend the existing exemption from the requirement of a tolerance for Dimethyl Sulfoxide",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0774",
+    "type": "Supporting & Related Material",
+    "posted": "2022-02-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0774-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0642-0003",
+    "title": "PC Code: 805602, Calcium Sulfate; Human Health Risk Assessment and Ecological Effects Assessment to Support Proposed Amendment to the Tolerance Exemption When Used as an Inert Ingredient in Pesticide Formulations",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0642",
+    "type": "Supporting & Related Material",
+    "posted": "2022-02-14",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0642-0003"
+   },
+   {
+    "id": "EPA-HQ-OAR-2018-0746-0265",
+    "title": "American Chemistry Council's Request for Correction under the Information Quality Act: 2014 National Air Toxics Assessment (NATA)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2018-0746",
+    "type": "Supporting & Related Material",
+    "posted": "2022-02-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2018-0746-0265"
+   },
+   {
+    "id": "EPA-HQ-OAR-2021-0347-0021",
+    "title": "References and Other Associated Documents for SNAP NPRM 24",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2021-0347",
+    "type": "Supporting & Related Material",
+    "posted": "2021-12-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2021-0347-0021"
+   },
+   {
+    "id": "EPA-HQ-OAR-2021-0347-0009",
+    "title": "SNAP Submission for HFO-1234yf in Small MVAC Refrigerant Cans. Honeywell. Rcvd 8-1-2016",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2021-0347",
+    "type": "Supporting & Related Material",
+    "posted": "2021-12-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2021-0347-0009"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0516-0001",
+    "title": "Receipt of a Pesticide Petition Filed for Residues of Pesticide Chemicals in or on Various Commodities",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0516",
+    "type": "Proposed Rule",
+    "posted": "2021-11-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0516-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0642-0001",
+    "title": "Receipt of a Pesticide Petition Filed for Residues of Pesticide Chemicals in or on Various Commodities",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0642",
+    "type": "Proposed Rule",
+    "posted": "2021-11-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0642-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0729-0001",
+    "title": "Receipt of a Pesticide Petition Filed for Residues of Pesticide Chemicals in or on Various Commodities",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0729",
+    "type": "Proposed Rule",
+    "posted": "2021-11-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0729-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0632-0001",
+    "title": "Receipt of a Pesticide Petition Filed for Residues of Pesticide Chemicals in or on Various Commodities",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0632",
+    "type": "Proposed Rule",
+    "posted": "2021-11-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0632-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0053-0015",
+    "title": "Receipt of a Pesticide Petition Filed for Residues of Pesticide Chemicals in or on Various Commodities",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0053",
+    "type": "Proposed Rule",
+    "posted": "2021-11-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0053-0015"
+   },
+   {
+    "id": "EPA-HQ-OPP-2015-0590-0034",
+    "title": "Ipconazole Interim Registration Review Decision Case Number 7041",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2015-0590",
+    "type": "Supporting & Related Material",
+    "posted": "2021-10-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2015-0590-0034"
+   },
+   {
+    "id": "EPA-HQ-OPP-2015-0101-0023",
+    "title": "Nicarbazin: Response to Comments for the Draft Ecological Risk Assessment",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2015-0101",
+    "type": "Supporting & Related Material",
+    "posted": "2021-10-22",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2015-0101-0023"
+   },
+   {
+    "id": "EPA-HQ-OAR-2021-0643-0021",
+    "title": "HCPA Membership List 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OAR-2021-0643",
+    "type": "Supporting & Related Material",
+    "posted": "2021-10-14",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OAR-2021-0643-0021"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0242-0040",
+    "title": "Metam Sodium Meeting Notes May 17, 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0242",
+    "type": "Supporting & Related Material",
+    "posted": "2021-10-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0242-0040"
+   },
+   {
+    "id": "EPA-HQ-OPP-2013-0140-0102",
+    "title": "Metam Sodium Meeting Notes May 17, 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2013-0140",
+    "type": "Supporting & Related Material",
+    "posted": "2021-10-06",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2013-0140-0102"
+   },
+   {
+    "id": "FDA-2018-C-4117-0002",
+    "title": "Listing of Color Additives Exempt From Certification; Butterfly Pea Flower Extract",
+    "agency": "FDA",
+    "docket": "FDA-2018-C-4117",
+    "type": "Rule",
+    "posted": "2021-09-02",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2018-C-4117-0002"
+   },
+   {
+    "id": "EPA-HQ-ORD-2009-0229-0091",
+    "title": "Final Toxicological Review of Ethyl Tertiary Butyl Ether",
+    "agency": "EPA",
+    "docket": "EPA-HQ-ORD-2009-0229",
+    "type": "Supporting & Related Material",
+    "posted": "2021-08-27",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-ORD-2009-0229-0091"
+   },
+   {
+    "id": "EPA-R09-OAR-2021-0341-0021",
+    "title": "F.1_86 FR 30204_E. Kern Reclassification to Severe",
+    "agency": "EPA",
+    "docket": "EPA-R09-OAR-2021-0341",
+    "type": "Supporting & Related Material",
+    "posted": "2021-08-26",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R09-OAR-2021-0341-0021"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0364-0002",
+    "title": "Lamberti USA, Incorporated Notice of Filing Pesticide Petition to establish an exemption from the requirement of a tolerance for a cluster of inert substances, fatty acids, esters with ethoxylated triethanolamine, for pre- and post-harvest use in pesticide formulations in accordance with 40 CFR §180",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0364",
+    "type": "Supporting & Related Material",
+    "posted": "2021-08-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0364-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0364-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities (July 2021)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0364",
+    "type": "Proposed Rule",
+    "posted": "2021-08-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0364-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0088-0006",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities (July 2021)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0088",
+    "type": "Proposed Rule",
+    "posted": "2021-08-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0088-0006"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0191-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities (July 2021)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0191",
+    "type": "Proposed Rule",
+    "posted": "2021-08-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0191-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0383-0002",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities (July 2021)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0383",
+    "type": "Proposed Rule",
+    "posted": "2021-08-03",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0383-0002"
+   },
+   {
+    "id": "FDA-2021-C-0522-0001",
+    "title": "Gardenia Blue Interest Group; Filing of Color Additive Petition",
+    "agency": "FDA",
+    "docket": "FDA-2021-C-0522",
+    "type": "Proposed Rule",
+    "posted": "2021-06-30",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/FDA-2021-C-0522-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0065-0006",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0065",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0065-0006"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0326-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0326",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0326-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2016-0013-0031",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2016-0013",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2016-0013-0031"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0203-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0203",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0203-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0691-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0691",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0691-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0417-0004",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0417",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0417-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0338-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0338",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0338-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0338-0002",
+    "title": "UPL NA Inc. Notice of Filing Pesticide Petition No. IN-11520 . to establish an exemption from the requirement of a\ntolerance for Sodium metabisulfite (CAS RN 7681-57-4) when used as an oxygen scavenger/antioxidant) in a pesticide formulation applied on crops pre-harvest according to 40\nCFR §180.920,",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0338",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0338-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0601-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0601",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0601-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0419-0003",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0419",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0419-0003"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0054-0004",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0054",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0054-0004"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0088-0005",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0088",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0088-0005"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0339-0002",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0339",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0339-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0153-0002",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0153",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0153-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0269-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0269",
+    "type": "Notice",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0269-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0356-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0356",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0356-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0355-0002",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0355",
+    "type": "Proposed Rule",
+    "posted": "2021-06-28",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0355-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0225-0013",
+    "title": "Review of Submitted Data Relating to Claims of Greater-than-Additive (GTA) Mixture Toxicity Associated with the Proposed New Active Ingredient, Ipflufenoquin (PC code 129120)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0225",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0225-0013"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0225-0009",
+    "title": "Ipflufenoquin: Ecological Risk Assessment for Section 3 New Chemical Registration",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0225",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0225-0009"
+   },
+   {
+    "id": "EPA-R01-OAR-2021-0392-0038",
+    "title": "2020 modeling protocol for construction",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2021-0392",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2021-0392-0038"
+   },
+   {
+    "id": "EPA-R01-OAR-2021-0392-0040",
+    "title": "2020 revised modeling protocol for construction",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2021-0392",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2021-0392-0040"
+   },
+   {
+    "id": "EPA-R01-OAR-2021-0392-0032",
+    "title": "2020 revised application Appendix B",
+    "agency": "EPA",
+    "docket": "EPA-R01-OAR-2021-0392",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-R01-OAR-2021-0392-0032"
+   },
+   {
+    "id": "EPA-HQ-RCRA-2016-0040-0566",
+    "title": "Concepts, Methods and Data Sources for Cumulative Health Risk Assessment of Multiple Chemicals, Exposures and Effects: A Resource Document, 2007",
+    "agency": "EPA",
+    "docket": "EPA-HQ-RCRA-2016-0040",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-15",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-RCRA-2016-0040-0566"
+   },
+   {
+    "id": "EPA-HQ-OPP-2014-0004-0107",
+    "title": "MBC (Carbendazim) Drinking Water and Dietary Exposure and Risk Refinements Presentation for EPA Meeting 3.11.21",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2014-0004",
+    "type": "Supporting & Related Material",
+    "posted": "2021-06-09",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2014-0004-0107"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0138-0003",
+    "title": "Tolerance Exemption: Cellulose, ethyl ether",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0138",
+    "type": "Rule",
+    "posted": "2021-06-07",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0138-0003"
+   },
+   {
+    "id": "EPA-HQ-OPP-2009-0136-0110",
+    "title": "Sulfuryl Fluoride. Occupational and Residential Exposure Assessment in Support of Registration Review",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2009-0136",
+    "type": "Supporting & Related Material",
+    "posted": "2021-05-25",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2009-0136-0110"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2021-0174-0003",
+    "title": "TFI Opposition to Petition",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2021-0174",
+    "type": "Supporting & Related Material",
+    "posted": "2021-05-21",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2021-0174-0003"
+   },
+   {
+    "id": "EPA-HQ-OPPT-2020-0091-0115",
+    "title": "P-20-0035 Sanitized Premanufacture Notice",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPPT-2020-0091",
+    "type": "Supporting & Related Material",
+    "posted": "2021-05-04",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPPT-2020-0091-0115"
+   },
+   {
+    "id": "EPA-HQ-OPP-2015-0590-0029",
+    "title": "Ipconazole Proposed Interim Registration Review Decision Case Number 7041",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2015-0590",
+    "type": "Supporting & Related Material",
+    "posted": "2021-04-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2015-0590-0029"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0737-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0737",
+    "type": "Notice",
+    "posted": "2021-03-24",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0737-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0164-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0164",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0164-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0197-0001",
+    "title": "Receipt of Pesticide Petitions Filed for\nResidues of Pesticide Chemicals in or\non Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0197",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0197-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0066-0002",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0066",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0066-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0155-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0155",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0155-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0045-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0045",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0045-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0184-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0184",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0184-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0172-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0172",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0172-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0161-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0161",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0161-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0190-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0190",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0190-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0173-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0173",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0173-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0157-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0157",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0157-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0170-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0170",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0170-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0198-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0198",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0198-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0736-0001",
+    "title": "Receipt of Pesticide Petitions Filed for\nResidues of Pesticide Chemicals in or\non Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0736",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0736-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0183-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0183",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0183-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0160-0001",
+    "title": "Receipt of Pesticide Petitions Filed for\nResidues of Pesticide Chemicals in or\non Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0160",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0160-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0194-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0194",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0194-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0481-0001",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0481",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0481-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0138-0001",
+    "title": "Receipt of Pesticide Petitions Filed for\nResidues of Pesticide Chemicals in or\non Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0138",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0138-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0138-0002",
+    "title": "DDP Specialty Electronic Materials US, Inc. Notice of Filing Pesticide Petition to Establish Cellulose, Ethyl Ether (CAS RN 9004-57-3)",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0138",
+    "type": "Supporting & Related Material",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0138-0002"
+   },
+   {
+    "id": "EPA-HQ-OPP-2021-0192-0001",
+    "title": "Receipt of Pesticide Petitions Filed for\nResidues of Pesticide Chemicals in or\non Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2021-0192",
+    "type": "Notice",
+    "posted": "2021-03-23",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2021-0192-0001"
+   },
+   {
+    "id": "EPA-HQ-OPP-2020-0053-0014",
+    "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities March 2021",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2020-0053",
+    "type": "Proposed Rule",
+    "posted": "2021-03-22",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2020-0053-0014"
+   },
+   {
+    "id": "EPA-HQ-OPP-2015-0101-0018",
+    "title": "Nicarbazin: Draft Ecological Risk Assessment for Registration Review",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OPP-2015-0101",
+    "type": "Supporting & Related Material",
+    "posted": "2021-03-08",
+    "matched_phrase": "\"prepared by Exponent\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OPP-2015-0101-0018"
+   },
+   {
+    "id": "EPA-HQ-OW-2019-0372-0280",
+    "title": "National Academies of Sciences, 2013. Assessing Risks to Endangered and Threatened Species from Pesticides (2013). ISBN 978-0-309-28583-4 | DOI 10.17226/18344",
+    "agency": "EPA",
+    "docket": "EPA-HQ-OW-2019-0372",
+    "type": "Supporting & Related Material",
+    "posted": "2021-02-19",
+    "matched_phrase": "\"Exponent, Inc\"",
+    "url": "https://www.regulations.gov/document/EPA-HQ-OW-2019-0372-0280"
+   }
+  ]
+ }
+}

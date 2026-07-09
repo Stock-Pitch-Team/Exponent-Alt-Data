@@ -1,0 +1,10 @@
+{
+  "title": "The actual cases (verify everything yourself)",
+  "what": "The most recent court cases our search matched, with the text snippet that triggered the match and a link to the full record on CourtListener.",
+  "how": "These are the raw rows behind the litigation charts above - no processing beyond the search itself. Company names appearing as plaintiffs/defendants here also feed the 'revealed clients' analysis in the R&D section.",
+  "thesis": "Transparency: any number on this page can be traced back to a court record you can open and read. If a match looks wrong, you can see exactly why it matched.",
+  "caveats": [
+    "A case mentioning Exponent near expert language does not say WHICH side hired the firm unless the text itself says so.",
+    "Snippets are short excerpts chosen by the search engine, not summaries of the case."
+  ]
+}

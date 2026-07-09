@@ -1,0 +1,204 @@
+{
+ "metadata": {
+  "pipeline": "p4_moat",
+  "output": "authors",
+  "generated_at": "2026-07-09T01:08:10Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "OpenAlex authors affiliated with Exponent",
+    "url": "https://api.openalex.org/authors?filter=affiliations.institution.id:I13383945",
+    "fetched_at": "2026-07-09T01:08:10Z",
+    "records_scanned": 3294
+   }
+  ],
+  "coverage": null,
+  "caveats": [
+   "Includes everyone who EVER published with an Exponent affiliation, including alumni; 'currently at Exponent' uses OpenAlex's last-known institution, which can be stale.",
+   "Citation counts measure scientific influence, not consulting revenue."
+  ],
+  "methodology_id": "p4_authors"
+ },
+ "data": {
+  "total_ever_affiliated": 3294,
+  "currently_at_exponent": 1410,
+  "top_authors": [
+   {
+    "name": "David R. Jacobs",
+    "works": 2198,
+    "citations": 150374,
+    "h_index": 180,
+    "current": false
+   },
+   {
+    "name": "Daniel T. Lackland",
+    "works": 461,
+    "citations": 131808,
+    "h_index": 80,
+    "current": false
+   },
+   {
+    "name": "Paolo Boffetta",
+    "works": 2090,
+    "citations": 114051,
+    "h_index": 167,
+    "current": false
+   },
+   {
+    "name": "David S. Siscovick",
+    "works": 980,
+    "citations": 110845,
+    "h_index": 156,
+    "current": false
+   },
+   {
+    "name": "A. Kalinowski",
+    "works": 1648,
+    "citations": 107922,
+    "h_index": 142,
+    "current": false
+   },
+   {
+    "name": "Richard R. Nelson",
+    "works": 525,
+    "citations": 93584,
+    "h_index": 100,
+    "current": false
+   },
+   {
+    "name": "Qing Lan",
+    "works": 803,
+    "citations": 88176,
+    "h_index": 87,
+    "current": false
+   },
+   {
+    "name": "Shelley E. Taylor",
+    "works": 416,
+    "citations": 83870,
+    "h_index": 130,
+    "current": false
+   },
+   {
+    "name": "Per Hall",
+    "works": 935,
+    "citations": 80576,
+    "h_index": 118,
+    "current": false
+   },
+   {
+    "name": "Hans‐Olov Adami",
+    "works": 987,
+    "citations": 79600,
+    "h_index": 145,
+    "current": false
+   },
+   {
+    "name": "Vinod H. Thourani",
+    "works": 1206,
+    "citations": 77329,
+    "h_index": 122,
+    "current": false
+   },
+   {
+    "name": "Raj Makkar",
+    "works": 821,
+    "citations": 75739,
+    "h_index": 114,
+    "current": false
+   },
+   {
+    "name": "Heikki Joensuu",
+    "works": 1137,
+    "citations": 75112,
+    "h_index": 128,
+    "current": false
+   },
+   {
+    "name": "Antonia M. Calafat",
+    "works": 980,
+    "citations": 74781,
+    "h_index": 146,
+    "current": false
+   },
+   {
+    "name": "Douglas W. Dockery",
+    "works": 310,
+    "citations": 63108,
+    "h_index": 108,
+    "current": false
+   },
+   {
+    "name": "Kristie L. Ebi",
+    "works": 580,
+    "citations": 62802,
+    "h_index": 103,
+    "current": false
+   },
+   {
+    "name": "­Eero Pukkala",
+    "works": 1005,
+    "citations": 59966,
+    "h_index": 110,
+    "current": false
+   },
+   {
+    "name": "Dennis D. Weisenburger",
+    "works": 605,
+    "citations": 59382,
+    "h_index": 106,
+    "current": false
+   },
+   {
+    "name": "Fereydoun Hormozdiari",
+    "works": 136,
+    "citations": 58797,
+    "h_index": 46,
+    "current": false
+   },
+   {
+    "name": "Kelly R. Evenson",
+    "works": 1013,
+    "citations": 58420,
+    "h_index": 105,
+    "current": false
+   },
+   {
+    "name": "Mads Melbye",
+    "works": 862,
+    "citations": 57247,
+    "h_index": 119,
+    "current": false
+   },
+   {
+    "name": "John Seely Brown",
+    "works": 244,
+    "citations": 55086,
+    "h_index": 57,
+    "current": false
+   },
+   {
+    "name": "Francine Laden",
+    "works": 622,
+    "citations": 53288,
+    "h_index": 91,
+    "current": false
+   },
+   {
+    "name": "Stephen M. Ansell",
+    "works": 1478,
+    "citations": 52632,
+    "h_index": 113,
+    "current": false
+   },
+   {
+    "name": "Stanley N. Cohen",
+    "works": 477,
+    "citations": 50670,
+    "h_index": 106,
+    "current": false
+   }
+  ]
+ }
+}

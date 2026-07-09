@@ -1,0 +1,10 @@
+{
+  "title": "The research network: who publishes with Exponent",
+  "what": "A map of the corporations that have co-authored research with Exponent scientists. Bigger circles = more joint publications.",
+  "how": "Built from the same OpenAlex publication data: each circle is a company whose name appeared alongside an Exponent affiliation on at least one paper; the line thickness reflects how many.",
+  "thesis": "The names matter as much as the count: medical-device makers (Stryker, Alcon), chemical/energy majors (Dow, ExxonMobil), consumer giants (P&G), utilities (PG&E) - blue-chip, litigation-exposed, R&D-heavy companies. That's the exact client profile that supports premium pricing and repeat engagement.",
+  "caveats": [
+    "Being on a paper together confirms a research relationship, not necessarily a paid consulting engagement (though for a consultancy the overlap is high).",
+    "Hover any circle for details; drag to explore. The table view lists every company."
+  ]
+}

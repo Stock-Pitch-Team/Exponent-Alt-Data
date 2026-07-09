@@ -1,0 +1,10 @@
+{
+  "title": "Who works at Exponent today, by specialty",
+  "what": "A live census of Exponent's ~1,000 consultants, grouped by their practice area (the field they consult in).",
+  "how": "Exponent's own website has a searchable staff directory. We queried the same search system the website itself uses and counted everyone listed, along with the practice area shown on each profile.",
+  "thesis": "The MIX of specialties shows where Exponent is betting: large and growing practices in batteries/thermal sciences, chemical regulation, and data/computer science are exactly the areas tied to EV fires, PFAS regulation, and AI-era product risk - the demand drivers the buy thesis leans on.",
+  "caveats": [
+    "This is the public directory; the company's official headcount (in its 10-K annual report) also counts support staff, so the two numbers won't match exactly.",
+    "A practice area label is how Exponent categorizes itself - some consultants work across several areas."
+  ]
+}

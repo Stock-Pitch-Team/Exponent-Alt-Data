@@ -1,0 +1,10 @@
+{
+  "title": "Exponent's footprint in federal rulemaking",
+  "what": "How often Exponent's work is cited inside federal regulatory proceedings each year - studies submitted to the EPA, FDA, OSHA and others, and public comments referencing the firm's research.",
+  "how": "We searched Regulations.gov (the government's public rulemaking portal) for exact phrases that can only mean the firm ('Exponent, Inc', 'prepared by Exponent'). The 'raw' line counts the bare word 'exponent' - shown so you can see how much noise the strict filter removes. Because the portal's own posting volume swings, the normalized rate (mentions per 10,000 posted documents) is the line to trust.",
+  "thesis": "Regulatory science consulting is a steady, non-cyclical revenue stream, and a rising presence in rulemaking dockets shows Exponent is embedded in processes (PFAS, chemical safety, device regulation) that will generate work for years. It is ALSO the risk sensor: opposition comments criticizing Exponent's industry-funded studies appear in the same data - the bear case in plain sight.",
+  "caveats": [
+    "A mention can be favorable or hostile; the count alone doesn't distinguish. Read the evidence table.",
+    "Regulations.gov posting volume collapsed in 2025 (~10x fewer documents than typical years), so recent raw counts are structurally low - use the normalized rate."
+  ]
+}
