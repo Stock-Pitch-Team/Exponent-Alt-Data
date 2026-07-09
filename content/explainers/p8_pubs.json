@@ -1,0 +1,11 @@
+{
+  "title": "Scientific output: Exponent vs the consulting peer set",
+  "what": "Peer-reviewed publications per year for Exponent and its closest listed consulting peers - CRA International, ICF, and FTI Consulting - from the OpenAlex research index.",
+  "how": "Each firm's publication count comes from its institution record in OpenAlex (the same source as the Science Moat section). FTI Consulting - a firm six times Exponent's revenue - has no institution record in the index at all, which is shown as what it is: zero research footprint.",
+  "thesis": "This is the moat, benchmarked. Expert testimony survives cross-examination when the expert has real scientific standing. Exponent out-publishes every peer in absolute terms despite being the smallest firm by revenue - per dollar of revenue, it isn't close. That is what justifies premium billing rates.",
+  "caveats": [
+    "Firms publishing under subsidiary or affiliate names may be undercounted.",
+    "ICF's output is concentrated in policy/health services research, not the failure-analysis engineering that drives courtroom credibility.",
+    "The most recent year is partial and still being indexed."
+  ]
+}

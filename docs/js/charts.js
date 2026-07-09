@@ -79,6 +79,61 @@ window.ALTDATA_CHARTS = (function () {
     });
   }
 
+  function p7Utilization() {
+    U.card({
+      mount: "mount-p7-utilization", datasetKey: "p7_utilization", chartId: "p7_utilization",
+      title: "Utilization: the thesis variable, from Exponent's own filings",
+      sub: "Company-stated quarterly utilization from SEC-filed earnings releases and 10-Qs. Dashed lines mark the thesis triggers: ~73% = bear ceiling, 76%+ = bull confirmation. Chart shows 2016-present; ~20 years in the table.",
+      build: function (elm, d) {
+        var rows = d.series.filter(function (r) { return r.quarter >= "2016" && r.utilization; });
+        return {
+          option: {
+            tooltip: {
+              formatter: function (ps) {
+                var r = rows[ps[0].dataIndex];
+                return r.quarter + "<br>Utilization: <b>" + r.utilization + "%</b>" +
+                  (r.headcount_growth_pct ? "<br>Headcount: +" + r.headcount_growth_pct + "% YoY (stated)" : "") +
+                  "<br><span style='color:" + U.cssVar("--muted") + "'>" +
+                  (r.source_form || "8-K") + " " + (r.accession || "") + "</span>";
+              }
+            },
+            xAxis: { type: "category", data: rows.map(function (r) { return r.quarter; }),
+                     axisLabel: { interval: 5 } },
+            yAxis: { type: "value", min: 60, max: 82,
+                     axisLabel: { formatter: "{value}%" } },
+            series: [{
+              type: "line", lineStyle: { width: 2.5 }, symbolSize: 7,
+              data: rows.map(function (r) { return r.utilization; }),
+              markLine: {
+                symbol: "none", silent: true,
+                lineStyle: { type: "dashed", width: 1 },
+                label: { color: U.cssVar("--muted"), fontSize: 11, position: "insideEndTop" },
+                data: [
+                  { yAxis: 73, label: { formatter: "73% - bear ceiling" },
+                    lineStyle: { color: U.cssVar("--s6") } },
+                  { yAxis: 76, label: { formatter: "76% - bull zone" },
+                    lineStyle: { color: U.cssVar("--s4") } }
+                ]
+              }
+            }]
+          },
+          table: {
+            columns: [{ label: "Quarter" }, { label: "Utilization", num: true },
+                      { label: "Year-ago (as stated)", num: true },
+                      { label: "Headcount growth (stated)", num: true },
+                      { label: "Source filing" }],
+            rows: d.series.map(function (r) {
+              return [r.quarter, r.utilization != null ? r.utilization + "%" : "",
+                      r.utilization_prior_year != null ? r.utilization_prior_year + "%" : "",
+                      r.headcount_growth_pct != null ? "+" + r.headcount_growth_pct + "%" : "",
+                      (r.source_form || "8-K") + " " + (r.accession || "")];
+            })
+          }
+        };
+      }
+    });
+  }
+
   /* ================= P2 — litigation ================= */
   function p2Timeseries() {
     U.card({
@@ -661,14 +716,155 @@ window.ALTDATA_CHARTS = (function () {
     });
   }
 
+  /* ================= P8 — peers ================= */
+  function p8Pubs() {
+    U.card({
+      mount: "mount-p8-pubs", datasetKey: "p8_peers", chartId: "p8_pubs",
+      title: "Scientific output vs peers: the moat, benchmarked",
+      sub: "Peer-reviewed publications per year. FTI Consulting (6x Exponent's revenue) has no research-index record at all.",
+      build: function (elm, d) {
+        var firms = d.firms.filter(function (f) { return (f.publications || []).length; });
+        var years = [];
+        for (var y = 2012; y <= THIS_YEAR; y++) years.push(y);
+        var noFootprint = d.firms.filter(function (f) { return f.publications_note; })
+          .map(function (f) { return f.name.split(" (")[0]; });
+        return {
+          option: {
+            legend: {},
+            xAxis: { type: "category", data: years.map(starYear) },
+            yAxis: { type: "value", name: "papers / year", nameTextStyle: { color: U.cssVar("--muted") } },
+            series: firms.map(function (f, i) {
+              var byYear = {};
+              (f.publications || []).forEach(function (p) { byYear[p.year] = p.works; });
+              return { name: f.name.split(" (")[0], type: "line",
+                       lineStyle: { width: f.key === "EXPO" ? 3 : 1.8 },
+                       symbolSize: f.key === "EXPO" ? 7 : 5,
+                       data: years.map(function (y) { return byYear[y] !== undefined ? byYear[y] : 0; }) };
+            }),
+            graphic: noFootprint.length ? [{
+              type: "text", right: 20, bottom: 60,
+              style: { text: noFootprint.join(", ") + ": no research-index record (0)",
+                       fill: U.cssVar("--muted"), fontSize: 12 }
+            }] : []
+          },
+          table: {
+            columns: [{ label: "Year" }].concat(d.firms.map(function (f) {
+              return { label: f.name.split(" (")[0], num: true };
+            })),
+            rows: years.map(function (y) {
+              return [y].concat(d.firms.map(function (f) {
+                var hit = (f.publications || []).filter(function (p) { return p.year === y; })[0];
+                return hit ? hit.works : (f.publications_note ? "not indexed" : 0);
+              }));
+            })
+          }
+        };
+      }
+    });
+  }
+
+  function p8Financials() {
+    U.card({
+      mount: "mount-p8-financials", datasetKey: "p8_peers", chartId: "p8_financials",
+      title: "Operating margin vs peers: the moat's paycheck",
+      sub: "Operating income as a share of revenue, from each firm's SEC filings. Exponent runs at roughly double every peer.",
+      build: function (elm, d) {
+        var years = [];
+        for (var y = 2018; y <= THIS_YEAR - 1; y++) years.push(y);
+        return {
+          option: {
+            legend: {},
+            tooltip: { valueFormatter: function (v) { return v == null ? "–" : v + "%"; } },
+            xAxis: { type: "category", data: years },
+            yAxis: { type: "value", axisLabel: { formatter: "{value}%" } },
+            series: d.firms.map(function (f) {
+              var byYear = {};
+              ((f.financials || {}).annual || []).forEach(function (r) { byYear[r.year] = r.op_margin_pct; });
+              return { name: f.name.split(" (")[0], type: "line",
+                       lineStyle: { width: f.key === "EXPO" ? 3 : 1.8 },
+                       symbolSize: f.key === "EXPO" ? 7 : 5,
+                       data: years.map(function (y) { return byYear[y] !== undefined ? byYear[y] : null; }) };
+            })
+          },
+          table: {
+            columns: [{ label: "Year" }].concat(d.firms.map(function (f) {
+              return { label: f.name.split(" (")[0] + " margin / growth" };
+            })),
+            rows: years.map(function (y) {
+              return [y].concat(d.firms.map(function (f) {
+                var hit = ((f.financials || {}).annual || []).filter(function (r) { return r.year === y; })[0];
+                if (!hit) return "";
+                return (hit.op_margin_pct != null ? hit.op_margin_pct + "%" : "–") +
+                       (hit.rev_growth_pct != null ? " / " + (hit.rev_growth_pct >= 0 ? "+" : "") + hit.rev_growth_pct + "%" : "");
+              }));
+            })
+          }
+        };
+      }
+    });
+  }
+
+  function p8Courts() {
+    var ds = window.ALTDATA.p8_peers;
+    var firms = ds && ds.data ? ds.data.firms : [];
+    var withCourts = firms.filter(function (f) { return f.courts; });
+    if (!withCourts.length) {
+      var mount = document.getElementById("mount-p8-courts");
+      if (mount) {
+        var u = U.el("div", "unavailable");
+        u.appendChild(U.el("span", "badge partial", "pending"));
+        u.appendChild(U.el("h3", null, "Courtroom share vs peers"));
+        u.appendChild(U.el("p", null, "Court-record counts for the peer set are fetched within the archive's free daily request quota and will appear on the next data refresh. Nothing is shown until the real counts are in."));
+        mount.appendChild(u);
+      }
+      return;
+    }
+    U.card({
+      mount: "mount-p8-courts", datasetKey: "p8_peers", chartId: "p8_courts",
+      title: "Courtroom share: whose experts get named",
+      sub: "Federal case files mentioning each firm near expert-witness language, per year. Newest 1-2 years read low from archive lag.",
+      build: function (elm, d) {
+        var years = Object.keys(withCourts[0].courts).map(Number).sort();
+        return {
+          option: {
+            legend: {},
+            xAxis: { type: "category", data: years.map(starYear) },
+            yAxis: { type: "value", name: "cases / year", nameTextStyle: { color: U.cssVar("--muted") } },
+            series: withCourts.map(function (f) {
+              return { name: f.name.split(" (")[0], type: "line",
+                       lineStyle: { width: f.key === "EXPO" ? 3 : 1.8 },
+                       symbolSize: f.key === "EXPO" ? 7 : 5,
+                       data: years.map(function (y) {
+                         var c = f.courts[y] || f.courts[String(y)];
+                         return c ? c.opinions + c.recap : null;
+                       }) };
+            })
+          },
+          table: {
+            columns: [{ label: "Year" }].concat(withCourts.map(function (f) {
+              return { label: f.name.split(" (")[0], num: true };
+            })),
+            rows: years.map(function (y) {
+              return [y].concat(withCourts.map(function (f) {
+                var c = f.courts[y] || f.courts[String(y)];
+                return c ? c.opinions + c.recap : "";
+              }));
+            })
+          }
+        };
+      }
+    });
+  }
+
   return {
     render: function () {
-      p1Headcount(); p1Roster();
+      p1Headcount(); p1Roster(); p7Utilization();
       p2Timeseries(); p2Daubert(); p2Cases();
       p3Index(); p3Lag();
       p4Pubs(); p4Partners(); p4Graph();
       p5Awards(); p5Regs();
       p6ClientRnd(); p6ExpoFin();
+      p8Pubs(); p8Financials(); p8Courts();
     }
   };
 })();

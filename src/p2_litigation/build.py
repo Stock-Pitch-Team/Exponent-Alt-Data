@@ -15,8 +15,8 @@ OPINIONS_START = 1990
 RECAP_START = 2005
 RECAP_PAGE_START = 2018         # page full RECAP results only for recent years (recency
                                 # focus); older years use one count request apiece
-DAUBERT_FETCH_CAP = 40          # Exponent-linked opinions to pull full text for
-BASELINE_FETCH_CAP = 40         # non-Exponent Daubert opinions for the baseline
+DAUBERT_FETCH_CAP = 100         # Exponent-linked opinions to pull full text for
+BASELINE_FETCH_CAP = 100        # non-Exponent Daubert opinions for the baseline
 
 _V_RE = re.compile(r"\s+v\.?\s+", re.IGNORECASE)
 
@@ -42,6 +42,9 @@ def _now():
 
 
 def run(step=None, use_cache=True):
+    if step == "daubert":
+        _run_daubert_guarded()
+        return
     end_year = date.today().year
     interim = settings.INTERIM_DIR
     partial_reason = None
@@ -83,10 +86,25 @@ def run(step=None, use_cache=True):
     _write_evidence_and_parties(results_o, results_r, interim)
 
     # --- Daubert win rate ---
+    _run_daubert_guarded()
+
+
+def _run_daubert_guarded():
+    """Run the Daubert stage; if the fetch stops early, KEEP the last good
+    dataset on disk instead of overwriting it with an unavailable stub."""
     try:
         _build_daubert()
     except (fetch.QuotaExhausted, http.SourceUnavailable) as exc:
         log.warning("daubert stage stopped: %s", exc)
+        existing = settings.SITE_DATA_DIR / "p2_daubert.json"
+        if existing.exists():
+            try:
+                doc = json.loads(existing.read_text(encoding="utf-8"))
+                if doc.get("metadata", {}).get("status") == "ok":
+                    log.info("keeping previous good p2_daubert.json; re-run to expand sample")
+                    return
+            except (json.JSONDecodeError, OSError):
+                pass
         jsonio.write_site_json(
             "p2_daubert.json",
             provenance.envelope(

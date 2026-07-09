@@ -9,6 +9,29 @@
 
   /* ---------- scoreboard ---------- */
   function tiles() {
+    var util = data("p7_utilization");
+    if (util && util.series) {
+      var us = util.series.filter(function (r) { return r.utilization; });
+      if (us.length >= 5) {
+        var cur = us[us.length - 1];
+        var yearAgo = us[us.length - 5];
+        var du = yearAgo ? cur.utilization - yearAgo.utilization : null;
+        var hc = null;
+        for (var i = us.length - 1; i >= 0 && !hc; i--) {
+          if (us[i].headcount_growth_pct) hc = us[i];
+        }
+        U.tile("tiles", {
+          label: "Utilization, company-stated (" + cur.quarter + ")",
+          value: cur.utilization + "%",
+          delta: (du !== null ? (du >= 0 ? "+" : "") + du + " pts vs year ago" : "") +
+                 (hc ? " · headcount +" + hc.headcount_growth_pct + "% (" + hc.quarter + ")" : ""),
+          dir: cur.utilization >= 76 ? "up" : cur.utilization <= 73 ? "down" : "flat",
+          note: "Straight from SEC filings. Thesis triggers: 76%+ with headcount growth = bull confirmed; ~73% ceiling = bear. Currently in the bull zone.",
+          href: "#sec-p1"
+        });
+      }
+    }
+
     var roster = data("p1_current_roster");
     var head = data("p1_headcount_timeseries");
     if (roster) {

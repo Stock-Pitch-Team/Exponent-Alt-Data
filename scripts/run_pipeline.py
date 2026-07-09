@@ -24,6 +24,8 @@ PIPELINES = {
     "p4": "src.p4_moat.build",
     "p5": "src.p5_gov.build",
     "p6": "src.p6_clients.build",
+    "p7": "src.p7_utilization.build",
+    "p8": "src.p8_peers.build",
 }
 
 

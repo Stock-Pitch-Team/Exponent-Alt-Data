@@ -1,0 +1,11 @@
+{
+  "title": "Courtroom share: whose experts get named",
+  "what": "Federal court records mentioning each consulting firm near expert-witness language, per year - the same method as the Exponent litigation chart, applied to the peer set.",
+  "how": "Yearly counts from the CourtListener archive for each firm's name near words like expert, testimony, or Daubert. Counts are fetched within the archive's free request quota, so this chart may show 'partial' until a later refresh completes it.",
+  "thesis": "Relative framing beats absolute: if Exponent holds or gains courtroom share while peers fade, the litigation franchise is winning even in a flat market. If a peer is taking share, that is a risk worth knowing before someone else points it out.",
+  "caveats": [
+    "Same limitations as the Exponent litigation chart: federal records only, testifying work only, and the newest 1-2 years read low from archive lag.",
+    "Firm names differ in ambiguity ('FTI' and 'CRA' are acronyms with other meanings; exact quoted names are used to compensate).",
+    "CRA and FTI do much of their expert work in economic/financial disputes rather than engineering - overlapping but not identical markets to Exponent's."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "The thesis variable itself: Exponent's own stated utilization",
+  "what": "Utilization is the share of consultants' available hours that clients actually pay for - THE profitability lever for a consulting firm. This is Exponent's own quarterly figure, read directly from its SEC-filed earnings releases and quarterly reports going back ~20 years.",
+  "how": "Software fetched every Exponent 8-K earnings release and 10-Q/10-K from SEC EDGAR and pattern-matched the stated utilization percentage (and, where stated, headcount growth). Every data point carries the SEC accession number of the filing it came from, so any value can be checked against the original document in seconds.",
+  "thesis": "The investment thesis is written against this exact series: the bull trigger is utilization sustaining the mid-to-high 70s WITH headcount growing; the bear trigger is stalling at the ~73% ceiling. The data shows the full cycle - the 2021 peak (79%), the 2023 over-hiring trough (69%), and the recovery to 76% in Q1-2026 alongside management-stated +5% headcount growth. That is the 'volume + rate' confirmation, from the company's own filings.",
+  "caveats": [
+    "Numbers are extracted from filing text by pattern-matching; quarters whose wording defeated the parser are absent, never estimated.",
+    "Press-release headlines and 10-Q management discussion occasionally round the same quarter differently by a point; where both exist, the press-release figure is used.",
+    "Utilization is Exponent's own non-GAAP operating metric (their definition of available hours), consistent over time but not audited."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Financial quality: the margin gap is the moat's paycheck",
+  "what": "Operating margin (profit from operations as a share of revenue) and revenue growth for Exponent and its listed consulting peers, from each company's own SEC filings.",
+  "how": "Annual revenue and operating income pulled from each firm's XBRL data on SEC EDGAR - the same audited numbers in their annual reports.",
+  "thesis": "If Exponent's scientific moat is real, it should show up as sustainably higher profitability - and it does: ~21% operating margins vs 7-11% for every peer, a gap that has persisted for years. The honest counterpoint is also here: CRA has grown revenue faster than Exponent recently (~9-10% vs ~4%), which is part of why EXPO de-rated. The buy case is that Exponent's growth re-accelerates (see the utilization chart) while the margin gap persists.",
+  "caveats": [
+    "Peers differ hugely in size and business mix (FTI ~$3.8B is litigation/restructuring; ICF ~$2B is government-heavy); compare margins and trends, not absolute revenue.",
+    "Operating-cost definitions vary slightly between firms; a 1-2 point margin difference is noise. The 2x gap is not.",
+    "Fiscal years differ by a few days between firms; annual figures are as each company reports them."
+  ]
+}
