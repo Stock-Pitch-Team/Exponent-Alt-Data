@@ -2,19 +2,19 @@
  "metadata": {
   "pipeline": "p6_clients",
   "output": "client_rnd",
-  "generated_at": "2026-07-09T18:54:46Z",
+  "generated_at": "2026-07-09T21:44:44Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "Revealed clients: OpenAlex co-authorships (P4) + court-case parties (P2)",
     "url": "derived",
-    "note": "967 candidate names, 162 matched to SEC filers, 805 unmatched/ambiguous"
+    "note": "833 candidate names, 159 matched to SEC filers, 674 unmatched/ambiguous"
    },
    {
     "name": "SEC EDGAR XBRL companyfacts + frames (us-gaap:ResearchAndDevelopmentExpense)",
     "url": "https://data.sec.gov/api/xbrl/",
-    "fetched_at": "2026-07-09T18:54:46Z"
+    "fetched_at": "2026-07-09T21:44:44Z"
    }
   ],
   "coverage": {
@@ -25,7 +25,7 @@
    "Exponent discloses NO client list. This 'revealed client' sample comes from public co-authored research and court cases - a lower bound, biased toward clients who publish or litigate.",
    "'research_partner' = co-authored publications with Exponent (high confidence there is a relationship). 'associated_party' = was a party in a case where Exponent appears near expert language - the side that hired Exponent is usually unknown.",
    "The aggregate uses only the constant sample of companies reporting R&D in every year shown, so growth is not distorted by companies entering/leaving the sample.",
-   "R&D values are exactly as reported to the SEC; companies not reporting the standard R&D tag are marked unavailable rather than estimated.",
+   "R&D values are exactly as reported to the SEC. Companies that file research spending under a different line item (e.g. Amazon's 'technology and content/infrastructure') show that item, clearly labeled; only standard-definition R&D goes into the aggregate line, and companies with no R&D-like line item at all are marked n/a, never estimated.",
    "Logic being tested: rising client/sector R&D budgets -> more proactive consulting demand for Exponent. This is a demand-environment indicator, not a revenue forecast."
   ],
   "methodology_id": "p6_client_rnd"
@@ -76,6 +76,8 @@
       "value": 1623000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -88,8 +90,43 @@
     "sec_title": "Shell plc",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 986000000
+     },
+     {
+      "year": 2019,
+      "value": 962000000
+     },
+     {
+      "year": 2020,
+      "value": 907000000
+     },
+     {
+      "year": 2021,
+      "value": 815000000
+     },
+     {
+      "year": 2022,
+      "value": 1075000000
+     },
+     {
+      "year": 2023,
+      "value": 1287000000
+     },
+     {
+      "year": 2024,
+      "value": 1099000000
+     },
+     {
+      "year": 2025,
+      "value": 1170000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": null
    },
    {
     "name": "ExxonMobil",
@@ -135,6 +172,8 @@
       "value": 1200000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -148,7 +187,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Procter & Gamble",
@@ -194,6 +235,8 @@
       "value": 2100000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -206,8 +249,43 @@
     "sec_title": "AMGEN INC",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 3737000000
+     },
+     {
+      "year": 2019,
+      "value": 4116000000
+     },
+     {
+      "year": 2020,
+      "value": 4207000000
+     },
+     {
+      "year": 2021,
+      "value": 4819000000
+     },
+     {
+      "year": 2022,
+      "value": 4434000000
+     },
+     {
+      "year": 2023,
+      "value": 4784000000
+     },
+     {
+      "year": 2024,
+      "value": 5964000000
+     },
+     {
+      "year": 2025,
+      "value": 7272000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Chevron",
@@ -253,6 +331,8 @@
       "value": 427000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -265,8 +345,43 @@
     "sec_title": "Medtronic plc",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 2330000000
+     },
+     {
+      "year": 2019,
+      "value": 2331000000
+     },
+     {
+      "year": 2020,
+      "value": 2493000000
+     },
+     {
+      "year": 2021,
+      "value": 2746000000
+     },
+     {
+      "year": 2022,
+      "value": 2696000000
+     },
+     {
+      "year": 2023,
+      "value": 2735000000
+     },
+     {
+      "year": 2024,
+      "value": 2732000000
+     },
+     {
+      "year": 2025,
+      "value": 2873000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "PG&E Corporation",
@@ -279,7 +394,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Ford Motor Company",
@@ -325,6 +442,8 @@
       "value": 9400000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -359,6 +478,8 @@
       "value": 109000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -405,6 +526,8 @@
       "value": 54000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -418,7 +541,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Apple Inc",
@@ -464,6 +589,8 @@
       "value": 34550000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -476,8 +603,43 @@
     "sec_title": "PFIZER INC",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 7760000000
+     },
+     {
+      "year": 2019,
+      "value": 8385000000
+     },
+     {
+      "year": 2020,
+      "value": 8709000000
+     },
+     {
+      "year": 2021,
+      "value": 10360000000
+     },
+     {
+      "year": 2022,
+      "value": 11428000000
+     },
+     {
+      "year": 2023,
+      "value": 10679000000
+     },
+     {
+      "year": 2024,
+      "value": 10822000000
+     },
+     {
+      "year": 2025,
+      "value": 10437000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Exponents",
@@ -490,7 +652,9 @@
     "match_method": "fuzzy",
     "match_score": 0.941,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Charles River Laboratories",
@@ -503,7 +667,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "General Electric",
@@ -549,6 +715,8 @@
       "value": 1580000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -562,7 +730,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Corteva",
@@ -608,6 +778,8 @@
       "value": 1474000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -621,7 +793,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "FMC",
@@ -633,8 +807,43 @@
     "sec_title": "FMC CORP",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 287700000
+     },
+     {
+      "year": 2019,
+      "value": 298100000
+     },
+     {
+      "year": 2020,
+      "value": 287900000
+     },
+     {
+      "year": 2021,
+      "value": 304700000
+     },
+     {
+      "year": 2022,
+      "value": 314200000
+     },
+     {
+      "year": 2023,
+      "value": 328800000
+     },
+     {
+      "year": 2024,
+      "value": 278000000
+     },
+     {
+      "year": 2025,
+      "value": 266100000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Novartis",
@@ -646,8 +855,43 @@
     "sec_title": "NOVARTIS AG",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 8489000000
+     },
+     {
+      "year": 2019,
+      "value": 9402000000
+     },
+     {
+      "year": 2020,
+      "value": 8980000000
+     },
+     {
+      "year": 2021,
+      "value": 8641000000
+     },
+     {
+      "year": 2022,
+      "value": 9172000000
+     },
+     {
+      "year": 2023,
+      "value": 11371000000
+     },
+     {
+      "year": 2024,
+      "value": 10022000000
+     },
+     {
+      "year": 2025,
+      "value": 11200000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": null
    },
    {
     "name": "Boston Scientific",
@@ -659,8 +903,43 @@
     "sec_title": "BOSTON SCIENTIFIC CORP",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 1113000000
+     },
+     {
+      "year": 2019,
+      "value": 1174000000
+     },
+     {
+      "year": 2020,
+      "value": 1143000000
+     },
+     {
+      "year": 2021,
+      "value": 1204000000
+     },
+     {
+      "year": 2022,
+      "value": 1323000000
+     },
+     {
+      "year": 2023,
+      "value": 1414000000
+     },
+     {
+      "year": 2024,
+      "value": 1615000000
+     },
+     {
+      "year": 2025,
+      "value": 2052000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "AstraZeneca",
@@ -672,8 +951,43 @@
     "sec_title": "ASTRAZENECA PLC",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 5932000000
+     },
+     {
+      "year": 2019,
+      "value": 6059000000
+     },
+     {
+      "year": 2020,
+      "value": 5991000000
+     },
+     {
+      "year": 2021,
+      "value": 9736000000
+     },
+     {
+      "year": 2022,
+      "value": 9762000000
+     },
+     {
+      "year": 2023,
+      "value": 10935000000
+     },
+     {
+      "year": 2024,
+      "value": 13583000000
+     },
+     {
+      "year": 2025,
+      "value": 14232000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": null
    },
    {
     "name": "Olin Corporation",
@@ -686,7 +1000,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Tetra Tech",
@@ -699,7 +1015,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Amazon.com, Inc",
@@ -712,7 +1030,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Masimo Corporation",
@@ -734,6 +1054,8 @@
       "value": 2089181
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -747,7 +1069,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "AbbVie",
@@ -759,8 +1083,43 @@
     "sec_title": "AbbVie Inc.",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 10329000000
+     },
+     {
+      "year": 2019,
+      "value": 6407000000
+     },
+     {
+      "year": 2020,
+      "value": 6379000000
+     },
+     {
+      "year": 2021,
+      "value": 6922000000
+     },
+     {
+      "year": 2022,
+      "value": 6510000000
+     },
+     {
+      "year": 2023,
+      "value": 7675000000
+     },
+     {
+      "year": 2024,
+      "value": 12791000000
+     },
+     {
+      "year": 2025,
+      "value": 9096000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Intel",
@@ -806,6 +1165,8 @@
       "value": 13774000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -819,7 +1180,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "3M",
@@ -861,6 +1224,8 @@
       "value": 700000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -907,6 +1272,8 @@
       "value": 24000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -919,8 +1286,43 @@
     "sec_title": "Zoetis Inc.",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 432000000
+     },
+     {
+      "year": 2019,
+      "value": 457000000
+     },
+     {
+      "year": 2020,
+      "value": 463000000
+     },
+     {
+      "year": 2021,
+      "value": 508000000
+     },
+     {
+      "year": 2022,
+      "value": 539000000
+     },
+     {
+      "year": 2023,
+      "value": 614000000
+     },
+     {
+      "year": 2024,
+      "value": 686000000
+     },
+     {
+      "year": 2025,
+      "value": 698000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Nvidia",
@@ -966,6 +1368,8 @@
       "value": 18497000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1012,20 +1416,9 @@
       "value": 57372000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
-   },
-   {
-    "name": "Universal Insurance Company",
-    "relationship": "associated_party",
-    "evidence_count": 4,
-    "evidence": "party in 4 matched case(s), e.g. Rachele, Caterina v. Universal Insurance Company; Rachele, Caterina v. Universal Insurance Company; Consejo De Titulares Del Condominio … v. Universal Insurance Company",
-    "ticker": "UVE",
-    "cik": 891166,
-    "sec_title": "UNIVERSAL INSURANCE HOLDINGS, INC.",
-    "match_method": "exact",
-    "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
    },
    {
     "name": "Eli Lilly",
@@ -1059,6 +1452,8 @@
       "value": 7190800000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1081,6 +1476,8 @@
       "value": 8049000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1127,6 +1524,8 @@
       "value": 147000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1140,7 +1539,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "FIT Consulting",
@@ -1153,7 +1554,9 @@
     "match_method": "fuzzy",
     "match_score": 0.929,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Edison International",
@@ -1166,7 +1569,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Accenture",
@@ -1212,6 +1617,8 @@
       "value": 817300000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1250,6 +1657,8 @@
       "value": 1317000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1296,6 +1705,8 @@
       "value": 1311800000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1342,6 +1753,8 @@
       "value": 32488000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1355,7 +1768,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Sonos, Inc",
@@ -1401,6 +1816,8 @@
       "value": 279969000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1447,6 +1864,8 @@
       "value": 85721000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1493,6 +1912,8 @@
       "value": 32488000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1506,7 +1927,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Baxter",
@@ -1552,6 +1975,8 @@
       "value": 518000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1598,6 +2023,8 @@
       "value": 246000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1611,7 +2038,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Ecolab",
@@ -1657,6 +2086,8 @@
       "value": 202000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1695,6 +2126,8 @@
       "value": 159300000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1741,6 +2174,8 @@
       "value": 2000000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1787,6 +2222,8 @@
       "value": 839000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1833,6 +2270,8 @@
       "value": 9951000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1879,6 +2318,8 @@
       "value": 1265000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1901,6 +2342,8 @@
       "value": 9106000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1913,8 +2356,43 @@
     "sec_title": "MAXLINEAR, INC",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 120046000
+     },
+     {
+      "year": 2019,
+      "value": 98344000
+     },
+     {
+      "year": 2020,
+      "value": 179993000
+     },
+     {
+      "year": 2021,
+      "value": 278440000
+     },
+     {
+      "year": 2022,
+      "value": 296442000
+     },
+     {
+      "year": 2023,
+      "value": 269504000
+     },
+     {
+      "year": 2024,
+      "value": 225189000
+     },
+     {
+      "year": 2025,
+      "value": 208599000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Thermo Fisher Scientific",
@@ -1960,6 +2438,8 @@
       "value": 1397000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -1973,7 +2453,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Rockwell Automation",
@@ -2019,6 +2501,8 @@
       "value": 679000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2061,6 +2545,8 @@
       "value": 413000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2107,6 +2593,8 @@
       "value": 4200000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2153,6 +2641,8 @@
       "value": 10272000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2199,6 +2689,8 @@
       "value": 1643000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2245,6 +2737,8 @@
       "value": 25941000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2258,7 +2752,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Hitachi",
@@ -2271,7 +2767,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Southwest Airlines Co",
@@ -2284,7 +2782,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "HP, Inc",
@@ -2330,6 +2830,8 @@
       "value": 1602000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2343,7 +2845,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Toyota Motor Corporation",
@@ -2356,7 +2860,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Walmart Inc",
@@ -2369,7 +2875,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Tesla, Inc",
@@ -2415,6 +2923,8 @@
       "value": 6411000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2428,7 +2938,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "3M Company",
@@ -2470,6 +2982,8 @@
       "value": 700000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2483,7 +2997,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Boston Scientific Corp",
@@ -2495,8 +3011,43 @@
     "sec_title": "BOSTON SCIENTIFIC CORP",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 1113000000
+     },
+     {
+      "year": 2019,
+      "value": 1174000000
+     },
+     {
+      "year": 2020,
+      "value": 1143000000
+     },
+     {
+      "year": 2021,
+      "value": 1204000000
+     },
+     {
+      "year": 2022,
+      "value": 1323000000
+     },
+     {
+      "year": 2023,
+      "value": 1414000000
+     },
+     {
+      "year": 2024,
+      "value": 1615000000
+     },
+     {
+      "year": 2025,
+      "value": 2052000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "ATI Technologies, Inc",
@@ -2530,6 +3081,8 @@
       "value": 3007443
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2543,7 +3096,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Exponent, Inc",
@@ -2556,7 +3111,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "FOX Corporation",
@@ -2569,7 +3126,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Phoenix Energy One, LLC",
@@ -2582,7 +3141,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Advanced Micro Devices, Inc",
@@ -2628,6 +3189,8 @@
       "value": 8091000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2641,7 +3204,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Alzamend Neuro, Inc",
@@ -2679,6 +3244,8 @@
       "value": 1414928
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2725,6 +3292,8 @@
       "value": 1319775000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2751,6 +3320,8 @@
       "value": 1029700000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2797,6 +3368,8 @@
       "value": 1602000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2843,6 +3416,8 @@
       "value": 1200000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2856,7 +3431,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Vestis Corporation",
@@ -2869,7 +3446,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "General Motors Company",
@@ -2882,7 +3461,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Shoals Technologies Group, LLC",
@@ -2895,7 +3476,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Harley-Davidson, Inc",
@@ -2933,6 +3516,8 @@
       "value": 159300000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -2946,7 +3531,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Ecolab Inc",
@@ -2992,6 +3579,8 @@
       "value": 202000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3005,7 +3594,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Dollar General Corporation",
@@ -3018,7 +3609,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Incyte Corporation",
@@ -3064,6 +3657,8 @@
       "value": 2050152000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3077,7 +3672,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Gentex Corporation",
@@ -3123,6 +3720,8 @@
       "value": 203259756
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3169,6 +3768,8 @@
       "value": 1580000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3215,6 +3816,8 @@
       "value": 8316000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3261,6 +3864,8 @@
       "value": 25241000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3307,6 +3912,8 @@
       "value": 3132000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3320,7 +3927,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Omega Flex Inc",
@@ -3366,6 +3975,8 @@
       "value": 1283000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3404,6 +4015,8 @@
       "value": 369016000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3417,7 +4030,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Qorvo, Inc",
@@ -3463,6 +4078,8 @@
       "value": 726122000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3501,6 +4118,8 @@
       "value": 12041000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3514,7 +4133,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "General Electric Co",
@@ -3560,6 +4181,8 @@
       "value": 1580000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3606,6 +4229,8 @@
       "value": 0
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3652,6 +4277,8 @@
       "value": 2311000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3665,7 +4292,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "ScentAir Technologies, LLC",
@@ -3699,6 +4328,8 @@
       "value": 3348000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3745,6 +4376,8 @@
       "value": 3142000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3758,7 +4391,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "NCS Multistage Inc",
@@ -3804,6 +4439,8 @@
       "value": 2000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3817,7 +4454,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Five Point Holdings, LLC",
@@ -3830,7 +4469,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Lands' End, Inc",
@@ -3843,7 +4484,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "GATX Corporation",
@@ -3856,7 +4499,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Georgia Power Company",
@@ -3869,7 +4514,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Lyft, Inc",
@@ -3915,6 +4562,8 @@
       "value": 451419000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -3928,7 +4577,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Arthur J. Gallagher & Co",
@@ -3941,7 +4592,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "L3Harris Technologies, Inc",
@@ -3954,7 +4607,9 @@
     "match_method": "fuzzy",
     "match_score": 0.933,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Starbucks Corporation",
@@ -3967,7 +4622,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "NVIDIA Corporation",
@@ -4013,6 +4670,8 @@
       "value": 18497000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4059,6 +4718,8 @@
       "value": 167000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4072,7 +4733,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Davita Inc",
@@ -4085,7 +4748,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Boston Scientific Corporation",
@@ -4097,8 +4762,43 @@
     "sec_title": "BOSTON SCIENTIFIC CORP",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 1113000000
+     },
+     {
+      "year": 2019,
+      "value": 1174000000
+     },
+     {
+      "year": 2020,
+      "value": 1143000000
+     },
+     {
+      "year": 2021,
+      "value": 1204000000
+     },
+     {
+      "year": 2022,
+      "value": 1323000000
+     },
+     {
+      "year": 2023,
+      "value": 1414000000
+     },
+     {
+      "year": 2024,
+      "value": 1615000000
+     },
+     {
+      "year": 2025,
+      "value": 2052000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "Lockheed Martin Corporation",
@@ -4144,6 +4844,8 @@
       "value": 2000000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4190,6 +4892,8 @@
       "value": 366000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4212,6 +4916,8 @@
       "value": 1132000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4258,6 +4964,8 @@
       "value": 427000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4304,6 +5012,8 @@
       "value": 147246000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4350,6 +5060,8 @@
       "value": 1283000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4396,6 +5108,8 @@
       "value": 23200000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4430,6 +5144,8 @@
       "value": 7190800000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4476,6 +5192,8 @@
       "value": 95400000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4522,6 +5240,8 @@
       "value": 427000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4568,6 +5288,8 @@
       "value": 1283000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4614,6 +5336,8 @@
       "value": 9400000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    },
    {
@@ -4627,7 +5351,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Norfolk Southern Corp",
@@ -4640,7 +5366,9 @@
     "match_method": "exact",
     "match_score": 1.0,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Amgen, Inc",
@@ -4652,8 +5380,43 @@
     "sec_title": "AMGEN INC",
     "match_method": "exact",
     "match_score": 1.0,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_annual": [
+     {
+      "year": 2018,
+      "value": 3737000000
+     },
+     {
+      "year": 2019,
+      "value": 4116000000
+     },
+     {
+      "year": 2020,
+      "value": 4207000000
+     },
+     {
+      "year": 2021,
+      "value": 4819000000
+     },
+     {
+      "year": 2022,
+      "value": 4434000000
+     },
+     {
+      "year": 2023,
+      "value": 4784000000
+     },
+     {
+      "year": 2024,
+      "value": 5964000000
+     },
+     {
+      "year": 2025,
+      "value": 7272000000
+     }
+    ],
+    "rnd_tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "rnd_is_standard": false,
+    "rnd_note": null
    },
    {
     "name": "MediaCom Corp",
@@ -4666,33 +5429,9 @@
     "match_method": "fuzzy",
     "match_score": 0.933,
     "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
-   },
-   {
-    "name": "Wal-Mart Inc",
-    "relationship": "associated_party",
-    "evidence_count": 1,
-    "evidence": "party in 1 matched case(s), e.g. González Rodríguez v. Wal-Mart Inc.",
-    "ticker": "WMT",
-    "cik": 104169,
-    "sec_title": "Walmart Inc.",
-    "match_method": "fuzzy",
-    "match_score": 0.933,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
-   },
-   {
-    "name": "Wal-Mart, Inc",
-    "relationship": "associated_party",
-    "evidence_count": 1,
-    "evidence": "party in 1 matched case(s), e.g. Luz M. Gonzalez Rodriguez v. Wal-Mart, Inc.",
-    "ticker": "WMT",
-    "cik": 104169,
-    "sec_title": "Walmart Inc.",
-    "match_method": "fuzzy",
-    "match_score": 0.933,
-    "rnd_annual": null,
-    "rnd_note": "company does not report the ResearchAndDevelopmentExpense tag"
+    "rnd_tag": null,
+    "rnd_is_standard": false,
+    "rnd_note": "no R&D-like line item in this company's structured filings"
    },
    {
     "name": "Intel Corp",
@@ -4738,6 +5477,8 @@
       "value": 13774000000
      }
     ],
+    "rnd_tag": "ResearchAndDevelopmentExpense",
+    "rnd_is_standard": true,
     "rnd_note": null
    }
   ],
@@ -5077,13 +5818,6 @@
     ]
    },
    {
-    "name": "Mapfre Praico Insurance Company",
-    "relationship": "associated_party",
-    "evidence_count": 5,
-    "evidence": "party in 5 matched case(s), e.g. Consejo De Titulares Del Condominio Paseo Horizonte I, Attenure Holdings Trust 2 Y Hrh Property Holdings LLC v. Mapfre Praico Insurance Company; Consejo De Titulares Del Condominio Paseo Horizonte I, Attenure Holdings Trust 2 Y Hrh Property Holdings LLC v. Mapfre Praico Insurance Company; Consejo De Titulares Del Condominio Paseo Horizonte I, Attenure Holdings Trust 2 Y Hrh Property Holdings LLC v. Mapfre Praico Insurance Company",
-    "reason": "no SEC name match"
-   },
-   {
     "name": "Roche",
     "relationship": "research_partner",
     "evidence_count": 4,
@@ -5166,56 +5900,63 @@
     "evidence_count": 4,
     "evidence": "party in 4 matched case(s), e.g. Nokia Technologies Oy v. ASUSTeK Computer Inc.; Nokia Technologies Oy v. Hisense Company Ltd.; Nokia Technologies Oy v. HP, Inc.",
     "reason": "no SEC name match"
+   },
+   {
+    "name": "US DOMINION, INC",
+    "relationship": "associated_party",
+    "evidence_count": 4,
+    "evidence": "party in 3 matched case(s), e.g. LINDELL v. US DOMINION, INC.; US DOMINION, INC. v. HERRING NETWORKS, INC.; US DOMINION, INC. v. POWELL",
+    "reason": "no SEC name match"
    }
   ],
   "constant_sample_aggregate": [
    {
     "year": 2018,
-    "total_rnd": 162838825862,
-    "companies": 67,
+    "total_rnd": 178245825862,
+    "companies": 70,
     "yoy_pct": null
    },
    {
     "year": 2019,
-    "total_rnd": 171011174309,
-    "companies": 67,
-    "yoy_pct": 5.0
+    "total_rnd": 187434174309,
+    "companies": 70,
+    "yoy_pct": 5.2
    },
    {
     "year": 2020,
-    "total_rnd": 187139721047,
-    "companies": 67,
-    "yoy_pct": 9.4
+    "total_rnd": 203017721047,
+    "companies": 70,
+    "yoy_pct": 8.3
    },
    {
     "year": 2021,
-    "total_rnd": 211252749676,
-    "companies": 67,
-    "yoy_pct": 12.9
+    "total_rnd": 230444749676,
+    "companies": 70,
+    "yoy_pct": 13.5
    },
    {
     "year": 2022,
-    "total_rnd": 246641948804,
-    "companies": 67,
-    "yoy_pct": 16.8
+    "total_rnd": 266650948804,
+    "companies": 70,
+    "yoy_pct": 15.7
    },
    {
     "year": 2023,
-    "total_rnd": 264381635700,
-    "companies": 67,
-    "yoy_pct": 7.2
+    "total_rnd": 287974635700,
+    "companies": 70,
+    "yoy_pct": 8.0
    },
    {
     "year": 2024,
-    "total_rnd": 292546229221,
-    "companies": 67,
-    "yoy_pct": 10.7
+    "total_rnd": 317250229221,
+    "companies": 70,
+    "yoy_pct": 10.2
    },
    {
     "year": 2025,
-    "total_rnd": 328009594756,
-    "companies": 67,
-    "yoy_pct": 12.1
+    "total_rnd": 354611594756,
+    "companies": 70,
+    "yoy_pct": 11.8
    }
   ],
   "market_baseline": [

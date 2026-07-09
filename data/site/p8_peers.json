@@ -2,24 +2,24 @@
  "metadata": {
   "pipeline": "p8_peers",
   "output": "peers",
-  "generated_at": "2026-07-09T21:20:38Z",
-  "status": "partial",
-  "status_reason": "FCN: no OpenAlex institution match",
+  "generated_at": "2026-07-09T21:44:45Z",
+  "status": "ok",
+  "status_reason": null,
   "sources": [
    {
     "name": "OpenAlex (publications per institution per year)",
     "url": "https://api.openalex.org/works",
-    "fetched_at": "2026-07-09T21:20:38Z"
+    "fetched_at": "2026-07-09T21:44:45Z"
    },
    {
     "name": "SEC EDGAR XBRL companyfacts (revenue, operating income)",
     "url": "https://data.sec.gov/api/xbrl/",
-    "fetched_at": "2026-07-09T21:20:38Z"
+    "fetched_at": "2026-07-09T21:44:45Z"
    },
    {
     "name": "CourtListener v4 search API (yearly counts)",
     "url": "https://www.courtlistener.com/api/rest/v4/search/",
-    "fetched_at": "2026-07-09T21:20:38Z"
+    "fetched_at": "2026-07-09T21:44:45Z"
    }
   ],
   "coverage": {
@@ -175,6 +175,8 @@
     "key": "FCN",
     "name": "FTI Consulting",
     "ticker": "FCN",
+    "publications": [],
+    "publications_note": "not in the OpenAlex research index at all - no institutional publication footprint",
     "financials": {
      "cik": 887936,
      "annual": [
@@ -517,6 +519,7 @@
      ]
     }
    }
-  ]
+  ],
+  "courts_note": "court counts not yet fetched (quota reserved for the Daubert expansion)"
  }
 }

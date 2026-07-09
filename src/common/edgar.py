@@ -41,14 +41,15 @@ def frames(tag: str, frame: str) -> dict:
     return json.loads(raw)
 
 
-def quarterly_series(facts: dict, tag: str, unit: str = "USD") -> list[dict]:
-    """Extract deduplicated quarterly values for a us-gaap tag from companyfacts.
+def quarterly_series(facts: dict, tag: str, unit: str = "USD",
+                     namespace: str = "us-gaap") -> list[dict]:
+    """Extract deduplicated quarterly values for a tag from companyfacts.
 
     Uses SEC's own 'frame' annotations (CYyyyyQq) which mark the canonical,
     deduplicated value for each calendar quarter.
     """
     try:
-        entries = facts["facts"]["us-gaap"][tag]["units"][unit]
+        entries = facts["facts"][namespace][tag]["units"][unit]
     except KeyError:
         return []
     out = {}
@@ -63,9 +64,10 @@ def quarterly_series(facts: dict, tag: str, unit: str = "USD") -> list[dict]:
     return [out[k] for k in sorted(out)]
 
 
-def annual_series(facts: dict, tag: str, unit: str = "USD") -> list[dict]:
+def annual_series(facts: dict, tag: str, unit: str = "USD",
+                  namespace: str = "us-gaap") -> list[dict]:
     try:
-        entries = facts["facts"]["us-gaap"][tag]["units"][unit]
+        entries = facts["facts"][namespace][tag]["units"][unit]
     except KeyError:
         return []
     out = {}

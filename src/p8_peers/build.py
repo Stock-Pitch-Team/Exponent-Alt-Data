@@ -45,8 +45,10 @@ def run(step=None, use_cache=True):
             notes.append(f"{peer['key']} financials failed: {exc}")
         firms.append(firm)
 
-    # court footprint - quota-aware; may complete on a later run
-    courts_status = "ok"
+    # court footprint - quota-aware; may complete on a later run. A pending
+    # courts sweep does NOT mark the completed pubs/financials charts partial;
+    # the courts chart renders its own explicit pending card instead.
+    courts_note = None
     if step in (None, "courts"):
         from src.p2_litigation.fetch import QuotaExhausted
         for firm, peer in zip(firms, P.PEERS):
@@ -54,11 +56,12 @@ def run(step=None, use_cache=True):
                 firm["courts"] = P.court_counts(peer, COURTS_START, end_year,
                                                 use_cache=use_cache)
             except (QuotaExhausted, http.SourceUnavailable) as exc:
-                courts_status = "partial"
-                notes.append(f"{peer['key']} court counts stopped: {exc}; re-run to resume")
+                courts_note = f"court counts pending ({peer['key']} stopped: {exc}); re-run to resume"
                 break
+    else:
+        courts_note = "court counts not yet fetched (quota reserved for the Daubert expansion)"
 
-    status = "ok" if courts_status == "ok" and not notes else "partial"
+    status = "ok" if not notes else "partial"
     jsonio.write_site_json(
         "p8_peers.json",
         provenance.envelope(
@@ -81,7 +84,7 @@ def run(step=None, use_cache=True):
                 "Operating margin is operating income / revenue from each company's own XBRL filings; consulting firms differ in what sits in operating costs, so small gaps are noise - the 2x+ gap is not.",
             ],
             methodology_id="p8_financials"),
-        {"firms": firms},
+        {"firms": firms, "courts_note": courts_note},
     )
     log.info("P8: %d firms, status %s%s", len(firms), status,
              (" (" + "; ".join(notes) + ")") if notes else "")

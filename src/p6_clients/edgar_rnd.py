@@ -1,11 +1,44 @@
-"""R&D expense per revealed client (companyfacts) + market-wide baseline (frames)."""
+"""R&D expense per revealed client (companyfacts) + market-wide baseline (frames).
+
+Companies label research spending differently: most use the standard
+us-gaap:ResearchAndDevelopmentExpense, but e.g. Amazon files 'Technology and
+content / infrastructure' under its own tag. We search every namespace in the
+company's facts for R&D-like tags and RECORD which line item was used - the
+label travels with the number, nothing is silently substituted.
+"""
 import logging
+import re
 
 from src.common import edgar, http
 
 log = logging.getLogger(__name__)
 
 RND_TAG = "ResearchAndDevelopmentExpense"
+_RND_LIKE = re.compile(
+    r"^(ResearchAndDevelopmentExpense(ExcludingAcquiredInProcessCost)?|"
+    r"ResearchAndDevelopment|ResearchDevelopmentAndEngineeringExpense|"
+    r"TechnologyAndContentExpense|TechnologyAndInfrastructureExpense|"
+    r"TechnologyAndDevelopmentExpense|ProductDevelopmentExpense)$")
+
+
+def _best_rnd_series(facts: dict, start_year: int):
+    """Find the R&D-like tag with the best annual coverage across namespaces.
+    Returns (series, tag, namespace) or ([], None, None)."""
+    standard = edgar.annual_series(facts, RND_TAG)
+    if standard:
+        return standard, RND_TAG, "us-gaap"
+    best = ([], None, None)
+    for ns, tags in (facts.get("facts") or {}).items():
+        if ns == "dei":
+            continue
+        for tag in tags:
+            if not _RND_LIKE.match(tag):
+                continue
+            series = edgar.annual_series(facts, tag, namespace=ns)
+            recent = [p for p in series if int(p["period"]) >= start_year]
+            if len(recent) > len([p for p in best[0] if int(p["period"]) >= start_year]):
+                best = (series, tag, ns)
+    return best
 
 
 def client_series(matched: list[dict], start_year: int = 2012) -> list[dict]:
@@ -17,13 +50,15 @@ def client_series(matched: list[dict], start_year: int = 2012) -> list[dict]:
             out.append({**client, "rnd_annual": None,
                         "rnd_note": f"EDGAR fetch failed: {exc.reason}"})
             continue
-        series = [p for p in edgar.annual_series(facts, RND_TAG)
-                  if int(p["period"]) >= start_year]
+        series, tag, ns = _best_rnd_series(facts, start_year)
+        series = [p for p in series if int(p["period"]) >= start_year]
         out.append({**client,
                     "rnd_annual": [{"year": int(p["period"]), "value": p["value"]}
                                    for p in series] or None,
+                    "rnd_tag": tag,
+                    "rnd_is_standard": tag == RND_TAG,
                     "rnd_note": None if series else
-                    "company does not report the ResearchAndDevelopmentExpense tag"})
+                    "no R&D-like line item in this company's structured filings"})
     return out
 
 

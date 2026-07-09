@@ -28,9 +28,11 @@ def _build_clients(use_cache):
     matched, unmatched = ticker_map.build_map(clients)
     with_rnd = edgar_rnd.client_series(matched, start_year=START_YEAR)
 
-    # constant-sample aggregate: only companies reporting R&D in EVERY year
+    # constant-sample aggregate: only companies reporting the STANDARD R&D tag
+    # in EVERY year (alternate line items like Amazon's technology-and-content
+    # are shown per-company but excluded here - different definitions don't sum)
     years = list(range(START_YEAR, end_year + 1))
-    constant = [c for c in with_rnd if c["rnd_annual"]
+    constant = [c for c in with_rnd if c["rnd_annual"] and c.get("rnd_is_standard")
                 and {p["year"] for p in c["rnd_annual"]}.issuperset(years)]
     agg = []
     for y in years:
@@ -70,7 +72,7 @@ def _build_clients(use_cache):
                 "Exponent discloses NO client list. This 'revealed client' sample comes from public co-authored research and court cases - a lower bound, biased toward clients who publish or litigate.",
                 "'research_partner' = co-authored publications with Exponent (high confidence there is a relationship). 'associated_party' = was a party in a case where Exponent appears near expert language - the side that hired Exponent is usually unknown.",
                 "The aggregate uses only the constant sample of companies reporting R&D in every year shown, so growth is not distorted by companies entering/leaving the sample.",
-                "R&D values are exactly as reported to the SEC; companies not reporting the standard R&D tag are marked unavailable rather than estimated.",
+                "R&D values are exactly as reported to the SEC. Companies that file research spending under a different line item (e.g. Amazon's 'technology and content/infrastructure') show that item, clearly labeled; only standard-definition R&D goes into the aggregate line, and companies with no R&D-like line item at all are marked n/a, never estimated.",
                 "Logic being tested: rising client/sector R&D budgets -> more proactive consulting demand for Exponent. This is a demand-environment indicator, not a revenue forecast.",
             ],
             methodology_id="p6_client_rnd"),

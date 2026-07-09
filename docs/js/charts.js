@@ -664,12 +664,20 @@ window.ALTDATA_CHARTS = (function () {
           custom: true,
           table: {
             columns: [{ label: "Company" }, { label: "Ticker" }, { label: "Relationship" },
-                      { label: "Evidence", wrap: true }, { label: "Latest R&D", num: true }],
+                      { label: "Evidence", wrap: true }, { label: "Latest R&D", num: true },
+                      { label: "YoY", num: true }, { label: "Line item used", wrap: true }],
             rows: (d.clients || []).map(function (c) {
               var latest = c.rnd_annual ? c.rnd_annual[c.rnd_annual.length - 1] : null;
+              var prev = (c.rnd_annual && c.rnd_annual.length > 1)
+                ? c.rnd_annual[c.rnd_annual.length - 2] : null;
+              var yoy = (latest && prev && prev.year === latest.year - 1 && prev.value)
+                ? ((latest.value / prev.value - 1) * 100) : null;
               return [c.name, c.ticker || "", c.relationship, c.evidence || "",
                       latest ? U.fmt(latest.value, { money: true }) + " (" + latest.year + ")"
-                             : (c.rnd_note || "n/a")];
+                             : (c.rnd_note || "n/a"),
+                      yoy !== null ? (yoy >= 0 ? "+" : "") + yoy.toFixed(1) + "%" : "",
+                      latest ? (c.rnd_is_standard ? "R&D expense (standard)"
+                                                  : (c.rnd_tag || "")) : ""];
             })
           }
         };
@@ -804,6 +812,46 @@ window.ALTDATA_CHARTS = (function () {
     });
   }
 
+  function p8Growth() {
+    U.card({
+      mount: "mount-p8-growth", datasetKey: "p8_peers", chartId: "p8_financials",
+      title: "Revenue growth vs peers: the honest counterpoint",
+      sub: "Year-over-year revenue growth from SEC filings. CRA has out-grown Exponent through the de-rating — the bull case needs the utilization recovery to close this gap.",
+      build: function (elm, d) {
+        var years = [];
+        for (var y = 2019; y <= THIS_YEAR - 1; y++) years.push(y);
+        return {
+          option: {
+            legend: {},
+            tooltip: { valueFormatter: function (v) { return v == null ? "–" : (v >= 0 ? "+" : "") + v + "%"; } },
+            xAxis: { type: "category", data: years },
+            yAxis: { type: "value", axisLabel: { formatter: "{value}%" } },
+            series: d.firms.map(function (f) {
+              var byYear = {};
+              ((f.financials || {}).annual || []).forEach(function (r) { byYear[r.year] = r.rev_growth_pct; });
+              return { name: f.name.split(" (")[0], type: "line",
+                       lineStyle: { width: f.key === "EXPO" ? 3 : 1.8 },
+                       symbolSize: f.key === "EXPO" ? 7 : 5,
+                       data: years.map(function (y) { return byYear[y] !== undefined ? byYear[y] : null; }) };
+            })
+          },
+          table: {
+            columns: [{ label: "Year" }].concat(d.firms.map(function (f) {
+              return { label: f.name.split(" (")[0] + " growth", num: true };
+            })),
+            rows: years.map(function (y) {
+              return [y].concat(d.firms.map(function (f) {
+                var hit = ((f.financials || {}).annual || []).filter(function (r) { return r.year === y; })[0];
+                return hit && hit.rev_growth_pct != null
+                  ? (hit.rev_growth_pct >= 0 ? "+" : "") + hit.rev_growth_pct + "%" : "";
+              }));
+            })
+          }
+        };
+      }
+    });
+  }
+
   function p8Courts() {
     var ds = window.ALTDATA.p8_peers;
     var firms = ds && ds.data ? ds.data.firms : [];
@@ -864,7 +912,7 @@ window.ALTDATA_CHARTS = (function () {
       p4Pubs(); p4Partners(); p4Graph();
       p5Awards(); p5Regs();
       p6ClientRnd(); p6ExpoFin();
-      p8Pubs(); p8Financials(); p8Courts();
+      p8Pubs(); p8Financials(); p8Growth(); p8Courts();
     }
   };
 })();
