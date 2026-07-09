@@ -21,14 +21,14 @@ def main():
     site = settings.SITE_DIR
     html = (site / "index.html").read_text(encoding="utf-8")
 
-    # inline the stylesheet
+    # inline the stylesheet (tolerate cache-busting query strings)
     css = (site / "css" / "main.css").read_text(encoding="utf-8")
-    html = html.replace('<link rel="stylesheet" href="css/main.css">',
-                        "<style>\n" + css + "\n</style>")
+    html = re.sub(r'<link rel="stylesheet" href="css/main\.css[^"]*">',
+                  lambda m: "<style>\n" + css + "\n</style>", html)
 
     # inline every <script src="..."> in document order
     def inline_script(m):
-        src = m.group(1)
+        src = m.group(1).split("?")[0]  # strip cache-busting query
         path = site / src.replace("/", "\\")
         if not path.exists():
             print(f"  WARNING: {src} missing -> dropped (page will show its unavailable card)")

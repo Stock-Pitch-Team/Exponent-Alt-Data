@@ -2,6 +2,12 @@
 window.ALTDATA_CHARTS = (function () {
   "use strict";
   var U = window.ALTDATA_UI;
+  var THIS_YEAR = new Date().getFullYear();
+
+  /* current calendar/fiscal year is in progress: star its axis label */
+  function starYear(y) {
+    return String(y) + (Number(String(y).replace(/\D/g, "").slice(-4)) >= THIS_YEAR ? "*" : "");
+  }
 
   /* ================= P1 — headcount ================= */
   function p1Headcount() {
@@ -79,13 +85,13 @@ window.ALTDATA_CHARTS = (function () {
       mount: "mount-p2-timeseries", datasetKey: "p2_litigation_timeseries",
       chartId: "p2_litigation_timeseries",
       title: "Exponent's courtroom footprint, normalized",
-      sub: "Cases mentioning Exponent near expert-witness language, per 100,000 cases in the archive that year — corrects for archive growth. Chart shows 2010-present; full history in the table.",
+      sub: "Cases mentioning Exponent near expert-witness language, per 100,000 cases in the archive that year — corrects for archive growth. Chart shows 2010-present; full history in the table. * = year in progress (and the newest 1-2 years always read low from archive lag).",
       build: function (elm, d) {
         var rows = d.series.filter(function (r) { return r.year >= 2010; });
         return {
           option: {
             legend: { data: ["Court opinions (per 100k)", "Federal case files (per 100k)"] },
-            xAxis: { type: "category", data: rows.map(function (r) { return r.year; }) },
+            xAxis: { type: "category", data: rows.map(function (r) { return starYear(r.year); }) },
             yAxis: { type: "value", name: "per 100k cases", nameTextStyle: { color: U.cssVar("--muted") } },
             series: [
               { name: "Court opinions (per 100k)", type: "line", lineStyle: { width: 2.5 },
@@ -326,12 +332,12 @@ window.ALTDATA_CHARTS = (function () {
     U.card({
       mount: "mount-p4-pubs", datasetKey: "p4_publications_timeseries", chartId: "p4_publications",
       title: "Scientific publications by Exponent staff, 1967–present",
-      sub: "Peer-reviewed output including the Failure Analysis Associates era — the moat, maintained in public.",
+      sub: "Peer-reviewed output including the Failure Analysis Associates era — the moat, maintained in public. * = year in progress (new papers are also indexed with a lag).",
       build: function (elm, d) {
         var rows = d.series.filter(function (r) { return r.year >= 1970 && r.year <= new Date().getFullYear(); });
         return {
           option: {
-            xAxis: { type: "category", data: rows.map(function (r) { return r.year; }),
+            xAxis: { type: "category", data: rows.map(function (r) { return starYear(r.year); }),
                      axisLabel: { interval: 9 } },
             yAxis: { type: "value", name: "papers / year", nameTextStyle: { color: U.cssVar("--muted") } },
             series: [{ type: "bar", barCategoryGap: "25%",
@@ -443,7 +449,7 @@ window.ALTDATA_CHARTS = (function () {
     U.card({
       mount: "mount-p5-awards", datasetKey: "p5_federal_awards", chartId: "p5_federal_awards",
       title: "Federal contract obligations to Exponent by fiscal year",
-      sub: "Prime awards from USAspending.gov. The 2019–2025 recovery off the 2014–18 trough is itself a demand signal.",
+      sub: "Prime awards from USAspending.gov. The 2019–2025 recovery off the 2014–18 trough is itself a demand signal. * = fiscal year in progress (Oct–Sep; agencies also record awards with a lag).",
       build: function (elm, d) {
         var rows = d.by_fiscal_year;
         return {
@@ -456,7 +462,8 @@ window.ALTDATA_CHARTS = (function () {
                   " across " + r.awards + " awards";
               }
             },
-            xAxis: { type: "category", data: rows.map(function (r) { return "FY" + String(r.fy).slice(2); }) },
+            xAxis: { type: "category", data: rows.map(function (r) {
+              return "FY" + String(r.fy).slice(2) + (r.fy >= THIS_YEAR ? "*" : ""); }) },
             yAxis: { type: "value", axisLabel: { formatter: function (v) { return "$" + v / 1e6 + "M"; } } },
             series: [{ type: "bar", barMaxWidth: 22, itemStyle: { borderRadius: [4, 4, 0, 0] },
                        data: rows.map(function (r) { return Math.round(r.obligations) ; }) }]
@@ -503,14 +510,14 @@ window.ALTDATA_CHARTS = (function () {
     U.card({
       mount: "mount-p5-regs", datasetKey: "p5_regulatory_mentions", chartId: "p5_regulatory_mentions",
       title: "Exponent inside federal rulemaking",
-      sub: "Documents and public comments naming the firm, per year — with a rate normalized to the portal's own posting volume.",
+      sub: "Documents and public comments naming the firm, per year — with a rate normalized to the portal's own posting volume. * = year in progress.",
       build: function (elm, d) {
         var rows = d.yearly.filter(function (r) { return r.documents || r.comments; });
         function g(r, ep, k) { return r[ep] && r[ep][k] != null ? r[ep][k] : null; }
         return {
           option: {
             legend: { data: ["Documents naming Exponent", "Comments naming Exponent", "Docs per 10k posted (rate)"] },
-            xAxis: { type: "category", data: rows.map(function (r) { return r.year; }) },
+            xAxis: { type: "category", data: rows.map(function (r) { return starYear(r.year); }) },
             yAxis: { type: "value" },
             series: [
               { name: "Documents naming Exponent", type: "bar", stack: "m", barMaxWidth: 20,
