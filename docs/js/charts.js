@@ -152,7 +152,7 @@ window.ALTDATA_CHARTS = (function () {
             series: series
           },
           table: {
-            columns: [{ label: "Case" }, { label: "Court" }, { label: "Date" },
+            columns: [{ label: "Case", wrap: true }, { label: "Court", wrap: true }, { label: "Date" },
                       { label: "Outcome" }, { label: "Judge's language", wrap: true }, { label: "Link", link: true }],
             rows: ((d.exponent && d.exponent.cases) || []).map(function (c) {
               return [c.case_name, c.court, c.date_filed, c.outcome,
@@ -174,12 +174,13 @@ window.ALTDATA_CHARTS = (function () {
         return {
           custom: true,
           table: {
-            columns: [{ label: "Case" }, { label: "Court" }, { label: "Filed" },
-                      { label: "Type" }, { label: "Matched text", wrap: true }, { label: "Record", link: true }],
+            columns: [{ label: "Case", wrap: true }, { label: "Court", wrap: true },
+                      { label: "Filed" }, { label: "Type" },
+                      { label: "Matched text", wrap: true }, { label: "Record", link: true }],
             rows: (d.cases || []).map(function (c) {
               return [c.case_name, c.court, c.date_filed,
                       c.type === "o" ? "Opinion" : "Case file",
-                      (c.snippets || []).join(" … ").replace(/\s+/g, " ").slice(0, 260),
+                      (c.snippets || []).join(" … ").replace(/\s+/g, " ").slice(0, 220),
                       { text: "open", href: c.url }];
             })
           }

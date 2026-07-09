@@ -109,6 +109,7 @@ section.block .trigger {
 
 /* ---------- chart cards ---------- */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid2 > * { min-width: 0; }  /* wide table content must scroll inside its card, never blow out the grid */
 @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
 
 .card {
@@ -243,10 +244,8 @@ footer.colophon {
     <p class="lede">Roughly 60% of revenue is reactive work anchored in disputes and litigation. Court
       records are public — so instead of trusting the “go-to expert firm” reputation, we counted it.</p>
     <div id="mount-p2-timeseries"></div>
-    <div class="grid2">
-      <div id="mount-p2-daubert"></div>
-      <div id="mount-p2-cases"></div>
-    </div>
+    <div id="mount-p2-daubert"></div>
+    <div id="mount-p2-cases"></div>
   </section>
 
   <section class="block" id="sec-p3">
@@ -848,7 +847,7 @@ window.ALTDATA_CHARTS = (function () {
             series: series
           },
           table: {
-            columns: [{ label: "Case" }, { label: "Court" }, { label: "Date" },
+            columns: [{ label: "Case", wrap: true }, { label: "Court", wrap: true }, { label: "Date" },
                       { label: "Outcome" }, { label: "Judge's language", wrap: true }, { label: "Link", link: true }],
             rows: ((d.exponent && d.exponent.cases) || []).map(function (c) {
               return [c.case_name, c.court, c.date_filed, c.outcome,
@@ -870,12 +869,13 @@ window.ALTDATA_CHARTS = (function () {
         return {
           custom: true,
           table: {
-            columns: [{ label: "Case" }, { label: "Court" }, { label: "Filed" },
-                      { label: "Type" }, { label: "Matched text", wrap: true }, { label: "Record", link: true }],
+            columns: [{ label: "Case", wrap: true }, { label: "Court", wrap: true },
+                      { label: "Filed" }, { label: "Type" },
+                      { label: "Matched text", wrap: true }, { label: "Record", link: true }],
             rows: (d.cases || []).map(function (c) {
               return [c.case_name, c.court, c.date_filed,
                       c.type === "o" ? "Opinion" : "Case file",
-                      (c.snippets || []).join(" … ").replace(/\s+/g, " ").slice(0, 260),
+                      (c.snippets || []).join(" … ").replace(/\s+/g, " ").slice(0, 220),
                       { text: "open", href: c.url }];
             })
           }

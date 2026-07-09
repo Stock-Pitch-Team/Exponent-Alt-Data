@@ -102,6 +102,7 @@ section.block .trigger {
 
 /* ---------- chart cards ---------- */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid2 > * { min-width: 0; }  /* wide table content must scroll inside its card, never blow out the grid */
 @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
 
 .card {
