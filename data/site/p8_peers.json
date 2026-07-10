@@ -2,24 +2,24 @@
  "metadata": {
   "pipeline": "p8_peers",
   "output": "peers",
-  "generated_at": "2026-07-09T21:44:45Z",
+  "generated_at": "2026-07-10T00:11:48Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "OpenAlex (publications per institution per year)",
     "url": "https://api.openalex.org/works",
-    "fetched_at": "2026-07-09T21:44:45Z"
+    "fetched_at": "2026-07-10T00:11:48Z"
    },
    {
     "name": "SEC EDGAR XBRL companyfacts (revenue, operating income)",
     "url": "https://data.sec.gov/api/xbrl/",
-    "fetched_at": "2026-07-09T21:44:45Z"
+    "fetched_at": "2026-07-10T00:11:48Z"
    },
    {
     "name": "CourtListener v4 search API (yearly counts)",
     "url": "https://www.courtlistener.com/api/rest/v4/search/",
-    "fetched_at": "2026-07-09T21:44:45Z"
+    "fetched_at": "2026-07-10T00:11:48Z"
    }
   ],
   "coverage": {
@@ -169,6 +169,52 @@
        "rev_growth_pct": 4.2
       }
      ]
+    },
+    "courts": {
+     "2016": {
+      "opinions": 0,
+      "recap": 23
+     },
+     "2017": {
+      "opinions": 1,
+      "recap": 18
+     },
+     "2018": {
+      "opinions": 2,
+      "recap": 23
+     },
+     "2019": {
+      "opinions": 1,
+      "recap": 31
+     },
+     "2020": {
+      "opinions": 0,
+      "recap": 43
+     },
+     "2021": {
+      "opinions": 0,
+      "recap": 18
+     },
+     "2022": {
+      "opinions": 0,
+      "recap": 29
+     },
+     "2023": {
+      "opinions": 0,
+      "recap": 25
+     },
+     "2024": {
+      "opinions": 0,
+      "recap": 16
+     },
+     "2025": {
+      "opinions": 1,
+      "recap": 12
+     },
+     "2026": {
+      "opinions": 0,
+      "recap": 2
+     }
     }
    },
    {
@@ -235,6 +281,52 @@
        "rev_growth_pct": 2.4
       }
      ]
+    },
+    "courts": {
+     "2016": {
+      "opinions": 4,
+      "recap": 120
+     },
+     "2017": {
+      "opinions": 14,
+      "recap": 111
+     },
+     "2018": {
+      "opinions": 26,
+      "recap": 176
+     },
+     "2019": {
+      "opinions": 21,
+      "recap": 211
+     },
+     "2020": {
+      "opinions": 5,
+      "recap": 281
+     },
+     "2021": {
+      "opinions": 7,
+      "recap": 142
+     },
+     "2022": {
+      "opinions": 9,
+      "recap": 175
+     },
+     "2023": {
+      "opinions": 9,
+      "recap": 334
+     },
+     "2024": {
+      "opinions": 10,
+      "recap": 250
+     },
+     "2025": {
+      "opinions": 7,
+      "recap": 379
+     },
+     "2026": {
+      "opinions": 4,
+      "recap": 49
+     }
     }
    },
    {
@@ -376,6 +468,52 @@
        "rev_growth_pct": 9.3
       }
      ]
+    },
+    "courts": {
+     "2016": {
+      "opinions": 2,
+      "recap": 27
+     },
+     "2017": {
+      "opinions": 1,
+      "recap": 32
+     },
+     "2018": {
+      "opinions": 1,
+      "recap": 49
+     },
+     "2019": {
+      "opinions": 3,
+      "recap": 48
+     },
+     "2020": {
+      "opinions": 2,
+      "recap": 73
+     },
+     "2021": {
+      "opinions": 1,
+      "recap": 57
+     },
+     "2022": {
+      "opinions": 0,
+      "recap": 41
+     },
+     "2023": {
+      "opinions": 1,
+      "recap": 40
+     },
+     "2024": {
+      "opinions": 0,
+      "recap": 31
+     },
+     "2025": {
+      "opinions": 2,
+      "recap": 44
+     },
+     "2026": {
+      "opinions": 0,
+      "recap": 17
+     }
     }
    },
    {
@@ -517,9 +655,55 @@
        "rev_growth_pct": -7.3
       }
      ]
+    },
+    "courts": {
+     "2016": {
+      "opinions": 0,
+      "recap": 10
+     },
+     "2017": {
+      "opinions": 1,
+      "recap": 7
+     },
+     "2018": {
+      "opinions": 2,
+      "recap": 12
+     },
+     "2019": {
+      "opinions": 0,
+      "recap": 11
+     },
+     "2020": {
+      "opinions": 0,
+      "recap": 11
+     },
+     "2021": {
+      "opinions": 0,
+      "recap": 10
+     },
+     "2022": {
+      "opinions": 0,
+      "recap": 7
+     },
+     "2023": {
+      "opinions": 0,
+      "recap": 9
+     },
+     "2024": {
+      "opinions": 0,
+      "recap": 18
+     },
+     "2025": {
+      "opinions": 0,
+      "recap": 9
+     },
+     "2026": {
+      "opinions": 0,
+      "recap": 1
+     }
     }
    }
   ],
-  "courts_note": "court counts not yet fetched (quota reserved for the Daubert expansion)"
+  "courts_note": null
  }
 }
