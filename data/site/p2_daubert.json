@@ -20,7 +20,8 @@
    "SMALL SAMPLE: 6 Exponent-linked and 65 baseline opinions had a classifiable outcome; read the rate as indicative, not precise.",
    "Outcomes are classified by pattern-matching legal language; 'unclassified' and 'mixed_signals' rows are shown, never guessed. Every case links to the full opinion for human verification.",
    "The baseline is the most recent non-Exponent Daubert/Rule-702 opinions run through the SAME classifier, so classifier bias applies equally to both groups.",
-   "An exclusion ruling may target any expert in the case, not necessarily the Exponent-affiliated one, when multiple experts are challenged in one opinion."
+   "An exclusion ruling may target any expert in the case, not necessarily the Exponent-affiliated one, when multiple experts are challenged in one opinion.",
+   "Expert attribution: 16 of 39 opinions matched to a named roster consultant (current or archived); the rest say 'not identified' rather than guessing. Practice areas come from the consultant's current directory profile."
   ],
   "methodology_id": "p2_daubert"
  },
@@ -35,7 +36,10 @@
      "date_filed": "2015-04-15",
      "url": "https://www.courtlistener.com/opinion/2793905/american-automobile-insurance-v-omega-flex-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "Harri Kytomaa (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "S. Gopalratnam v. ABC Insurance Company",
@@ -43,7 +47,9 @@
      "date_filed": "2017-12-15",
      "url": "https://www.courtlistener.com/opinion/4452211/s-gopalratnam-v-abc-insurance-company/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Padilla v. Hunter Douglas Window Coverings, Inc.",
@@ -52,7 +58,10 @@
      "url": "https://www.courtlistener.com/opinion/7306008/padilla-v-hunter-douglas-window-coverings-inc/",
      "outcome": "admitted",
      "evidence_quote": "denies Plaintiff’s motion to exclude",
-     "windows": 7
+     "windows": 7,
+     "expert": "Joseph Sala",
+     "expert_practice": "Human Factors",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Pekarek v. Sunbeam Products, Inc.",
@@ -60,7 +69,10 @@
      "date_filed": "2008-09-30",
      "url": "https://www.courtlistener.com/opinion/2308318/pekarek-v-sunbeam-products-inc/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "John Loud",
+     "expert_practice": "Electrical Engineering and Computer Science",
+     "expert_match": "full-name"
     },
     {
      "case_name": "Botnick v. Zimmer, Inc.",
@@ -68,7 +80,10 @@
      "date_filed": "2007-02-27",
      "url": "https://www.courtlistener.com/opinion/2444897/botnick-v-zimmer-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "Bradley James (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "State Farm Fire & Casualty Co. v. Electrolux Home Products, Inc.",
@@ -77,7 +92,10 @@
      "url": "https://www.courtlistener.com/opinion/8729282/state-farm-fire-casualty-co-v-electrolux-home-products-inc/",
      "outcome": "admitted",
      "evidence_quote": "may testify",
-     "windows": 4
+     "windows": 4,
+     "expert": "Duane L Steffey (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "full-name"
     },
     {
      "case_name": "Hanson v. Colgate-Palmolive Co.",
@@ -85,7 +103,9 @@
      "date_filed": "2018-09-24",
      "url": "https://www.courtlistener.com/opinion/7333692/hanson-v-colgate-palmolive-co/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Werth v. Hill-Rom, Inc.",
@@ -93,7 +113,10 @@
      "date_filed": "2012-04-18",
      "url": "https://www.courtlistener.com/opinion/8714764/werth-v-hill-rom-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "Robert Caligiuri",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Bowers v. Norfolk Southern Corp.",
@@ -102,7 +125,9 @@
      "url": "https://www.courtlistener.com/opinion/2348457/bowers-v-norfolk-southern-corp/",
      "outcome": "admitted",
      "evidence_quote": "Motion to Exclude the testimony of Robert Larson is DENIED",
-     "windows": 2
+     "windows": 2,
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Jackson v. E-Z-Go Div. of Textron, Inc.",
@@ -110,7 +135,9 @@
      "date_filed": "2018-07-23",
      "url": "https://www.courtlistener.com/opinion/7331632/jackson-v-e-z-go-div-of-textron-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Messer v. Cerestar USA, Inc.",
@@ -118,7 +145,9 @@
      "date_filed": "2004-02-27",
      "url": "https://www.courtlistener.com/opinion/2022671/messer-v-cerestar-usa-inc/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Hetzer-Young v. Elano Corp.",
@@ -126,7 +155,10 @@
      "date_filed": "2014-03-21",
      "url": "https://www.courtlistener.com/opinion/2692870/hetzer-young-v-elano-corp/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "Lee Swanger",
+     "expert_practice": "Metallurgical and Corrosion Engineering",
+     "expert_match": "full-name"
     },
     {
      "case_name": "Waite v. AII Acquisition Corp.",
@@ -134,7 +166,9 @@
      "date_filed": "2016-07-11",
      "url": "https://www.courtlistener.com/opinion/7321062/waite-v-aii-acquisition-corp/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Chapin v. a & L PARTS, INC.",
@@ -142,7 +176,9 @@
      "date_filed": "2007-01-30",
      "url": "https://www.courtlistener.com/opinion/2230644/chapin-v-a-l-parts-inc/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Softub, Inc. v. Mundial, Inc.",
@@ -151,7 +187,10 @@
      "url": "https://www.courtlistener.com/opinion/7309267/softub-inc-v-mundial-inc/",
      "outcome": "admitted",
      "evidence_quote": "may testify",
-     "windows": 1
+     "windows": 1,
+     "expert": "Harri Kytomaa (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Hendrix v. Evenflo Co.",
@@ -160,7 +199,10 @@
      "url": "https://www.courtlistener.com/opinion/8770902/hendrix-v-evenflo-co/",
      "outcome": "granted_in_part",
      "evidence_quote": "granted in part and denied in part",
-     "windows": 2
+     "windows": 2,
+     "expert": "Maureen Reitman",
+     "expert_practice": "Polymers & Chemistry",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Phillips v. Raymond Corp.",
@@ -168,7 +210,9 @@
      "date_filed": "2005-03-24",
      "url": "https://www.courtlistener.com/opinion/2344106/phillips-v-raymond-corp/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Bob T. Moore and Susan Moore v. Ashland Chemical, Inc. And Ashland Oil, Inc.",
@@ -176,7 +220,9 @@
      "date_filed": "1997-11-12",
      "url": "https://www.courtlistener.com/opinion/746887/bob-t-moore-and-susan-moore-v-ashland-chemical-inc-and-ashland-oil/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "DeKeyser v. Thyssenkrupp Waupaca, Inc.",
@@ -184,7 +230,10 @@
      "date_filed": "2010-09-29",
      "url": "https://www.courtlistener.com/opinion/2474832/dekeyser-v-thyssenkrupp-waupaca-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "Mark Roberts (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "In re Toyota Motor Corp. Unintended Acceleration Marketing, Sales Practices, & Products Liability Litigation",
@@ -193,7 +242,10 @@
      "url": "https://www.courtlistener.com/opinion/8729015/in-re-toyota-motor-corp-unintended-acceleration-marketing-sales/",
      "outcome": "mixed_signals",
      "evidence_quote": "may not testify",
-     "windows": 3
+     "windows": 3,
+     "expert": "Ashish Arora",
+     "expert_practice": "Electrical Engineering and Computer Science",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "In re Toyota Motor Corp. Unintended Acceleration Marketing, Sales Practices, & Products Liability Litigation",
@@ -202,7 +254,10 @@
      "url": "https://www.courtlistener.com/opinion/8729015/in-re-toyota-motor-corp-unintended-acceleration-marketing-sales/",
      "outcome": "mixed_signals",
      "evidence_quote": "may not testify",
-     "windows": 3
+     "windows": 3,
+     "expert": "Ashish Arora",
+     "expert_practice": "Electrical Engineering and Computer Science",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "United States v. Bush",
@@ -210,7 +265,9 @@
      "date_filed": "1996-06-13",
      "url": "https://www.courtlistener.com/opinion/7351645/united-states-v-bush/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "U.S. Securities and Exchange Commission v. E-Smart Technologies, Inc.",
@@ -218,7 +275,9 @@
      "date_filed": "2015-03-30",
      "url": "https://www.courtlistener.com/opinion/2790109/us-securities-and-exchange-commission-v-e-smart-technologies-inc/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Tyree v. Boston Scientific Corp.",
@@ -226,7 +285,9 @@
      "date_filed": "2014-10-29",
      "url": "https://www.courtlistener.com/opinion/7309383/tyree-v-boston-scientific-corp/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "In Re Yamaha Motor Corp. Rhino ATV Products Liability Litigation",
@@ -234,7 +295,9 @@
      "date_filed": "2011-09-06",
      "url": "https://www.courtlistener.com/opinion/2169096/in-re-yamaha-motor-corp-rhino-atv-products-liability-litigation/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "In re C.R. Bard, Inc.",
@@ -243,7 +306,10 @@
      "url": "https://www.courtlistener.com/opinion/8725662/in-re-cr-bard-inc/",
      "outcome": "granted_in_part",
      "evidence_quote": "GRANTED in part and DENIED in part",
-     "windows": 21
+     "windows": 21,
+     "expert": "Marta Villarraga",
+     "expert_practice": "Biomedical Engineering and Sciences",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "In re Whirlpool Corp. Front-Loading Washer Products Liability Litigation",
@@ -252,7 +318,10 @@
      "url": "https://www.courtlistener.com/opinion/7308672/in-re-whirlpool-corp-front-loading-washer-products-liability-litigation/",
      "outcome": "mixed_signals",
      "evidence_quote": "motion to exclude Wilson’s testimony is denied",
-     "windows": 8
+     "windows": 8,
+     "expert": "Paul Taylor (former-roster match)",
+     "expert_practice": null,
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Eghnayem v. Boston Scientific Corp.",
@@ -260,7 +329,9 @@
      "date_filed": "2014-10-27",
      "url": "https://www.courtlistener.com/opinion/7309678/eghnayem-v-boston-scientific-corp/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "FMC Technologies, Inc. v. Richard Murphy and Dril-Quip, Inc.",
@@ -268,7 +339,9 @@
      "date_filed": "2023-08-10",
      "url": "https://www.courtlistener.com/opinion/9420054/fmc-technologies-inc-v-richard-murphy-and-dril-quip-inc/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Kevin King v. David Trippett",
@@ -276,7 +349,9 @@
      "date_filed": "1999-09-14",
      "url": "https://www.courtlistener.com/opinion/766251/kevin-king-v-david-trippett/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "In re Delaware Public Schools Litigation",
@@ -284,7 +359,9 @@
      "date_filed": "2020-05-08",
      "url": "https://www.courtlistener.com/opinion/4752599/in-re-delaware-public-schools-litigation/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Pacificorp v. Northwest Pipeline GP",
@@ -292,7 +369,9 @@
      "date_filed": "2012-07-16",
      "url": "https://www.courtlistener.com/opinion/8717477/pacificorp-v-northwest-pipeline-gp/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Kulak v. Nationwide Mutual Insurance",
@@ -300,7 +379,9 @@
      "date_filed": "1976-06-15",
      "url": "https://www.courtlistener.com/opinion/5682257/kulak-v-nationwide-mutual-insurance/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Harris v. Kellogg, Brown & Root Services, Inc.",
@@ -308,7 +389,10 @@
      "date_filed": "2012-07-13",
      "url": "https://www.courtlistener.com/opinion/8717331/harris-v-kellogg-brown-root-services-inc/",
      "outcome": "unclassified",
-     "reason": "no outcome language matched"
+     "reason": "no outcome language matched",
+     "expert": "John Loud",
+     "expert_practice": "Electrical Engineering and Computer Science",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "National Union Fire Insurance v. Puget Plastics Corp.",
@@ -316,7 +400,10 @@
      "date_filed": "2009-08-12",
      "url": "https://www.courtlistener.com/opinion/1632406/national-union-fire-insurance-v-puget-plastics-corp/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "Maureen Reitman",
+     "expert_practice": "Polymers & Chemistry",
+     "expert_match": "roster-name in opinion"
     },
     {
      "case_name": "Eli Lilly & Co. v. Perrigo Co.",
@@ -324,7 +411,9 @@
      "date_filed": "2016-08-22",
      "url": "https://www.courtlistener.com/opinion/7321669/eli-lilly-co-v-perrigo-co/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Wetherill v. University of Chicago",
@@ -332,7 +421,9 @@
      "date_filed": "1983-06-17",
      "url": "https://www.courtlistener.com/opinion/1458165/wetherill-v-university-of-chicago/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "in Re Vcc, LLC, Vratsinas Construction Co., Nato Garcia D/B/A Nato Garcia Company, and Phi Service Agency, Inc.",
@@ -340,7 +431,9 @@
      "date_filed": "2017-12-22",
      "url": "https://www.courtlistener.com/opinion/4455273/in-re-vcc-llc-vratsinas-construction-co-nato-garcia-dba-nato-garcia/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     },
     {
      "case_name": "Parents in Action on Special Ed.(Pase) v. Hannon",
@@ -348,7 +441,9 @@
      "date_filed": "1980-07-07",
      "url": "https://www.courtlistener.com/opinion/1654128/parents-in-action-on-special-edpase-v-hannon/",
      "outcome": "unclassified",
-     "reason": "no challenge language near an Exponent mention"
+     "reason": "no challenge language near an Exponent mention",
+     "expert": "not identified",
+     "expert_practice": null
     }
    ]
   },
@@ -368,6 +463,40 @@
    "admitted": 4,
    "granted_in_part": 2,
    "mixed_signals": 3
+  },
+  "by_practice": {
+   "Human Factors": {
+    "cases": 1,
+    "outcomes": {
+     "admitted": 1
+    }
+   },
+   "Electrical Engineering and Computer Science": {
+    "cases": 4,
+    "outcomes": {
+     "unclassified": 2,
+     "mixed_signals": 2
+    }
+   },
+   "Metallurgical and Corrosion Engineering": {
+    "cases": 1,
+    "outcomes": {
+     "unclassified": 1
+    }
+   },
+   "Polymers & Chemistry": {
+    "cases": 2,
+    "outcomes": {
+     "granted_in_part": 1,
+     "unclassified": 1
+    }
+   },
+   "Biomedical Engineering and Sciences": {
+    "cases": 1,
+    "outcomes": {
+     "granted_in_part": 1
+    }
+   }
   }
  }
 }

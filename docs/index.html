@@ -29,6 +29,7 @@
     <a href="#sec-p5">Government</a>
     <a href="#sec-p6">Clients &amp; financials</a>
     <a href="#sec-p8">Peers</a>
+    <a href="#sec-p10">Nowcast</a>
     <a href="#sec-metho">Methodology</a>
   </div>
 </nav>
@@ -49,6 +50,10 @@
       over-hired in 2022–23, cut back in 2024, and the buy case needs headcount growing again. We track it
       independently, using the firm's own website and twenty years of web archives.</p>
     <div id="mount-p7-utilization"></div>
+    <div class="grid2">
+      <div id="mount-p7-rate"></div>
+      <div id="mount-p9-hiring"></div>
+    </div>
     <div id="mount-p1-headcount"></div>
     <div id="mount-p1-roster"></div>
   </section>
@@ -107,6 +112,7 @@
       because when client R&amp;D grows, the proactive consulting that ~40% of Exponent's revenue depends
       on grows with it.</p>
     <div id="mount-p6-rnd"></div>
+    <div id="mount-p6-guidance"></div>
     <div id="mount-p6-clients"></div>
     <div id="mount-p6-expofin"></div>
   </section>
@@ -126,6 +132,17 @@
       <div id="mount-p8-pubs"></div>
       <div id="mount-p8-courts"></div>
     </div>
+  </section>
+
+  <section class="block" id="sec-p10">
+    <span class="trigger">The capstone — a falsifiable call on the next print</span>
+    <h2>Nowcast: calling the July utilization print</h2>
+    <p class="lede">Everything above measured the past and present. This section fuses the demand and
+      capacity signals into a walk-forward model that predicts the next quarterly utilization print —
+      shown with its full out-of-sample track record next to a naive baseline, because a prediction
+      without its misses is marketing.</p>
+    <div id="mount-p10-call"></div>
+    <div id="mount-p10-nowcast"></div>
   </section>
 
   <section class="block" id="sec-metho">
@@ -165,7 +182,11 @@
 <script src="data/explainers.data.js"></script>
 <script src="data/manifest.data.js"></script>
 <script src="data/p7_utilization.data.js"></script>
+<script src="data/p7_realized_rate.data.js"></script>
 <script src="data/p8_peers.data.js"></script>
+<script src="data/p9_hiring.data.js"></script>
+<script src="data/p10_nowcast.data.js"></script>
+<script src="data/p6_rnd_guidance.data.js"></script>
 <script src="data/p1_headcount_timeseries.data.js"></script>
 <script src="data/p1_current_roster.data.js"></script>
 <script src="data/p1_job_postings.data.js"></script>
@@ -182,7 +203,7 @@
 <script src="data/p6_client_rnd.data.js"></script>
 <script src="data/p6_expo_financials.data.js"></script>
 <script src="js/ui.js?v=3"></script>
-<script src="js/charts.js?v=8"></script>
+<script src="js/charts.js?v=9"></script>
 <script src="js/main.js?v=5"></script>
 </body>
 </html>

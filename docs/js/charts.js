@@ -134,6 +134,162 @@ window.ALTDATA_CHARTS = (function () {
     });
   }
 
+  function p7RealizedRate() {
+    U.card({
+      mount: "mount-p7-rate", datasetKey: "p7_realized_rate", chartId: "p7_realized_rate",
+      title: "Pricing power, quantified: estimated realized rate per billable hour",
+      sub: "Reported revenue ÷ (company-stated FTEs × utilization × available hours). Trend and YoY are the signal; the level depends on the hours convention.",
+      build: function (elm, d) {
+        var rows = d.series;
+        return {
+          option: {
+            tooltip: {
+              formatter: function (ps) {
+                var r = rows[ps[0].dataIndex];
+                return r.quarter + "<br>Est. rate: <b>$" + r.rate_est.toFixed(0) + "/hr</b>" +
+                  (r.rate_yoy_pct != null ? " (" + (r.rate_yoy_pct >= 0 ? "+" : "") + r.rate_yoy_pct + "% YoY)" : "") +
+                  "<br>Est. billable hours: " + U.fmt(r.billable_hours_est) +
+                  "<br>Utilization " + r.utilization + "% · FTE " + U.fmt(r.fte, { dp: 0 });
+              }
+            },
+            xAxis: { type: "category", data: rows.map(function (r) { return r.quarter; }),
+                     axisLabel: { interval: 3 } },
+            yAxis: { type: "value", axisLabel: { formatter: "${value}" }, min: 250 },
+            series: [{ type: "line", lineStyle: { width: 2.5 }, symbolSize: 7,
+                       data: rows.map(function (r) { return r.rate_est; }) }]
+          },
+          table: {
+            columns: [{ label: "Quarter" }, { label: "Est. rate $/hr", num: true },
+                      { label: "YoY", num: true }, { label: "Est. billable hours", num: true },
+                      { label: "Utilization", num: true }, { label: "FTE", num: true }],
+            rows: rows.map(function (r) {
+              return [r.quarter, "$" + r.rate_est.toFixed(0),
+                      r.rate_yoy_pct != null ? (r.rate_yoy_pct >= 0 ? "+" : "") + r.rate_yoy_pct + "%" : "",
+                      r.billable_hours_est.toLocaleString(), r.utilization + "%", r.fte];
+            })
+          }
+        };
+      }
+    });
+  }
+
+  function p9Hiring() {
+    U.card({
+      mount: "mount-p9-hiring", datasetKey: "p9_hiring", chartId: "p9_hiring",
+      title: "Sponsored hiring: H-1B and green-card filings per quarter",
+      sub: "Exponent's filings with the US Dept. of Labor — a public, quarterly slice of specialist hiring. * = newest quarters arrive with a reporting lag.",
+      build: function (elm, d) {
+        var rows = d.series;
+        return {
+          option: {
+            legend: { data: ["H-1B applications (hiring intent)", "Green-card sponsorships (retention)"] },
+            xAxis: { type: "category", data: rows.map(function (r, i) {
+              return r.quarter + (i >= rows.length - 2 ? "*" : ""); }) },
+            yAxis: { type: "value", minInterval: 1 },
+            series: [
+              { name: "H-1B applications (hiring intent)", type: "bar", stack: "h",
+                barMaxWidth: 22, itemStyle: { borderColor: U.cssVar("--surface"), borderWidth: 2 },
+                data: rows.map(function (r) { return r.lca; }) },
+              { name: "Green-card sponsorships (retention)", type: "bar", stack: "h",
+                barMaxWidth: 22, itemStyle: { borderColor: U.cssVar("--surface"), borderWidth: 2,
+                                              borderRadius: [4, 4, 0, 0] },
+                data: rows.map(function (r) { return r.perm; }) }
+            ]
+          },
+          table: {
+            columns: [{ label: "Quarter (filed)" }, { label: "H-1B", num: true },
+                      { label: "PERM", num: true }, { label: "Certified", num: true }],
+            rows: rows.map(function (r) { return [r.quarter, r.lca, r.perm, r.certified]; })
+          }
+        };
+      }
+    });
+  }
+
+  function p6Guidance() {
+    U.card({
+      mount: "mount-p6-guidance", datasetKey: "p6_rnd_guidance", chartId: "p6_rnd_guidance",
+      title: "Clients' forward R&D guidance — in their own words",
+      sub: "Verbatim forward-looking R&D sentences from the largest revealed clients' recent filings. Read the quotes; the labels are just a sort key.",
+      build: function (elm, d) {
+        elm.remove();
+        return {
+          custom: true,
+          table: {
+            columns: [{ label: "Client" }, { label: "Direction" }, { label: "Filed" },
+                      { label: "What they said (verbatim)", wrap: true }],
+            rows: (d.signals || []).map(function (s) {
+              return [s.name + (s.ticker ? " (" + s.ticker + ")" : ""),
+                      s.direction, s.filed, s.sentence];
+            })
+          }
+        };
+      }
+    });
+    var mount = document.getElementById("mount-p6-guidance");
+    var wrap = mount && mount.querySelector(".tablewrap");
+    if (wrap) wrap.classList.add("open");
+  }
+
+  function p10Nowcast() {
+    U.card({
+      mount: "mount-p10-nowcast", datasetKey: "p10_nowcast", chartId: "p10_nowcast",
+      title: "Out-of-sample track record: predicted vs actual utilization change",
+      sub: "Every point is a genuine walk-forward prediction made only with earlier data. The model barely edges naive persistence — which is itself the finding: utilization stays where it is.",
+      build: function (elm, d) {
+        var rows = d.backtest;
+        var live = d.live_call;
+        return {
+          option: {
+            legend: { data: ["Actual YoY change", "Model prediction", "Naive (persistence)"] },
+            tooltip: { valueFormatter: function (v) { return v == null ? "–" : (v >= 0 ? "+" : "") + v + " pts"; } },
+            xAxis: { type: "category", data: rows.map(function (r) { return r.quarter; }),
+                     axisLabel: { interval: 5 } },
+            yAxis: { type: "value", name: "utilization YoY, pts", nameTextStyle: { color: U.cssVar("--muted") } },
+            series: [
+              { name: "Actual YoY change", type: "line", lineStyle: { width: 2.5 }, symbolSize: 7,
+                data: rows.map(function (r) { return r.actual_yoy; }) },
+              { name: "Model prediction", type: "line", lineStyle: { width: 1.8 }, symbolSize: 5,
+                color: U.cssVar("--s5"), data: rows.map(function (r) { return r.model_yoy; }) },
+              { name: "Naive (persistence)", type: "line", lineStyle: { width: 1.2, opacity: 0.7 },
+                symbolSize: 4, color: U.cssVar("--s3"),
+                data: rows.map(function (r) { return r.naive_yoy; }) }
+            ]
+          },
+          table: {
+            columns: [{ label: "Quarter" }, { label: "Actual", num: true },
+                      { label: "Model", num: true }, { label: "Naive", num: true }],
+            rows: rows.map(function (r) { return [r.quarter, r.actual_yoy, r.model_yoy, r.naive_yoy]; })
+          }
+        };
+      }
+    });
+    /* the live-call card */
+    var d = (window.ALTDATA.p10_nowcast || {}).data;
+    var mount = document.getElementById("mount-p10-call");
+    if (mount && d && d.live_call) {
+      var c = d.live_call;
+      var el = U.el("div", "card");
+      el.appendChild(U.el("h3", null, "The live call — " + U.esc(c.target_quarter) + " print"));
+      el.appendChild(U.el("p", "sub", "A dated, falsifiable prediction, made " +
+        new Date().toISOString().slice(0, 10) + " with the same walk-forward recipe as every backtest point."));
+      var big = U.el("div", null,
+        '<span style="font-size:34px;font-weight:600">' +
+        (c.implied_utilization != null ? c.implied_utilization + "%" : "–") + "</span>" +
+        '<span style="color:var(--ink-2)"> ± ' + c.mae_band_pts + ' pts · direction: <b>' +
+        U.esc(c.direction) + "</b> vs year-ago " + c.year_ago_utilization + "%</span>");
+      el.appendChild(big);
+      el.appendChild(U.el("p", "sub",
+        "Inputs: utilization momentum " + (c.inputs.utilization_yoy_pts >= 0 ? "+" : "") +
+        c.inputs.utilization_yoy_pts + " pts YoY · Reactive Demand Index +" +
+        c.inputs.reactive_index_yoy + " YoY · headcount +" + c.inputs.fte_yoy_pct +
+        "% YoY. Model hit rate " + (d.model_hit_rate * 100).toFixed(0) + "% vs naive " +
+        (d.naive_hit_rate * 100).toFixed(0) + "% over " + d.evaluated + " out-of-sample quarters — " +
+        "utilization is persistent, and persistence at these levels is the bull case."));
+      mount.appendChild(el);
+    }
+  }
+
   /* ================= P2 — litigation ================= */
   function p2Timeseries() {
     U.card({
@@ -207,10 +363,12 @@ window.ALTDATA_CHARTS = (function () {
             series: series
           },
           table: {
-            columns: [{ label: "Case", wrap: true }, { label: "Court", wrap: true }, { label: "Date" },
-                      { label: "Outcome" }, { label: "Judge's language", wrap: true }, { label: "Link", link: true }],
+            columns: [{ label: "Case", wrap: true }, { label: "Expert" }, { label: "Practice", wrap: true },
+                      { label: "Date" }, { label: "Outcome" },
+                      { label: "Judge's language", wrap: true }, { label: "Link", link: true }],
             rows: ((d.exponent && d.exponent.cases) || []).map(function (c) {
-              return [c.case_name, c.court, c.date_filed, c.outcome,
+              return [c.case_name, (c.expert || "").replace(" (former-roster match)", " †"),
+                      c.expert_practice || "", c.date_filed, c.outcome,
                       c.evidence_quote || c.reason || "", { text: "opinion", href: c.url }];
             })
           }
@@ -907,7 +1065,8 @@ window.ALTDATA_CHARTS = (function () {
 
   return {
     render: function () {
-      p1Headcount(); p1Roster(); p7Utilization();
+      p1Headcount(); p1Roster(); p7Utilization(); p7RealizedRate(); p9Hiring();
+      p6Guidance(); p10Nowcast();
       p2Timeseries(); p2Daubert(); p2Cases();
       p3Index(); p3Lag();
       p4Pubs(); p4Partners(); p4Graph();

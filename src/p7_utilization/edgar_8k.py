@@ -40,10 +40,23 @@ _HEADCOUNT_PATTERNS = [
     re.compile(r"(?:grew|increased|expanded)\s+(?:our\s+)?headcount\s+(?:by\s+)?"
                r"(?:approximately\s+)?(\d{1,2}(?:\.\d)?)\s*%", re.IGNORECASE),
 ]
-# "Technical full-time equivalent employees ... were 967"
-_FTE_RE = re.compile(
-    r"technical\s+full[-\s]?time\s+equivalent\s+employees[^.]{0,160}?"
-    r"\b([1-9],?\d{2,3})\b", re.IGNORECASE | re.DOTALL)
+# FTE appears as a metrics-table row ("Technical full-time equivalents 1,013 966")
+# or a short verb phrase. Firmwide FTE is 300-1,600 over EXPO's history; segment
+# figures are smaller, years are larger - callers take the max in-band candidate.
+_FTE_PATTERNS = [
+    re.compile(r"technical\s+full[-\s]?time\s+equivalents?(?:\s+employees)?"
+               r"(?:\s*\(FTEs?\))?[\s:]{0,6}([\d,]{3,5})(?!\s*%|\d)", re.IGNORECASE),
+    # "... increased 5% to 1,013 during ..." - gap may contain digits/percent
+    re.compile(r"technical\s+full[-\s]?time\s+equivalents?(?:\s+employees)?"
+               r"(?:\s*\(FTEs?\))?.{0,60}?(?:were|was|of|totaled|at|to)\s+"
+               r"([\d,]{3,5})(?!\s*%|\d)", re.IGNORECASE | re.DOTALL),
+]
+# "... to 1,013 during the first quarter of 2026 as compared to 966 ..."
+_FTE_COMPARE_RE = re.compile(
+    r"technical\s+full[-\s]?time\s+equivalents?(?:\s+employees)?.{0,60}?"
+    r"to\s+([\d,]{3,5})\s+(?:during|for|in).{0,80}?compared\s+(?:to|with)\s+"
+    r"([\d,]{3,5})(?!\s*%|\d)", re.IGNORECASE | re.DOTALL)
+_FTE_BAND = (300, 1600)
 
 
 def list_filings(cik: int, forms: tuple, use_cache=True) -> list[dict]:
@@ -113,7 +126,7 @@ def exhibit_texts(cik: int, accession: str, use_cache=True) -> list[str]:
     return texts
 
 
-def parse_metrics(text: str) -> dict:
+def parse_metrics(text: str, allow_fte: bool = True) -> dict:
     """Extract utilization % (current + year-ago), headcount growth %, FTE count."""
     out = {}
     m = _UTIL_COMPARE_RE.search(text)
@@ -131,9 +144,23 @@ def parse_metrics(text: str) -> dict:
         if h and 0 < float(h.group(1)) <= 30:
             out["headcount_growth_pct"] = float(h.group(1))
             break
-    f = _FTE_RE.search(text)
-    if f:
-        out["fte"] = int(f.group(1).replace(",", ""))
+    if allow_fte:
+        cm = _FTE_COMPARE_RE.search(text)
+        if cm:
+            cur, prior = (int(cm.group(i).replace(",", "")) for i in (1, 2))
+            if all(_FTE_BAND[0] <= v <= _FTE_BAND[1] for v in (cur, prior)):
+                out["fte"] = cur
+                out["fte_prior_year"] = prior
+        if "fte" not in out:
+            candidates = []
+            for pat in _FTE_PATTERNS:
+                for m in pat.finditer(text):
+                    v = int(m.group(1).replace(",", ""))
+                    if _FTE_BAND[0] <= v <= _FTE_BAND[1]:
+                        candidates.append(v)
+            if candidates:
+                # firmwide >= any segment figure mentioned in the same document
+                out["fte"] = max(candidates)
     return out
 
 

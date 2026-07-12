@@ -1,0 +1,11 @@
+{
+  "title": "The nowcast: calling the next utilization print before it happens",
+  "what": "An experimental model that predicts the year-over-year change in next quarter's utilization - the number the stock reprices on - from three signals available today: current utilization momentum, the Reactive Demand Index, and headcount growth. Shown with its full out-of-sample track record next to the dumbest possible baseline.",
+  "how": "For every quarter since 2016 the model was refit using ONLY data available before that quarter, then made a genuine out-of-sample prediction (41 of them). The baseline it must beat: 'next quarter's change equals this quarter's change'. We report both hit rates honestly - including that the simple baseline is nearly as good, because utilization is highly persistent.",
+  "thesis": "Two uses. First, the live call for the next print, with its error band - a falsifiable, dated prediction. Second, and arguably more valuable: the model's failure to beat persistence IS evidence for the thesis - utilization at 76% tends to STAY elevated, which is exactly the 'sustained peaks' pattern the bull case rests on and the market's ~25x multiple implies it doubts.",
+  "caveats": [
+    "EXPERIMENTAL and small-sample (41 out-of-sample quarters). Read the direction and the +/-3.4pt error band, never the decimals.",
+    "A print inside the band is consistent with the model, not proof of it; one print outside the band is weather, three is climate.",
+    "The model knows nothing about one-off events (a mega-engagement starting or ending, an acquisition, a pandemic)."
+  ]
+}

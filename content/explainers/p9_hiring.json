@@ -1,0 +1,11 @@
+{
+  "title": "Sponsored hiring: a public, quarterly window into headcount growth",
+  "what": "Every quarter Exponent asks the US Department of Labor for permission to employ foreign specialists (H-1B applications) or sponsor their green cards (PERM). Those filings are public - employer, job title, worksite, wage level - and for a PhD-heavy firm they are a real slice of hiring activity, published quarterly while total headcount only appears in filings.",
+  "how": "We downloaded the DOL's official disclosure files (~1.2GB, every US employer's filings) and filtered to Exponent, Inc. An H-1B filing signals hiring intent for a specialist role; a PERM filing signals a long-term retention commitment to a scientist already on staff.",
+  "thesis": "Thesis trigger 1 needs headcount GROWING. The company confirmed +5% in Q1-2026; this feed is the between-quarters check that the hiring engine keeps running - and the job titles show WHERE the growth is (batteries, data science, biomedical engineering = proactive-segment capacity).",
+  "caveats": [
+    "This is only the sponsored-hire slice of total hiring - read it as a direction and mix signal, not a census.",
+    "LCA filings include renewals and transfers, not just new hires.",
+    "DOL publishes with a lag; the newest quarter is always incomplete."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Pricing power, quantified: the estimated realized rate",
+  "what": "An estimate of what Exponent actually collects per billable hour, each quarter: reported revenue divided by estimated billable hours (consultants x utilization x available hours). This answers 'even if case volume is flat, is pricing rising?' - with numbers.",
+  "how": "All three inputs are company-reported: revenue from SEC XBRL, utilization and consultant count (FTEs) parsed from the text of Exponent's own filed releases and 10-Qs. We divide one by the other - the only assumption is the standard 40-hour available week.",
+  "thesis": "Management says growth is driven by 'strong rate realization'; this chart is that claim made measurable: roughly $290/hour in 2019 to $415/hour in Q1-2026, up 9% year-over-year in the latest quarter. Combined with the litigation chart (flat case volume), the conclusion is the moat thesis in one line: Exponent grows by charging more for the same courtroom presence, not by discounting for volume.",
+  "caveats": [
+    "The dollar LEVEL depends on the available-hours convention and revenue includes ~5-6% pass-through expenses - trust the TREND and the year-over-year change, not the exact level.",
+    "Quarters missing a stated utilization or FTE are absent, never interpolated.",
+    "Rate mix (senior vs junior hours) also moves this number, not just like-for-like price increases."
+  ]
+}

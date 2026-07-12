@@ -1,0 +1,310 @@
+{
+ "metadata": {
+  "pipeline": "p7_utilization",
+  "output": "realized_rate",
+  "generated_at": "2026-07-12T02:19:34Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "Derived: SEC-reported revenue / (company-stated FTE x utilization x 520h)",
+    "url": "https://data.sec.gov/",
+    "fetched_at": "2026-07-12T02:19:34Z",
+    "records_matched": 31
+   }
+  ],
+  "coverage": {
+   "start": "2018-Q2",
+   "end": "2026-Q1"
+  },
+  "caveats": [
+   "Every input is company-reported (revenue from XBRL, utilization and FTE from filed text); only the division is ours.",
+   "The dollar LEVEL depends on the 40h/week available-hours convention and on revenue including ~5-6% pass-through reimbursements - read the TREND and the YoY, not the exact level.",
+   "Quarters missing a stated utilization or FTE are absent, never interpolated."
+  ],
+  "methodology_id": "p7_realized_rate"
+ },
+ "data": {
+  "series": [
+   {
+    "quarter": "2018-Q2",
+    "revenue": 95621000,
+    "fte": 834,
+    "utilization": 75.0,
+    "billable_hours_est": 325260,
+    "rate_est": 293.98,
+    "rate_yoy_pct": null
+   },
+   {
+    "quarter": "2018-Q3",
+    "revenue": 95302000,
+    "fte": 843,
+    "utilization": 73.0,
+    "billable_hours_est": 320003,
+    "rate_est": 297.82,
+    "rate_yoy_pct": null
+   },
+   {
+    "quarter": "2019-Q1",
+    "revenue": 99031000,
+    "fte": 883,
+    "utilization": 72.0,
+    "billable_hours_est": 330595,
+    "rate_est": 299.55,
+    "rate_yoy_pct": null
+   },
+   {
+    "quarter": "2019-Q2",
+    "revenue": 106506000,
+    "fte": 890,
+    "utilization": 76.0,
+    "billable_hours_est": 351728,
+    "rate_est": 302.81,
+    "rate_yoy_pct": 3.0
+   },
+   {
+    "quarter": "2019-Q3",
+    "revenue": 101548000,
+    "fte": 906,
+    "utilization": 72.0,
+    "billable_hours_est": 339206,
+    "rate_est": 299.37,
+    "rate_yoy_pct": 0.5
+   },
+   {
+    "quarter": "2019-Q4",
+    "revenue": 110114000,
+    "fte": 901,
+    "utilization": 72.0,
+    "billable_hours_est": 337334,
+    "rate_est": 326.42,
+    "rate_yoy_pct": null
+   },
+   {
+    "quarter": "2020-Q1",
+    "revenue": 105953000,
+    "fte": 938,
+    "utilization": 71.0,
+    "billable_hours_est": 346310,
+    "rate_est": 305.95,
+    "rate_yoy_pct": 2.1
+   },
+   {
+    "quarter": "2020-Q2",
+    "revenue": 92045000,
+    "fte": 899,
+    "utilization": 64.0,
+    "billable_hours_est": 299187,
+    "rate_est": 307.65,
+    "rate_yoy_pct": 1.6
+   },
+   {
+    "quarter": "2020-Q3",
+    "revenue": 98663000,
+    "fte": 901,
+    "utilization": 66.0,
+    "billable_hours_est": 309223,
+    "rate_est": 319.07,
+    "rate_yoy_pct": 6.6
+   },
+   {
+    "quarter": "2020-Q4",
+    "revenue": 103239000,
+    "fte": 912,
+    "utilization": 67.0,
+    "billable_hours_est": 317741,
+    "rate_est": 324.92,
+    "rate_yoy_pct": -0.5
+   },
+   {
+    "quarter": "2021-Q1",
+    "revenue": 116481000,
+    "fte": 906,
+    "utilization": 76.0,
+    "billable_hours_est": 358051,
+    "rate_est": 325.32,
+    "rate_yoy_pct": 6.3
+   },
+   {
+    "quarter": "2021-Q2",
+    "revenue": 119877000,
+    "fte": 888,
+    "utilization": 79.0,
+    "billable_hours_est": 364790,
+    "rate_est": 328.62,
+    "rate_yoy_pct": 6.8
+   },
+   {
+    "quarter": "2021-Q3",
+    "revenue": 116405000,
+    "fte": 883,
+    "utilization": 76.0,
+    "billable_hours_est": 348962,
+    "rate_est": 333.58,
+    "rate_yoy_pct": 4.5
+   },
+   {
+    "quarter": "2021-Q4",
+    "revenue": 113506000,
+    "fte": 900,
+    "utilization": 75.0,
+    "billable_hours_est": 351000,
+    "rate_est": 323.38,
+    "rate_yoy_pct": -0.5
+   },
+   {
+    "quarter": "2022-Q1",
+    "revenue": 128478000,
+    "fte": 939,
+    "utilization": 77.0,
+    "billable_hours_est": 375976,
+    "rate_est": 341.72,
+    "rate_yoy_pct": 5.0
+   },
+   {
+    "quarter": "2022-Q2",
+    "revenue": 130281000,
+    "fte": 934,
+    "utilization": 77.0,
+    "billable_hours_est": 373974,
+    "rate_est": 348.37,
+    "rate_yoy_pct": 6.0
+   },
+   {
+    "quarter": "2022-Q3",
+    "revenue": 127179000,
+    "fte": 958,
+    "utilization": 73.0,
+    "billable_hours_est": 363657,
+    "rate_est": 349.72,
+    "rate_yoy_pct": 4.8
+   },
+   {
+    "quarter": "2022-Q4",
+    "revenue": 127355000,
+    "fte": 955,
+    "utilization": 74.0,
+    "billable_hours_est": 367484,
+    "rate_est": 346.56,
+    "rate_yoy_pct": 7.2
+   },
+   {
+    "quarter": "2023-Q1",
+    "revenue": 140309000,
+    "fte": 1052,
+    "utilization": 70.0,
+    "billable_hours_est": 382928,
+    "rate_est": 366.41,
+    "rate_yoy_pct": 7.2
+   },
+   {
+    "quarter": "2023-Q2",
+    "revenue": 140221000,
+    "fte": 1077,
+    "utilization": 69.0,
+    "billable_hours_est": 386428,
+    "rate_est": 362.86,
+    "rate_yoy_pct": 4.2
+   },
+   {
+    "quarter": "2023-Q3",
+    "revenue": 133336000,
+    "fte": 1050,
+    "utilization": 70.0,
+    "billable_hours_est": 382200,
+    "rate_est": 348.86,
+    "rate_yoy_pct": -0.2
+   },
+   {
+    "quarter": "2023-Q4",
+    "revenue": 122900000,
+    "fte": 1047,
+    "utilization": 69.0,
+    "billable_hours_est": 375664,
+    "rate_est": 327.15,
+    "rate_yoy_pct": -5.6
+   },
+   {
+    "quarter": "2024-Q1",
+    "revenue": 144933000,
+    "fte": 1003,
+    "utilization": 75.0,
+    "billable_hours_est": 391170,
+    "rate_est": 370.51,
+    "rate_yoy_pct": 1.1
+   },
+   {
+    "quarter": "2024-Q2",
+    "revenue": 140536000,
+    "fte": 975,
+    "utilization": 75.0,
+    "billable_hours_est": 380250,
+    "rate_est": 369.59,
+    "rate_yoy_pct": 1.9
+   },
+   {
+    "quarter": "2024-Q3",
+    "revenue": 136279000,
+    "fte": 949,
+    "utilization": 75.0,
+    "billable_hours_est": 370110,
+    "rate_est": 368.21,
+    "rate_yoy_pct": 5.5
+   },
+   {
+    "quarter": "2024-Q4",
+    "revenue": 136766000,
+    "fte": 967,
+    "utilization": 73.0,
+    "billable_hours_est": 367073,
+    "rate_est": 372.59,
+    "rate_yoy_pct": 13.9
+   },
+   {
+    "quarter": "2025-Q1",
+    "revenue": 145507000,
+    "fte": 966,
+    "utilization": 76.0,
+    "billable_hours_est": 381763,
+    "rate_est": 381.14,
+    "rate_yoy_pct": 2.9
+   },
+   {
+    "quarter": "2025-Q2",
+    "revenue": 141962000,
+    "fte": 958,
+    "utilization": 72.0,
+    "billable_hours_est": 358675,
+    "rate_est": 395.8,
+    "rate_yoy_pct": 7.1
+   },
+   {
+    "quarter": "2025-Q3",
+    "revenue": 147120000,
+    "fte": 976,
+    "utilization": 74.0,
+    "billable_hours_est": 375565,
+    "rate_est": 391.73,
+    "rate_yoy_pct": 6.4
+   },
+   {
+    "quarter": "2025-Q4",
+    "revenue": 147425000,
+    "fte": 973,
+    "utilization": 74.0,
+    "billable_hours_est": 374410,
+    "rate_est": 393.75,
+    "rate_yoy_pct": 5.7
+   },
+   {
+    "quarter": "2026-Q1",
+    "revenue": 166303000,
+    "fte": 1013,
+    "utilization": 76.0,
+    "billable_hours_est": 400338,
+    "rate_est": 415.41,
+    "rate_yoy_pct": 9.0
+   }
+  ]
+ }
+}

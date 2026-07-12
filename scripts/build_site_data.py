@@ -22,8 +22,9 @@ EXPECTED_EXPLAINERS = [
     "p4_publications", "p4_partners_rolling", "p4_collab_graph",
     "p5_federal_awards", "p5_regulatory_mentions",
     "p6_client_rnd", "p6_expo_financials",
-    "p7_utilization",
+    "p7_utilization", "p7_realized_rate",
     "p8_pubs", "p8_financials", "p8_courts",
+    "p9_hiring", "p6_rnd_guidance", "p10_nowcast",
 ]
 
 

@@ -1,0 +1,11 @@
+{
+  "title": "What clients say they'll spend NEXT: forward R&D guidance",
+  "what": "Verbatim forward-looking sentences about research & development spending, taken from the most recent SEC-filed earnings releases and quarterly reports of Exponent's largest revealed clients - stated intent, one to two quarters ahead of the reported R&D numbers in the chart above.",
+  "how": "For each top client we scanned their recent 8-K releases and 10-Q management discussion for sentences that mention R&D and use forward-looking language ('we expect', 'plan to', 'fiscal 2026'). Each sentence ships verbatim with a simple direction label (increase / decrease / neutral) - you can read every quote and judge the label yourself.",
+  "thesis": "Exponent's proactive segment sells into these exact budgets with a ~1-2 quarter lag. If the biggest documented clients are guiding R&D UP, the demand pool for Exponent's design-review and testing work is still filling - the leading edge of thesis trigger 5.",
+  "caveats": [
+    "Direction labels are keyword-based; the verbatim quote is the evidence, the label is just a sort key.",
+    "Companies that don't discuss R&D plans in filings are absent - this is a sample of talkers, not the full roster.",
+    "Stated intent is not spend; guidance gets revised."
+  ]
+}
