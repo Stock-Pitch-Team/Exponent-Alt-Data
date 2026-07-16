@@ -279,6 +279,29 @@ window.ALTDATA_CHARTS = (function () {
         '<span style="color:var(--ink-2)"> ± ' + c.mae_band_pts + ' pts · direction: <b>' +
         U.esc(c.direction) + "</b> vs year-ago " + c.year_ago_utilization + "%</span>");
       el.appendChild(big);
+
+      /* The number above is a YEAR-OVER-YEAR call. Readers instinctively compare it
+         to the last print (76%) and read a normal seasonal step as a predicted
+         crash, so state both anchors and the historical step explicitly. */
+      if (c.last_printed_utilization != null) {
+        var s = c.seasonal_step, seasonal = "";
+        if (s) {
+          seasonal = " Across the last " + s.quarters_used + " years, " +
+            U.esc(c.target_quarter.split("-")[1]) + " has landed on average " +
+            s.avg_step_pts + " pts from the quarter before it (range " +
+            s.min_step_pts + " to +" + Math.abs(s.max_step_pts) + ").";
+        }
+        var note = U.el("p", "callout",
+          "<b>Not a predicted decline.</b> Last print was " + c.last_printed_quarter +
+          " at " + c.last_printed_utilization + "%, but this call is <b>year-over-year</b>: " +
+          c.implied_utilization + "% vs " + c.target_quarter + " a year ago at " +
+          c.year_ago_utilization + "% — flat." + seasonal +
+          " Utilization is seasonal, so comparing " + c.target_quarter + " to " +
+          c.last_printed_quarter + " compares two different seasons." +
+          (c.band_low != null ? " Full band: <b>" + c.band_low + "%–" + c.band_high + "%</b>." : ""));
+        el.appendChild(note);
+      }
+
       el.appendChild(U.el("p", "sub",
         "Inputs: utilization momentum " + (c.inputs.utilization_yoy_pts >= 0 ? "+" : "") +
         c.inputs.utilization_yoy_pts + " pts YoY · Reactive Demand Index +" +
@@ -288,6 +311,152 @@ window.ALTDATA_CHARTS = (function () {
         "utilization is persistent, and persistence at these levels is the bull case."));
       mount.appendChild(el);
     }
+    p10Guidance();
+  }
+
+  /* Management's own guidance — the second opinion, deliberately NOT a model input */
+  function p10Guidance() {
+    var doc = window.ALTDATA.p10_mgmt_guidance;
+    var mount = document.getElementById("mount-p10-guidance");
+    if (!mount) return;
+    var meta = doc && doc.metadata;
+    if (!doc || !meta || meta.status === "unavailable" || !doc.data) {
+      var u = U.el("div", "unavailable");
+      u.appendChild(U.el("span", "badge unavail", "Data unavailable"));
+      u.appendChild(U.el("h3", null, "The other forecast: what management guided"));
+      u.appendChild(U.el("p", null, "No guidance is shown because none could be read from a " +
+        "filed earnings release. Reason: " +
+        U.esc((meta && meta.status_reason) || "dataset not generated") +
+        ". Nothing on this page is ever simulated or estimated to fill a gap."));
+      mount.appendChild(u);
+      return;
+    }
+    var g = doc.data;
+    var el = U.el("div", "card");
+    el.appendChild(U.el("h3", null, "The other forecast: what management guided"));
+    el.appendChild(U.el("p", "sub",
+      "The model above is deliberately blind to company commentary. This is Exponent's own " +
+      "outlook for the same quarter, lifted verbatim from the 8-K earnings release filed " +
+      U.esc(g.filed) + " — an independent second opinion, not an input."));
+    if (g.quote) {
+      el.appendChild(U.el("blockquote", "quote", U.esc(g.quote) +
+        " <span class='sub'>— Richard Schlenker, CFO</span>"));
+    }
+    g.guidance.forEach(function (item) {
+      var box = U.el("div", "guide-item");
+      box.appendChild(U.el("div", "guide-period", U.esc(item.period)));
+      var ul = U.el("ul", "guide-list");
+      item.statements.forEach(function (st) { ul.appendChild(U.el("li", null, U.esc(st))); });
+      box.appendChild(ul);
+      el.appendChild(box);
+    });
+    /* The coherence check: revenue ~= headcount x utilization x rate. Management
+       guiding high-single-digit revenue growth on +5% headcount is arithmetically
+       consistent with utilization holding — which is exactly the model's call. */
+    el.appendChild(U.el("p", "callout",
+      "<b>Do the two forecasts agree?</b> Revenue is roughly headcount × utilization × rate. " +
+      "Management guides high-single-digit revenue growth; the filings show headcount +5% and " +
+      "realized rate +9%. Those alone clear high-single-digit growth with utilization merely " +
+      "holding flat — which is precisely what the model calls. The two independent forecasts " +
+      "are consistent, and neither requires utilization to rise for the thesis to work."));
+    var foot = U.el("p", "prov",
+      'Source: Exponent 8-K earnings release, filed ' + U.esc(g.filed) +
+      ' · <a href="' + U.esc(g.url) + '" target="_blank" rel="noopener">accession ' +
+      U.esc(g.accession) + "</a>");
+    el.appendChild(foot);
+    mount.appendChild(el);
+  }
+
+  /* ================= P11 — AI exposure ================= */
+  function p11AiExposure() {
+    U.card({
+      mount: "mount-p11-attention", datasetKey: "p11_ai_exposure", chartId: "p11_ai_exposure",
+      title: "Does Exponent think AI threatens its business? Ask its 10-K",
+      sub: "Times AI, artificial intelligence or machine learning appear in each annual report. The red marker is the year Exponent first added a risk factor saying AI may REDUCE demand for its services — a legally-consequential statement, not commentary.",
+      build: function (elm, d) {
+        var rows = d.years;
+        return {
+          option: {
+            grid: { top: 40 },
+            xAxis: { type: "category", data: rows.map(function (r) { return "FY" + r.fiscal_year; }) },
+            yAxis: { type: "value", name: "mentions in 10-K", nameTextStyle: { color: U.cssVar("--muted") } },
+            tooltip: {
+              trigger: "axis",
+              formatter: function (ps) {
+                var r = rows[ps[0].dataIndex];
+                return "FY" + r.fiscal_year + "<br/>" + r.ai_mentions + " mentions<br/>" +
+                  (r.has_ai_demand_risk_factor
+                    ? "<b>AI demand risk factor present</b>" : "no AI demand risk factor");
+              }
+            },
+            series: [{
+              type: "bar", barCategoryGap: "35%",
+              itemStyle: { borderRadius: [3, 3, 0, 0] },
+              data: rows.map(function (r) {
+                return { value: r.ai_mentions,
+                         itemStyle: { color: U.cssVar(r.has_ai_demand_risk_factor ? "--s6" : "--s1") } };
+              })
+            }]
+          },
+          table: {
+            columns: [{ label: "Fiscal year" }, { label: "Filed" },
+                      { label: "AI mentions", num: true },
+                      { label: "AI demand risk factor?" }, { label: "Link", link: true }],
+            rows: rows.map(function (r) {
+              return ["FY" + r.fiscal_year, r.filed, r.ai_mentions,
+                      r.has_ai_demand_risk_factor ? "YES — newly added" : "no",
+                      { text: "10-K", href: r.url }];
+            })
+          }
+        };
+      }
+    });
+
+    /* the verbatim two-sided panel: the company's own risk AND its own scoping */
+    var doc = window.ALTDATA.p11_ai_exposure;
+    var mount = document.getElementById("mount-p11-words");
+    if (!mount || !doc || !doc.data) return;
+    var d = doc.data;
+    var el = U.el("div", "card");
+    el.appendChild(U.el("h3", null, "In their own words — the risk, and its stated limits"));
+    el.appendChild(U.el("p", "sub",
+      "Both sides of the AI question, quoted from primary sources rather than summarised. " +
+      "Read them and judge for yourself."));
+
+    if (d.risk_factor) {
+      el.appendChild(U.el("div", "guide-period", "The bear case, from Exponent's FY" +
+        d.first_year_flagged + " 10-K risk factors"));
+      el.appendChild(U.el("blockquote", "quote", U.esc(d.risk_factor.verbatim)));
+    }
+    if (d.scope_sentence) {
+      el.appendChild(U.el("p", "callout",
+        "<b>Note where they draw the line.</b> Their own sentence scopes the exposure: “" +
+        U.esc(d.scope_sentence) + "” Exponent's work is the opposite of standardized — " +
+        "bespoke failure investigations defended under cross-examination. That is management's " +
+        "framing, and it is self-interested; but it is also the specific, checkable claim they " +
+        "chose to make to the SEC."));
+    }
+    if (d.testimony_anchor) {
+      var a = d.testimony_anchor;
+      el.appendChild(U.el("div", "guide-period", "The structural counter-argument, in our own data"));
+      el.appendChild(U.el("p", "callout",
+        "Roughly 60% of Exponent's revenue is reactive work anchored in disputes. Under Federal " +
+        "Rule of Evidence 702, that testimony must come from a <b>human</b> expert who is deposed " +
+        "and cross-examined — a model cannot be sworn in, impeached, or held liable. In the federal " +
+        "opinions we sampled we tied <b>" + a.named_experts_found + " named Exponent experts</b> " +
+        "across <b>" + a.opinions_reviewed + " opinions</b> to " +
+        a.practices_with_court_presence.length + " practices, which employ <b>" +
+        a.bench_in_courtroom_practices + " of " + a.bench_total + " consultants (" +
+        a.share_pct + "%)</b>. Treat that as a floor, not an estimate: consulting experts never " +
+        "surface in court records at all, so the true testimony-anchored share is higher."));
+    }
+    el.appendChild(U.el("p", "prov",
+      "Sources: Exponent 10-K annual reports (SEC EDGAR)" +
+      (d.risk_factor ? ' · <a href="' + U.esc(d.risk_factor.url) + '" target="_blank" ' +
+        'rel="noopener">FY' + d.first_year_flagged + " 10-K, accession " +
+        U.esc(d.risk_factor.accession) + "</a>" : "") +
+      " · practice census from exponent.com; expert attribution from CourtListener opinions."));
+    mount.appendChild(el);
   }
 
   /* ================= P2 — litigation ================= */
@@ -468,18 +637,32 @@ window.ALTDATA_CHARTS = (function () {
     }
     var shifts = [0, 1, 4, 8]; // quarters: 0, +3mo, +12mo, +24mo
     var labels = ["No shift", "+3 months", "+12 months", "+24 months"];
-    var state = { shift: 2 };
+    /* mode "index": both lines rebased to their own average (levels).
+       mode "yoy":   both lines as % change vs the same quarter a year earlier.
+       YoY strips the shared upward drift that makes any two growing series look
+       correlated, so turning points line up (or fail to) on their own merit. */
+    var state = { shift: 2, mode: "index" };
 
     var controls = U.el("div", "controls");
     var chartRef = null;
 
     function quarterAdd(q, n) {
+      /* n may be negative (the YoY view looks back four quarters), and JS keeps
+         the sign on %, so -3 % 4 is -3 and would yield "2024-Q-2". Wrap it. */
       var m = q.split("-Q"); var y = +m[0], k = +m[1] - 1 + n;
-      return (y + Math.floor(k / 4)) + "-Q" + (k % 4 + 1);
+      return (y + Math.floor(k / 4)) + "-Q" + (((k % 4) + 4) % 4 + 1);
+    }
+    function yoy(map, quarters) {
+      return quarters.map(function (q) {
+        var prior = quarterAdd(q, -4);
+        var a = map[q], b = map[prior];
+        return (a == null || b == null || !b) ? null : +((a / b - 1) * 100).toFixed(1);
+      });
     }
     function buildSeries() {
       var rev = fin.data.revenue_quarterly;
-      var revBase = rev.filter(function (p) { return p.period >= "2018" && p.period < "2020"; });
+      var revRaw = {};
+      rev.forEach(function (p) { revRaw[p.period] = p.value; });
       var mean = rev.reduce(function (a, p) { return a + p.value; }, 0) / rev.length;
       var revIdx = {};
       rev.forEach(function (p) { revIdx[p.period] = +(p.value / mean * 100).toFixed(1); });
@@ -488,42 +671,70 @@ window.ALTDATA_CHARTS = (function () {
         if (r.index !== null) idx[quarterAdd(r.quarter, shifts[state.shift])] = r.index;
       });
       var quarters = Object.keys(revIdx).sort();
+      if (state.mode === "yoy") {
+        return { quarters: quarters, rev: yoy(revRaw, quarters), idx: yoy(idx, quarters) };
+      }
       return {
         quarters: quarters,
         rev: quarters.map(function (q) { return revIdx[q]; }),
         idx: quarters.map(function (q) { return idx[q] !== undefined ? idx[q] : null; })
       };
     }
+    function axisName() {
+      return state.mode === "yoy" ? "% change vs year earlier" : "index (avg = 100)";
+    }
+    function repaint() {
+      if (!chartRef) return;
+      var s = buildSeries();
+      chartRef.setOption({
+        xAxis: { data: s.quarters },
+        yAxis: { name: axisName() },
+        series: [{ data: s.rev }, { data: s.idx }]
+      });
+    }
+    var shiftBtns = [];
     labels.forEach(function (lb, i) {
       var b = U.el("button", i === state.shift ? "active" : null, lb);
       b.onclick = function () {
         state.shift = i;
-        controls.querySelectorAll("button").forEach(function (x, j) {
-          x.className = j === i ? "active" : "";
-        });
-        if (chartRef) {
-          var s = buildSeries();
-          chartRef.setOption({ xAxis: { data: s.quarters },
-                               series: [{ data: s.rev }, { data: s.idx }] });
-        }
+        shiftBtns.forEach(function (x, j) { x.className = j === i ? "active" : ""; });
+        repaint();
       };
+      shiftBtns.push(b);
       controls.appendChild(b);
     });
+    var modes = [{ key: "index", label: "Levels (indexed)" }, { key: "yoy", label: "YoY % change" }];
+    var modeWrap = U.el("span", "ctl-group");
+    var modeBtns = [];
+    modes.forEach(function (m, i) {
+      var b = U.el("button", m.key === state.mode ? "active" : null, m.label);
+      b.onclick = function () {
+        state.mode = m.key;
+        modeBtns.forEach(function (x, j) { x.className = j === i ? "active" : ""; });
+        repaint();
+      };
+      modeBtns.push(b);
+      modeWrap.appendChild(b);
+    });
+    controls.appendChild(modeWrap);
 
     U.card({
       mount: "mount-p3-lag", datasetKey: "p3_reactive_index", chartId: "p3_lag_overlay",
       title: "Failures today, revenue later — test the lag yourself",
-      sub: "Both lines indexed to their own average (=100) so they share one honest axis. Shift the failure index forward and see if peaks align with later revenue.",
+      sub: "Shift the failure index forward and see if its peaks line up with later revenue. " +
+           "“Levels” rebases both lines to their own average (=100) so they share one honest axis; " +
+           "“YoY % change” instead plots each line's growth rate, which removes the shared upward " +
+           "drift that can make any two rising series look related.",
       controls: controls,
       build: function (elm) {
         var s = buildSeries();
         return {
           option: {
-            legend: { data: ["Exponent revenue (indexed)", "Reactive Demand Index (shifted)"] },
+            legend: { data: ["Exponent revenue", "Reactive Demand Index (shifted)"] },
             xAxis: { type: "category", data: s.quarters, axisLabel: { interval: 3 } },
-            yAxis: { type: "value", name: "index (avg = 100)", nameTextStyle: { color: U.cssVar("--muted") } },
+            yAxis: { type: "value", name: axisName(), nameTextStyle: { color: U.cssVar("--muted") } },
             series: [
-              { name: "Exponent revenue (indexed)", type: "line", lineStyle: { width: 2.5 },
+              { name: "Exponent revenue", type: "line", lineStyle: { width: 2.5 },
                 symbolSize: 7, data: s.rev },
               { name: "Reactive Demand Index (shifted)", type: "line",
                 color: U.cssVar("--s6"), lineStyle: { width: 2 }, symbolSize: 6,
@@ -532,8 +743,10 @@ window.ALTDATA_CHARTS = (function () {
           },
           onchart: function (c) { chartRef = c; },
           table: {
-            columns: [{ label: "Quarter" }, { label: "Revenue (indexed)", num: true },
-                      { label: "Failure index (shifted)", num: true }],
+            columns: [{ label: "Quarter" },
+                      { label: state.mode === "yoy" ? "Revenue YoY %" : "Revenue (indexed)", num: true },
+                      { label: state.mode === "yoy" ? "Failure index YoY % (shifted)"
+                                                    : "Failure index (shifted)", num: true }],
             rows: s.quarters.map(function (q, i) { return [q, s.rev[i], s.idx[i]]; })
           }
         };
@@ -561,6 +774,45 @@ window.ALTDATA_CHARTS = (function () {
           table: {
             columns: [{ label: "Year" }, { label: "Papers", num: true }, { label: "Citations to that year's papers", num: true }],
             rows: rows.map(function (r) { return [r.year, r.works, r.citations]; })
+          }
+        };
+      }
+    });
+  }
+
+  /* Publication COUNT falls in recent years; citations RECEIVED does not. The
+     second is the relevance question, and it needs its own chart because the two
+     answer different things. */
+  function p4Citations() {
+    U.card({
+      mount: "mount-p4-citations", datasetKey: "p4_citations_received",
+      chartId: "p4_citations_received",
+      title: "Is anyone still using Exponent's science? Citations received per year",
+      sub: "How often Exponent's whole body of work — papers of every vintage back to 1967 — was cited in each calendar year. This is the live relevance measure, not citations to that year's papers (which would punish new work for being new). Starts in 2012 because that is as far back as OpenAlex publishes per-year counts. * = year in progress.",
+      build: function (elm, d) {
+        var rows = d.series.filter(function (r) { return r.year <= new Date().getFullYear(); });
+        return {
+          option: {
+            legend: { data: ["Citations received (all work)", "…of which, to work from the last 5 years"] },
+            xAxis: { type: "category", data: rows.map(function (r) { return starYear(r.year); }),
+                     axisLabel: { interval: 3 } },
+            yAxis: { type: "value", name: "citations / year", nameTextStyle: { color: U.cssVar("--muted") } },
+            series: [
+              { name: "Citations received (all work)", type: "line", lineStyle: { width: 3 },
+                symbolSize: 6, areaStyle: { opacity: 0.10 },
+                data: rows.map(function (r) { return r.citations_received; }) },
+              { name: "…of which, to work from the last 5 years", type: "line",
+                color: U.cssVar("--s3"), lineStyle: { width: 2 }, symbolSize: 5,
+                data: rows.map(function (r) { return r.from_last_5y_work; }) }
+            ]
+          },
+          table: {
+            columns: [{ label: "Year" }, { label: "Citations received", num: true },
+                      { label: "From work < 5 yrs old", num: true },
+                      { label: "From work < 10 yrs old", num: true }],
+            rows: d.series.map(function (r) {
+              return [r.year, r.citations_received, r.from_last_5y_work, r.from_last_10y_work];
+            })
           }
         };
       }
@@ -1069,7 +1321,8 @@ window.ALTDATA_CHARTS = (function () {
       p6Guidance(); p10Nowcast();
       p2Timeseries(); p2Daubert(); p2Cases();
       p3Index(); p3Lag();
-      p4Pubs(); p4Partners(); p4Graph();
+      p4Pubs(); p4Citations(); p4Partners(); p4Graph();
+      p11AiExposure();
       p5Awards(); p5Regs();
       p6ClientRnd(); p6ExpoFin();
       p8Pubs(); p8Financials(); p8Growth(); p8Courts();

@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exponent (EXPO) — Alternative Data Dashboard</title>
-<link rel="stylesheet" href="css/main.css?v=3">
+<link rel="stylesheet" href="css/main.css?v=4">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🔬</text></svg>">
 </head>
 <body>
 
 <header class="masthead">
   <h1>Exponent (NASDAQ: EXPO) — Alternative Data Dashboard</h1>
-  <p class="tagline">Six independent data pipelines testing one investment thesis: that Exponent is a
+  <p class="tagline">Eleven independent data pipelines testing one investment thesis: that Exponent is a
     high-quality forensic-engineering consultancy whose demand is re-accelerating while the stock trades
     at its cheapest valuation in a decade. Every number below comes from a public primary source you can
     click through to — court records, regulators, the SEC, the scientific literature, and Exponent's own
@@ -26,6 +26,7 @@
     <a href="#sec-p2">Courtroom</a>
     <a href="#sec-p3">Failure demand</a>
     <a href="#sec-p4">Science moat</a>
+    <a href="#sec-p11">AI exposure</a>
     <a href="#sec-p5">Government</a>
     <a href="#sec-p6">Clients &amp; financials</a>
     <a href="#sec-p8">Peers</a>
@@ -88,7 +89,20 @@
       <div id="mount-p4-pubs"></div>
       <div id="mount-p4-partners"></div>
     </div>
+    <div id="mount-p4-citations"></div>
     <div id="mount-p4-graph"></div>
+  </section>
+
+  <section class="block" id="sec-p11">
+    <span class="trigger">The bear case, taken seriously — can AI do this work?</span>
+    <h2>AI exposure: the threat, measured in filings rather than opinions</h2>
+    <p class="lede">The obvious question about a firm of 996 scientists is whether software is
+      coming for their billable hours. No public dataset honestly scores that, and we won't invent
+      one. So we asked sources that can answer: Exponent's own annual reports, where a misleading
+      statement carries legal consequence, and our own court records — because testimony given under
+      Rule 702 requires a human who can be cross-examined.</p>
+    <div id="mount-p11-attention"></div>
+    <div id="mount-p11-words"></div>
   </section>
 
   <section class="block" id="sec-p5">
@@ -142,6 +156,7 @@
       shown with its full out-of-sample track record next to a naive baseline, because a prediction
       without its misses is marketing.</p>
     <div id="mount-p10-call"></div>
+    <div id="mount-p10-guidance"></div>
     <div id="mount-p10-nowcast"></div>
   </section>
 
@@ -186,6 +201,9 @@
 <script src="data/p8_peers.data.js"></script>
 <script src="data/p9_hiring.data.js"></script>
 <script src="data/p10_nowcast.data.js"></script>
+<script src="data/p10_mgmt_guidance.data.js"></script>
+<script src="data/p11_ai_exposure.data.js"></script>
+<script src="data/p4_citations_received.data.js"></script>
 <script src="data/p6_rnd_guidance.data.js"></script>
 <script src="data/p1_headcount_timeseries.data.js"></script>
 <script src="data/p1_current_roster.data.js"></script>
@@ -202,8 +220,8 @@
 <script src="data/p5_regulatory_mentions.data.js"></script>
 <script src="data/p6_client_rnd.data.js"></script>
 <script src="data/p6_expo_financials.data.js"></script>
-<script src="js/ui.js?v=3"></script>
-<script src="js/charts.js?v=9"></script>
-<script src="js/main.js?v=5"></script>
+<script src="js/ui.js?v=4"></script>
+<script src="js/charts.js?v=11"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>

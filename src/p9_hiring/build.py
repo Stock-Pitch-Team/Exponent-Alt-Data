@@ -2,7 +2,7 @@
 import logging
 import re
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 from src.common import jsonio, provenance, quarters
 from src.p9_hiring import dol
@@ -54,6 +54,7 @@ def run(step=None, use_cache=True):
             titles[r["title"].title()] += 1
 
     series = [{"quarter": q, **by_q[q]} for q in sorted(by_q, key=quarters.sort_key)]
+    newest_file = max((r["file"] for r in rows), default="none")
     top_titles = sorted(titles.items(), key=lambda kv: -kv[1])[:20]
     sample = [{k: r.get(k) for k in ("program", "received", "status", "title",
                                      "city", "state", "wage", "wage_level")}
@@ -76,7 +77,11 @@ def run(step=None, use_cache=True):
             caveats=[
                 "Covers only roles where Exponent sponsored a foreign national (H-1B LCA) or a green card (PERM) - a SLICE of total hiring, but a high-signal one for a PhD-heavy firm and 100% public/legal.",
                 "An LCA filing is hiring INTENT (and includes renewals/transfers); a PERM filing signals a long-term retention commitment to an existing scientist.",
-                "Filed quarterly by DOL with a reporting lag; the newest quarter is incomplete.",
+                f"WHY THE CHART STOPS AT {series[-1]['quarter'] if series else 'n/a'}: DOL publishes these files "
+                f"~1-2 quarters in arrears, and the newest one it has released is {newest_file} "
+                f"(checked {date.today()}); later files return HTTP 404 because they do not exist yet. "
+                "The last bar is therefore incomplete, not a decline.",
+                "Bars are placed by the date DOL RECEIVED the filing, not the decision date - PERM decisions can lag receipt by over a year, so a filing that appears in a FY2026 file may belong to a 2024 bar.",
                 "Job titles are as written on the filings.",
             ],
             methodology_id="p9_hiring"),

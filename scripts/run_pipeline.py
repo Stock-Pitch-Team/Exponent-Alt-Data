@@ -1,4 +1,4 @@
-"""CLI entry point: python scripts/run_pipeline.py <p1..p6> [--step NAME] [--no-cache]"""
+"""CLI entry point: python scripts/run_pipeline.py <p1..p10> [--step NAME] [--no-cache]"""
 import argparse
 import importlib
 import logging
@@ -26,6 +26,9 @@ PIPELINES = {
     "p6": "src.p6_clients.build",
     "p7": "src.p7_utilization.build",
     "p8": "src.p8_peers.build",
+    "p9": "src.p9_hiring.build",
+    "p10": "src.p10_nowcast.build",
+    "p11": "src.p11_ai_exposure.build",
 }
 
 

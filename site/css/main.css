@@ -115,6 +115,37 @@ section.block .trigger {
 .card .plot.tall { height: 430px; }
 .card .plot:not(.tall) { height: 320px; }
 
+/* a framed aside for context that stops a chart being misread */
+.card .callout {
+  background: var(--bg); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+  padding: 10px 12px; margin: 12px 0 4px;
+  font-size: 13px; line-height: 1.5; color: var(--ink-2);
+}
+.card .callout b { color: var(--ink); }
+
+/* verbatim quotes lifted from filings — visually distinct from our own prose */
+.card .quote {
+  margin: 10px 0; padding: 8px 0 8px 14px;
+  border-left: 3px solid var(--grid);
+  font-size: 14px; line-height: 1.55; color: var(--ink);
+}
+.card .quote .sub { display: block; margin-top: 4px; font-size: 12px; }
+
+.card .guide-item { margin: 12px 0 0; }
+.card .guide-period {
+  font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.card .guide-list { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; }
+.card .guide-list li { margin: 2px 0; }
+
+.card .prov {
+  border-top: 1px solid var(--grid); margin-top: 12px; padding-top: 8px;
+  font-size: 12px; color: var(--muted);
+}
+.card .prov a { color: var(--accent); }
+
 .card .foot {
   border-top: 1px solid var(--grid); margin-top: 10px; padding-top: 8px;
   display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline;

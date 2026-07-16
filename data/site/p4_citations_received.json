@@ -1,0 +1,129 @@
+{
+ "metadata": {
+  "pipeline": "p4_moat",
+  "output": "citations_received",
+  "generated_at": "2026-07-16T19:44:38Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "OpenAlex per-year citation counts (counts_by_year) across all Exponent-affiliated works",
+    "url": "https://api.openalex.org/works?filter=authorships.institutions.id:I13383945",
+    "fetched_at": "2026-07-16T19:44:38Z",
+    "records_scanned": 4947,
+    "records_matched": 3432
+   }
+  ],
+  "coverage": {
+   "start": "2012",
+   "end": "2026"
+  },
+  "caveats": [
+   "This counts citations RECEIVED in each calendar year by Exponent's entire body of work - the question 'how much is Exponent's science being used right now', which is different from the publication-count chart above.",
+   "It is deliberately NOT citations-by-publication-year. That version punishes recent papers for not having existed long enough to be cited, and would show a fake collapse in the newest years.",
+   "The series starts in 2012 because OpenAlex only publishes per-year citation counts for a rolling recent window - it is not a claim that nobody cited Exponent before then. Papers of every vintage, back to 1967, contribute to these bars.",
+   "2026 is a partial year - it counts citations logged so far, not a full twelve months. Read it as incomplete, never as a drop.",
+   "OpenAlex's citation graph is itself still indexing recent literature, so the last 1-2 years drift upward after publication.",
+   "The 'recent work' lines isolate citations earned by papers published within the last 5 and 10 years, separating a coasting back catalogue from current output that is landing."
+  ],
+  "methodology_id": "p4_citations_received"
+ },
+ "data": {
+  "series": [
+   {
+    "year": 2012,
+    "citations_received": 4844,
+    "from_last_5y_work": 1930,
+    "from_last_10y_work": 3995
+   },
+   {
+    "year": 2013,
+    "citations_received": 5634,
+    "from_last_5y_work": 2298,
+    "from_last_10y_work": 4661
+   },
+   {
+    "year": 2014,
+    "citations_received": 6420,
+    "from_last_5y_work": 2304,
+    "from_last_10y_work": 5098
+   },
+   {
+    "year": 2015,
+    "citations_received": 7380,
+    "from_last_5y_work": 2672,
+    "from_last_10y_work": 5829
+   },
+   {
+    "year": 2016,
+    "citations_received": 7871,
+    "from_last_5y_work": 2657,
+    "from_last_10y_work": 6195
+   },
+   {
+    "year": 2017,
+    "citations_received": 8275,
+    "from_last_5y_work": 2394,
+    "from_last_10y_work": 5215
+   },
+   {
+    "year": 2018,
+    "citations_received": 9049,
+    "from_last_5y_work": 2385,
+    "from_last_10y_work": 5492
+   },
+   {
+    "year": 2019,
+    "citations_received": 9487,
+    "from_last_5y_work": 2023,
+    "from_last_10y_work": 5210
+   },
+   {
+    "year": 2020,
+    "citations_received": 11096,
+    "from_last_5y_work": 2523,
+    "from_last_10y_work": 5866
+   },
+   {
+    "year": 2021,
+    "citations_received": 12073,
+    "from_last_5y_work": 2808,
+    "from_last_10y_work": 6502
+   },
+   {
+    "year": 2022,
+    "citations_received": 11445,
+    "from_last_5y_work": 3037,
+    "from_last_10y_work": 5914
+   },
+   {
+    "year": 2023,
+    "citations_received": 11151,
+    "from_last_5y_work": 3179,
+    "from_last_10y_work": 5818
+   },
+   {
+    "year": 2024,
+    "citations_received": 11254,
+    "from_last_5y_work": 3084,
+    "from_last_10y_work": 5594
+   },
+   {
+    "year": 2025,
+    "citations_received": 10354,
+    "from_last_5y_work": 2532,
+    "from_last_10y_work": 5351
+   },
+   {
+    "year": 2026,
+    "citations_received": 4815,
+    "from_last_5y_work": 1021,
+    "from_last_10y_work": 2515
+   }
+  ],
+  "vintage_windows": [
+   5,
+   10
+  ]
+ }
+}

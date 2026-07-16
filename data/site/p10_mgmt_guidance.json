@@ -1,0 +1,54 @@
+{
+ "metadata": {
+  "pipeline": "p10_nowcast",
+  "output": "mgmt_guidance",
+  "generated_at": "2026-07-16T19:42:30Z",
+  "status": "ok",
+  "status_reason": null,
+  "sources": [
+   {
+    "name": "Exponent 8-K earnings release, filed 2026-04-30 (accession 0001171843-26-002896)",
+    "url": "https://www.sec.gov/Archives/edgar/data/851520/000117184326002896/0001171843-26-002896-index.htm",
+    "fetched_at": "2026-07-16T19:42:30Z",
+    "records_matched": 2
+   }
+  ],
+  "coverage": {
+   "start": "2026-04-30",
+   "end": "2026-04-30"
+  },
+  "caveats": [
+   "VERBATIM from Exponent's own earnings release - lifted whole, not summarised, scored or interpreted. Click through and read the original.",
+   "This is NOT an input to the nowcast. The model uses three quantitative signals and is deliberately blind to management commentary; guidance is shown beside it as an independent second opinion.",
+   "Management guides REVENUE growth and EBITDA margin - not utilization directly. Since revenue is roughly headcount x utilization x rate, their revenue guide implies a utilization path only in combination with the headcount and rate data on this page.",
+   "Guidance is an interested party's forecast: companies guide conservatively and revise. It is evidence, not truth."
+  ],
+  "methodology_id": "p10_mgmt_guidance"
+ },
+ "data": {
+  "filed": "2026-04-30",
+  "accession": "0001171843-26-002896",
+  "url": "https://www.sec.gov/Archives/edgar/data/851520/000117184326002896/0001171843-26-002896-index.htm",
+  "guidance": [
+   {
+    "period": "second quarter of fiscal 2026",
+    "quarter": "2026-Q2",
+    "statements": [
+     "Revenues before reimbursements to grow in the high-single digits",
+     "EBITDA to be 27.0% to 27.8% of revenues before reimbursements"
+    ],
+    "verbatim": "Revenues before reimbursements to grow in the high-single digits; and, EBITDA to be 27.0% to 27.8% of revenues before reimbursements."
+   },
+   {
+    "period": "full fiscal year 2026",
+    "quarter": "FY2026",
+    "statements": [
+     "Revenues before reimbursements to grow in the high-single digits",
+     "EBITDA to be 27.6% to 28.1% of revenues before reimbursements"
+    ],
+    "verbatim": "Revenues before reimbursements to grow in the high-single digits; and, EBITDA to be 27.6% to 28.1% of revenues before reimbursements."
+   }
+  ],
+  "quote": "“Exponent delivered a strong first quarter, with 5% year-over-year headcount growth, 76% utilization, and strong rate realization driving growth,”"
+ }
+}

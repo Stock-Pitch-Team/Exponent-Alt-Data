@@ -11,6 +11,9 @@ BASE = "https://api.openalex.org"
 WORKS_SELECT = ",".join([
     "id", "display_name", "publication_year", "publication_date",
     "cited_by_count", "authorships", "primary_topic", "type",
+    # per-calendar-year citations RECEIVED, so we can measure how much the corpus
+    # is being used NOW rather than how much each vintage eventually accumulated
+    "counts_by_year",
 ])
 
 

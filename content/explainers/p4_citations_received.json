@@ -1,0 +1,13 @@
+{
+  "title": "Citations received: is Exponent's science still being used?",
+  "what": "Every time any researcher anywhere cites a paper written by Exponent staff, that is one scientist treating Exponent's work as worth building on. This chart counts those citations by the calendar year they happened - so the 2025 bar means 'in 2025, Exponent's body of work was cited this many times', whether the paper cited was published last year or in 1987.",
+  "how": "OpenAlex, an open index of the scientific literature, records for every paper how many citations it received in each year. We fetched all 4,947 papers affiliated with Exponent (including its Failure Analysis Associates era) and added up those per-year counts across the whole corpus. The second line isolates citations earned by papers published within the previous five years, which separates an old back catalogue coasting on reputation from current work that is landing.",
+  "thesis": "The publications-per-year chart above appears to decline recently, and a sceptic will read that as a fading moat. This chart is the check on that reading - and it holds up: Exponent's science is cited roughly 11,000 times a year and has been for half a decade, meaning the credential engine that underwrites its expert-witness pricing power is still running. If this line were falling, the moat argument would be in trouble; it isn't.",
+  "caveats": [
+    "This is deliberately NOT 'citations to papers published that year'. That version punishes recent papers for not having existed long enough to be cited, and would show a fake collapse in the newest years - the exact artefact this chart exists to avoid.",
+    "The chart starts in 2012 only because OpenAlex publishes per-year citation counts for a rolling recent window. It is not a claim that Exponent's work went uncited before then - papers of every vintage, back to 1967, feed these totals.",
+    "The current year is partial: it counts citations logged so far, not twelve months. It will always look low until the year ends.",
+    "OpenAlex is still indexing recent literature, so the last year or two drift upward over time.",
+    "Citations measure scientific influence, not revenue. Exponent's confidential consulting work produces no papers at all, so this tracks the moat, not the business."
+  ]
+}

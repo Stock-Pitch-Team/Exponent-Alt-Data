@@ -114,6 +114,24 @@
       });
     }
 
+    /* The bear case deserves a tile of its own, not a footnote. */
+    var ai = data("p11_ai_exposure");
+    if (ai && ai.years && ai.years.length >= 2) {
+      var latest = ai.years[ai.years.length - 1];
+      var prevYr = ai.years[ai.years.length - 2];
+      var anch = ai.testimony_anchor;
+      U.tile("tiles", {
+        label: "AI-substitution risk (FY" + latest.fiscal_year + " 10-K)",
+        value: latest.has_ai_demand_risk_factor ? "Newly flagged" : "Not flagged",
+        delta: latest.ai_mentions + " AI mentions vs " + prevYr.ai_mentions + " a year earlier",
+        /* management newly disclosing a demand risk cuts against the thesis */
+        dir: latest.has_ai_demand_risk_factor && !prevYr.has_ai_demand_risk_factor ? "down" : "flat",
+        note: "Exponent added a risk factor saying AI may reduce demand — new this year, and a real change to the story. Its own scoping puts the exposure on 'more standardized' offerings" +
+              (anch ? "; testimony work needs a human under Rule 702." : "."),
+        href: "#sec-p11"
+      });
+    }
+
     var p2 = data("p2_litigation_timeseries");
     if (p2 && p2.series) {
       // federal case files are the meaningful volume series; the newest ~2 years

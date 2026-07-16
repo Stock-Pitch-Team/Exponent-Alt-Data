@@ -16,20 +16,31 @@ log = logging.getLogger(__name__)
 DOL_DIR = settings.RAW_DIR / "dol"
 CACHE_DIR = settings.INTERIM_DIR / "dol_filtered"
 
+
+class UnknownSchema(Exception):
+    """A workbook's header row has no recognisable employer column."""
+
 _EMPLOYER_RE = re.compile(r"\bEXPONENT\b", re.IGNORECASE)
-# columns we keep, matched loosely against header names
+# Columns we keep, matched loosely against header names. DOL rewrote the PERM
+# schema at FY2025-Q3 (EMPLOYER_NAME -> EMP_BUSINESS_NAME, PW_* -> PWD_*,
+# JOB_INFO_WORK_* -> PRIMARY_WORKSITE_*); both generations are listed here.
 _WANTED = {
-    "employer": ("EMPLOYER_NAME",),
+    "employer": ("EMPLOYER_NAME", "EMP_BUSINESS_NAME"),
     "status": ("CASE_STATUS",),
     "received": ("RECEIVED_DATE", "CASE_RECEIVED_DATE"),
     "decision": ("DECISION_DATE",),
     "title": ("JOB_TITLE",),
-    "soc_title": ("SOC_TITLE", "PW_SOC_TITLE"),
-    "city": ("WORKSITE_CITY", "WORKSITE_CITY_1", "PW_WORKSITE_CITY", "JOB_INFO_WORK_CITY"),
-    "state": ("WORKSITE_STATE", "WORKSITE_STATE_1", "PW_WORKSITE_STATE", "JOB_INFO_WORK_STATE"),
-    "wage": ("WAGE_RATE_OF_PAY_FROM", "WAGE_RATE_OF_PAY_FROM_1", "PW_AMOUNT_9089", "WAGE_OFFER_FROM_9089", "WAGE_OFFERED_FROM_9089"),
+    "soc_title": ("SOC_TITLE", "PW_SOC_TITLE", "PWD_SOC_TITLE"),
+    "soc_code": ("SOC_CODE", "PW_SOC_CODE", "PWD_SOC_CODE"),
+    "city": ("WORKSITE_CITY", "WORKSITE_CITY_1", "PW_WORKSITE_CITY", "JOB_INFO_WORK_CITY",
+             "PRIMARY_WORKSITE_CITY"),
+    "state": ("WORKSITE_STATE", "WORKSITE_STATE_1", "PW_WORKSITE_STATE", "JOB_INFO_WORK_STATE",
+              "PRIMARY_WORKSITE_STATE"),
+    "wage": ("WAGE_RATE_OF_PAY_FROM", "WAGE_RATE_OF_PAY_FROM_1", "PW_AMOUNT_9089",
+             "WAGE_OFFER_FROM_9089", "WAGE_OFFERED_FROM_9089", "JOB_OPP_WAGE_FROM"),
     "wage_level": ("PW_WAGE_LEVEL", "PW_WAGE_LEVEL_1", "PW_SKILL_LEVEL", "PW_LEVEL_9089"),
-    "employment_start": ("BEGIN_DATE", "EMPLOYMENT_START_DATE", "JOB_INFO_START_DATE"),
+    "employment_start": ("BEGIN_DATE", "EMPLOYMENT_START_DATE", "JOB_INFO_START_DATE",
+                         "RECR_INFO_JOB_START_DATE"),
 }
 
 
@@ -57,9 +68,13 @@ def filter_file(path) -> list[dict]:
     header = next(rows_iter)
     idx = _header_map(header)
     if "employer" not in idx:
-        log.warning("%s: no EMPLOYER_NAME column found", path.name)
+        # Never cache/return [] here: an unrecognised schema is a BUG, and a silent
+        # empty list is indistinguishable from "Exponent filed nothing this quarter".
+        # DOL rewrote the PERM schema at FY2025-Q3 and this path hid four files.
         wb.close()
-        return []
+        raise UnknownSchema(
+            f"{path.name}: no employer column among {_WANTED['employer']}; "
+            f"headers start with {[str(c) for c in header[:8]]}")
     out, scanned = [], 0
     for row in rows_iter:
         scanned += 1

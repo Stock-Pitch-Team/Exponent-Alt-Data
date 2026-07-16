@@ -2,16 +2,16 @@
  "metadata": {
   "pipeline": "p9_hiring",
   "output": "hiring",
-  "generated_at": "2026-07-12T02:42:48Z",
+  "generated_at": "2026-07-16T19:28:59Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "US Dept. of Labor LCA (H-1B) + PERM disclosure files, FY2024-FY2026",
     "url": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
-    "fetched_at": "2026-07-12T02:42:48Z",
-    "records_scanned": 37,
-    "records_matched": 33
+    "fetched_at": "2026-07-16T19:28:59Z",
+    "records_scanned": 40,
+    "records_matched": 36
    }
   ],
   "coverage": {
@@ -21,7 +21,8 @@
   "caveats": [
    "Covers only roles where Exponent sponsored a foreign national (H-1B LCA) or a green card (PERM) - a SLICE of total hiring, but a high-signal one for a PhD-heavy firm and 100% public/legal.",
    "An LCA filing is hiring INTENT (and includes renewals/transfers); a PERM filing signals a long-term retention commitment to an existing scientist.",
-   "Filed quarterly by DOL with a reporting lag; the newest quarter is incomplete.",
+   "WHY THE CHART STOPS AT 2025-Q3: DOL publishes these files ~1-2 quarters in arrears, and the newest one it has released is PERM_Disclosure_Data_FY2026_Q2.xlsx (checked 2026-07-16); later files return HTTP 404 because they do not exist yet. The last bar is therefore incomplete, not a decline.",
+   "Bars are placed by the date DOL RECEIVED the filing, not the decision date - PERM decisions can lag receipt by over a year, so a filing that appears in a FY2026 file may belong to a 2024 bar.",
    "Job titles are as written on the filings."
   ],
   "methodology_id": "p9_hiring"
@@ -67,8 +68,8 @@
    {
     "quarter": "2024-Q4",
     "lca": 3,
-    "perm": 0,
-    "certified": 2
+    "perm": 3,
+    "certified": 5
    },
    {
     "quarter": "2025-Q1",
@@ -99,15 +100,15 @@
     "count": 8
    },
    {
+    "title": "Senior Associate, Construction Consulting",
+    "count": 4
+   },
+   {
     "title": "Senior Scientist",
     "count": 3
    },
    {
     "title": "Manager, Construction Consulting",
-    "count": 3
-   },
-   {
-    "title": "Senior Associate, Construction Consulting",
     "count": 3
    },
    {
@@ -120,6 +121,14 @@
    },
    {
     "title": "Scientist",
+    "count": 1
+   },
+   {
+    "title": "Senior Engineer, Building And Structures",
+    "count": 1
+   },
+   {
+    "title": "Engineer, Buildings & Structures",
     "count": 1
    }
   ],
@@ -263,6 +272,36 @@
     "state": "MA",
     "wage": "140000",
     "wage_level": "II"
+   },
+   {
+    "program": "PERM",
+    "received": "2024-10-16 00:00:00",
+    "status": "Certified",
+    "title": "Senior Associate, Construction Consulting",
+    "city": "Oakland",
+    "state": "CA",
+    "wage": "105000",
+    "wage_level": null
+   },
+   {
+    "program": "PERM",
+    "received": "2024-10-15 00:00:00",
+    "status": "Certified",
+    "title": "Senior Engineer, Building and Structures",
+    "city": "Menlo Park",
+    "state": "CA",
+    "wage": "125000",
+    "wage_level": null
+   },
+   {
+    "program": "PERM",
+    "received": "2024-10-02 00:00:00",
+    "status": "Certified",
+    "title": "Engineer, Buildings & Structures",
+    "city": "New York",
+    "state": "NY",
+    "wage": "117666",
+    "wage_level": null
    },
    {
     "program": "LCA",

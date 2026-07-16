@@ -47,6 +47,33 @@ def run(step=None, use_cache=True):
         {"series": series, "total_works": len(works)},
     )
 
+    # --- citations RECEIVED per calendar year (live relevance, not vintage) ---
+    cites = graph.citations_received_by_year(works)
+    cseries = cites["series"]
+    this_year = datetime.now(timezone.utc).year
+    jsonio.write_site_json(
+        "p4_citations_received.json",
+        provenance.envelope(
+            pipeline="p4_moat", output="citations_received", status="ok",
+            sources=[provenance.source(
+                "OpenAlex per-year citation counts (counts_by_year) across all Exponent-affiliated works",
+                OPENALEX_URL, fetched_at=fetched_at,
+                records_scanned=len(works),
+                records_matched=sum(1 for w in works if w.get("counts_by_year")))],
+            coverage={"start": str(cseries[0]["year"]), "end": str(cseries[-1]["year"])}
+            if cseries else None,
+            caveats=[
+                "This counts citations RECEIVED in each calendar year by Exponent's entire body of work - the question 'how much is Exponent's science being used right now', which is different from the publication-count chart above.",
+                "It is deliberately NOT citations-by-publication-year. That version punishes recent papers for not having existed long enough to be cited, and would show a fake collapse in the newest years.",
+                f"The series starts in {cseries[0]['year'] if cseries else 'n/a'} because OpenAlex only publishes per-year citation counts for a rolling recent window - it is not a claim that nobody cited Exponent before then. Papers of every vintage, back to 1967, contribute to these bars.",
+                f"{this_year} is a partial year - it counts citations logged so far, not a full twelve months. Read it as incomplete, never as a drop.",
+                "OpenAlex's citation graph is itself still indexing recent literature, so the last 1-2 years drift upward after publication.",
+                "The 'recent work' lines isolate citations earned by papers published within the last 5 and 10 years, separating a coasting back catalogue from current output that is landing.",
+            ],
+            methodology_id="p4_citations_received"),
+        cites,
+    )
+
     # --- corporate collaboration graph ---
     per_company, per_work = graph.corporate_partners(works)
     companies = sorted(per_company.values(), key=lambda c: -c["works"])

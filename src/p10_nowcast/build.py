@@ -13,6 +13,7 @@ import logging
 from datetime import datetime, timezone
 
 from src.common import jsonio, provenance, quarters
+from src.p10_nowcast import guidance
 
 log = logging.getLogger(__name__)
 
@@ -72,6 +73,30 @@ def _load_inputs():
     reactive = {r["quarter"]: r["index"] for r in p3["data"]["blended_index"]
                 if r["index"] is not None}
     return util, reactive
+
+
+def _seasonal_step(util, target_q, back=8):
+    """Typical print-to-print step into target_q's calendar quarter, historically.
+
+    The model works in YoY terms, so its call is anchored to the YEAR-AGO print.
+    Readers instead compare it to the LAST print and misread a normal seasonal
+    step as a forecast crash (76% Q1 -> ~72% Q2 is what Exponent does most years).
+    This quantifies that step from Exponent's own history so the card can say so.
+    """
+    n = int(target_q.split("-Q")[1])
+    steps = []
+    for q in sorted(util, key=quarters.sort_key):
+        if int(q.split("-Q")[1]) != n or q == target_q:
+            continue
+        prev = _prev_quarter(q)
+        if prev in util and util[q].get("utilization") and util[prev].get("utilization"):
+            steps.append(util[q]["utilization"] - util[prev]["utilization"])
+    steps = steps[-back:]
+    if not steps:
+        return None
+    return {"quarters_used": len(steps),
+            "avg_step_pts": round(sum(steps) / len(steps), 1),
+            "min_step_pts": min(steps), "max_step_pts": max(steps)}
 
 
 def _features(q, util, reactive):
@@ -150,6 +175,13 @@ def run(step=None, use_cache=True):
             "inputs": {"utilization_yoy_pts": round(x_live[1], 1),
                        "reactive_index_yoy": round(x_live[2] * 10, 1),
                        "fte_yoy_pct": round(x_live[3], 1)},
+            # The call is a YoY statement; readers anchor on the last print instead.
+            # Ship both anchors so the card can't be misread as a predicted crash.
+            "last_printed_quarter": latest_q,
+            "last_printed_utilization": util[latest_q].get("utilization"),
+            "band_low": round(base + pred - mae, 1) if base is not None and mae else None,
+            "band_high": round(base + pred + mae, 1) if base is not None and mae else None,
+            "seasonal_step": _seasonal_step(util, target_q),
         }
 
     model_hit_rate = round(model_hits / evaluated, 2) if evaluated else None
@@ -174,6 +206,8 @@ def run(step=None, use_cache=True):
                    "The model does NOT beat naive persistence on this window - the honest conclusion is that utilization is highly persistent, which itself supports the 'sustained peaks' argument."),
                 "Every prediction was made using only information available before the predicted quarter (walk-forward); the live call uses the same recipe.",
                 "The mean absolute error band is shown with the call; a print inside the band is consistent with the model, not proof of it.",
+                "READ THE CALL AGAINST THE YEAR-AGO QUARTER, NOT THE LAST ONE. The model predicts the year-over-year CHANGE, because utilization is seasonal: Exponent's Q2 normally prints below its Q1. A call of 'flat' means flat versus the same quarter last year.",
+                "The model is deliberately blind to management's own guidance, which is shown beside it as an independent second opinion rather than folded in as a fourth input - with 41 out-of-sample quarters, another parameter would buy overfitting, not accuracy.",
             ],
             methodology_id="p10_nowcast"),
         {"backtest": rows, "evaluated": evaluated,
@@ -188,3 +222,6 @@ def run(step=None, use_cache=True):
     )
     log.info("P10: %d OOS quarters | model hit %s vs naive %s | live call: %s",
              evaluated, model_hit_rate, naive_hit_rate, live)
+
+    # Management's own guidance for the same quarter - a cross-check, never a feature.
+    guidance.run(step=step, use_cache=use_cache)

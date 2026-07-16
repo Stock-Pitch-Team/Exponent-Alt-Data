@@ -2,16 +2,16 @@
  "metadata": {
   "pipeline": "p4_moat",
   "output": "partners_rolling",
-  "generated_at": "2026-07-09T01:07:51Z",
+  "generated_at": "2026-07-16T19:44:38Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "OpenAlex co-author institutions (type=company)",
     "url": "https://api.openalex.org/works?filter=authorships.institutions.id:I13383945",
-    "fetched_at": "2026-07-09T01:07:51Z",
-    "records_scanned": 4946,
-    "records_matched": 1120
+    "fetched_at": "2026-07-16T19:44:38Z",
+    "records_scanned": 4947,
+    "records_matched": 1121
    }
   ],
   "coverage": {
@@ -881,18 +881,18 @@
    },
    {
     "year": 1999,
-    "unique_partners": 23,
-    "coauthored_works": 29
+    "unique_partners": 24,
+    "coauthored_works": 30
    },
    {
     "year": 2000,
-    "unique_partners": 23,
-    "coauthored_works": 39
+    "unique_partners": 24,
+    "coauthored_works": 40
    },
    {
     "year": 2001,
-    "unique_partners": 41,
-    "coauthored_works": 50
+    "unique_partners": 42,
+    "coauthored_works": 51
    },
    {
     "year": 2002,
@@ -906,18 +906,18 @@
    },
    {
     "year": 2004,
-    "unique_partners": 82,
-    "coauthored_works": 74
+    "unique_partners": 83,
+    "coauthored_works": 75
    },
    {
     "year": 2005,
-    "unique_partners": 77,
-    "coauthored_works": 64
+    "unique_partners": 78,
+    "coauthored_works": 65
    },
    {
     "year": 2006,
-    "unique_partners": 80,
-    "coauthored_works": 88
+    "unique_partners": 81,
+    "coauthored_works": 89
    },
    {
     "year": 2007,
@@ -951,73 +951,73 @@
    },
    {
     "year": 2013,
-    "unique_partners": 142,
-    "coauthored_works": 143
+    "unique_partners": 141,
+    "coauthored_works": 142
    },
    {
     "year": 2014,
-    "unique_partners": 149,
-    "coauthored_works": 145
+    "unique_partners": 148,
+    "coauthored_works": 144
    },
    {
     "year": 2015,
     "unique_partners": 167,
-    "coauthored_works": 153
+    "coauthored_works": 152
    },
    {
     "year": 2016,
-    "unique_partners": 180,
+    "unique_partners": 181,
     "coauthored_works": 168
    },
    {
     "year": 2017,
-    "unique_partners": 165,
+    "unique_partners": 166,
     "coauthored_works": 156
    },
    {
     "year": 2018,
-    "unique_partners": 149,
-    "coauthored_works": 134
+    "unique_partners": 150,
+    "coauthored_works": 135
    },
    {
     "year": 2019,
-    "unique_partners": 141,
-    "coauthored_works": 124
+    "unique_partners": 143,
+    "coauthored_works": 126
    },
    {
     "year": 2020,
-    "unique_partners": 163,
-    "coauthored_works": 150
+    "unique_partners": 161,
+    "coauthored_works": 149
    },
    {
     "year": 2021,
-    "unique_partners": 170,
-    "coauthored_works": 171
+    "unique_partners": 168,
+    "coauthored_works": 165
    },
    {
     "year": 2022,
-    "unique_partners": 154,
-    "coauthored_works": 163
+    "unique_partners": 152,
+    "coauthored_works": 155
    },
    {
     "year": 2023,
-    "unique_partners": 158,
-    "coauthored_works": 146
+    "unique_partners": 156,
+    "coauthored_works": 141
    },
    {
     "year": 2024,
-    "unique_partners": 146,
+    "unique_partners": 144,
     "coauthored_works": 127
    },
    {
     "year": 2025,
-    "unique_partners": 189,
-    "coauthored_works": 138
+    "unique_partners": 191,
+    "coauthored_works": 140
    },
    {
     "year": 2026,
-    "unique_partners": 166,
-    "coauthored_works": 123
+    "unique_partners": 171,
+    "coauthored_works": 129
    }
   ]
  }

@@ -25,6 +25,7 @@ EXPECTED_EXPLAINERS = [
     "p7_utilization", "p7_realized_rate",
     "p8_pubs", "p8_financials", "p8_courts",
     "p9_hiring", "p6_rnd_guidance", "p10_nowcast",
+    "p4_citations_received", "p11_ai_exposure",
 ]
 
 

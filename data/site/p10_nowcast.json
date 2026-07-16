@@ -2,14 +2,14 @@
  "metadata": {
   "pipeline": "p10_nowcast",
   "output": "nowcast",
-  "generated_at": "2026-07-12T02:26:26Z",
+  "generated_at": "2026-07-16T19:42:30Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "Fusion of company-stated utilization/FTE (P7) + Reactive Demand Index (P3)",
     "url": "derived",
-    "fetched_at": "2026-07-12T02:26:26Z",
+    "fetched_at": "2026-07-16T19:42:30Z",
     "records_matched": 41,
     "note": "walk-forward OLS, 3 features, refit each quarter on prior data only"
    }
@@ -22,7 +22,9 @@
    "EXPERIMENTAL. 41 out-of-sample quarterly predictions is a small sample - read the direction and the error band, not the decimals.",
    "Out-of-sample directional hit rate: model 0.68, naive persistence 0.73. The model does NOT beat naive persistence on this window - the honest conclusion is that utilization is highly persistent, which itself supports the 'sustained peaks' argument.",
    "Every prediction was made using only information available before the predicted quarter (walk-forward); the live call uses the same recipe.",
-   "The mean absolute error band is shown with the call; a print inside the band is consistent with the model, not proof of it."
+   "The mean absolute error band is shown with the call; a print inside the band is consistent with the model, not proof of it.",
+   "READ THE CALL AGAINST THE YEAR-AGO QUARTER, NOT THE LAST ONE. The model predicts the year-over-year CHANGE, because utilization is seasonal: Exponent's Q2 normally prints below its Q1. A call of 'flat' means flat versus the same quarter last year.",
+   "The model is deliberately blind to management's own guidance, which is shown beside it as an independent second opinion rather than folded in as a fourth input - with 41 out-of-sample quarters, another parameter would buy overfitting, not accuracy."
   ],
   "methodology_id": "p10_nowcast"
  },
@@ -297,6 +299,16 @@
     "utilization_yoy_pts": 0.0,
     "reactive_index_yoy": 11.8,
     "fte_yoy_pct": 4.9
+   },
+   "last_printed_quarter": "2026-Q1",
+   "last_printed_utilization": 76.0,
+   "band_low": 68.5,
+   "band_high": 75.3,
+   "seasonal_step": {
+    "quarters_used": 8,
+    "avg_step_pts": -0.9,
+    "min_step_pts": -7.0,
+    "max_step_pts": 4.0
    }
   }
  }

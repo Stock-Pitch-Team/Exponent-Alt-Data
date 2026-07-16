@@ -17,6 +17,42 @@ def publications_by_year(works: list[dict]) -> list[dict]:
     return [{"year": y, **per_year[y]} for y in sorted(per_year)]
 
 
+def citations_received_by_year(works: list[dict], vintage_years=(5, 10)) -> dict:
+    """Citations RECEIVED per calendar year, across the whole corpus.
+
+    publications_by_year() credits citations to the year a paper was PUBLISHED,
+    which makes recent years look like a collapse purely because new papers have
+    not had time to be cited - a recency artefact, not a decline in relevance.
+    This instead asks: in calendar year Y, how often was Exponent's science cited
+    by anyone? That is the live relevance measure.
+
+    Also splits out citations earned by RECENT work (papers published within the
+    last N years as of each citing year), which separates "the back catalogue is
+    coasting" from "current output is landing".
+    """
+    total = defaultdict(int)
+    recent = {n: defaultdict(int) for n in vintage_years}
+    for w in works:
+        pub = w.get("publication_year")
+        for row in w.get("counts_by_year") or []:
+            year, cites = row.get("year"), row.get("cited_by_count") or 0
+            if not year:
+                continue
+            total[year] += cites
+            if pub is None:
+                continue
+            for n in vintage_years:
+                if 0 <= year - pub < n:
+                    recent[n][year] += cites
+    years = sorted(total)
+    return {
+        "series": [{"year": y, "citations_received": total[y],
+                    **{f"from_last_{n}y_work": recent[n].get(y, 0) for n in vintage_years}}
+                   for y in years],
+        "vintage_windows": list(vintage_years),
+    }
+
+
 def corporate_partners(works: list[dict]):
     """Company co-author institutions per work.
 

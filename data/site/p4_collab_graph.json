@@ -2,16 +2,16 @@
  "metadata": {
   "pipeline": "p4_moat",
   "output": "collab_graph",
-  "generated_at": "2026-07-09T01:07:51Z",
+  "generated_at": "2026-07-16T19:44:38Z",
   "status": "ok",
   "status_reason": null,
   "sources": [
    {
     "name": "OpenAlex co-author institutions (type=company)",
     "url": "https://api.openalex.org/works?filter=authorships.institutions.id:I13383945",
-    "fetched_at": "2026-07-09T01:07:51Z",
-    "records_scanned": 4946,
-    "records_matched": 1120
+    "fetched_at": "2026-07-16T19:44:38Z",
+    "records_scanned": 4947,
+    "records_matched": 1121
    }
   ],
   "coverage": {
@@ -32,7 +32,7 @@
    {
     "id": "exponent",
     "name": "Exponent, Inc.",
-    "works": 4946,
+    "works": 4947,
     "is_exponent": true
    },
    {
@@ -51,9 +51,9 @@
    {
     "id": "https://openalex.org/I4210133143",
     "name": "Dow Chemical (United States)",
-    "works": 49,
+    "works": 50,
     "first_year": 2002,
-    "last_year": 2025,
+    "last_year": 2026,
     "top_topics": [
      "Carcinogens and Genotoxicity Assessment",
      "Effects and risks of endocrine disrupting chemicals",
@@ -226,7 +226,7 @@
     "top_topics": [
      "Carcinogens and Genotoxicity Assessment",
      "Thyroid Disorders and Treatments",
-     "Immunotoxicology and immune responses"
+     "Hemoglobin structure and function"
     ],
     "is_exponent": false
    },
@@ -283,6 +283,19 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210137183",
+    "name": "Exponents (United States)",
+    "works": 11,
+    "first_year": 2001,
+    "last_year": 2024,
+    "top_topics": [
+     "Seismic Performance and Analysis",
+     "Carcinogens and Genotoxicity Assessment",
+     "Dermatology and Skin Diseases"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I150569930",
     "name": "Bayer (United States)",
     "works": 11,
@@ -292,6 +305,19 @@
      "Immunotoxicology and immune responses",
      "Academic integrity and plagiarism",
      "Effects and risks of endocrine disrupting chemicals"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210126295",
+    "name": "Charles River Laboratories (United States)",
+    "works": 11,
+    "first_year": 2001,
+    "last_year": 2026,
+    "top_topics": [
+     "Carcinogens and Genotoxicity Assessment",
+     "Immunotoxicology and immune responses",
+     "Thyroid Disorders and Treatments"
     ],
     "is_exponent": false
    },
@@ -335,19 +361,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210137183",
-    "name": "Exponents (United States)",
-    "works": 10,
-    "first_year": 2001,
-    "last_year": 2020,
-    "top_topics": [
-     "Seismic Performance and Analysis",
-     "Carcinogens and Genotoxicity Assessment",
-     "Dermatology and Skin Diseases"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I1295346377",
     "name": "Monsanto (United States)",
     "works": 10,
@@ -358,39 +371,6 @@
      "Fatty Acid Research and Health",
      "Computational Drug Discovery Methods"
     ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210126295",
-    "name": "Charles River Laboratories (United States)",
-    "works": 10,
-    "first_year": 2001,
-    "last_year": 2026,
-    "top_topics": [
-     "Carcinogens and Genotoxicity Assessment",
-     "Immunotoxicology and immune responses",
-     "Thyroid Disorders and Treatments"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I1332737386",
-    "name": "General Electric (United States)",
-    "works": 10,
-    "first_year": 2002,
-    "last_year": 2022,
-    "top_topics": [
-     "Power Systems Fault Detection"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210125361",
-    "name": "Walter de Gruyter (Germany)",
-    "works": 10,
-    "first_year": 2013,
-    "last_year": 2022,
-    "top_topics": [],
     "is_exponent": false
    },
    {
@@ -456,15 +436,6 @@
      "Birth, Development, and Health",
      "Carcinogens and Genotoxicity Assessment"
     ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210166246",
-    "name": "Translational Research Platform for Veterinary Biologicals (India)",
-    "works": 9,
-    "first_year": 2020,
-    "last_year": 2022,
-    "top_topics": [],
     "is_exponent": false
    },
    {
@@ -624,19 +595,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I50258018",
-    "name": "Origin Energy (Australia)",
-    "works": 7,
-    "first_year": 2001,
-    "last_year": 2024,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics",
-     "Transportation Safety and Impact Analysis",
-     "Mechanical Behavior of Composites"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210121594",
     "name": "Ferring Pharmaceuticals (United States)",
     "works": 7,
@@ -659,6 +617,19 @@
      "Carcinogens and Genotoxicity Assessment",
      "Nuclear Receptors and Signaling",
      "Genomics, phytochemicals, and oxidative stress"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I50258018",
+    "name": "Origin Energy (Australia)",
+    "works": 7,
+    "first_year": 2001,
+    "last_year": 2024,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics",
+     "Transportation Safety and Impact Analysis",
+     "Mechanical Behavior of Composites"
     ],
     "is_exponent": false
    },
@@ -761,8 +732,8 @@
     "last_year": 2021,
     "top_topics": [
      "Human-Automation Interaction and Safety",
-     "Virtual Reality Applications and Impacts",
-     "Electric Motor Design and Analysis"
+     "Electric Motor Design and Analysis",
+     "Infection Control in Healthcare"
     ],
     "is_exponent": false
    },
@@ -928,7 +899,7 @@
     "top_topics": [
      "Civil and Structural Engineering Research",
      "Orthopedic Infections and Treatments",
-     "Burn Injury Management and Outcomes"
+     "Advanced Manufacturing and Logistics Optimization"
     ],
     "is_exponent": false
    },
@@ -1047,6 +1018,19 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210086509",
+    "name": "Litron Laboratories (United States)",
+    "works": 4,
+    "first_year": 2016,
+    "last_year": 2026,
+    "top_topics": [
+     "Carcinogens and Genotoxicity Assessment",
+     "Genetically Modified Organisms Research",
+     "Single-cell and spatial transcriptomics"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I1340755506",
     "name": "3M (United States)",
     "works": 4,
@@ -1067,8 +1051,8 @@
     "last_year": 2025,
     "top_topics": [
      "Immunotoxicology and immune responses",
-     "Functional Brain Connectivity Studies",
-     "Folate and B Vitamins Research"
+     "Folate and B Vitamins Research",
+     "Functional Brain Connectivity Studies"
     ],
     "is_exponent": false
    },
@@ -1080,8 +1064,8 @@
     "last_year": 2006,
     "top_topics": [
      "Toxic Organic Pollutants Impact",
-     "Automotive and Human Injury Biomechanics",
-     "Fish Ecology and Management Studies"
+     "Fish Ecology and Management Studies",
+     "Automotive and Human Injury Biomechanics"
     ],
     "is_exponent": false
    },
@@ -1125,19 +1109,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I28304128",
-    "name": "Alcoa (United States)",
-    "works": 4,
-    "first_year": 1995,
-    "last_year": 2023,
-    "top_topics": [
-     "Toxic Organic Pollutants Impact",
-     "Shoulder Injury and Treatment",
-     "Fatigue and fracture mechanics"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210117619",
     "name": "Novartis (United States)",
     "works": 4,
@@ -1171,6 +1142,19 @@
      "Carcinogens and Genotoxicity Assessment",
      "Medication Adherence and Compliance",
      "Environmental Justice and Health Disparities"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I28304128",
+    "name": "Alcoa (United States)",
+    "works": 4,
+    "first_year": 1995,
+    "last_year": 2023,
+    "top_topics": [
+     "Toxic Organic Pollutants Impact",
+     "Shoulder Injury and Treatment",
+     "Fatigue and fracture mechanics"
     ],
     "is_exponent": false
    },
@@ -1397,19 +1381,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210086509",
-    "name": "Litron Laboratories (United States)",
-    "works": 3,
-    "first_year": 2016,
-    "last_year": 2026,
-    "top_topics": [
-     "Genetically Modified Organisms Research",
-     "Single-cell and spatial transcriptomics",
-     "Carcinogens and Genotoxicity Assessment"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210164117",
     "name": "Walker (United States)",
     "works": 3,
@@ -1418,19 +1389,6 @@
     "top_topics": [
      "Flame retardant materials and properties",
      "Advanced Battery Technologies Research"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210099511",
-    "name": "Covestro (United States)",
-    "works": 3,
-    "first_year": 2008,
-    "last_year": 2020,
-    "top_topics": [
-     "Reproductive biology and impacts on aquatic species",
-     "Urban Stormwater Management Solutions",
-     "Pesticide Exposure and Toxicity"
     ],
     "is_exponent": false
    },
@@ -1545,6 +1503,19 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210099511",
+    "name": "Covestro (United States)",
+    "works": 3,
+    "first_year": 2008,
+    "last_year": 2020,
+    "top_topics": [
+     "Reproductive biology and impacts on aquatic species",
+     "Urban Stormwater Management Solutions",
+     "Pesticide Exposure and Toxicity"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210150258",
     "name": "Eurofins (United States)",
     "works": 3,
@@ -1594,18 +1565,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210158342",
-    "name": "Intel (United Kingdom)",
-    "works": 3,
-    "first_year": 2020,
-    "last_year": 2022,
-    "top_topics": [
-     "Autonomous Vehicle Technology and Safety",
-     "Electrostatic Discharge in Electronics"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I165476936",
     "name": "Vale (Brazil)",
     "works": 3,
@@ -1636,8 +1595,8 @@
     "last_year": 2026,
     "top_topics": [
      "Infrastructure Resilience and Vulnerability Analysis",
-     "Electromagnetic Fields and Biological Effects",
-     "Construction Project Management and Performance"
+     "Construction Project Management and Performance",
+     "Electromagnetic Fields and Biological Effects"
     ],
     "is_exponent": false
    },
@@ -1716,19 +1675,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210097287",
-    "name": "Engineering Associates (United States)",
-    "works": 3,
-    "first_year": 2007,
-    "last_year": 2014,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics",
-     "Wood Treatment and Properties",
-     "Vehicle Dynamics and Control Systems"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210139992",
     "name": "MDS Associates (United States)",
     "works": 3,
@@ -1751,6 +1697,30 @@
      "Fault Detection and Control Systems",
      "Big Data and Business Intelligence",
      "Materials Engineering and Processing"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210086503",
+    "name": "ABB (Sweden)",
+    "works": 3,
+    "first_year": 2019,
+    "last_year": 2020,
+    "top_topics": [
+     "Real-time simulation and control systems"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210097287",
+    "name": "Engineering Associates (United States)",
+    "works": 3,
+    "first_year": 2007,
+    "last_year": 2014,
+    "top_topics": [
+     "Vehicle Dynamics and Control Systems",
+     "Automotive and Human Injury Biomechanics",
+     "Wood Treatment and Properties"
     ],
     "is_exponent": false
    },
@@ -1805,17 +1775,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210086503",
-    "name": "ABB (Sweden)",
-    "works": 3,
-    "first_year": 2019,
-    "last_year": 2020,
-    "top_topics": [
-     "Real-time simulation and control systems"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210157825",
     "name": "Veritas (United States)",
     "works": 3,
@@ -1824,6 +1783,18 @@
     "top_topics": [
      "Fish Ecology and Management Studies",
      "Risk Perception and Management"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210158342",
+    "name": "Intel (United Kingdom)",
+    "works": 3,
+    "first_year": 2020,
+    "last_year": 2022,
+    "top_topics": [
+     "Autonomous Vehicle Technology and Safety",
+     "Electrostatic Discharge in Electronics"
     ],
     "is_exponent": false
    },
@@ -1875,6 +1846,19 @@
     "top_topics": [
      "Model-Driven Software Engineering Techniques",
      "Environmental Toxicology and Ecotoxicology"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I1311688040",
+    "name": "Amazon (United States)",
+    "works": 3,
+    "first_year": 2024,
+    "last_year": 2026,
+    "top_topics": [
+     "Resilience and Mental Health",
+     "Electronic Packaging and Soldering Technologies",
+     "Lightning and Electromagnetic Phenomena"
     ],
     "is_exponent": false
    },
@@ -1945,18 +1929,6 @@
     "top_topics": [
      "Metamaterials and Metasurfaces Applications",
      "Advanced Battery Technologies Research"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I1290206253",
-    "name": "Microsoft (United States)",
-    "works": 2,
-    "first_year": 2010,
-    "last_year": 2014,
-    "top_topics": [
-     "Software Engineering Research",
-     "Data-Driven Disease Surveillance"
     ],
     "is_exponent": false
    },
@@ -2629,42 +2601,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210144946",
-    "name": "Applied Research Associates (United States)",
-    "works": 2,
-    "first_year": 2003,
-    "last_year": 2022,
-    "top_topics": [
-     "Oil Spill Detection and Mitigation",
-     "Mechanical Failure Analysis and Simulation"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I103084370",
-    "name": "Total (France)",
-    "works": 2,
-    "first_year": 2025,
-    "last_year": 2026,
-    "top_topics": [
-     "Thyroid Disorders and Treatments",
-     "Environmental Toxicology and Ecotoxicology"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210107206",
-    "name": "Biobyte Solutions (Germany)",
-    "works": 2,
-    "first_year": 2025,
-    "last_year": 2025,
-    "top_topics": [
-     "Thyroid Disorders and Treatments",
-     "Animal testing and alternatives"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I127558574",
     "name": "DSM (Netherlands)",
     "works": 2,
@@ -2712,17 +2648,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210160592",
-    "name": "Posit Science (United States)",
-    "works": 2,
-    "first_year": 2006,
-    "last_year": 2006,
-    "top_topics": [
-     "Visual perception and processing mechanisms"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210105238",
     "name": "Applied Science Associates (United States)",
     "works": 2,
@@ -2755,6 +2680,18 @@
     "top_topics": [
      "Carcinogens and Genotoxicity Assessment",
      "Mining and Resource Management"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210144946",
+    "name": "Applied Research Associates (United States)",
+    "works": 2,
+    "first_year": 2003,
+    "last_year": 2022,
+    "top_topics": [
+     "Oil Spill Detection and Mitigation",
+     "Mechanical Failure Analysis and Simulation"
     ],
     "is_exponent": false
    },
@@ -2806,6 +2743,30 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I103084370",
+    "name": "Total (France)",
+    "works": 2,
+    "first_year": 2025,
+    "last_year": 2026,
+    "top_topics": [
+     "Thyroid Disorders and Treatments",
+     "Environmental Toxicology and Ecotoxicology"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210107206",
+    "name": "Biobyte Solutions (Germany)",
+    "works": 2,
+    "first_year": 2025,
+    "last_year": 2025,
+    "top_topics": [
+     "Thyroid Disorders and Treatments",
+     "Animal testing and alternatives"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210140124",
     "name": "W. L. Gore & Associates (United States)",
     "works": 2,
@@ -2826,6 +2787,18 @@
     "top_topics": [
      "Monoclonal and Polyclonal Antibodies Research",
      "Computational Drug Discovery Methods"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210138378",
+    "name": "Dominion (United States)",
+    "works": 2,
+    "first_year": 2025,
+    "last_year": 2026,
+    "top_topics": [
+     "Hemoglobin structure and function",
+     "Carcinogens and Genotoxicity Assessment"
     ],
     "is_exponent": false
    },
@@ -2961,30 +2934,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210139705",
-    "name": "Ingegneria dei Sistemi (Italy)",
-    "works": 2,
-    "first_year": 2004,
-    "last_year": 2004,
-    "top_topics": [
-     "Groundwater and Isotope Geochemistry",
-     "Flood Risk Assessment and Management"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210101890",
-    "name": "ExxonMobil (Germany)",
-    "works": 2,
-    "first_year": 2009,
-    "last_year": 2022,
-    "top_topics": [
-     "Fluid Dynamics Simulations and Interactions",
-     "Wind and Air Flow Studies"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I57053284",
     "name": "Rockwell Automation (United States)",
     "works": 2,
@@ -3044,18 +2993,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210119367",
-    "name": "Trex (United States)",
-    "works": 2,
-    "first_year": 2001,
-    "last_year": 2001,
-    "top_topics": [
-     "Advanced Measurement and Detection Methods",
-     "Advanced Optical Sensing Technologies"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210150972",
     "name": "Musculoskeletal Clinical Regulatory Advisers (United States)",
     "works": 2,
@@ -3092,14 +3029,48 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210151482",
-    "name": "SCS Engineers (United States)",
+    "id": "https://openalex.org/I1290206253",
+    "name": "Microsoft (United States)",
     "works": 2,
-    "first_year": 2015,
-    "last_year": 2015,
+    "first_year": 2010,
+    "last_year": 2014,
     "top_topics": [
-     "Seismic Performance and Analysis",
-     "earthquake and tectonic studies"
+     "Software Engineering Research",
+     "Data-Driven Disease Surveillance"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210160592",
+    "name": "Posit Science (United States)",
+    "works": 2,
+    "first_year": 2006,
+    "last_year": 2006,
+    "top_topics": [
+     "Visual perception and processing mechanisms"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210111236",
+    "name": "International Wildlife Consultants (United Kingdom)",
+    "works": 2,
+    "first_year": 2019,
+    "last_year": 2020,
+    "top_topics": [
+     "Occupational and environmental lung diseases"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210119367",
+    "name": "Trex (United States)",
+    "works": 2,
+    "first_year": 2001,
+    "last_year": 2001,
+    "top_topics": [
+     "Advanced Optical Sensing Technologies",
+     "Advanced Measurement and Detection Methods"
     ],
     "is_exponent": false
    },
@@ -3111,6 +3082,42 @@
     "last_year": 2008,
     "top_topics": [
      "Nutritional Studies and Diet"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210139705",
+    "name": "Ingegneria dei Sistemi (Italy)",
+    "works": 2,
+    "first_year": 2004,
+    "last_year": 2004,
+    "top_topics": [
+     "Groundwater and Isotope Geochemistry",
+     "Flood Risk Assessment and Management"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210101890",
+    "name": "ExxonMobil (Germany)",
+    "works": 2,
+    "first_year": 2009,
+    "last_year": 2022,
+    "top_topics": [
+     "Fluid Dynamics Simulations and Interactions",
+     "Wind and Air Flow Studies"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210151482",
+    "name": "SCS Engineers (United States)",
+    "works": 2,
+    "first_year": 2015,
+    "last_year": 2015,
+    "top_topics": [
+     "Seismic Performance and Analysis",
+     "earthquake and tectonic studies"
     ],
     "is_exponent": false
    },
@@ -3234,18 +3241,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210136903",
-    "name": "Airbus (Germany)",
-    "works": 2,
-    "first_year": 2019,
-    "last_year": 2026,
-    "top_topics": [
-     "Wireless Power Transfer Systems",
-     "Aluminum Alloy Microstructure Properties"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I106618798",
     "name": "Beiersdorf (Germany)",
     "works": 2,
@@ -3281,18 +3276,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I1311688040",
-    "name": "Amazon (United States)",
-    "works": 2,
-    "first_year": 2024,
-    "last_year": 2024,
-    "top_topics": [
-     "Resilience and Mental Health",
-     "Electronic Packaging and Soldering Technologies"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210107938",
     "name": "Hitachi (Sweden)",
     "works": 2,
@@ -3323,18 +3306,6 @@
     "last_year": 2025,
     "top_topics": [
      "HVDC Systems and Fault Protection"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210138378",
-    "name": "Dominion (United States)",
-    "works": 2,
-    "first_year": 2025,
-    "last_year": 2026,
-    "top_topics": [
-     "Carcinogens and Genotoxicity Assessment",
-     "Hemoglobin structure and function"
     ],
     "is_exponent": false
    },
@@ -3643,17 +3614,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210093279",
-    "name": "Blue Canyon Technologies (United States)",
-    "works": 1,
-    "first_year": 2014,
-    "last_year": 2014,
-    "top_topics": [
-     "Arsenic contamination and mitigation"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210156316",
     "name": "Rocky Mountain Research (United States)",
     "works": 1,
@@ -3687,6 +3647,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210147562",
+    "name": "Leatherhead Food Research",
+    "works": 1,
+    "first_year": 2011,
+    "last_year": 2011,
+    "top_topics": [
+     "Orthopaedic implants and arthroplasty"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210133601",
     "name": "Fimlab (Finland)",
     "works": 1,
@@ -3705,17 +3676,6 @@
     "last_year": 2016,
     "top_topics": [
      "Mercury impact and mitigation studies"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210147562",
-    "name": "Leatherhead Food Research",
-    "works": 1,
-    "first_year": 2011,
-    "last_year": 2011,
-    "top_topics": [
-     "Orthopaedic implants and arthroplasty"
     ],
     "is_exponent": false
    },
@@ -3995,6 +3955,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210093279",
+    "name": "Blue Canyon Technologies (United States)",
+    "works": 1,
+    "first_year": 2014,
+    "last_year": 2014,
+    "top_topics": [
+     "Arsenic contamination and mitigation"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210125576",
     "name": "Lakes Environmental (Canada)",
     "works": 1,
@@ -4156,28 +4127,6 @@
     "last_year": 2012,
     "top_topics": [
      "Nutritional Studies and Diet"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I100301340",
-    "name": "Quanta Technology (United States)",
-    "works": 1,
-    "first_year": 2015,
-    "last_year": 2015,
-    "top_topics": [
-     "Power System Optimization and Stability"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I86725329",
-    "name": "Hitachi Global Storage Technologies (United States)",
-    "works": 1,
-    "first_year": 2015,
-    "last_year": 2015,
-    "top_topics": [
-     "Power System Optimization and Stability"
     ],
     "is_exponent": false
    },
@@ -4446,17 +4395,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I1293612202",
-    "name": "Toyota Motor Corporation (Switzerland)",
-    "works": 1,
-    "first_year": 2018,
-    "last_year": 2018,
-    "top_topics": [
-     "Advanced Neural Network Applications"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I95946053",
     "name": "Kobe Steel (Japan)",
     "works": 1,
@@ -4486,6 +4424,17 @@
     "last_year": 2014,
     "top_topics": [
      "Toxic Organic Pollutants Impact"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210104536",
+    "name": "ReproCELL (United Kingdom)",
+    "works": 1,
+    "first_year": 2019,
+    "last_year": 2019,
+    "top_topics": [
+     "Viral-associated cancers and disorders"
     ],
     "is_exponent": false
    },
@@ -4673,17 +4622,6 @@
     "last_year": 2024,
     "top_topics": [
      "Microplastics and Plastic Pollution"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210158890",
-    "name": "Immunotope (United States)",
-    "works": 1,
-    "first_year": 2010,
-    "last_year": 2010,
-    "top_topics": [
-     "Immunotoxicology and immune responses"
     ],
     "is_exponent": false
    },
@@ -4985,6 +4923,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210122706",
+    "name": "GexCon (Norway)",
+    "works": 1,
+    "first_year": 2009,
+    "last_year": 2009,
+    "top_topics": [
+     "Combustion and Detonation Processes"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210117962",
     "name": "Blade Diagnostics (United States)",
     "works": 1,
@@ -5029,17 +4978,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210122706",
-    "name": "GexCon (Norway)",
-    "works": 1,
-    "first_year": 2009,
-    "last_year": 2009,
-    "top_topics": [
-     "Combustion and Detonation Processes"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210154462",
     "name": "Alaska Biological Research (United States)",
     "works": 1,
@@ -5047,6 +4985,17 @@
     "last_year": 2007,
     "top_topics": [
      "Oil Spill Detection and Mitigation"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210150002",
+    "name": "Dow Chemical (China)",
+    "works": 1,
+    "first_year": 2019,
+    "last_year": 2019,
+    "top_topics": [
+     "Carcinogens and Genotoxicity Assessment"
     ],
     "is_exponent": false
    },
@@ -5069,28 +5018,6 @@
     "last_year": 2019,
     "top_topics": [
      "Indoor Air Quality and Microbial Exposure"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210150002",
-    "name": "Dow Chemical (China)",
-    "works": 1,
-    "first_year": 2019,
-    "last_year": 2019,
-    "top_topics": [
-     "Carcinogens and Genotoxicity Assessment"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210104536",
-    "name": "ReproCELL (United Kingdom)",
-    "works": 1,
-    "first_year": 2019,
-    "last_year": 2019,
-    "top_topics": [
-     "Viral-associated cancers and disorders"
     ],
     "is_exponent": false
    },
@@ -5348,6 +5275,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210158890",
+    "name": "Immunotope (United States)",
+    "works": 1,
+    "first_year": 2010,
+    "last_year": 2010,
+    "top_topics": [
+     "Immunotoxicology and immune responses"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I2801244959",
     "name": "Raytheon Technologies (Australia)",
     "works": 1,
@@ -5355,17 +5293,6 @@
     "last_year": 2016,
     "top_topics": [
      "Global Health Workforce Issues"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210104535",
-    "name": "Survice Engineering (United States)",
-    "works": 1,
-    "first_year": 2020,
-    "last_year": 2020,
-    "top_topics": [
-     "Risk and Safety Analysis"
     ],
     "is_exponent": false
    },
@@ -5447,17 +5374,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210139261",
-    "name": "Currax Pharmaceuticals (United States)",
-    "works": 1,
-    "first_year": 2022,
-    "last_year": 2022,
-    "top_topics": [
-     "Pharmacology and Obesity Treatment"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4387155329",
     "name": "Form Energy (United States)",
     "works": 1,
@@ -5502,17 +5418,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210166078",
-    "name": "Aisin (United States)",
-    "works": 1,
-    "first_year": 2023,
-    "last_year": 2023,
-    "top_topics": [
-     "Architecture, Design, and Social History"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210156517",
     "name": "Sandia Research (United States)",
     "works": 1,
@@ -5535,6 +5440,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I61822063",
+    "name": "ICF International (United States)",
+    "works": 1,
+    "first_year": 2025,
+    "last_year": 2025,
+    "top_topics": [
+     "Per- and polyfluoroalkyl substances research"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210128050",
     "name": "Watershed",
     "works": 1,
@@ -5542,17 +5458,6 @@
     "last_year": 2021,
     "top_topics": [
      "Hydrology and Sediment Transport Processes"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210130332",
-    "name": "Advanced Network and Services (United States)",
-    "works": 1,
-    "first_year": 2025,
-    "last_year": 2025,
-    "top_topics": [
-     "Data Quality and Management"
     ],
     "is_exponent": false
    },
@@ -5575,17 +5480,6 @@
     "last_year": 2026,
     "top_topics": [
      "Spine and Intervertebral Disc Pathology"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210107583",
-    "name": "Memtronics (United States)",
-    "works": 1,
-    "first_year": 2008,
-    "last_year": 2008,
-    "top_topics": [
-     "Advanced MEMS and NEMS Technologies"
     ],
     "is_exponent": false
    },
@@ -5645,28 +5539,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210132327",
-    "name": "Synaptic Research (United States)",
-    "works": 1,
-    "first_year": 2010,
-    "last_year": 2010,
-    "top_topics": [
-     "Target Tracking and Data Fusion in Sensor Networks"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210101277",
-    "name": "Glass Service (Czechia)",
-    "works": 1,
-    "first_year": 2007,
-    "last_year": 2007,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210110228",
     "name": "Probelte Pharma (Spain)",
     "works": 1,
@@ -5674,28 +5546,6 @@
     "last_year": 2015,
     "top_topics": [
      "Edible Oils Quality and Analysis"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210153176",
-    "name": "Renesas Electronics (Japan)",
-    "works": 1,
-    "first_year": 2009,
-    "last_year": 2009,
-    "top_topics": [
-     "Silicon Carbide Semiconductor Technologies"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I68384125",
-    "name": "Thomson Reuters (United States)",
-    "works": 1,
-    "first_year": 2008,
-    "last_year": 2008,
-    "top_topics": [
-     "Power Quality and Harmonics"
     ],
     "is_exponent": false
    },
@@ -5766,17 +5616,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I1325784139",
-    "name": "Yahoo (United Kingdom)",
-    "works": 1,
-    "first_year": 2013,
-    "last_year": 2013,
-    "top_topics": [
-     "Geophysical and Geoelectrical Methods"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210125521",
     "name": "Translational Therapeutics (United States)",
     "works": 1,
@@ -5784,28 +5623,6 @@
     "last_year": 2013,
     "top_topics": [
      "Nutritional Studies and Diet"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210100359",
-    "name": "Ford Motor Company (France)",
-    "works": 1,
-    "first_year": 2010,
-    "last_year": 2010,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210138163",
-    "name": "Novozymes (United States)",
-    "works": 1,
-    "first_year": 2017,
-    "last_year": 2017,
-    "top_topics": [
-     "Consumer Attitudes and Food Labeling"
     ],
     "is_exponent": false
    },
@@ -5854,6 +5671,28 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210139261",
+    "name": "Currax Pharmaceuticals (United States)",
+    "works": 1,
+    "first_year": 2022,
+    "last_year": 2022,
+    "top_topics": [
+     "Pharmacology and Obesity Treatment"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210098531",
+    "name": "Teledyne e2v (United Kingdom)",
+    "works": 1,
+    "first_year": 2019,
+    "last_year": 2019,
+    "top_topics": [
+     "Botanical Research and Chemistry"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210152483",
     "name": "Arysta LifeScience (France)",
     "works": 1,
@@ -5883,17 +5722,6 @@
     "last_year": 2021,
     "top_topics": [
      "Facial Rejuvenation and Surgery Techniques"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210105730",
-    "name": "Engineering Research & Analysis (United States)",
-    "works": 1,
-    "first_year": 2020,
-    "last_year": 2020,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics"
     ],
     "is_exponent": false
    },
@@ -6173,28 +6001,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210155701",
-    "name": "Geomechanica (Canada)",
-    "works": 1,
-    "first_year": 2021,
-    "last_year": 2021,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210165218",
-    "name": "GeoMechanics Technologies (United States)",
-    "works": 1,
-    "first_year": 2021,
-    "last_year": 2021,
-    "top_topics": [
-     "Automotive and Human Injury Biomechanics"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210157079",
     "name": "Klein Buendel (United States)",
     "works": 1,
@@ -6312,17 +6118,6 @@
     "last_year": 2020,
     "top_topics": [
      "Seismic Performance and Analysis"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I825935405",
-    "name": "Oceaneering International (United States)",
-    "works": 1,
-    "first_year": 2021,
-    "last_year": 2021,
-    "top_topics": [
-     "Oil Spill Detection and Mitigation"
     ],
     "is_exponent": false
    },
@@ -6503,39 +6298,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I154100212",
-    "name": "Schlumberger (British Virgin Islands)",
-    "works": 1,
-    "first_year": 2021,
-    "last_year": 2021,
-    "top_topics": [
-     "Tunneling and Rock Mechanics"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210143693",
-    "name": "TRC Companies (United States)",
-    "works": 1,
-    "first_year": 2022,
-    "last_year": 2022,
-    "top_topics": [
-     "Fire effects on ecosystems"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210110953",
-    "name": "Diamond Materials (United States)",
-    "works": 1,
-    "first_year": 2023,
-    "last_year": 2023,
-    "top_topics": [
-     "Mining and Resource Management"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I21409547",
     "name": "Ford Motor Company (Canada)",
     "works": 1,
@@ -6653,17 +6415,6 @@
     "last_year": 2025,
     "top_topics": [
      "Environmental Toxicology and Ecotoxicology"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210127469",
-    "name": "Yalong Hydro (China)",
-    "works": 1,
-    "first_year": 2025,
-    "last_year": 2025,
-    "top_topics": [
-     "Optical Wireless Communication Technologies"
     ],
     "is_exponent": false
    },
@@ -6877,17 +6628,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210134280",
-    "name": "SGF International (Germany)",
-    "works": 1,
-    "first_year": 2012,
-    "last_year": 2012,
-    "top_topics": [
-     "Vehicle Noise and Vibration Control"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I69816183",
     "name": "Atomic Energy (Canada)",
     "works": 1,
@@ -6917,17 +6657,6 @@
     "last_year": 2014,
     "top_topics": [
      "Blood transfusion and management"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210092993",
-    "name": "Simpson Strong-Tie (United States)",
-    "works": 1,
-    "first_year": 2015,
-    "last_year": 2015,
-    "top_topics": [
-     "Facilities and Workplace Management"
     ],
     "is_exponent": false
    },
@@ -7108,17 +6837,6 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210140578",
-    "name": "Gamma Therapeutics (United States)",
-    "works": 1,
-    "first_year": 2009,
-    "last_year": 2009,
-    "top_topics": [
-     "Fire dynamics and safety research"
-    ],
-    "is_exponent": false
-   },
-   {
     "id": "https://openalex.org/I4210116416",
     "name": "Gannett (United States)",
     "works": 1,
@@ -7130,68 +6848,13 @@
     "is_exponent": false
    },
    {
-    "id": "https://openalex.org/I4210155601",
-    "name": "Innovative Research (United States)",
+    "id": "https://openalex.org/I4210133584",
+    "name": "Clinical Research Consultants (United States)",
     "works": 1,
-    "first_year": 2000,
-    "last_year": 2000,
+    "first_year": 2015,
+    "last_year": 2015,
     "top_topics": [
-     "Construction Engineering and Safety"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I136150977",
-    "name": "TE Connectivity (Switzerland)",
-    "works": 1,
-    "first_year": 2014,
-    "last_year": 2014,
-    "top_topics": [
-     "Winter Sports Injuries and Performance"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210101722",
-    "name": "Engineering Data Management",
-    "works": 1,
-    "first_year": 2014,
-    "last_year": 2014,
-    "top_topics": [
-     "Winter Sports Injuries and Performance"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210156081",
-    "name": "Tech-X Corporation (United States)",
-    "works": 1,
-    "first_year": 2017,
-    "last_year": 2017,
-    "top_topics": [
-     "Laser-Plasma Interactions and Diagnostics"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I1316064682",
-    "name": "LinkedIn (United States)",
-    "works": 1,
-    "first_year": 2017,
-    "last_year": 2017,
-    "top_topics": [
-     "Laser-Plasma Interactions and Diagnostics"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210095672",
-    "name": "Polaris (United States)",
-    "works": 1,
-    "first_year": 2017,
-    "last_year": 2017,
-    "top_topics": [
-     "Oil Spill Detection and Mitigation"
+     "Risk and Safety Analysis"
     ],
     "is_exponent": false
    },
@@ -7262,6 +6925,83 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I100301340",
+    "name": "Quanta Technology (United States)",
+    "works": 1,
+    "first_year": 2015,
+    "last_year": 2015,
+    "top_topics": [
+     "Power System Optimization and Stability"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I86725329",
+    "name": "Hitachi Global Storage Technologies (United States)",
+    "works": 1,
+    "first_year": 2015,
+    "last_year": 2015,
+    "top_topics": [
+     "Power System Optimization and Stability"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210107583",
+    "name": "Memtronics (United States)",
+    "works": 1,
+    "first_year": 2008,
+    "last_year": 2008,
+    "top_topics": [
+     "Advanced MEMS and NEMS Technologies"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I1293612202",
+    "name": "Toyota Motor Corporation (Switzerland)",
+    "works": 1,
+    "first_year": 2018,
+    "last_year": 2018,
+    "top_topics": [
+     "Advanced Neural Network Applications"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210132327",
+    "name": "Synaptic Research (United States)",
+    "works": 1,
+    "first_year": 2010,
+    "last_year": 2010,
+    "top_topics": [
+     "Target Tracking and Data Fusion in Sensor Networks"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210101277",
+    "name": "Glass Service (Czechia)",
+    "works": 1,
+    "first_year": 2007,
+    "last_year": 2007,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210153176",
+    "name": "Renesas Electronics (Japan)",
+    "works": 1,
+    "first_year": 2009,
+    "last_year": 2009,
+    "top_topics": [
+     "Silicon Carbide Semiconductor Technologies"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210137977",
     "name": "Advanced Micro Devices (United States)",
     "works": 1,
@@ -7317,6 +7057,39 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I68384125",
+    "name": "Thomson Reuters (United States)",
+    "works": 1,
+    "first_year": 2008,
+    "last_year": 2008,
+    "top_topics": [
+     "Power Quality and Harmonics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I1325784139",
+    "name": "Yahoo (United Kingdom)",
+    "works": 1,
+    "first_year": 2013,
+    "last_year": 2013,
+    "top_topics": [
+     "Geophysical and Geoelectrical Methods"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210100359",
+    "name": "Ford Motor Company (France)",
+    "works": 1,
+    "first_year": 2010,
+    "last_year": 2010,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210146357",
     "name": "Oxford BioMedica (United Kingdom)",
     "works": 1,
@@ -7324,6 +7097,72 @@
     "last_year": 2021,
     "top_topics": [
      "Advanced Causal Inference Techniques"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210138163",
+    "name": "Novozymes (United States)",
+    "works": 1,
+    "first_year": 2017,
+    "last_year": 2017,
+    "top_topics": [
+     "Consumer Attitudes and Food Labeling"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210104535",
+    "name": "Survice Engineering (United States)",
+    "works": 1,
+    "first_year": 2020,
+    "last_year": 2020,
+    "top_topics": [
+     "Risk and Safety Analysis"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210155701",
+    "name": "Geomechanica (Canada)",
+    "works": 1,
+    "first_year": 2021,
+    "last_year": 2021,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210165218",
+    "name": "GeoMechanics Technologies (United States)",
+    "works": 1,
+    "first_year": 2021,
+    "last_year": 2021,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210151920",
+    "name": "HeidelbergCement (United States)",
+    "works": 1,
+    "first_year": 1999,
+    "last_year": 1999,
+    "top_topics": [
+     "Chromium effects and bioremediation"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210105730",
+    "name": "Engineering Research & Analysis (United States)",
+    "works": 1,
+    "first_year": 2020,
+    "last_year": 2020,
+    "top_topics": [
+     "Automotive and Human Injury Biomechanics"
     ],
     "is_exponent": false
    },
@@ -7339,6 +7178,39 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I891521709",
+    "name": "Daimler (Germany)",
+    "works": 1,
+    "first_year": 2004,
+    "last_year": 2004,
+    "top_topics": [
+     "Occupational and environmental lung diseases"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I825935405",
+    "name": "Oceaneering International (United States)",
+    "works": 1,
+    "first_year": 2021,
+    "last_year": 2021,
+    "top_topics": [
+     "Oil Spill Detection and Mitigation"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210166078",
+    "name": "Aisin (United States)",
+    "works": 1,
+    "first_year": 2023,
+    "last_year": 2023,
+    "top_topics": [
+     "Architecture, Design, and Social History"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I170138621",
     "name": "Atos (France)",
     "works": 1,
@@ -7346,6 +7218,28 @@
     "last_year": 1997,
     "top_topics": [
      "Vibrio bacteria research studies"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210134280",
+    "name": "SGF International (Germany)",
+    "works": 1,
+    "first_year": 2012,
+    "last_year": 2012,
+    "top_topics": [
+     "Vehicle Noise and Vibration Control"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210092993",
+    "name": "Simpson Strong-Tie (United States)",
+    "works": 1,
+    "first_year": 2015,
+    "last_year": 2015,
+    "top_topics": [
+     "Facilities and Workplace Management"
     ],
     "is_exponent": false
    },
@@ -7416,6 +7310,28 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I1332737386",
+    "name": "General Electric (United States)",
+    "works": 1,
+    "first_year": 2002,
+    "last_year": 2002,
+    "top_topics": [
+     "Power Systems Fault Detection"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210140578",
+    "name": "Gamma Therapeutics (United States)",
+    "works": 1,
+    "first_year": 2009,
+    "last_year": 2009,
+    "top_topics": [
+     "Fire dynamics and safety research"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210114674",
     "name": "ConocoPhillips (Canada)",
     "works": 1,
@@ -7423,6 +7339,72 @@
     "last_year": 2009,
     "top_topics": [
      "Wind and Air Flow Studies"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210155601",
+    "name": "Innovative Research (United States)",
+    "works": 1,
+    "first_year": 2000,
+    "last_year": 2000,
+    "top_topics": [
+     "Construction Engineering and Safety"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I136150977",
+    "name": "TE Connectivity (Switzerland)",
+    "works": 1,
+    "first_year": 2014,
+    "last_year": 2014,
+    "top_topics": [
+     "Winter Sports Injuries and Performance"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210101722",
+    "name": "Engineering Data Management",
+    "works": 1,
+    "first_year": 2014,
+    "last_year": 2014,
+    "top_topics": [
+     "Winter Sports Injuries and Performance"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210156081",
+    "name": "Tech-X Corporation (United States)",
+    "works": 1,
+    "first_year": 2017,
+    "last_year": 2017,
+    "top_topics": [
+     "Laser-Plasma Interactions and Diagnostics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I1316064682",
+    "name": "LinkedIn (United States)",
+    "works": 1,
+    "first_year": 2017,
+    "last_year": 2017,
+    "top_topics": [
+     "Laser-Plasma Interactions and Diagnostics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210095672",
+    "name": "Polaris (United States)",
+    "works": 1,
+    "first_year": 2017,
+    "last_year": 2017,
+    "top_topics": [
+     "Oil Spill Detection and Mitigation"
     ],
     "is_exponent": false
    },
@@ -7445,6 +7427,61 @@
     "last_year": 2019,
     "top_topics": [
      "Cell Image Analysis Techniques"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I154100212",
+    "name": "Schlumberger (British Virgin Islands)",
+    "works": 1,
+    "first_year": 2021,
+    "last_year": 2021,
+    "top_topics": [
+     "Tunneling and Rock Mechanics"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210143693",
+    "name": "TRC Companies (United States)",
+    "works": 1,
+    "first_year": 2022,
+    "last_year": 2022,
+    "top_topics": [
+     "Fire effects on ecosystems"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210110953",
+    "name": "Diamond Materials (United States)",
+    "works": 1,
+    "first_year": 2023,
+    "last_year": 2023,
+    "top_topics": [
+     "Mining and Resource Management"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210127469",
+    "name": "Yalong Hydro (China)",
+    "works": 1,
+    "first_year": 2025,
+    "last_year": 2025,
+    "top_topics": [
+     "Optical Wireless Communication Technologies"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210130332",
+    "name": "Advanced Network and Services (United States)",
+    "works": 1,
+    "first_year": 2025,
+    "last_year": 2025,
+    "top_topics": [
+     "Data Quality and Management"
     ],
     "is_exponent": false
    },
@@ -7823,6 +7860,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210106833",
+    "name": "Wave Computation Technologies (United States)",
+    "works": 1,
+    "first_year": 2018,
+    "last_year": 2018,
+    "top_topics": [
+     "2D Materials and Applications"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210109251",
     "name": "EMI (United Kingdom)",
     "works": 1,
@@ -7988,6 +8036,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210161300",
+    "name": "Biostats (United States)",
+    "works": 1,
+    "first_year": 2021,
+    "last_year": 2021,
+    "top_topics": [
+     "Tissue Engineering and Regenerative Medicine"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I1310145721",
     "name": "SAES Group (Italy)",
     "works": 1,
@@ -8072,17 +8131,6 @@
     "last_year": 2009,
     "top_topics": [
      "Business and Management Studies"
-    ],
-    "is_exponent": false
-   },
-   {
-    "id": "https://openalex.org/I4210116219",
-    "name": "Engineering Systems (United States)",
-    "works": 1,
-    "first_year": 2020,
-    "last_year": 2020,
-    "top_topics": [
-     "Burn Injury Management and Outcomes"
     ],
     "is_exponent": false
    },
@@ -8950,6 +8998,17 @@
     "is_exponent": false
    },
    {
+    "id": "https://openalex.org/I4210136903",
+    "name": "Airbus (Germany)",
+    "works": 1,
+    "first_year": 2026,
+    "last_year": 2026,
+    "top_topics": [
+     "Aluminum Alloy Microstructure Properties"
+    ],
+    "is_exponent": false
+   },
+   {
     "id": "https://openalex.org/I4210089342",
     "name": "The Centre for Health (New Zealand)",
     "works": 1,
@@ -8970,6 +9029,39 @@
      "Chaos-based Image/Signal Encryption"
     ],
     "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210128410",
+    "name": "Guided Therapy Systems (United States)",
+    "works": 1,
+    "first_year": 2026,
+    "last_year": 2026,
+    "top_topics": [
+     "Safety Systems Engineering in Autonomy"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I84606831",
+    "name": "Terumo (Germany)",
+    "works": 1,
+    "first_year": 2026,
+    "last_year": 2026,
+    "top_topics": [
+     "Effects and risks of endocrine disrupting chemicals"
+    ],
+    "is_exponent": false
+   },
+   {
+    "id": "https://openalex.org/I4210088006",
+    "name": "Kubota Research Associates (United States)",
+    "works": 1,
+    "first_year": 2026,
+    "last_year": 2026,
+    "top_topics": [
+     "Carcinogens and Genotoxicity Assessment"
+    ],
+    "is_exponent": false
    }
   ],
   "edges": [
@@ -8981,7 +9073,7 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210133143",
-    "weight": 49
+    "weight": 50
    },
    {
     "source": "exponent",
@@ -9070,7 +9162,17 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210137183",
+    "weight": 11
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I150569930",
+    "weight": 11
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210126295",
     "weight": 11
    },
    {
@@ -9090,27 +9192,7 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210137183",
-    "weight": 10
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I1295346377",
-    "weight": 10
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210126295",
-    "weight": 10
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I1332737386",
-    "weight": 10
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210125361",
     "weight": 10
    },
    {
@@ -9136,11 +9218,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210121787",
-    "weight": 9
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210166246",
     "weight": 9
    },
    {
@@ -9205,17 +9282,17 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I50258018",
-    "weight": 7
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210121594",
     "weight": 7
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I926567449",
+    "weight": 7
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I50258018",
     "weight": 7
    },
    {
@@ -9370,6 +9447,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210086509",
+    "weight": 4
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I1340755506",
     "weight": 4
    },
@@ -9400,11 +9482,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I28304128",
-    "weight": 4
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210117619",
     "weight": 4
    },
@@ -9416,6 +9493,11 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I1283582996",
+    "weight": 4
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I28304128",
     "weight": 4
    },
    {
@@ -9510,17 +9592,7 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210086509",
-    "weight": 3
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210164117",
-    "weight": 3
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210099511",
     "weight": 3
    },
    {
@@ -9570,6 +9642,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210099511",
+    "weight": 3
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210150258",
     "weight": 3
    },
@@ -9586,11 +9663,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210108991",
-    "weight": 3
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210158342",
     "weight": 3
    },
    {
@@ -9640,17 +9712,22 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210097287",
-    "weight": 3
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210139992",
     "weight": 3
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I1341412227",
+    "weight": 3
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210086503",
+    "weight": 3
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210097287",
     "weight": 3
    },
    {
@@ -9675,12 +9752,12 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210086503",
+    "target": "https://openalex.org/I4210157825",
     "weight": 3
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210157825",
+    "target": "https://openalex.org/I4210158342",
     "weight": 3
    },
    {
@@ -9701,6 +9778,11 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I71187865",
+    "weight": 3
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I1311688040",
     "weight": 3
    },
    {
@@ -9731,11 +9813,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I2250650973",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I1290206253",
     "weight": 2
    },
    {
@@ -10025,21 +10102,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210144946",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I103084370",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210107206",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I127558574",
     "weight": 2
    },
@@ -10060,11 +10122,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210160592",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210105238",
     "weight": 2
    },
@@ -10076,6 +10133,11 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210096927",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210144946",
     "weight": 2
    },
    {
@@ -10100,12 +10162,27 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I103084370",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210107206",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210140124",
     "weight": 2
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210140816",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210138378",
     "weight": 2
    },
    {
@@ -10165,16 +10242,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210139705",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210101890",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I57053284",
     "weight": 2
    },
@@ -10200,11 +10267,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210119367",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210150972",
     "weight": 2
    },
@@ -10220,12 +10282,42 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210151482",
+    "target": "https://openalex.org/I1290206253",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210160592",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210111236",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210119367",
     "weight": 2
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I863982854",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210139705",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210101890",
+    "weight": 2
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210151482",
     "weight": 2
    },
    {
@@ -10280,11 +10372,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210136903",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I106618798",
     "weight": 2
    },
@@ -10300,11 +10387,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I1311688040",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210107938",
     "weight": 2
    },
@@ -10316,11 +10398,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I1325886976",
-    "weight": 2
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210138378",
     "weight": 2
    },
    {
@@ -10465,11 +10542,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210093279",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210156316",
     "weight": 1
    },
@@ -10485,17 +10557,17 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210147562",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210133601",
     "weight": 1
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210121399",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210147562",
     "weight": 1
    },
    {
@@ -10625,6 +10697,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210093279",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210125576",
     "weight": 1
    },
@@ -10696,16 +10773,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210147336",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I100301340",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I86725329",
     "weight": 1
    },
    {
@@ -10830,11 +10897,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I1293612202",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I95946053",
     "weight": 1
    },
@@ -10846,6 +10908,11 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210136429",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210104536",
     "weight": 1
    },
    {
@@ -10931,11 +10998,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210096935",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210158890",
     "weight": 1
    },
    {
@@ -11075,6 +11137,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210122706",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210117962",
     "weight": 1
    },
@@ -11095,12 +11162,12 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210122706",
+    "target": "https://openalex.org/I4210154462",
     "weight": 1
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210154462",
+    "target": "https://openalex.org/I4210150002",
     "weight": 1
    },
    {
@@ -11111,16 +11178,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I189065380",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210150002",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210104536",
     "weight": 1
    },
    {
@@ -11240,12 +11297,12 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I2801244959",
+    "target": "https://openalex.org/I4210158890",
     "weight": 1
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210104535",
+    "target": "https://openalex.org/I2801244959",
     "weight": 1
    },
    {
@@ -11285,11 +11342,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210139261",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4387155329",
     "weight": 1
    },
@@ -11310,11 +11362,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210166078",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210156517",
     "weight": 1
    },
@@ -11325,12 +11372,12 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210128050",
+    "target": "https://openalex.org/I61822063",
     "weight": 1
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210130332",
+    "target": "https://openalex.org/I4210128050",
     "weight": 1
    },
    {
@@ -11341,11 +11388,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210153972",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210107583",
     "weight": 1
    },
    {
@@ -11375,27 +11417,7 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210132327",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210101277",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210110228",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210153176",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I68384125",
     "weight": 1
    },
    {
@@ -11430,22 +11452,7 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I1325784139",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210125521",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210100359",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210138163",
     "weight": 1
    },
    {
@@ -11470,6 +11477,16 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210139261",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210098531",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210152483",
     "weight": 1
    },
@@ -11481,11 +11498,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210158702",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210105730",
     "weight": 1
    },
    {
@@ -11615,16 +11627,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210155701",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210165218",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210157079",
     "weight": 1
    },
@@ -11676,11 +11678,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4401726759",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I825935405",
     "weight": 1
    },
    {
@@ -11765,21 +11762,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I154100212",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210143693",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210110953",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I21409547",
     "weight": 1
    },
@@ -11831,11 +11813,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210094472",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210127469",
     "weight": 1
    },
    {
@@ -11935,11 +11912,6 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210134280",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I69816183",
     "weight": 1
    },
@@ -11951,11 +11923,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210148657",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210092993",
     "weight": 1
    },
    {
@@ -12040,42 +12007,12 @@
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210140578",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
     "target": "https://openalex.org/I4210116416",
     "weight": 1
    },
    {
     "source": "exponent",
-    "target": "https://openalex.org/I4210155601",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I136150977",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210101722",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210156081",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I1316064682",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210095672",
+    "target": "https://openalex.org/I4210133584",
     "weight": 1
    },
    {
@@ -12110,6 +12047,41 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I100301340",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I86725329",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210107583",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I1293612202",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210132327",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210101277",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210153176",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210137977",
     "weight": 1
    },
@@ -12135,7 +12107,52 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I68384125",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I1325784139",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210100359",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210146357",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210138163",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210104535",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210155701",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210165218",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210151920",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210105730",
     "weight": 1
    },
    {
@@ -12145,7 +12162,32 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I891521709",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I825935405",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210166078",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I170138621",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210134280",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210092993",
     "weight": 1
    },
    {
@@ -12180,7 +12222,47 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I1332737386",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210140578",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210114674",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210155601",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I136150977",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210101722",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210156081",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I1316064682",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210095672",
     "weight": 1
    },
    {
@@ -12191,6 +12273,31 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210148944",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I154100212",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210143693",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210110953",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210127469",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210130332",
     "weight": 1
    },
    {
@@ -12365,6 +12472,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210106833",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210109251",
     "weight": 1
    },
@@ -12440,6 +12552,11 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210161300",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I1310145721",
     "weight": 1
    },
@@ -12476,11 +12593,6 @@
    {
     "source": "exponent",
     "target": "https://openalex.org/I864088423",
-    "weight": 1
-   },
-   {
-    "source": "exponent",
-    "target": "https://openalex.org/I4210116219",
     "weight": 1
    },
    {
@@ -12880,12 +12992,32 @@
    },
    {
     "source": "exponent",
+    "target": "https://openalex.org/I4210136903",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
     "target": "https://openalex.org/I4210089342",
     "weight": 1
    },
    {
     "source": "exponent",
     "target": "https://openalex.org/I4210161116",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210128410",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I84606831",
+    "weight": 1
+   },
+   {
+    "source": "exponent",
+    "target": "https://openalex.org/I4210088006",
     "weight": 1
    }
   ],
@@ -12899,7 +13031,7 @@
      "https://openalex.org/I923382979"
     ],
     "title": "Toxicity Testing in the 21st Century: A Vision and a Strategy",
-    "cited_by": 1682
+    "cited_by": 1687
    },
    {
     "year": 2000,
@@ -12907,7 +13039,7 @@
      "https://openalex.org/I4210115849"
     ],
     "title": "The Effect of Fecal Occult-Blood Screening on the Incidence of Colorectal Cancer",
-    "cited_by": 1424
+    "cited_by": 1427
    },
    {
     "year": 2012,
@@ -12923,7 +13055,7 @@
      "https://openalex.org/I74680897"
     ],
     "title": "Pharmaceuticals and Personal Care Products in the Environment: What Are the Big Questions?",
-    "cited_by": 1346
+    "cited_by": 1349
    },
    {
     "year": 2020,
@@ -12934,7 +13066,7 @@
      "https://openalex.org/I4210154085"
     ],
     "title": "A genomic catalog of Earth’s microbiomes",
-    "cited_by": 977
+    "cited_by": 981
    },
    {
     "year": 2016,
@@ -12943,7 +13075,7 @@
      "https://openalex.org/I4210127940"
     ],
     "title": "A review of Listeria monocytogenes: An update on outbreaks, virulence, dose-response, ecology, and risk assessments",
-    "cited_by": 813
+    "cited_by": 815
    },
    {
     "year": 2012,
@@ -12988,7 +13120,7 @@
      "https://openalex.org/I4210128863"
     ],
     "title": "Human exposure and internal dose assessments of acrylamide in food",
-    "cited_by": 394
+    "cited_by": 395
    },
    {
     "year": 2012,
@@ -12996,7 +13128,7 @@
      "https://openalex.org/I4210101778"
     ],
     "title": "ECG Biometric Recognition: A Comparative Analysis",
-    "cited_by": 351
+    "cited_by": 353
    },
    {
     "year": 2014,
@@ -13045,7 +13177,7 @@
      "https://openalex.org/I4210166736"
     ],
     "title": "On the potential of recurrent neural networks for modeling path dependent plasticity",
-    "cited_by": 299
+    "cited_by": 300
    },
    {
     "year": 2010,
@@ -13053,7 +13185,7 @@
      "https://openalex.org/I51579864"
     ],
     "title": "Risk of Subsequent Revision after Primary and Revision Total Joint Arthroplasty",
-    "cited_by": 291
+    "cited_by": 292
    },
    {
     "year": 2013,
@@ -13077,7 +13209,7 @@
      "https://openalex.org/I157066012"
     ],
     "title": "Global genetic diversity status and trends: towards a suite of Essential Biodiversity Variables (<scp>EBVs</scp>) for genetic composition",
-    "cited_by": 272
+    "cited_by": 275
    },
    {
     "year": 2014,
@@ -13085,7 +13217,7 @@
      "https://openalex.org/I1290206253"
     ],
     "title": "Using psycho-physiological measures to assess task difficulty in software development",
-    "cited_by": 258
+    "cited_by": 259
    },
    {
     "year": 2013,
@@ -13117,7 +13249,7 @@
      "https://openalex.org/I1320553840"
     ],
     "title": "An international assessment of ovarian cancer incidence and mortality",
-    "cited_by": 218
+    "cited_by": 219
    },
    {
     "year": 2020,
@@ -13135,7 +13267,7 @@
      "https://openalex.org/I4210145812"
     ],
     "title": "Genome-wide association study identifies multiple risk loci for chronic lymphocytic leukemia",
-    "cited_by": 211
+    "cited_by": 213
    },
    {
     "year": 2007,
@@ -13143,7 +13275,7 @@
      "https://openalex.org/I4210135812"
     ],
     "title": "Evidence of Health Impacts of Sulfate-and Nitrate-Containing Particles in Ambient Air",
-    "cited_by": 211
+    "cited_by": 212
    },
    {
     "year": 1999,
@@ -13168,7 +13300,7 @@
      "https://openalex.org/I89199228"
     ],
     "title": "Pesticide residues in food—acute dietary exposure",
-    "cited_by": 190
+    "cited_by": 191
    },
    {
     "year": 2011,
@@ -13222,7 +13354,7 @@
      "https://openalex.org/I4210124211"
     ],
     "title": "Sensory pollutants alter bird phenology and fitness across a continent",
-    "cited_by": 180
+    "cited_by": 181
    },
    {
     "year": 2002,
@@ -13257,7 +13389,7 @@
      "https://openalex.org/I4210133143"
     ],
     "title": "Pesticide Exposure and Neurodevelopmental Outcomes: Review of the Epidemiologic and Animal Studies",
-    "cited_by": 171
+    "cited_by": 172
    },
    {
     "year": 2003,
@@ -13273,7 +13405,7 @@
      "https://openalex.org/I4210091810"
     ],
     "title": "Morbidity and Mortality After Vertebral Fractures",
-    "cited_by": 165
+    "cited_by": 167
    },
    {
     "year": 2006,
@@ -13283,7 +13415,7 @@
      "https://openalex.org/I4210087094"
     ],
     "title": "A Tiered Approach to Life Stages Testing for Agricultural Chemical Safety Assessment",
-    "cited_by": 165
+    "cited_by": 166
    },
    {
     "year": 2011,
